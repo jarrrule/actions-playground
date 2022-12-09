@@ -1,0 +1,30 @@
+name: Manual Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      image-tag:
+        description: 'The latest master image will be deployed - specify an image tag to override it'
+        required: false
+      deployment-suffix:
+        description: 'Use if not deploying master to append your branch name e.g. COP-0000'
+        required: false
+      deployment-group:
+        description: 'The deployment group to which the app will be deployed. ALPHA = cluster01, BRAVO = cluster02'
+        required: true
+        default: 'ALPHA'
+        type: choice
+        options:
+          - ALPHA
+          - BRAVO
+      environment:
+        description: 'The environment to which the app will be deployed'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - stg
+          - prd
+
+jobs:
+  determine-image:
