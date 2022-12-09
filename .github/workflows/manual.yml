@@ -32,5 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: list files
-        run: ls -a
+        run: |
+          pwd
+          ls -a
 
