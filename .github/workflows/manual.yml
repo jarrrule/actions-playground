@@ -25,6 +25,3 @@ on:
           - dev
           - stg
           - prd
-
-jobs:
-  determine-image:
