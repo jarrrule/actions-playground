@@ -28,3 +28,7 @@ on:
 
 
 jobs:
+  my_first_job:
+    name: my first job
+  my_second_job:
+    name: my second job
