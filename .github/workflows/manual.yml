@@ -28,7 +28,9 @@ on:
 
 
 jobs:
-  my_first_job:
-    name: my first job
-  my_second_job:
-    name: my second job
+  run-github-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: list files
+        run ls -a
+
