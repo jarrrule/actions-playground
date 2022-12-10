@@ -9,15 +9,24 @@ on:
       brand:
         type: choice
         required: true
-        description: '\nBRAND - Choose brand environment.\n\n- all: Trigger a new build to deploy to Habitat whilst continuing with Argos deployment.\n- argos: application name - ui-global-service\n- habitat: application name - ui-global-service-habitat \n\n'
+        description: 'BRAND - Choose brand environment.'
         options:
           - argos
           - habitat
           - tu
       url-ext:
-        description: '✏️  URL_EXT - Enter a custom name for this app all lowercase \n\n Example:\n - branch-bug-fix -  ui-global-service-branch-bug-fix.service.eu-west-1.dev.deveng.systems\n\n'
+        description: '✏️  URL_EXT - Enter a custom name for this app all lowercase'
         required: true
-        default: ${{ env.GITHUB_REF }}
+      stub-service-endpoint:
+        description: 'Override stub service endpoint
+        required: false
+      deploy-to:
+        description: 'Deploy to dev/staging
+        require: true
+        default: dev
+        options:
+          - dev
+          - staging
 
 jobs:
   run-github-action:
