@@ -18,7 +18,7 @@ on:
         description: '✏️  URL_EXT - Enter a custom name for this app all lowercase'
         required: true
       stub-service-endpoint:
-        description: 'Override stub service endpoint
+        description: 'Override stub service endpoint'
         required: false
       deploy-to:
         description: 'Deploy to dev/staging
@@ -34,5 +34,4 @@ jobs:
     steps:
       - name: list files
         run: |
-          pwd
           ls -a
