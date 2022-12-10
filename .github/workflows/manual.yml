@@ -2,30 +2,22 @@ name: Manual Deploy
 on:
   workflow_dispatch:
     inputs:
-      image-tag:
-        description: 'The latest master image will be deployed - specify an image tag to override it'
-        required: false
-      deployment-suffix:
-        description: 'Use if not deploying master to append your branch name e.g. COP-0000'
-        required: false
-      deployment-group:
-        description: 'The deployment group to which the app will be deployed. ALPHA = cluster01, BRAVO = cluster02'
+      run-acceptance-tests:
+        description: 'Run the Acceptance Tests?'
         required: true
-        default: 'ALPHA'
+        default: true
+      brand:
         type: choice
-        options:
-          - ALPHA
-          - BRAVO
-      environment:
-        description: 'The environment to which the app will be deployed'
         required: true
-        default: 'dev'
-        type: choice
+        description: '\nBRAND - Choose brand environment.\n\n- all: Trigger a new build to deploy to Habitat whilst continuing with Argos deployment.\n- argos: application name - ui-global-service\n- habitat: application name - ui-global-service-habitat \n\n'
         options:
-          - dev
-          - stg
-          - prd
-
+          - argos
+          - habitat
+          - tu
+      url-ext:
+        description: '✏️  URL_EXT - Enter a custom name for this app all lowercase \n\n Example:\n - branch-bug-fix -  ui-global-service-branch-bug-fix.service.eu-west-1.dev.deveng.systems\n\n'
+        required: true
+        default: ${{ env.GITHUB_REF }}
 
 jobs:
   run-github-action:
