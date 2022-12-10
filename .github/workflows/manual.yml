@@ -9,13 +9,15 @@ on:
       brand:
         type: choice
         required: true
+        default: all
         description: 'BRAND - Choose brand environment.'
         options:
+          - all
           - argos
           - habitat
           - tu
       url-ext:
-        description: '✏️  URL_EXT - Enter a custom name for this app all lowercase'
+        description: 'Enter a custom name for this app all lowercase'
         required: true
       stub-service-endpoint:
         description: 'Override stub service endpoint'
