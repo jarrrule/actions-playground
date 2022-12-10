@@ -21,7 +21,7 @@ on:
         description: 'Override stub service endpoint'
         required: false
       deploy-to:
-        description: 'Deploy to dev/staging
+        description: 'Deploy to dev/staging'
         require: true
         default: dev
         options:
