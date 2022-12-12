@@ -35,15 +35,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: configureEnvironmentVariables
-        run: echo "maybe an action to do this
+        run: echo "maybe an action to do this"
 
   create-and-publish-docker-image:
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name:
         run: echo "call /reusable-build.yaml here"
 
   acceptance-tests:
+    needs:
+      - setup
+      - create-and-publish-docker-image
     runs-on: ubuntu-latest
     steps:
       - name: run acceptance tests
