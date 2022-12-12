@@ -50,6 +50,7 @@ jobs:
       - create-and-publish-docker-image
       - deploy-stub-server
       - deploy-stub-app
+    if: ${{ inputs.run-acceptance-tests == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: run acceptance tests
