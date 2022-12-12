@@ -67,6 +67,7 @@ jobs:
     needs:
       - setup
       - create-and-publish-docker-image
+    runs-on: ubuntu-latest
     steps:
       - name: deploy stub server
         run: echo "kicks off the build deploy stub server workflow"
@@ -75,6 +76,7 @@ jobs:
     needs:
       - setup
       - create-and-publish-docker-image
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy stub app
         run: echo "deploy stub app"
@@ -84,6 +86,7 @@ jobs:
       - setup
       - create-and-publish-docker-image
       - acceptance-tests
+    runs-on: ubuntu-latest
     steps:
       - name: deploy app
         run: echo "deploy app"
@@ -93,6 +96,7 @@ jobs:
       - setup
       - create-and-publish-docker-image
       - acceptance-tests
+    runs-on: ubuntu-latest
     steps:
       - name: deploy integrated environment
         run: echo "deploy integrated environment"
@@ -102,6 +106,7 @@ jobs:
       - setup:
       - create-and-publish-docker-image
       - acceptance-tests
+    runs-on: ubuntu-latest
     steps:
       - name: deploy auth preview
         run: echo "will only run for production"
