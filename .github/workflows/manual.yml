@@ -103,7 +103,7 @@ jobs:
 
   deploy-auth-preview:
     needs:
-      - setup:
+      - setup
       - create-and-publish-docker-image
       - acceptance-tests
     runs-on: ubuntu-latest
