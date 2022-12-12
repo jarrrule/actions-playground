@@ -3,9 +3,13 @@ on:
   workflow_dispatch:
     inputs:
       run-acceptance-tests:
+        type: choice
         description: 'Run the Acceptance Tests?'
         required: true
         default: false
+        options:
+          - true
+          - false
       brand:
         type: choice
         required: true
@@ -31,6 +35,10 @@ on:
           - staging
 
 jobs:
+  test-reusable-workflow:
+    uses: ./.github/workflows/called-workflow.yml
+    with:
+      NAME: sean darley
   setup:
     runs-on: ubuntu-latest
     steps:
@@ -61,6 +69,7 @@ jobs:
       - setup
       - create-and-publish-docker-image
       - acceptance-tests
+    if: ${{ inputs.deploy-to == 'staging' }}
     runs-on: ubuntu-latest
     steps:
       - name: upload s3 assets
