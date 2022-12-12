@@ -11,7 +11,7 @@ on:
 
 jobs:
   print-caller-value:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: echo name from caller workflow
-        run: echo "the name from the caller workflow"
+        run: echo "the name from the caller workflow ${{ inputs.NAME }}"

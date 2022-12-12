@@ -39,6 +39,7 @@ jobs:
     uses: ./.github/workflows/called-workflow.yml
     with:
       NAME: sean darley
+
   setup:
     runs-on: ubuntu-latest
     steps:
