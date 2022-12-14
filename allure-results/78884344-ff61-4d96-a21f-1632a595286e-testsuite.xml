@@ -1,0 +1,49 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1663681268914' stop='1663681286171'>
+    <name>CMS content in list</name>
+    <title>CMS content in list</title>
+    <test-cases>
+        <test-case start='1663681272150' status='failed' stop='1663681286169'>
+            <name>Content in PLP list</name>
+            <title>Content in PLP list</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-105.0.0.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3000'/>
+            </parameters>
+            <steps>
+                <step start='1663681274494' status='passed' stop='1663681281130'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1663681281130' status='failed' stop='1663681286168'>
+                    <name>Then I should see content in list</name>
+                    <title>Then I should see content in list</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Expect $(`[data-test="product-list"] [data-test="product-list-m053"]`) to be displayed</message>
+                <stack-trace>Error: Expect $(`[data-test="product-list"] [data-test="product-list-m053"]`) to be displayed
+                
+                Expected: "displayed"
+                Received: "not displayed"
+                    at /Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:161:42
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:243:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:159:3)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

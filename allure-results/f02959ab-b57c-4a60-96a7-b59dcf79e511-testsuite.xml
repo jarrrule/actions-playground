@@ -1,0 +1,164 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650912061491' stop='1650912091655'>
+    <name>Aggregations &amp; Filters Functionality</name>
+    <title>Aggregations &amp; Filters Functionality</title>
+    <test-cases>
+        <test-case start='1650912067068' status='failed' stop='1650912077392'>
+            <name>Closing error modal via the 'x' button</name>
+            <title>Closing error modal via the 'x' button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650912067074' status='passed' stop='1650912075479'>
+                    <name>Given I see the no results modal</name>
+                    <title>Given I see the no results modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912075479' status='passed' stop='1650912077317'>
+                    <name>When I click the no results modal X button</name>
+                    <title>When I click the no results modal X button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912077317' status='passed' stop='1650912077348'>
+                    <name>Then I should see some search results</name>
+                    <title>Then I should see some search results</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912077348' status='failed' stop='1650912077392'>
+                    <name>And I should not see the no results modal</name>
+                    <title>And I should not see the no results modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toEqual(expected) // deep equality</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: false
+                Received: true
+                    at /Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:204:52
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:240:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:202:3)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1650912077394' status='passed' stop='1650912087592'>
+            <name>Closing error modal via the close button</name>
+            <title>Closing error modal via the close button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650912077395' status='passed' stop='1650912085722'>
+                    <name>Given I see the no results modal</name>
+                    <title>Given I see the no results modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912085722' status='passed' stop='1650912087559'>
+                    <name>When I click the no results modal close button</name>
+                    <title>When I click the no results modal close button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912087559' status='passed' stop='1650912087587'>
+                    <name>Then I should see some search results</name>
+                    <title>Then I should see some search results</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912087587' status='passed' stop='1650912087592'>
+                    <name>And I should not see the no results modal</name>
+                    <title>And I should not see the no results modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1650912087593' status='failed' stop='1650912091654'>
+            <name>Close filter panel by clicking on background overlay</name>
+            <title>Close filter panel by clicking on background overlay</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650912087593' status='passed' stop='1650912091641'>
+                    <name>Given I navigate to a "cat-match search" page</name>
+                    <title>Given I navigate to a "cat-match search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912091641' status='passed' stop='1650912091642'>
+                    <name>When I click the edit filters button</name>
+                    <title>When I click the edit filters button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912091642' status='passed' stop='1650912091645'>
+                    <name>Then I should see the filter panel</name>
+                    <title>Then I should see the filter panel</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912091645' status='passed' stop='1650912091648'>
+                    <name>When I click the filter panel background overlay</name>
+                    <title>When I click the filter panel background overlay</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912091648' status='failed' stop='1650912091654'>
+                    <name>Then I should not see the filter panel</name>
+                    <title>Then I should not see the filter panel</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toEqual(expected) // deep equality</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: 0
+                Received: 1
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/filtering_steps.js:106:56)
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

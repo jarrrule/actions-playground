@@ -1,0 +1,41 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660200517773' stop='1660200549546'>
+    <name>Citrus in browse</name>
+    <title>Citrus in browse</title>
+    <test-cases>
+        <test-case start='1660200524932' status='broken' stop='1660200549543'>
+            <name>display 2 citrus products on plain browse and sort (mobile)</name>
+            <title>display 2 citrus products on plain browse and sort (mobile)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='chrome-12'/>
+                <parameter kind='argument' name='browser' value='Android 12.0 Samsung Galaxy S21'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1660200525041' status='broken' stop='1660200549543'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>unknown error: An unknown server-side error occurred while processing the command. Original error: unknown error: cannot determine loading status</message>
+                <stack-trace>unknown error: An unknown server-side error occurred while processing the command. Original error: unknown error: cannot determine loading status
+                from unknown error: unexpected command response
+                  (Session info: chrome=103.0.5060.53)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_navigation_steps.js:13:3)</stack-trace>
+            </failure>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/2cfc5de489ca0e10d9ca0c22468e24f47e4d623b" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

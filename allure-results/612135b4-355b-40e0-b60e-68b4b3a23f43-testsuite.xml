@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1663852302155' stop='1663852318503'>
+    <name>CMS displayed content</name>
+    <title>CMS displayed content</title>
+    <test-cases>
+        <test-case start='1663852307117' status='passed' stop='1663852318502'>
+            <name>Navigation from CLP content link</name>
+            <title>Navigation from CLP content link</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-105.0.0.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3000'/>
+            </parameters>
+            <steps>
+                <step start='1663852309373' status='passed' stop='1663852315789'>
+                    <name>Given I navigate to a "category list" page</name>
+                    <title>Given I navigate to a "category list" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1663852315789' status='passed' stop='1663852318062'>
+                    <name>When I click a merchandising link</name>
+                    <title>When I click a merchandising link</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1663852318062' status='passed' stop='1663852318500'>
+                    <name>Then I should see some search results</name>
+                    <title>Then I should see some search results</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

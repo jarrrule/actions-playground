@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1653336259768' stop='1653336443670'>
+    <name>Perceived Availability</name>
+    <title>Perceived Availability</title>
+    <test-cases>
+        <test-case start='1653336263597' status='broken' stop='1653336443657'>
+            <name>Localised and product is OOS for collection and delivery (prepush)</name>
+            <title>Localised and product is OOS for collection and delivery (prepush)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-11'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-101.0.4951.64'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1653336263617' status='broken' stop='1653336443657'>
+                    <name></name>
+                    <title></title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1653336443660' status='canceled' stop='1653336443662'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1653336443662' status='canceled' stop='1653336443662'>
+                    <name>Then I should see a single Out of stock icon on the product card</name>
+                    <title>Then I should see a single Out of stock icon on the product card</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1653336443662' status='canceled' stop='1653336443662'>
+                    <name>And I should see a single Out of stock message on the product card</name>
+                    <title>And I should see a single Out of stock message on the product card</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: function timed out, ensure the promise resolves within 180000 milliseconds</message>
+                <stack-trace>Error: function timed out, ensure the promise resolves within 180000 milliseconds
+                    at Timeout._onTimeout (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/user_code_runner.ts:80:18)
+                    at listOnTimeout (internal/timers.js:531:17)
+                    at processTimers (internal/timers.js:475:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

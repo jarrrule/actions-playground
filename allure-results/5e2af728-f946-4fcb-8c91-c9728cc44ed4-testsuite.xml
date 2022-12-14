@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650909658972' stop='1650909673189'>
+    <name>Applied filters</name>
+    <title>Applied filters</title>
+    <test-cases>
+        <test-case start='1650909664274' status='passed' stop='1650909673188'>
+            <name>Remove filters from within applied filter section</name>
+            <title>Remove filters from within applied filter section</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650909664277' status='passed' stop='1650909669530'>
+                    <name>Given I navigate to a "filtered search" page</name>
+                    <title>Given I navigate to a "filtered search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650909669530' status='passed' stop='1650909672664'>
+                    <name>When I remove all applied filters</name>
+                    <title>When I remove all applied filters</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650909672664' status='passed' stop='1650909672670'>
+                    <name>Then I should not see the applied filters section</name>
+                    <title>Then I should not see the applied filters section</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650909672670' status='passed' stop='1650909673186'>
+                    <name>And I should see correctly filtered and sorted products</name>
+                    <title>And I should see correctly filtered and sorted products</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

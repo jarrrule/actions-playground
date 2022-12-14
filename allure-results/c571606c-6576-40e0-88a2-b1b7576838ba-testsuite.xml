@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1649412072016' stop='1649412083117'>
+    <name>Bespoke white goods product card</name>
+    <title>Bespoke white goods product card</title>
+    <test-cases>
+        <test-case start='1649412076112' status='passed' stop='1649412083116'>
+            <name>Bespoke white goods product cards displayed on white goods browse lister</name>
+            <title>Bespoke white goods product cards displayed on white goods browse lister</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-6'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-100.0.4896.75'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1649412076124' status='passed' stop='1649412083109'>
+                    <name>Given I navigate to a "white goods browse" page</name>
+                    <title>Given I navigate to a "white goods browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649412083109' status='passed' stop='1649412083114'>
+                    <name>Then I should see bespoke white goods product cards</name>
+                    <title>Then I should see bespoke white goods product cards</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

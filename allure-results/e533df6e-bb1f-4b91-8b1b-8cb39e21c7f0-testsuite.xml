@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648722993242' stop='1648723048283'>
+    <name>Customer Rating filter in the filter panel</name>
+    <title>Customer Rating filter in the filter panel</title>
+    <test-cases>
+        <test-case start='1648722996809' status='passed' stop='1648723048282'>
+            <name>Apply Customer Rating filter updates the URL</name>
+            <title>Apply Customer Rating filter updates the URL</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-12'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Mobile Safari-11.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1648722996817' status='passed' stop='1648723003871'>
+                    <name>Given I navigate to a "cat-match search" page</name>
+                    <title>Given I navigate to a "cat-match search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648723003872' status='passed' stop='1648723007213'>
+                    <name>When I sort by Customer Rating</name>
+                    <title>When I sort by Customer Rating</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648723007213' status='passed' stop='1648723015730'>
+                    <name>And I click the customer rating "4 or More" filter</name>
+                    <title>And I click the customer rating "4 or More" filter</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648723015730' status='passed' stop='1648723048280'>
+                    <name>Then I should only see product cards with customer ratings of at least 4</name>
+                    <title>Then I should only see product cards with customer ratings of at least 4</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

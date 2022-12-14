@@ -1,0 +1,60 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650441330665' stop='1650441342813'>
+    <name>Feedback on search results page</name>
+    <title>Feedback on search results page</title>
+    <test-cases>
+        <test-case start='1650441334656' status='failed' stop='1650441342810'>
+            <name>User is happy with their searching experience so clicks the 'Yes' button in the feedback box</name>
+            <title>User is happy with their searching experience so clicks the 'Yes' button in the feedback box</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://tu-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650441334672' status='passed' stop='1650441340676'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650441340676' status='passed' stop='1650441340692'>
+                    <name>Then I should see a feedback box asking if the results were helpful</name>
+                    <title>Then I should see a feedback box asking if the results were helpful</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650441340692' status='passed' stop='1650441342779'>
+                    <name>When I click the yes button</name>
+                    <title>When I click the yes button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650441342779' status='failed' stop='1650441342810'>
+                    <name>Then I should see a feedback box with a success message</name>
+                    <title>Then I should see a feedback box with a success message</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toEqual(expected) // deep equality</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: true
+                Received: false
+                    at fn (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/feedback_steps.js:13:44)
+                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:240:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/feedback_steps.js:12:15)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

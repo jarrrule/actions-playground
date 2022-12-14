@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650980166271' stop='1650980182002'>
+    <name>Canned Search</name>
+    <title>Canned Search</title>
+    <test-cases>
+        <test-case start='1650980171459' status='passed' stop='1650980182002'>
+            <name>Expanded category facet contains 20+ categories</name>
+            <title>Expanded category facet contains 20+ categories</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650980175109' status='passed' stop='1650980179628'>
+                    <name>Given I navigate to a "canned search test" page</name>
+                    <title>Given I navigate to a "canned search test" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650980179628' status='passed' stop='1650980181981'>
+                    <name>When I click the show more category link</name>
+                    <title>When I click the show more category link</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650980181981' status='passed' stop='1650980182000'>
+                    <name>Then I should see at least 21 categories in the category filter</name>
+                    <title>Then I should see at least 21 categories in the category filter</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
