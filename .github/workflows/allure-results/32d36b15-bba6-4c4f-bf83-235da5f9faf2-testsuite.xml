@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650992163576' stop='1650992181425'>
+    <name>Category facet</name>
+    <title>Category facet</title>
+    <test-cases>
+        <test-case start='1650992170908' status='passed' stop='1650992181425'>
+            <name>Navigate down through the search taxonomy</name>
+            <title>Navigate down through the search taxonomy</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://tu-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650992170915' status='passed' stop='1650992175894'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650992175894' status='passed' stop='1650992181405'>
+                    <name>When I click any unselected leaf category</name>
+                    <title>When I click any unselected leaf category</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650992181405' status='passed' stop='1650992181423'>
+                    <name>Then I should see a selected leaf category</name>
+                    <title>Then I should see a selected leaf category</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

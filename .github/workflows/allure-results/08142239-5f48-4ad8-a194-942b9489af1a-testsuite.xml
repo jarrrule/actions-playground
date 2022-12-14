@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660204007424' stop='1660204029517'>
+    <name>Citrus in browse</name>
+    <title>Citrus in browse</title>
+    <test-cases>
+        <test-case start='1660204014194' status='passed' stop='1660204029516'>
+            <name>display 2 citrus products on plain browse and sort (mobile)</name>
+            <title>display 2 citrus products on plain browse and sort (mobile)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='chrome-12'/>
+                <parameter kind='argument' name='browser' value='Android 12.0 Samsung Galaxy S21'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1660204014419' status='passed' stop='1660204029514'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/4603efdd1fb4582ba816d5f67822d3091d585aa0" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

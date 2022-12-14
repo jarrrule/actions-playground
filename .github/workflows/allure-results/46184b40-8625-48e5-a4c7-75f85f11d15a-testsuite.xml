@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660128813384' stop='1660128833991'>
+    <name>Citrus in browse</name>
+    <title>Citrus in browse</title>
+    <test-cases>
+        <test-case start='1660128818054' status='passed' stop='1660128833990'>
+            <name>display 1 citrus product filtered by price in browse (mobile)</name>
+            <title>display 1 citrus product filtered by price in browse (mobile)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Mobile Safari-11.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1660128821907' status='passed' stop='1660128832123'>
+                    <name>Given I navigate to a "price filtered browse" page</name>
+                    <title>Given I navigate to a "price filtered browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1660128832123' status='passed' stop='1660128833989'>
+                    <name>Then I should see 1 citrus sponsored products listed in position 3</name>
+                    <title>Then I should see 1 citrus sponsored products listed in position 3</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

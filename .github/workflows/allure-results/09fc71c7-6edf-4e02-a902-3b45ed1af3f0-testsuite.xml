@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650881036553' stop='1650881036750'>
+    <name>Add to Trolley</name>
+    <title>Add to Trolley</title>
+    <test-cases>
+        <test-case start='1650881036594' status='broken' stop='1650881036746'>
+            <name>Add to trolley modal and close using the continue shopping button</name>
+            <title>Add to trolley modal and close using the continue shopping button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>net::ERR_ABORTED at https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems/</message>
+                <stack-trace>net::ERR_ABORTED at https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems/
+                Error: net::ERR_ABORTED at https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems/
+                    at navigate (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/FrameManager.ts:218:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at FrameManager.navigateFrame (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/FrameManager.ts:188:17)
+                    at Frame.goto (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/FrameManager.ts:765:12)
+                    at Page.goto (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/Page.ts:1766:12)
+                    at DevToolsDriver.navigateTo (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/devtools/build/commands/navigateTo.js:18:5)
+                    at Browser.wrappedCommand (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/devtools/build/devtoolsdriver.js:102:26)
+                    at Browser.wrapCommandFn (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@wdio/utils/build/shim.js:137:29)
+                    at Browser.wrapCommandFn (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@wdio/utils/build/shim.js:137:29)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

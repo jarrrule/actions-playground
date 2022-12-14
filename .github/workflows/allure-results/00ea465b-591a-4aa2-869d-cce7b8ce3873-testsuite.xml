@@ -1,0 +1,69 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648817568896' stop='1648817606638'>
+    <name>Add to Trolley</name>
+    <title>Add to Trolley</title>
+    <test-cases>
+        <test-case start='1648817576711' status='passed' stop='1648817606636'>
+            <name>Add to trolley modal and close using the X button</name>
+            <title>Add to trolley modal and close using the X button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-96.0.4664.110'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@att and not @wip and not @ignoredesktop and not @ignoreStub and not @prepush and not @ignoreargos'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1648817579991' status='passed' stop='1648817597698'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648817597698' status='passed' stop='1648817602003'>
+                    <name>When I click the add to trolley button</name>
+                    <title>When I click the add to trolley button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648817602003' status='passed' stop='1648817604379'>
+                    <name>Then I should see the product in the att modal</name>
+                    <title>Then I should see the product in the att modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648817604379' status='passed' stop='1648817604488'>
+                    <name>And I should see the att modal go to trolley button</name>
+                    <title>And I should see the att modal go to trolley button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648817604489' status='passed' stop='1648817604604'>
+                    <name>And I should see the att modal continue shopping button</name>
+                    <title>And I should see the att modal continue shopping button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648817604604' status='passed' stop='1648817606543'>
+                    <name>When I click the att modal close button</name>
+                    <title>When I click the att modal close button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648817606543' status='passed' stop='1648817606633'>
+                    <name>Then I should not see the att modal</name>
+                    <title>Then I should not see the att modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/590c29fa5795f0a5b45e4af0a435f7b539b22cb6" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

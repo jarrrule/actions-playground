@@ -1,0 +1,103 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1652715002327' stop='1652715041200'>
+    <name>Product Card Variations</name>
+    <title>Product Card Variations</title>
+    <test-cases>
+        <test-case start='1652715009934' status='passed' stop='1652715020841'>
+            <name>Correct product card links for size searched variants small suitcase</name>
+            <title>Correct product card links for size searched variants small suitcase</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-96.0.4664.110'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1652715010279' status='passed' stop='1652715019730'>
+                    <name>Given I search for a "small suitcase"</name>
+                    <title>Given I search for a "small suitcase"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652715019730' status='passed' stop='1652715020840'>
+                    <name>Then I should see correct size variant product cards links</name>
+                    <title>Then I should see correct size variant product cards links</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/4ccccfb9de1066e3669ec2fc9d5d6987dd54707a" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+        <test-case start='1652715020841' status='passed' stop='1652715031688'>
+            <name>Correct product card links for size searched variants medium suitcase</name>
+            <title>Correct product card links for size searched variants medium suitcase</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-96.0.4664.110'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1652715020918' status='passed' stop='1652715030990'>
+                    <name>Given I search for a "medium suitcase"</name>
+                    <title>Given I search for a "medium suitcase"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652715030990' status='passed' stop='1652715031687'>
+                    <name>Then I should see correct size variant product cards links</name>
+                    <title>Then I should see correct size variant product cards links</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/4ccccfb9de1066e3669ec2fc9d5d6987dd54707a" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+        <test-case start='1652715031688' status='passed' stop='1652715041198'>
+            <name>Correct product card links for size searched variants large suitcase</name>
+            <title>Correct product card links for size searched variants large suitcase</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-96.0.4664.110'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1652715031740' status='passed' stop='1652715040516'>
+                    <name>Given I search for a "large suitcase"</name>
+                    <title>Given I search for a "large suitcase"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652715040516' status='passed' stop='1652715041197'>
+                    <name>Then I should see correct size variant product cards links</name>
+                    <title>Then I should see correct size variant product cards links</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/4ccccfb9de1066e3669ec2fc9d5d6987dd54707a" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

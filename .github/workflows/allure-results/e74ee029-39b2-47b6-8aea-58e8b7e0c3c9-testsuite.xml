@@ -1,0 +1,91 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1649327114834' stop='1649327229517'>
+    <name>Perceived Availability</name>
+    <title>Perceived Availability</title>
+    <test-cases>
+        <test-case start='1649327118039' status='passed' stop='1649327130807'>
+            <name>Close localise tooltip prompt on browse page</name>
+            <title>Close localise tooltip prompt on browse page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.75'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-findability-ui-cta.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1649327121650' status='passed' stop='1649327129225'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649327129225' status='passed' stop='1649327130798'>
+                    <name>When I click the availability tooltip close button</name>
+                    <title>When I click the availability tooltip close button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649327130799' status='passed' stop='1649327130805'>
+                    <name>Then I should not see the availability tooltip prompt</name>
+                    <title>Then I should not see the availability tooltip prompt</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1649327130807' status='broken' stop='1649327229512'>
+            <name>Close localise tooltip prompt on search page</name>
+            <title>Close localise tooltip prompt on search page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.75'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-findability-ui-cta.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1649327132613' status='passed' stop='1649327136871'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649327136871' status='broken' stop='1649327229512'>
+                    <name>When I click the availability tooltip close button</name>
+                    <title>When I click the availability tooltip close button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649327229512' status='canceled' stop='1649327229513'>
+                    <name>Then I should not see the availability tooltip prompt</name>
+                    <title>Then I should not see the availability tooltip prompt</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Can't call click on element with selector "[data-test="availability-tooltip-close"]" because element wasn't found</message>
+                <stack-trace>Error: Can't call click on element with selector "[data-test="availability-tooltip-close"]" because element wasn't found
+                    at Element.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@wdio/utils/build/shim.js:270:24)
+                    at Availability.click (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sainsburys-tech/wdio-handler/dist/index.js:1:5263)
+                    at Availability.click (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/Page.js:34:11)
+                    at fn (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/availability_steps.js:27:18)
+                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:240:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/availability_steps.js:26:15)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

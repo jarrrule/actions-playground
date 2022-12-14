@@ -1,0 +1,56 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660680554036' stop='1660680567446'>
+    <name>Add to Wishlist</name>
+    <title>Add to Wishlist</title>
+    <test-cases>
+        <test-case start='1660680557770' status='passed' stop='1660680567446'>
+            <name>Clicking the wishlist icon on a browse lister page</name>
+            <title>Clicking the wishlist icon on a browse lister page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Mobile Safari-11.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1660680557779' status='passed' stop='1660680562812'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1660680562813' status='passed' stop='1660680565884'>
+                    <name>When I click the heart icon on a product</name>
+                    <title>When I click the heart icon on a product</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1660680565884' status='passed' stop='1660680565898'>
+                    <name>Then I should see the wish list tool tip</name>
+                    <title>Then I should see the wish list tool tip</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1660680565898' status='passed' stop='1660680567434'>
+                    <name>When I click the wish list tool tip close icon</name>
+                    <title>When I click the wish list tool tip close icon</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1660680567435' status='passed' stop='1660680567444'>
+                    <name>Then I should not see the wish list tool tip</name>
+                    <title>Then I should not see the wish list tool tip</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
