@@ -129,7 +129,7 @@ jobs:
   allure:
     runs-on: ubuntu-latest
     steps:
-      - checkout
+      - name: checkout
         uses: actions/checkout@v3
       - name: allure report
         uses: Xotabu4/send-to-allure-server-action@1
