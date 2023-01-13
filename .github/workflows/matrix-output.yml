@@ -16,12 +16,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - run: mkdir -p path/to/artifact
-
-      - run: echo "hello image name for ${{matrix.brand}}" > path/to/artifact/${{ matrix.brand }}.txt
-
+      - run: mkdir -p image
+      - run: echo "hello image name for ${{matrix.brand}}" > image/${{ matrix.brand }}.txt
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: path/to/artifact/${{ matrix.brand }}.txt
+          path: image/${{ matrix.brand }}.txt
