@@ -37,7 +37,7 @@ jobs:
         run: |
           value=`cat ${{ matrix.brand }}.txt`
           echo "do we have a value: $value"
-          echo "::set-output name=imageName::$content"
+          echo "::set-output name=imageName::$value"
 
       - name: echo env var
         run: |
