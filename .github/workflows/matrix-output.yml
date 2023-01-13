@@ -26,12 +26,12 @@ jobs:
         brand: [ argos, habitat ]
 
     steps:
-#      - name: Download artifacts
-#      - id: set_var
+      - name: Download artifacts
+      - id: set_var
       - uses: actions/download-artifact@v3
       - run: echo "hello ${{matrix.brand}}"
-        with:
-          name: docker-images
+#        with:
+#          name: docker-images
 
 #      - name: Display structure of downloaded files
 #        run: ls -R
