@@ -20,5 +20,5 @@ jobs:
       - run: echo "hello image name for ${{matrix.brand}}" > image/${{ matrix.brand }}.txt
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
+          name: docker-images
           path: image/${{ matrix.brand }}.txt
