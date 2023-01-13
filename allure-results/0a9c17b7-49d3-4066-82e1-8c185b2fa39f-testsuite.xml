@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
-<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650909390383' stop='1650909406626'>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='165090939   0383' stop='1650909406626'>
     <name>Applied filters</name>
     <title>Applied filters</title>
     <test-cases>
-        <test-case start='1650909398151' status='passed' stop='1650909406625'>
+        <test-case start='1650909398151'    stat     us='passed' stop='1650909406625'>
             <name>Remove filters from within applied filter section</name>
             <title>Remove filters from within applied filter section</title>
             <labels>
