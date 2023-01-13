@@ -40,10 +40,4 @@ jobs:
           value=`cat ${{ matrix.brand }}.txt`
           echo "do we have a value: $value"
           echo "::set-output name=imageName::$content"
-          echo "${{steps.set_var.outputs.imageName}}"
-      - name: Print the final result
-      - shell: bash
-        run: |
-          echo "hello"
-
-
+          echo "sorted ${{steps.set_var.outputs.imageName}}"
