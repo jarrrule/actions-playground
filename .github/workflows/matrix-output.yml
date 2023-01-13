@@ -30,6 +30,7 @@ jobs:
       matrix:
         brand: [ argos, habitat ]
     steps:
+      - name: Set Rust Target
       - id: set_var
       - uses: actions/download-artifact@v3
         with:
