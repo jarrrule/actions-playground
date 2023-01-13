@@ -42,5 +42,7 @@ jobs:
           echo "::set-output name=imageName::$content"
           echo "${{steps.set_var.outputs.imageName}}"
       - name: Print the final result
+        run: |
+          echo "hello"
 
 
