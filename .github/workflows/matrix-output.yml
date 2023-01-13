@@ -12,7 +12,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: mkdir -p image
       - run: echo "hello image name for ${{matrix.brand}}" > ${{ matrix.brand }}.txt
       - uses: actions/upload-artifact@v3
         with:
@@ -27,9 +26,11 @@ jobs:
         brand: [ argos, habitat ]
 
     steps:
-      - name: Download artifacts
+#      - name: Download artifacts
 #      - id: set_var
-#      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v3
+      - run: echo "hello ${{matrix.brand}}"
+
 #        with:
 #          name: docker-images
 
