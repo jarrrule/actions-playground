@@ -9,10 +9,10 @@ jobs:
         brand: [ argos, habitat ]
 
     runs-on: ubuntu-latest
-    # Map a step output to a job output
-    outputs:
-      output1: ${{ steps.step1.outputs.test }}
-      output2: ${{ steps.step2.outputs.test }}
+    if: ${{ matrix.brand === argos }}
+      outputs:
+        output1: ${{ steps.step1.outputs.test }}
+#      output2: ${{ steps.step2.outputs.test }}
     steps:
       - id: step1
         run: echo "test=hello" >> $GITHUB_OUTPUT
