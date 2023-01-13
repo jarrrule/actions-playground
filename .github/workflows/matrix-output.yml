@@ -38,6 +38,4 @@ jobs:
         run: |
           value=`cat ${{ matrix.brand }}.txt`
           echo "${{ matrix.brand }}-image=$(echo $value)" >> $GITHUB_ENV
-      - name: Test
-      - shell: bash
-        run: echo $habitat-image
+          echo $habitat-image
