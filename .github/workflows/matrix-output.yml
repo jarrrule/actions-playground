@@ -1,23 +1,35 @@
+name: "CI/CD"
+
 on:
   push:
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        brand: [ argos, habitat ]
+        kv:
+          - key: one
+            val: ONE
+          - key: two
+            val: TWO
+          - key: three
+            val: THREE
 
     steps:
       - id: one
         run: |
-          mkdir -p images
-          echo ${{ matrix.brand }} >> outputs/${{ matrix.brand }}.txt
+          mkdir -p pipelines
+          echo ${{ matrix.kv.val }} >> outputs/${{ matrix.kv.key }}.txt
 
       - uses: actions/upload-artifact@v3
         with:
           name: outputs
-          path: outputs/${{ matrix.brand }}.txt
+          path: outputs/*.txt
 
 
   getval:
