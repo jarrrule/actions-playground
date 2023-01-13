@@ -3,8 +3,8 @@ on:
 
 jobs:
   test:
+    runs-on: ubuntu-latest
     strategy:
-      runs-on: ubuntu-latest
       matrix:
         brand: [ argos, habitat ]
 
