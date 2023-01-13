@@ -40,6 +40,7 @@ jobs:
           value=`cat ${{ matrix.brand }}.txt`
           echo "do we have a value: $value"
           echo "::set-output name=imageName::$content"
-      - run: |
-           echo "this should be the image name: ${{steps.set_var.outputs.imageName}}"
+      - shell: bash
+        run: |
+          echo "this should be the image name: ${{steps.set_var.outputs.imageName}}"
 
