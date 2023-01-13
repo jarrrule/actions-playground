@@ -34,8 +34,12 @@ jobs:
         with:
           name: docker-images
 
-      - name: Display structure of downloaded files
-        run: ls -R
+      - name: Set output
+        run: |
+          value=`cat ${{ matrix.brand }}.txt`
+          echo "do we have a value: $value"
+          echo "::set-output name=imageName::$content"
+        #          echo "sorted ${{steps.set_var.outputs.imageName}}"
 
 #      - name: Display structure of downloaded files
 #        run: ls -R
@@ -43,4 +47,4 @@ jobs:
 #          value=`cat ${{ matrix.brand }}.txt`
 #          echo "do we have a value: $value"
 #          echo "::set-output name=imageName::$content"
-##          echo "sorted ${{steps.set_var.outputs.imageName}}"
+#          echo "sorted ${{steps.set_var.outputs.imageName}}"
