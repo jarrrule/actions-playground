@@ -12,20 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        kv:
-          - key: one
-            val: ONE
-          - key: two
-            val: TWO
+        brand: [ argos, habitat ]
 
     steps:
       - uses: actions/checkout@v3
 
       - run: mkdir -p path/to/artifact
 
-      - run: echo hello > path/to/artifact/world.txt
+      - run: echo "hello image name for ${{matrix.brand}}" > path/to/artifact/${{ matrix.brand }}.txt
 
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: path/to/artifact/world.txt
+          path: path/to/artifact/${{ matrix.brand }}.txt
