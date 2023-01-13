@@ -28,13 +28,12 @@ jobs:
 
     steps:
       - name: Download artifacts
-        id: set_var
         uses: actions/download-artifact@v3
-#        run: echo "hello ${{matrix.brand}}"
         with:
           name: docker-images
 
       - name: Set output
+        id: set_var
         run: |
           value=`cat ${{ matrix.brand }}.txt`
           echo "do we have a value: $value"
@@ -42,4 +41,4 @@ jobs:
 
       - name: echo env var
         run: |
-          echo "we have it $imageName"
+          echo "we have it at last : ${{ steps.set_var.outputs.imageName}}"
