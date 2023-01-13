@@ -30,17 +30,14 @@ jobs:
       matrix:
         brand: [ argos, habitat ]
     steps:
-      - name: Set Rust Target
+      - name: Download artifacts
       - id: set_var
       - uses: actions/download-artifact@v3
         shell: bash
         with:
           name: docker-images
-        run: |
-          value=`cat ${{ matrix.brand }}.txt`
-          echo "do we have a value: $value"
-          echo "::set-output name=imageName::$content"
-#          echo "sorted ${{steps.set_var.outputs.imageName}}"
-      - name: Set Rust Target
-        shell: bash
-        run: rustup target add ${{ matrix.brand }}
+#        run: |
+#          value=`cat ${{ matrix.brand }}.txt`
+#          echo "do we have a value: $value"
+#          echo "::set-output name=imageName::$content"
+##          echo "sorted ${{steps.set_var.outputs.imageName}}"
