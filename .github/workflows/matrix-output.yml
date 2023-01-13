@@ -34,8 +34,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: docker-images
-      - shell: bash
         run: |
           value=`cat ${{ matrix.brand }}.txt`
-          echo "${{ matrix.brand }}-image=$(echo $value)" >> $GITHUB_ENV
+          echo "HABITAT_IMAGE=$(echo $value)" >> $GITHUB_ENV
           env
