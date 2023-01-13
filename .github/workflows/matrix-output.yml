@@ -33,6 +33,7 @@ jobs:
       - name: Set Rust Target
       - id: set_var
       - uses: actions/download-artifact@v3
+        shell: bash
         with:
           name: docker-images
         run: |
@@ -41,5 +42,5 @@ jobs:
           echo "::set-output name=imageName::$content"
 #          echo "sorted ${{steps.set_var.outputs.imageName}}"
       - name: Set Rust Target
-        run: rustup target add ${{ matrix.brand }}
         shell: bash
+        run: rustup target add ${{ matrix.brand }}
