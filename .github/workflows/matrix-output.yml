@@ -33,7 +33,6 @@ jobs:
       - name: Download artifacts
       - id: set_var
       - uses: actions/download-artifact@v3
-        shell: bash
         with:
           name: docker-images
 #        run: |
