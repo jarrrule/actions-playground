@@ -28,11 +28,10 @@ jobs:
 
     steps:
       - name: Download artifacts
-      - id: set_var
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
-        with:
-          name: docker-images
+#      - id: set_var
+#      - uses: actions/download-artifact@v3
+#        with:
+#          name: docker-images
 
 #      - name: Display structure of downloaded files
 #        run: ls -R
