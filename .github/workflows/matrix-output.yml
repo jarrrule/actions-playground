@@ -37,8 +37,8 @@ jobs:
         run: |
           value=`cat ${{ matrix.brand }}.txt`
           echo "do we have a value: $value"
-          echo "::set-output name=imageName::$value"
+          echo "imageName=$value" >> $GITHUB_OUTPUT
 
       - name: echo env var
         run: |
-          echo "we have it at last : ${{ steps.set_var.outputs.imageName}}"
+          echo "we have it at last : ${{ env.imageName}}"
