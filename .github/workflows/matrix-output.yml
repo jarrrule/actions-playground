@@ -31,11 +31,9 @@ jobs:
         brand: [ argos, habitat ]
     steps:
       - id: set_var
-      - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
         with:
           name: docker-images
-      - shell: bash
         run: |
           value=`cat ${{ matrix.brand }}.txt`
           echo "do we have a value: $value"
