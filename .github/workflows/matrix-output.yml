@@ -3,6 +3,11 @@ on:
 
 jobs:
   job1:
+    strategy:
+      matrix:
+        env: [ dev ]
+        brand: [ argos, habitat ]
+
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
