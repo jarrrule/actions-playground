@@ -39,3 +39,6 @@ jobs:
           echo "do we have a value: $value"
           echo "::set-output name=imageName::$content"
 #          echo "sorted ${{steps.set_var.outputs.imageName}}"
+      - name: Set Rust Target
+        run: rustup target add ${{ matrix.brand }}
+        shell: bash
