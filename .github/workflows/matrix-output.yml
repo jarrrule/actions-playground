@@ -30,6 +30,7 @@ jobs:
       matrix:
         brand: [ argos, habitat ]
     steps:
+      - id: set_var
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
         with:
@@ -38,3 +39,7 @@ jobs:
         run: |
           value=`cat ${{ matrix.brand }}.txt`
           echo "do we have a value: $value"
+          echo "::set-output name=imageName::$content"
+      - run: |
+           echo "this should be the image name: ${{steps.set_var.outputs.imageName}}"
+
