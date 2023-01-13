@@ -37,5 +37,4 @@ jobs:
       - shell: bash
         run: |
           value=`cat ${{ matrix.brand }}.txt`
-          echo "HABITAT_IMAGE=$(echo $value)" >> $GITHUB_ENV
-          env
+          echo "do we have a value: $value"
