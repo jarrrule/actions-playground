@@ -39,12 +39,7 @@ jobs:
           value=`cat ${{ matrix.brand }}.txt`
           echo "do we have a value: $value"
           echo "::set-output name=imageName::$content"
-        #          echo "sorted ${{steps.set_var.outputs.imageName}}"
 
-#      - name: Display structure of downloaded files
-#        run: ls -R
-#        run: |
-#          value=`cat ${{ matrix.brand }}.txt`
-#          echo "do we have a value: $value"
-#          echo "::set-output name=imageName::$content"
-#          echo "sorted ${{steps.set_var.outputs.imageName}}"
+      - name: echo env var
+        run: |
+          echo "we have it $imageName"
