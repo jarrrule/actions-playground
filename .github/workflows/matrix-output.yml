@@ -19,6 +19,7 @@ jobs:
           path: ${{ matrix.brand }}.txt
 
   pick:
+    name: Docker image
     needs: test
     runs-on: ubuntu-latest
     strategy:
@@ -29,9 +30,9 @@ jobs:
       - name: Download artifacts
         id: set_var
         uses: actions/download-artifact@v3
-        run: echo "hello ${{matrix.brand}}"
-#        with:
-#          name: docker-images
+#        run: echo "hello ${{matrix.brand}}"
+        with:
+          name: docker-images
 
 #      - name: Display structure of downloaded files
 #        run: ls -R
