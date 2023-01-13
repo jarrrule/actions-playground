@@ -27,9 +27,9 @@ jobs:
 
     steps:
       - name: Download artifacts
-      - id: set_var
-      - uses: actions/download-artifact@v3
-      - run: echo "hello ${{matrix.brand}}"
+        id: set_var
+        uses: actions/download-artifact@v3
+        run: echo "hello ${{matrix.brand}}"
 #        with:
 #          name: docker-images
 
