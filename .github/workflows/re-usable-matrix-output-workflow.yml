@@ -1,6 +1,11 @@
 on:
   workflow_call:
-    # Map the workflow outputs to job outputs
+    inputs:
+      brand:
+        description: 'Name from the caller workflow'
+        default: 'bob'
+        required: true
+        type: string
     outputs:
       argosTag:
         description: "The first output string"
@@ -19,6 +24,9 @@ jobs:
       habitatTag: ${{ steps.habitat.outputs.dockerTag }}
     steps:
       - id: argos
-        run: echo "dockerTag=argos" >> $GITHUB_OUTPUT
+        run: |
+          echo "dockerTag=argos" >> $GITHUB_OUTPUT
+        if: startsWith(inputs.brand , 'argos')
       - id: habitat
         run: echo "dockerTag=habitat" >> $GITHUB_OUTPUT
+        if: startsWith(inputs.brand , 'habitat')
