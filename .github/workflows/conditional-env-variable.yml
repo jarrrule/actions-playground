@@ -22,5 +22,8 @@ jobs:
         brand: [ argos, habitat ]
 
     steps:
-      - run: echo ${{ needs.test.outputs['argosTag'] }} ${{ needs.test.outputs.habitatTag }}
+      run: |
+        echo "dockerTag=argos" >> $GITHUB_ENV
+      if: contains(matrix.brand , 'argos')
+        echo "docker tags is ${{ env.dockerTag }}"
 
