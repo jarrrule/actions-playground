@@ -18,8 +18,12 @@ jobs:
 
       - name: Sets argoa docker env var
         run: |
-          echo "argosTag=blar blar blar" >> $GITHUB_ENV
+          echo "ARGOS_TAG=blar blar blar" >> $GITHUB_ENV
 #        if: startsWith(matrix.brand, 'argos')
+
+      - name: cAN WE SEE IT HERE
+        run: |
+          echo "this should be argos tag ${{ env.argosTag }}"
 
   pick:
     name: Docker image names
