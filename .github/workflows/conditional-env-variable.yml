@@ -9,7 +9,7 @@ jobs:
       matrix:
         brand: [ argos, habitat ]
 
-    uses: re-usable-matrix-output-workflow.yml
+    uses: ./.github/workflows/re-usable-matrix-output-workflow.yml
 
   pick:
     name: Docker image names
