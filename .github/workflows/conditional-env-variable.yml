@@ -32,5 +32,5 @@ jobs:
     steps:
       - name: Set output
         run: |
-          echo "this should be argos tag ${{ env.argosTag }}"
+          echo "this should be argos tag $argosTag"
 
