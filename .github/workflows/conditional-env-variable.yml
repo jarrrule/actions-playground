@@ -20,5 +20,5 @@ jobs:
         brand: [ argos, habitat ]
 
     steps:
-      - run: echo ${{ needs.job1.outputs.argosTag }} ${{ needs.job1.outputs.habitatTag }}
+      - run: echo ${{ needs.test.outputs.argosTag }} ${{ needs.test.outputs.habitatTag }}
 
