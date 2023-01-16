@@ -3,6 +3,10 @@ name: "Conditional envs"
 on:
   push:
 
+env:
+  ARGOS_IMAGE_TAG:
+  HABITAT_IMAGE_TAG:
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -18,12 +22,12 @@ jobs:
 
       - name: Sets argoa docker env var
         run: |
-          echo "ARGOS_TAG=blar blar blar" >> $GITHUB_ENV
+          echo "ARGOS_IMAGE_TAG=blar blar blar" >> $GITHUB_ENV
 #        if: startsWith(matrix.brand, 'argos')
 
       - name: cAN WE SEE IT HERE
         run: |
-          echo "this should be argos tag ${{ env.ARGOS_TAG }}"
+          echo "this should be argos tag ${{ env.ARGOS_IMAGE_TAG }}"
 
   pick:
     name: Docker image names
@@ -36,5 +40,5 @@ jobs:
     steps:
       - name: Set output
         run: |
-          echo "this should be argos tag ${{ env.ARGOS_TAG }}"
+          echo "this should be argos tag ${{ env.ARGOS_IMAGE_TAG }}"
 
