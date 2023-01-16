@@ -1,0 +1,24 @@
+on:
+  workflow_call:
+    # Map the workflow outputs to job outputs
+    outputs:
+      argosTag:
+        description: "The first output string"
+        value: ${{ jobs.example_job.outputs.argosTag }}
+      habitatTag:
+        description: "The second output string"
+        value: ${{ jobs.example_job.outputs.habitatTag }}
+
+jobs:
+  example_job:
+    name: Generate output
+    runs-on: ubuntu-latest
+    # Map the job outputs to step outputs
+    outputs:
+      argosTag: ${{ steps.argos.outputs.dockerTag }}
+      habitatTag: ${{ steps.habitat.outputs.dockerTag }}
+    steps:
+      - id: argos
+        run: echo "dockerTag=argos" >> $GITHUB_OUTPUT
+      - id: habitat
+        run: echo "dockerTag=habitat" >> $GITHUB_OUTPUT

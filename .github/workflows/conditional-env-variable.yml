@@ -5,24 +5,11 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    outputs:
-      argosTag: ${{ steps.step1.outputs.argosTag }}
-      habitatTag: ${{ steps.step2.outputs.habitatTag }}
     strategy:
       matrix:
         brand: [ argos, habitat ]
 
-    steps:
-      - name: Sets habitat docker env var
-        run: |
-          echo "habitatTag=blar blar blar${{ matrix.brand }}" >> $GITHUB_OUTPUT
-        if: startsWith(matrix.brand, 'habitat')
-
-      - name: Sets argos docker env var
-        run: |
-          echo "argosTag=blar blar blar${{ matrix.brand }}" >> $GITHUB_OUTPUT
-        if: startsWith(matrix.brand, 'argos')
+    uses: re-usable-matrix-output-workflow.yml
 
   pick:
     name: Docker image names
@@ -33,7 +20,5 @@ jobs:
         brand: [ argos, habitat ]
 
     steps:
-      - name: Set output
-        run: |
-          echo "this should be argos tag ${{ needs.test.outputs.argosTag }}"
+      - run: echo ${{ needs.job1.outputs.argosTag }} ${{ needs.job1.outputs.habitatTag }}
 
