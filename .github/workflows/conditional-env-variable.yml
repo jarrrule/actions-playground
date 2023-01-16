@@ -1,0 +1,36 @@
+name: "Conditional envs"
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        brand: [ argos, habitat ]
+
+    steps:
+      - name: Sets habitat docker env var
+        run: |
+          echo "HABITAT_TAG=${{ matrix.brand }}" >> $GITHUB_ENV
+        if: startsWith(matrix.brand, 'habitat')
+
+      - name: Sets argoa docker env var
+        run: |
+          echo "ARGOS_TAG=${{ matrix.brand }}" >> $GITHUB_ENV
+        if: startsWith(matrix.brand, 'argos')
+
+  pick:
+    name: Docker image names
+    needs: test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        brand: [ argos, habitat ]
+
+    steps:
+      - name: Set output
+        run: |
+          echo "this should be argos tag ${{ env.ARGOS_TAG }}
+
