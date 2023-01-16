@@ -22,9 +22,10 @@ jobs:
         brand: [ argos, habitat ]
 
     steps:
-      run: |
-        echo "dockerTag=argos" >> $GITHUB_ENV
-      if: contains(matrix.brand , 'argos')
-      name: show tag id
-      - run: echo "docker tags is ${{ env.dockerTag }}"
+      - name: set env for docker tag
+        run: |
+          echo "dockerTag=argos" >> $GITHUB_ENV
+        if: contains(matrix.brand , 'argos')
+      - name: show tag id
+        run: echo "docker tags is ${{ env.dockerTag }}"
 
