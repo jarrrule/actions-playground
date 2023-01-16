@@ -16,12 +16,12 @@ jobs:
     steps:
       - name: Sets habitat docker env var
         run: |
-          echo "HABITAT_TAG=blar blar blar${{ matrix.brand }}" >> $GITHUB_OUTPUT
+          echo "habitatTag=blar blar blar${{ matrix.brand }}" >> $GITHUB_OUTPUT
         if: startsWith(matrix.brand, 'habitat')
 
       - name: Sets argos docker env var
         run: |
-          echo "ARGOS_TAG=blar blar blar${{ matrix.brand }}" >> $GITHUB_OUTPUT
+          echo "argosTag=blar blar blar${{ matrix.brand }}" >> $GITHUB_OUTPUT
         if: startsWith(matrix.brand, 'argos')
 
   pick:
@@ -36,5 +36,4 @@ jobs:
       - name: Set output
         run: |
           echo "this should be argos tag ${{ needs.test.outputs.argosTag }}"
-          echo "this should be argos tag ${{ needs.test.outputs.habitatTag }}"
 
