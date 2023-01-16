@@ -23,7 +23,7 @@ jobs:
 
       - name: cAN WE SEE IT HERE
         run: |
-          echo "this should be argos tag ${{ env.argosTag }}"
+          echo "this should be argos tag ${{ env.ARGOS_TAG }}"
 
   pick:
     name: Docker image names
@@ -36,5 +36,5 @@ jobs:
     steps:
       - name: Set output
         run: |
-          echo "this should be argos tag $argosTag"
+          echo "this should be argos tag ${{ env.ARGOS_TAG }}"
 
