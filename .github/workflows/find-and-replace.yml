@@ -1,0 +1,19 @@
+name: "find and replace"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        brand: [ argos, habitat ]
+        deploy-suffix: [ brand, brand-stub]
+
+      name: Run find-and-replace to remove refs/heads/
+        uses: mad9000/actions-find-and-replace-string@1
+        id: findandreplace
+        with:
+          source: ${{ matrix.deploy-suffix }}
+          find: 'brand'
+          replace: ${{ matrix.brand }}
