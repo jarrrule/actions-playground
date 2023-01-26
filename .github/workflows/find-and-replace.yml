@@ -2,16 +2,17 @@ name: "find and replace"
 
 on:
   workflow_dispatch:
-
 jobs:
-  test:
-    strategy:
-      matrix:
-        brand: [ argos, habitat ]
-        deploy-suffix: [ brand, brand-stub]
-
-    uses: mad9000/actions-find-and-replace-string@1
-    with:
-      source: ${{ matrix.deploy-suffix }}
-      find: 'brand'
-      replace: ${{ matrix.brand }}
+  find-and-replace-job:
+    runs-on: ubuntu-latest
+    name: 'Find and replace on a string'
+    steps:
+      - name: Run find-and-replace to generate deploy-suffix
+        uses: mad9000/actions-find-and-replace-string@1
+        id: findandreplace
+        with:
+          source: ${{ brand-stub }}
+          find: 'brand'
+          replace: 'argos'
+      - name: Get the above output
+        run: echo "The replaced value is ${{ steps.findandreplace.outputs.value }}"
