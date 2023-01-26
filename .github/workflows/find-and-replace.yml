@@ -10,7 +10,7 @@ jobs:
         brand: [ argos, habitat ]
         deploy-suffix: [ brand, brand-stub]
 
-      name: Run find-and-replace to remove refs/heads/
+      - name: Run find-and-replace to generate deploy-suffix
         uses: mad9000/actions-find-and-replace-string@1
         id: findandreplace
         with:
