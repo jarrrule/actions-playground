@@ -11,8 +11,8 @@ jobs:
         uses: mad9000/actions-find-and-replace-string@1
         id: findandreplace
         with:
-          source: ${{ brand-stub }}
-          find: 'brand'
-          replace: 'argos'
+          source: brand-stub
+          find: brand
+          replace: argos
       - name: Get the above output
         run: echo "The replaced value is ${{ steps.findandreplace.outputs.value }}"
