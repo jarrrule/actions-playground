@@ -9,8 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       -name: list directory
-      run: |
-        ls
+       run: |
+         ls
       - uses: ./.github/actions/deploy-suffix
         name: get deploy-suffix from action
         id: deploy-suffix
