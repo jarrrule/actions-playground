@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: list directory
         run: |
-          ls
+          ls -a
       - uses: ./.github/actions/deploy-suffix
         name: get deploy-suffix from action
         id: deploy-suffix
