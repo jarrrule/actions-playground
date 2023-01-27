@@ -1,11 +1,11 @@
-var $9RTY0$actionscore = require("@actions/core");
+var $eN5AE$actionscore = require("@actions/core");
 require("@actions/github");
 
 
 
-const $d05e830f84c91b0b$var$brand = $d05e830f84c91b0b$var$brand.getInput("brand");
-console.log(`what is the brand ${$d05e830f84c91b0b$var$brand}`);
-$9RTY0$actionscore.setOutput("deploy-suffix", `deploy-suffix from action ${$d05e830f84c91b0b$var$brand}`);
+const $9942db6d6e98b381$var$brand = $9942db6d6e98b381$var$brand.getInput("brand");
+console.log(`what is the brand ${$9942db6d6e98b381$var$brand}`);
+$eN5AE$actionscore.setOutput("deploy-suffix", `deploy-suffix from action ${$9942db6d6e98b381$var$brand}`);
 
 
 //# sourceMappingURL=index.js.map
