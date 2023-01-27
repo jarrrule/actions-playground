@@ -7,13 +7,13 @@
   "author": "sean darley <sean.darley@sainsburys.co.uk>",
   "license": "MIT",
   "scripts": {
-    "build": "parcel build"
+    "build": "ncc build ./.github/actions/deploy/src/index.js -o ./.github/actions/deploy/dist"
   },
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1"
   },
   "devDependencies": {
-    "parcel": "^2.8.3"
+    "@zeit/ncc": "^0.22.3"
   }
 }
