@@ -11,7 +11,7 @@ jobs:
       - name: list directory
         run: |
           ls -a
-      - uses: ./.github/actions/deploy-suffix
+      - uses: ./.github/actions/deploy
         name: get deploy-suffix from action
         id: deploy-suffix
         with:
