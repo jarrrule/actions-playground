@@ -8,7 +8,7 @@ jobs:
     name: 'Geneate the deploy suffix for sub-environment'
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/deploy-suffix
+      - uses: .github/actions/deploy-suffix
         name: get deploy-suffix from action
         id: deploy-suffix
         with:
