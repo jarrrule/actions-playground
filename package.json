@@ -1,0 +1,19 @@
+{
+  "name": "actions-playground",
+  "version": "1.0.0",
+  "source": ".github/actions/deploy-suffix/src/index.js",
+  "main": "dist/index.js",
+  "repository": "git@github.com:jarrrule/actions-playground.git",
+  "author": "sean darley <sean.darley@sainsburys.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

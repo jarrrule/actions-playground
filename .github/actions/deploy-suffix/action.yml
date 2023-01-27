@@ -1,0 +1,21 @@
+name: deploy-suffix
+author: Sean Darley
+description: geneate deploy-suffix for sub-environments
+inputs:
+  brand:
+    description: brand to deploy
+    required: false
+    default: ''
+  deploy-suffix:
+    description: deploy-suffix to potentially modify
+    required: false
+    default: ''
+  placeholder:
+    description: value to replace if
+    required: false
+outputs:
+  deploy-suffix:
+    description: deploy-suffix for sub-environment, will form part of the url
+runs:
+  using: node16
+  main: dist/index.js
