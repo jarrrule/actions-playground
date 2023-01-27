@@ -16,4 +16,8 @@ jobs:
         id: deploy-suffix
         with:
           brand: argos
+          placeholder: '****'
+          deploy-suffix: '****-stub'
+      - name: output deploy-suffix
+        run: echo ${{  steps.deploy-suffix.outputs.value }}
 

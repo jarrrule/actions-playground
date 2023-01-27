@@ -5,7 +5,7 @@ const placeholder = core.getInput('placeholder')
 const brand = core.getInput('brand')
 
 if (placeholder) {
-  core.setOutput('deploy-suffix',  deploySuffix.replace(placeholder, brand))
+  core.setOutput('value',  deploySuffix.replace(placeholder, brand))
 } else {
-  core.setOutput('deploy-suffix', deploySuffix)
+  core.setOutput('value', deploySuffix)
 }
