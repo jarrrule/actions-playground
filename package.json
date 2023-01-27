@@ -1,8 +1,6 @@
 {
   "name": "actions-playground",
   "version": "1.0.0",
-  "source": "./.github/actions/deploy/src/index.js",
-  "main": "./.github/actions/deploy/dist/index.js",
   "repository": "git@github.com:jarrrule/actions-playground.git",
   "author": "sean darley <sean.darley@sainsburys.co.uk>",
   "license": "MIT",

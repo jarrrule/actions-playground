@@ -4768,7 +4768,7 @@ exports.default = _default;
 const core = __webpack_require__(470)
 const github = __webpack_require__(469)
 
-const brand = brand.getInput('brand')
+const brand = core.getInput('brand')
 console.log(`what is the brand ${brand}`)
 core.setOutput('deploy-suffix', `deploy-suffix from action ${brand}`)
 
