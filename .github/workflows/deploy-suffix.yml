@@ -16,7 +16,7 @@ jobs:
         id: deploy-suffix
         with:
           brand: argos
-          deploy-suffix: ${{ github.head_ref }}
+          deploy-suffix: 'features/NAV-1898-blar-blar'
       - name: output deploy-suffix
         run: echo ${{  steps.deploy-suffix.outputs.value }}
 
