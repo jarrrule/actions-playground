@@ -1,0 +1,98 @@
+{
+  "7acaaece7a53a3be6f27531446de2095" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3f2cbb02b86dc182",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666347258377,
+        "stop" : 1666347258877,
+        "duration" : 500
+      }
+    } ]
+  },
+  "a2813a3383917f38d8d6c4aee9e5479d" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "12100aef3e035753",
+      "status" : "failed",
+      "statusDetails" : "Error: Expect $(`[data-test=\"argos-card-prompt-link\"]`) to be displayed",
+      "time" : {
+        "start" : 1666282540244,
+        "stop" : 1666282547046,
+        "duration" : 6802
+      }
+    } ]
+  },
+  "1fcdeed80aa58c99dde86e362a7b77be" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1f7bec2453d4f499",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666347258877,
+        "stop" : 1666347259280,
+        "duration" : 403
+      }
+    } ]
+  },
+  "cdead083cbeac24f3354a85c3ca5ef66" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "67620d03ff9f071b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666291731721,
+        "stop" : 1666291733591,
+        "duration" : 1870
+      }
+    } ]
+  },
+  "405dd568af0fb867c2254ae31fe65baa" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ca7431d43dfe504",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666291904382,
+        "stop" : 1666291907426,
+        "duration" : 3044
+      }
+    } ]
+  }
+}

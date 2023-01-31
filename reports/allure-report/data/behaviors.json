@@ -1,0 +1,70 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Argos credit banner proposition",
+    "uid" : "12100aef3e035753",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1666282540244,
+      "stop" : 1666282547046,
+      "duration" : 6802
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+  }, {
+    "name" : "Search bar displays",
+    "uid" : "67620d03ff9f071b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1666291731721,
+      "stop" : 1666291733591,
+      "duration" : 1870
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+  }, {
+    "name" : "Dismiss search term",
+    "uid" : "ca7431d43dfe504",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1666291904382,
+      "stop" : 1666291907426,
+      "duration" : 3044
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+  }, {
+    "name" : "Events page CMS API proxy",
+    "uid" : "3f2cbb02b86dc182",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1666347258377,
+      "stop" : 1666347258877,
+      "duration" : 500
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+  }, {
+    "name" : "Homepage CMS API proxy",
+    "uid" : "1f7bec2453d4f499",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1666347258877,
+      "stop" : 1666347259280,
+      "duration" : 403
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+  } ]
+}

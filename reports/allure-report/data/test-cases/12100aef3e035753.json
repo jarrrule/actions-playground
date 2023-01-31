@@ -1,0 +1,121 @@
+{
+  "uid" : "12100aef3e035753",
+  "name" : "Argos credit banner proposition",
+  "fullName" : "Argos credit banner is present.Argos credit banner proposition",
+  "historyId" : "a2813a3383917f38d8d6c4aee9e5479d",
+  "time" : {
+    "start" : 1666282540244,
+    "stop" : 1666282547046,
+    "duration" : 6802
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Expect $(`[data-test=\"argos-card-prompt-link\"]`) to be displayed",
+  "statusTrace" : "Error: Expect $(`[data-test=\"argos-card-prompt-link\"]`) to be displayed\n                \n                Expected: \"displayed\"\n                Received: \"not displayed\"\n                    at World.<anonymous> (/Users/sean.darley/projects/argos-ui-global-service/test/support/step_definitions/argos_credit_banner_is_present_steps.js:7:57)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Error: Expect $(`[data-test=\"argos-card-prompt-link\"]`) to be displayed",
+    "statusTrace" : "Error: Expect $(`[data-test=\"argos-card-prompt-link\"]`) to be displayed\n                \n                Expected: \"displayed\"\n                Received: \"not displayed\"\n                    at World.<anonymous> (/Users/sean.darley/projects/argos-ui-global-service/test/support/step_definitions/argos_credit_banner_is_present_steps.js:7:57)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+    "steps" : [ {
+      "name" : "Given I navigate to the homepage",
+      "time" : {
+        "start" : 1666282540247,
+        "stop" : 1666282542033,
+        "duration" : 1786
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see the argos credit banner",
+      "time" : {
+        "start" : 1666282542033,
+        "stop" : 1666282547046,
+        "duration" : 5013
+      },
+      "status" : "failed",
+      "statusMessage" : "Error: Expect $(`[data-test=\"argos-card-prompt-link\"]`) to be displayed\n                \n                Expected: \"displayed\"\n                Received: \"not displayed\"\n                    at World.<anonymous> (/Users/sean.darley/projects/argos-ui-global-service/test/support/step_definitions/argos_credit_banner_is_present_steps.js:7:57)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Argos credit banner is present"
+  }, {
+    "name" : "testClass",
+    "value" : "Argos credit banner is present"
+  }, {
+    "name" : "testMethod",
+    "value" : "Argos credit banner proposition"
+  }, {
+    "name" : "package",
+    "value" : "Argos credit banner is present"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-106.0.0.0"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 99.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "10892829c2e3fe33",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666282406839,
+        "stop" : 1666282408642,
+        "duration" : 1803
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "12100aef3e035753.json",
+  "parameterValues" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+}

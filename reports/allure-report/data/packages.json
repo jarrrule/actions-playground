@@ -1,0 +1,82 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "Argos credit banner is present",
+    "children" : [ {
+      "name" : "Argos credit banner proposition",
+      "uid" : "12100aef3e035753",
+      "parentUid" : "81d73baa7bb971bf5118bed4f79624ae",
+      "status" : "failed",
+      "time" : {
+        "start" : 1666282540244,
+        "stop" : 1666282547046,
+        "duration" : 6802
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+    } ],
+    "uid" : "81d73baa7bb971bf5118bed4f79624ae"
+  }, {
+    "name" : "Search bar",
+    "children" : [ {
+      "name" : "Search bar displays",
+      "uid" : "67620d03ff9f071b",
+      "parentUid" : "811b2d69f03c80bb0e6bced4cf1082ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666291731721,
+        "stop" : 1666291733591,
+        "duration" : 1870
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+    }, {
+      "name" : "Dismiss search term",
+      "uid" : "ca7431d43dfe504",
+      "parentUid" : "811b2d69f03c80bb0e6bced4cf1082ff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666291904382,
+        "stop" : 1666291907426,
+        "duration" : 3044
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+    } ],
+    "uid" : "811b2d69f03c80bb0e6bced4cf1082ff"
+  }, {
+    "name" : "API proxies",
+    "children" : [ {
+      "name" : "Events page CMS API proxy",
+      "uid" : "3f2cbb02b86dc182",
+      "parentUid" : "f3e114b31fe9fe94726b0df08a2a225e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666347258377,
+        "stop" : 1666347258877,
+        "duration" : 500
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+    }, {
+      "name" : "Homepage CMS API proxy",
+      "uid" : "1f7bec2453d4f499",
+      "parentUid" : "f3e114b31fe9fe94726b0df08a2a225e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1666347258877,
+        "stop" : 1666347259280,
+        "duration" : 403
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "Chrome-106.0.0.0", "Windows 10 Chrome 99.0", "@test" ]
+    } ],
+    "uid" : "f3e114b31fe9fe94726b0df08a2a225e"
+  } ]
+}

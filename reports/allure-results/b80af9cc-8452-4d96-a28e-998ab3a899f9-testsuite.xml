@@ -1,0 +1,45 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1666346067157' stop='1666346075923'>
+    <name>API proxies</name>
+    <title>API proxies</title>
+    <test-cases>
+        <test-case start='1666346075132' status='failed' stop='1666346075921'>
+            <name>Events page CMS API proxy</name>
+            <title>Events page CMS API proxy</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-106.0.0.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://ui-global-service-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1666346075135' status='passed' stop='1666346075914'>
+                    <name>Given I request the global-api cms events endpoint</name>
+                    <title>Given I request the global-api cms events endpoint</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1666346075914' status='failed' stop='1666346075920'>
+                    <name>Then I should see the correct api response</name>
+                    <title>Then I should see the correct api response</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>SyntaxError: Unexpected token o in JSON at position 1</message>
+                <stack-trace>SyntaxError: Unexpected token o in JSON at position 1
+                    at JSON.parse (&lt;anonymous>)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/argos-ui-global-service/test/support/step_definitions/api_proxy_steps.js:20:38)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
