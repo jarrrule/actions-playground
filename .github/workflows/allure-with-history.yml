@@ -6,6 +6,7 @@ on:
 
 jobs:
   allure:
+    runs-on: ubuntu-latest
     steps:
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
