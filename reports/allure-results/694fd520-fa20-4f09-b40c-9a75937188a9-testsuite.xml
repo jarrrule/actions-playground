@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650442880661' stop='1650442892698'>
+    <name>Feedback on search results page</name>
+    <title>Feedback on search results page</title>
+    <test-cases>
+        <test-case start='1650442884741' status='passed' stop='1650442892696'>
+            <name>Pre-push The feedback box should be reset when the user navigates to a different search term</name>
+            <title>Pre-push The feedback box should be reset when the user navigates to a different search term</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-5'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1650442884755' status='passed' stop='1650442892680'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650442892680' status='passed' stop='1650442892693'>
+                    <name>Then I should see a feedback box asking if the results were helpful</name>
+                    <title>Then I should see a feedback box asking if the results were helpful</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

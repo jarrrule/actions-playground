@@ -1,0 +1,102 @@
+{
+  "uid" : "f6944ccb89876ab4",
+  "name" : "Pre-push The feedback box should be reset when the user navigates to a different search term",
+  "fullName" : "Feedback on search results page.Pre-push The feedback box should be reset when the user navigates to a different search term",
+  "historyId" : "d29d60acedcc0eef6e4f6052631c340f",
+  "time" : {
+    "start" : 1650442720224,
+    "stop" : 1650442734382,
+    "duration" : 14158
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"search\" page",
+      "time" : {
+        "start" : 1650442720235,
+        "stop" : 1650442734354,
+        "duration" : 14119
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see a feedback box asking if the results were helpful",
+      "time" : {
+        "start" : 1650442734354,
+        "stop" : 1650442734380,
+        "duration" : 26
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-4"
+  }, {
+    "name" : "suite",
+    "value" : "Feedback on search results page"
+  }, {
+    "name" : "testClass",
+    "value" : "Feedback on search results page"
+  }, {
+    "name" : "testMethod",
+    "value" : "Pre-push The feedback box should be reset when the user navigates to a different search term"
+  }, {
+    "name" : "package",
+    "value" : "Feedback on search results page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Mobile Safari-11.0"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@prepush"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f6944ccb89876ab4.json",
+  "parameterValues" : [ "Mobile Safari-11.0", "Windows 10 Chrome 96.0", "@prepush" ]
+}

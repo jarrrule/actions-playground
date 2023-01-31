@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1649414069209' stop='1649414088884'>
+    <name>Canned Search</name>
+    <title>Canned Search</title>
+    <test-cases>
+        <test-case start='1649414075885' status='passed' stop='1649414088883'>
+            <name>Serving 1 citrus ads canned search /list/test-test-test/ (desktop/tablet)</name>
+            <title>Serving 1 citrus ads canned search /list/test-test-test/ (desktop/tablet)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.75'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1649414079401' status='passed' stop='1649414088848'>
+                    <name>Given I navigate to a "canned search test" page</name>
+                    <title>Given I navigate to a "canned search test" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649414088848' status='passed' stop='1649414088872'>
+                    <name>Then I should see some search results</name>
+                    <title>Then I should see some search results</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649414088872' status='passed' stop='1649414088881'>
+                    <name>And I should see 1 citrus sponsored products listed in position 4</name>
+                    <title>And I should see 1 citrus sponsored products listed in position 4</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

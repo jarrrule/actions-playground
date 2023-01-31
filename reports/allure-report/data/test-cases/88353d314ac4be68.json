@@ -1,0 +1,147 @@
+{
+  "uid" : "88353d314ac4be68",
+  "name" : "Clicking the wishlist icon on a browse lister page",
+  "fullName" : "Add to Wishlist.Clicking the wishlist icon on a browse lister page",
+  "historyId" : "852982469277a40fbc148a8267d89aa0",
+  "time" : {
+    "start" : 1660679585289,
+    "stop" : 1660679594137,
+    "duration" : 8848
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"browse\" page",
+      "time" : {
+        "start" : 1660679585296,
+        "stop" : 1660679590359,
+        "duration" : 5063
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I click the heart icon on a product",
+      "time" : {
+        "start" : 1660679590359,
+        "stop" : 1660679592593,
+        "duration" : 2234
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see the wish list tool tip",
+      "time" : {
+        "start" : 1660679592593,
+        "stop" : 1660679592606,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I click the wish list tool tip close icon",
+      "time" : {
+        "start" : 1660679592606,
+        "stop" : 1660679594123,
+        "duration" : 1517
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should not see the wish list tool tip",
+      "time" : {
+        "start" : 1660679594123,
+        "stop" : 1660679594135,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Add to Wishlist"
+  }, {
+    "name" : "testClass",
+    "value" : "Add to Wishlist"
+  }, {
+    "name" : "testMethod",
+    "value" : "Clicking the wishlist icon on a browse lister page"
+  }, {
+    "name" : "package",
+    "value" : "Add to Wishlist"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-104.0.5112.79"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 99.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "88353d314ac4be68.json",
+  "parameterValues" : [ "Chrome-104.0.5112.79", "Windows 10 Chrome 99.0", "@test" ]
+}

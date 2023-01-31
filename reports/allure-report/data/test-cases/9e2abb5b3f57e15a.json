@@ -1,0 +1,122 @@
+{
+  "uid" : "9e2abb5b3f57e15a",
+  "name" : "Navigate down through the search taxonomy",
+  "fullName" : "Category facet.Navigate down through the search taxonomy",
+  "historyId" : "26fc590ec47dd8d751b9afce4aac061",
+  "time" : {
+    "start" : 1650991452009,
+    "stop" : 1650991460098,
+    "duration" : 8089
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality",
+  "statusTrace" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: true\n                Received: false\n                    at /Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/category_steps.js:19:53\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at FilterPanel.requiresExpandedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:233:5)\n                    at World.<anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/category_steps.js:18:3)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality",
+    "statusTrace" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: true\n                Received: false\n                    at /Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/category_steps.js:19:53\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at FilterPanel.requiresExpandedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:233:5)\n                    at World.<anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/category_steps.js:18:3)",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"search\" page",
+      "time" : {
+        "start" : 1650991452015,
+        "stop" : 1650991457613,
+        "duration" : 5598
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I click any unselected leaf category",
+      "time" : {
+        "start" : 1650991457613,
+        "stop" : 1650991459887,
+        "duration" : 2274
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see a selected leaf category",
+      "time" : {
+        "start" : 1650991459887,
+        "stop" : 1650991460097,
+        "duration" : 210
+      },
+      "status" : "failed",
+      "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                Expected: true\n                Received: false\n                    at /Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/category_steps.js:19:53\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at FilterPanel.requiresExpandedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:233:5)\n                    at World.<anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/category_steps.js:18:3)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Category facet"
+  }, {
+    "name" : "testClass",
+    "value" : "Category facet"
+  }, {
+    "name" : "testMethod",
+    "value" : "Navigate down through the search taxonomy"
+  }, {
+    "name" : "package",
+    "value" : "Category facet"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-100.0.4896.127"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9e2abb5b3f57e15a.json",
+  "parameterValues" : [ "Chrome-100.0.4896.127", "Windows 10 Chrome 96.0", "@test" ]
+}

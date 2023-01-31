@@ -1,0 +1,123 @@
+{
+  "uid" : "eb581da549aa6b3a",
+  "name" : "prepush",
+  "fullName" : "Tagging - Lister Page.prepush",
+  "historyId" : "d973e7f4965316e91700f155121e1853",
+  "time" : {
+    "start" : 1648723099594,
+    "stop" : 1648723111069,
+    "duration" : 11475
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"white goods browse\" page",
+      "time" : {
+        "start" : 1648723099602,
+        "stop" : 1648723107067,
+        "duration" : 7465
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I click the pagination next button",
+      "time" : {
+        "start" : 1648723107067,
+        "stop" : 1648723111055,
+        "duration" : 3988
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the following global data layer variables should be present:",
+      "time" : {
+        "start" : 1648723111055,
+        "stop" : 1648723111067,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "93272f8e6cf3a73d",
+        "name" : "Data Table",
+        "source" : "93272f8e6cf3a73d.csv",
+        "type" : "text/csv",
+        "size" : 93
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-8"
+  }, {
+    "name" : "suite",
+    "value" : "Tagging - Lister Page"
+  }, {
+    "name" : "testClass",
+    "value" : "Tagging - Lister Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "prepush"
+  }, {
+    "name" : "package",
+    "value" : "Tagging - Lister Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome Headless-100.0.4896.60"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@prepush"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "eb581da549aa6b3a.json",
+  "parameterValues" : [ "Chrome Headless-100.0.4896.60", "Windows 10 Chrome 96.0", "@prepush" ]
+}

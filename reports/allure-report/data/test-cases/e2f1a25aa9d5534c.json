@@ -1,0 +1,128 @@
+{
+  "uid" : "e2f1a25aa9d5534c",
+  "name" : "Selected browse page filters should see in the applied filter section",
+  "fullName" : "Applied filters.Selected browse page filters should see in the applied filter section",
+  "historyId" : "5363a52335baf1a4924fcb71f97e3308",
+  "time" : {
+    "start" : 1650905606380,
+    "stop" : 1650905617683,
+    "duration" : 11303
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"browse\" page",
+      "time" : {
+        "start" : 1650905606381,
+        "stop" : 1650905610581,
+        "duration" : 4200
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I apply a filter to the \"PRICE\" that hasn't yet been used",
+      "time" : {
+        "start" : 1650905610581,
+        "stop" : 1650905617675,
+        "duration" : 7094
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see the selected filter in the applied filters section",
+      "time" : {
+        "start" : 1650905617675,
+        "stop" : 1650905617682,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Applied filters"
+  }, {
+    "name" : "testClass",
+    "value" : "Applied filters"
+  }, {
+    "name" : "testMethod",
+    "value" : "Selected browse page filters should see in the applied filter section"
+  }, {
+    "name" : "package",
+    "value" : "Applied filters"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-100.0.4896.127"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "7f5f0f644545921f",
+      "status" : "broken",
+      "statusDetails" : "TypeError: Cannot read properties of undefined (reading 'aggregations')",
+      "time" : {
+        "start" : 1650896532823,
+        "stop" : 1650896537617,
+        "duration" : 4794
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e2f1a25aa9d5534c.json",
+  "parameterValues" : [ "Chrome-100.0.4896.127", "Windows 10 Chrome 96.0", "@test" ]
+}

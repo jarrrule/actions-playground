@@ -1,0 +1,80 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650976690359' stop='1650976704839'>
+    <name>Brands Not In Catalogue</name>
+    <title>Brands Not In Catalogue</title>
+    <test-cases>
+        <test-case start='1650976695748' status='failed' stop='1650976704833'>
+            <name>Search resulting in a brands not in catalogue experience WITH suggestions banner</name>
+            <title>Search resulting in a brands not in catalogue experience WITH suggestions banner</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650976695780' status='passed' stop='1650976699854'>
+                    <name>Given I navigate to a "brands nic with banner" page</name>
+                    <title>Given I navigate to a "brands nic with banner" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650976699854' status='passed' stop='1650976700376'>
+                    <name>Then I should see the search term in the brands not in catalogue message</name>
+                    <title>Then I should see the search term in the brands not in catalogue message</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650976700376' status='passed' stop='1650976700894'>
+                    <name>And I should see "hair straighteners" in the search page heading</name>
+                    <title>And I should see "hair straighteners" in the search page heading</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650976700894' status='passed' stop='1650976700902'>
+                    <name>And I should see the brands not in catalogue suggestion banner</name>
+                    <title>And I should see the brands not in catalogue suggestion banner</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650976700902' status='passed' stop='1650976700920'>
+                    <name>And I should see some search results</name>
+                    <title>And I should see some search results</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650976700920' status='passed' stop='1650976700925'>
+                    <name>And I should see an empty search bar</name>
+                    <title>And I should see an empty search bar</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650976700925' status='passed' stop='1650976704805'>
+                    <name>When I click the pagination next button</name>
+                    <title>When I click the pagination next button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toEqual(expected) // deep equality</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: false
+                Received: true
+                    at /Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:20:52
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:240:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:18:3)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

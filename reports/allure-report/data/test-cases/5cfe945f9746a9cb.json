@@ -1,0 +1,179 @@
+{
+  "uid" : "5cfe945f9746a9cb",
+  "name" : "Add to trolley modal and close using the X button",
+  "fullName" : "Add to Trolley.Add to trolley modal and close using the X button",
+  "historyId" : "bf332fa8140b272324e3adc07f65853b",
+  "time" : {
+    "start" : 1649334625002,
+    "stop" : 1649334637386,
+    "duration" : 12384
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"browse\" page",
+      "time" : {
+        "start" : 1649334626910,
+        "stop" : 1649334633556,
+        "duration" : 6646
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I click the add to trolley button",
+      "time" : {
+        "start" : 1649334633557,
+        "stop" : 1649334635796,
+        "duration" : 2239
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see the product in the att modal",
+      "time" : {
+        "start" : 1649334635796,
+        "stop" : 1649334635803,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I should see the att modal go to trolley button",
+      "time" : {
+        "start" : 1649334635803,
+        "stop" : 1649334635808,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I should see the att modal continue shopping button",
+      "time" : {
+        "start" : 1649334635808,
+        "stop" : 1649334635813,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I click the att modal close button",
+      "time" : {
+        "start" : 1649334635813,
+        "stop" : 1649334637378,
+        "duration" : 1565
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should not see the att modal",
+      "time" : {
+        "start" : 1649334637378,
+        "stop" : 1649334637384,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Add to Trolley"
+  }, {
+    "name" : "testClass",
+    "value" : "Add to Trolley"
+  }, {
+    "name" : "testMethod",
+    "value" : "Add to trolley modal and close using the X button"
+  }, {
+    "name" : "package",
+    "value" : "Add to Trolley"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-100.0.4896.75"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5cfe945f9746a9cb.json",
+  "parameterValues" : [ "Chrome-100.0.4896.75", "Windows 10 Chrome 96.0", "@test" ]
+}

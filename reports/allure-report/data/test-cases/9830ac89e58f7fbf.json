@@ -1,0 +1,132 @@
+{
+  "uid" : "9830ac89e58f7fbf",
+  "name" : "Perform sort after single select",
+  "fullName" : "Aggregations & Filters Functionality.Perform sort after single select",
+  "historyId" : "464cb5b9bb2eb0236f6da36089ba8cf2",
+  "time" : {
+    "start" : 1648471907643,
+    "stop" : 1648471933746,
+    "duration" : 26103
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"cat-match search\" page",
+      "time" : {
+        "start" : 1648471907654,
+        "stop" : 1648471918416,
+        "duration" : 10762
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I apply a filter in \"any facet\" that hasn't yet been used",
+      "time" : {
+        "start" : 1648471918416,
+        "stop" : 1648471930011,
+        "duration" : 11595
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I sort by Price: High - Low",
+      "time" : {
+        "start" : 1648471930011,
+        "stop" : 1648471933527,
+        "duration" : 3516
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see correctly filtered and sorted products",
+      "time" : {
+        "start" : 1648471933527,
+        "stop" : 1648471933744,
+        "duration" : 217
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-2"
+  }, {
+    "name" : "suite",
+    "value" : "Aggregations & Filters Functionality"
+  }, {
+    "name" : "testClass",
+    "value" : "Aggregations & Filters Functionality"
+  }, {
+    "name" : "testMethod",
+    "value" : "Perform sort after single select"
+  }, {
+    "name" : "package",
+    "value" : "Aggregations & Filters Functionality"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Mobile Safari-11.0"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@prepush"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9830ac89e58f7fbf.json",
+  "parameterValues" : [ "Mobile Safari-11.0", "Windows 10 Chrome 96.0", "@prepush" ]
+}

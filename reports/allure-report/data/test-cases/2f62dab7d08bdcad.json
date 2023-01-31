@@ -1,0 +1,117 @@
+{
+  "uid" : "2f62dab7d08bdcad",
+  "name" : "Accessibility violations on clothing lister page",
+  "fullName" : "Accessibility.Accessibility violations on clothing lister page",
+  "historyId" : "39b85d7a43e7bd778123f46fe19ff1f6",
+  "time" : {
+    "start" : 1654011066812,
+    "stop" : 1654011105472,
+    "duration" : 38660
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to the \"clothing lister\" page",
+      "time" : {
+        "start" : 1654011066824,
+        "stop" : 1654011071641,
+        "duration" : 4817
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I lazy scroll down the page",
+      "time" : {
+        "start" : 1654011071641,
+        "stop" : 1654011105470,
+        "duration" : 33829
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should not see any accessibility violations for \"clothing lister\"",
+      "time" : {
+        "start" : 1654011105470,
+        "stop" : 1654011105471,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Accessibility"
+  }, {
+    "name" : "testClass",
+    "value" : "Accessibility"
+  }, {
+    "name" : "testMethod",
+    "value" : "Accessibility violations on clothing lister page"
+  }, {
+    "name" : "package",
+    "value" : "Accessibility"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-102.0.5005.61"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2f62dab7d08bdcad.json",
+  "parameterValues" : [ "Chrome-102.0.5005.61", "Windows 10 Chrome 96.0", "@test" ]
+}

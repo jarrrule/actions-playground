@@ -1,0 +1,102 @@
+{
+  "uid" : "691ab10910292db7",
+  "name" : "Access the dyson stub server",
+  "fullName" : "Dyson stub server.Access the dyson stub server",
+  "historyId" : "b8d49c1d8a02c2444e74f01146bd40fd",
+  "time" : {
+    "start" : 1650442794542,
+    "stop" : 1650442800110,
+    "duration" : 5568
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to the \"dyson stub dashboard\" page",
+      "time" : {
+        "start" : 1650442794575,
+        "stop" : 1650442800095,
+        "duration" : 5520
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see the dyson stub dashboard",
+      "time" : {
+        "start" : 1650442800095,
+        "stop" : 1650442800107,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-10"
+  }, {
+    "name" : "suite",
+    "value" : "Dyson stub server"
+  }, {
+    "name" : "testClass",
+    "value" : "Dyson stub server"
+  }, {
+    "name" : "testMethod",
+    "value" : "Access the dyson stub server"
+  }, {
+    "name" : "package",
+    "value" : "Dyson stub server"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Mobile Safari-11.0"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@prepush"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "691ab10910292db7.json",
+  "parameterValues" : [ "Mobile Safari-11.0", "Windows 10 Chrome 96.0", "@prepush" ]
+}

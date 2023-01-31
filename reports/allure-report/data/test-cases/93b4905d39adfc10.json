@@ -1,0 +1,143 @@
+{
+  "uid" : "93b4905d39adfc10",
+  "name" : "User is happy with their searching experience so clicks the 'Yes' button in the feedback box",
+  "fullName" : "Feedback on search results page.User is happy with their searching experience so clicks the 'Yes' button in the feedback box",
+  "historyId" : "1f57cd79fd7fd0d1eb85fb913ecce940",
+  "time" : {
+    "start" : 1650441407293,
+    "stop" : 1650441415579,
+    "duration" : 8286
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"search\" page",
+      "time" : {
+        "start" : 1650441407310,
+        "stop" : 1650441412634,
+        "duration" : 5324
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see a feedback box asking if the results were helpful",
+      "time" : {
+        "start" : 1650441412634,
+        "stop" : 1650441412644,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I click the yes button",
+      "time" : {
+        "start" : 1650441412644,
+        "stop" : 1650441415566,
+        "duration" : 2922
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see a feedback box with a success message",
+      "time" : {
+        "start" : 1650441415566,
+        "stop" : 1650441415577,
+        "duration" : 11
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Feedback on search results page"
+  }, {
+    "name" : "testClass",
+    "value" : "Feedback on search results page"
+  }, {
+    "name" : "testMethod",
+    "value" : "User is happy with their searching experience so clicks the 'Yes' button in the feedback box"
+  }, {
+    "name" : "package",
+    "value" : "Feedback on search results page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-100.0.4896.127"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "3bb1cc022e587440",
+      "status" : "failed",
+      "statusDetails" : "Error: expect(received).toEqual(expected) // deep equality",
+      "time" : {
+        "start" : 1650441334656,
+        "stop" : 1650441342810,
+        "duration" : 8154
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "93b4905d39adfc10.json",
+  "parameterValues" : [ "Chrome-100.0.4896.127", "Windows 10 Chrome 96.0", "@test" ]
+}

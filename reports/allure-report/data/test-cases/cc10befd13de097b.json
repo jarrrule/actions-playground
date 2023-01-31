@@ -1,0 +1,162 @@
+{
+  "uid" : "cc10befd13de097b",
+  "name" : "display 2 citrus products on plain browse and sort (mobile)",
+  "fullName" : "Citrus in browse.display 2 citrus products on plain browse and sort (mobile)",
+  "historyId" : "d422e65be81f17ce1b961f51d907a5f4",
+  "time" : {
+    "start" : 1660144067869,
+    "stop" : 1660144117247,
+    "duration" : 49378
+  },
+  "description" : "",
+  "descriptionHtml" : "<p><a href=\"https://automate.browserstack.com/dashboard/v2/sessions/75b460bab3c0c8e5f4a67f24e4854edb3aa83b02\" target=\"_blank\">Browserstack Console</a></p>",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"browse\" page",
+      "time" : {
+        "start" : 1660144071232,
+        "stop" : 1660144088624,
+        "duration" : 17392
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see 2 citrus sponsored products listed in positions 3 and 4",
+      "time" : {
+        "start" : 1660144088624,
+        "stop" : 1660144092788,
+        "duration" : 4164
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I sort by Customer Rating",
+      "time" : {
+        "start" : 1660144092788,
+        "stop" : 1660144098200,
+        "duration" : 5412
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see 2 citrus sponsored products listed in positions 3 and 4",
+      "time" : {
+        "start" : 1660144098200,
+        "stop" : 1660144105706,
+        "duration" : 7506
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I sort by Relevance",
+      "time" : {
+        "start" : 1660144105707,
+        "stop" : 1660144110417,
+        "duration" : 4710
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see 2 citrus sponsored products listed in positions 3 and 4",
+      "time" : {
+        "start" : 1660144110418,
+        "stop" : 1660144117244,
+        "duration" : 6826
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Citrus in browse"
+  }, {
+    "name" : "testClass",
+    "value" : "Citrus in browse"
+  }, {
+    "name" : "testMethod",
+    "value" : "display 2 citrus products on plain browse and sort (mobile)"
+  }, {
+    "name" : "package",
+    "value" : "Citrus in browse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Android 11.0 Samsung Galaxy S21"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  }, {
+    "name" : "device",
+    "value" : "chrome-11"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "cc10befd13de097b.json",
+  "parameterValues" : [ "Android 11.0 Samsung Galaxy S21", "@test", "chrome-11" ]
+}

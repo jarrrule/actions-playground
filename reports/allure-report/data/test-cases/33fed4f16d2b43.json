@@ -1,0 +1,142 @@
+{
+  "uid" : "33fed4f16d2b43",
+  "name" : "Apply Customer Rating filter updates the URL",
+  "fullName" : "Customer Rating filter in the filter panel.Apply Customer Rating filter updates the URL",
+  "historyId" : "e247c5ba26581bfbe0f5154e0d5cd86a",
+  "time" : {
+    "start" : 1649412055702,
+    "stop" : 1649412077705,
+    "duration" : 22003
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"cat-match search\" page",
+      "time" : {
+        "start" : 1649412055723,
+        "stop" : 1649412062033,
+        "duration" : 6310
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I sort by Customer Rating",
+      "time" : {
+        "start" : 1649412062033,
+        "stop" : 1649412065827,
+        "duration" : 3794
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I click the customer rating \"4 or More\" filter",
+      "time" : {
+        "start" : 1649412065827,
+        "stop" : 1649412072173,
+        "duration" : 6346
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should only see product cards with customer ratings of at least 4",
+      "time" : {
+        "start" : 1649412072173,
+        "stop" : 1649412077703,
+        "duration" : 5530
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-3"
+  }, {
+    "name" : "suite",
+    "value" : "Customer Rating filter in the filter panel"
+  }, {
+    "name" : "testClass",
+    "value" : "Customer Rating filter in the filter panel"
+  }, {
+    "name" : "testMethod",
+    "value" : "Apply Customer Rating filter updates the URL"
+  }, {
+    "name" : "package",
+    "value" : "Customer Rating filter in the filter panel"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome Headless-100.0.4896.75"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@prepush"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c8b1e962e434d544",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649328435288,
+        "stop" : 1649328460927,
+        "duration" : 25639
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "33fed4f16d2b43.json",
+  "parameterValues" : [ "Chrome Headless-100.0.4896.75", "Windows 10 Chrome 96.0", "@prepush" ]
+}

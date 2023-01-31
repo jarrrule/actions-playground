@@ -1,0 +1,192 @@
+{
+  "uid" : "89b5f90bc4efecef",
+  "name" : "Localised and product is OOS for collection and delivery (prepush)",
+  "fullName" : "Perceived Availability.Localised and product is OOS for collection and delivery (prepush)",
+  "historyId" : "1843e0fa1f7a308cb288fbdcd489c792",
+  "time" : {
+    "start" : 1653336149803,
+    "stop" : 1653336160570,
+    "duration" : 10767
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"search\" page",
+      "time" : {
+        "start" : 1653336153387,
+        "stop" : 1653336160507,
+        "duration" : 7120
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see a single Out of stock icon on the product card",
+      "time" : {
+        "start" : 1653336160507,
+        "stop" : 1653336160538,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I should see a single Out of stock message on the product card",
+      "time" : {
+        "start" : 1653336160538,
+        "stop" : 1653336160568,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-11"
+  }, {
+    "name" : "suite",
+    "value" : "Perceived Availability"
+  }, {
+    "name" : "testClass",
+    "value" : "Perceived Availability"
+  }, {
+    "name" : "testMethod",
+    "value" : "Localised and product is OOS for collection and delivery (prepush)"
+  }, {
+    "name" : "package",
+    "value" : "Perceived Availability"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Mobile Safari-11.0"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@prepush"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "eeb4db1aac500f73",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652426304944,
+        "stop" : 1652426314563,
+        "duration" : 9619
+      }
+    }, {
+      "uid" : "f15c500468fa65b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650442803231,
+        "stop" : 1650442816486,
+        "duration" : 13255
+      }
+    }, {
+      "uid" : "8a09f7a29eb0b2f7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649412008527,
+        "stop" : 1649412021090,
+        "duration" : 12563
+      }
+    }, {
+      "uid" : "3fbb998eb43f87fd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649328390547,
+        "stop" : 1649328401963,
+        "duration" : 11416
+      }
+    }, {
+      "uid" : "384677d3da313fd4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1648723916314,
+        "stop" : 1648723927892,
+        "duration" : 11578
+      }
+    }, {
+      "uid" : "e5d5ccd23d63f957",
+      "status" : "broken",
+      "statusDetails" : "Error: function timed out, ensure the promise resolves within 180000 milliseconds",
+      "time" : {
+        "start" : 1648723429465,
+        "stop" : 1648723609478,
+        "duration" : 180013
+      }
+    }, {
+      "uid" : "a26bd9af69cef995",
+      "status" : "passed",
+      "time" : {
+        "start" : 1648723003354,
+        "stop" : 1648723050949,
+        "duration" : 47595
+      }
+    }, {
+      "uid" : "71aa2777ecf4b7cc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1648480290306,
+        "stop" : 1648480304968,
+        "duration" : 14662
+      }
+    }, {
+      "uid" : "f9a385c24949274",
+      "status" : "passed",
+      "time" : {
+        "start" : 1648471963998,
+        "stop" : 1648471976753,
+        "duration" : 12755
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "89b5f90bc4efecef.json",
+  "parameterValues" : [ "Mobile Safari-11.0", "Windows 10 Chrome 96.0", "@prepush" ]
+}

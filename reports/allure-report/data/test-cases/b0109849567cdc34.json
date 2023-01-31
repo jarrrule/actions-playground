@@ -1,0 +1,119 @@
+{
+  "uid" : "b0109849567cdc34",
+  "name" : "Expanded category facet contains 20+ categories",
+  "fullName" : "Canned Search.Expanded category facet contains 20+ categories",
+  "historyId" : "6ce7ea018e250e1366c8ef624a7900c1",
+  "time" : {
+    "start" : 1650980171459,
+    "stop" : 1650980182002,
+    "duration" : 10543
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"canned search test\" page",
+      "time" : {
+        "start" : 1650980175109,
+        "stop" : 1650980179628,
+        "duration" : 4519
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I click the show more category link",
+      "time" : {
+        "start" : 1650980179628,
+        "stop" : 1650980181981,
+        "duration" : 2353
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see at least 21 categories in the category filter",
+      "time" : {
+        "start" : 1650980181981,
+        "stop" : 1650980182000,
+        "duration" : 19
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Canned Search"
+  }, {
+    "name" : "testClass",
+    "value" : "Canned Search"
+  }, {
+    "name" : "testMethod",
+    "value" : "Expanded category facet contains 20+ categories"
+  }, {
+    "name" : "package",
+    "value" : "Canned Search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-100.0.4896.127"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b0109849567cdc34.json",
+  "parameterValues" : [ "Chrome-100.0.4896.127", "Windows 10 Chrome 96.0", "@test" ]
+}

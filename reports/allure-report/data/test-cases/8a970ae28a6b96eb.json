@@ -1,0 +1,64 @@
+{
+  "uid" : "8a970ae28a6b96eb",
+  "name" : "display 2 citrus products on plain browse and sort (mobile)",
+  "fullName" : "Citrus in browse.display 2 citrus products on plain browse and sort (mobile)",
+  "historyId" : "4ee9cc9a1b6c57f17e82ef992cdce31c",
+  "time" : {
+    "start" : 1660148754181,
+    "stop" : 1660148779531,
+    "duration" : 25350
+  },
+  "description" : "",
+  "descriptionHtml" : "<p><a href=\"https://automate.browserstack.com/dashboard/v2/sessions/273f942c8e2badcdc00b3d63e03bc5c37f43d343\" target=\"_blank\">Browserstack Console</a></p>",
+  "status" : "broken",
+  "statusMessage" : "Error: write EPIPE",
+  "statusTrace" : "Error: write EPIPE\n                    at afterWriteDispatched (node:internal/stream_base_commons:160:15)\n                    at writeGeneric (node:internal/stream_base_commons:151:3)\n                    at Socket._writeGeneric (node:net:795:11)\n                    at Socket._write (node:net:807:8)\n                    at writeOrBuffer (node:internal/streams/writable:389:12)\n                    at _write (node:internal/streams/writable:330:10)\n                    at Socket.Writable.write (node:internal/streams/writable:334:10)\n                    at Console.log (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sainsburys-tech/wdio-framework/node_modules/winston/lib/winston/transports/console.js:79:23)\n                    at Console._write (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/winston-transport/index.js:103:17)\n                    at doWrite (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_writable.js:409:139)\n                    at writeOrBuffer (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_writable.js:398:5)\n                    at Console.Writable.write (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_writable.js:307:11)\n                    at DerivedLogger.ondata (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_readable.js:681:20)\n                    at DerivedLogger.emit (node:events:532:35)\n                    at DerivedLogger.emit (node:domain:475:12)\n                    at addChunk (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_readable.js:298:12)\n                    at readableAddChunk (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_readable.js:280:11)\n                    at DerivedLogger.Readable.push (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_readable.js:241:10)\n                    at DerivedLogger.Transform.push (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_transform.js:139:32)\n                    at DerivedLogger._transform (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sainsburys-tech/wdio-framework/node_modules/winston/lib/winston/logger.js:313:12)\n                    at DerivedLogger.Transform._read (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_transform.js:177:10)\n                    at DerivedLogger.Transform._write (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_transform.js:164:83)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Citrus in browse"
+  }, {
+    "name" : "testClass",
+    "value" : "Citrus in browse"
+  }, {
+    "name" : "testMethod",
+    "value" : "display 2 citrus products on plain browse and sort (mobile)"
+  }, {
+    "name" : "package",
+    "value" : "Citrus in browse"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Android 12.0 Samsung Galaxy S21"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  }, {
+    "name" : "device",
+    "value" : "chrome-12"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8a970ae28a6b96eb.json",
+  "parameterValues" : [ "Android 12.0 Samsung Galaxy S21", "@test", "chrome-12" ]
+}

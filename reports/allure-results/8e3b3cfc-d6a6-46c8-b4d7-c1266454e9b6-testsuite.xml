@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648480372490' stop='1648480395619'>
+    <name>Citrus in search</name>
+    <title>Citrus in search</title>
+    <test-cases>
+        <test-case start='1648480377175' status='passed' stop='1648480395603'>
+            <name>prepush: display 3 citrus products on plain search and sort (desktop/tablet)</name>
+            <title>prepush: display 3 citrus products on plain search and sort (desktop/tablet)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-7'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-99.0.4844.83'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1648480379729' status='passed' stop='1648480395573'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648480395573' status='passed' stop='1648480395596'>
+                    <name>Then I should see 3 citrus sponsored products listed in positions 4, 5 and 6</name>
+                    <title>Then I should see 3 citrus sponsored products listed in positions 4, 5 and 6</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

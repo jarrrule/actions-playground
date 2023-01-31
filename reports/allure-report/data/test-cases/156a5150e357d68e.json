@@ -1,0 +1,198 @@
+{
+  "uid" : "156a5150e357d68e",
+  "name" : "Perform sort after single select",
+  "fullName" : "Aggregations & Filters Functionality.Perform sort after single select",
+  "historyId" : "464cb5b9bb2eb0236f6da36089ba8cf2",
+  "time" : {
+    "start" : 1653336080685,
+    "stop" : 1653336105125,
+    "duration" : 24440
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"cat-match search\" page",
+      "time" : {
+        "start" : 1653336080692,
+        "stop" : 1653336090884,
+        "duration" : 10192
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I apply a filter in \"any facet\" that hasn't yet been used",
+      "time" : {
+        "start" : 1653336090884,
+        "stop" : 1653336101676,
+        "duration" : 10792
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I sort by Price: High - Low",
+      "time" : {
+        "start" : 1653336101676,
+        "stop" : 1653336104878,
+        "duration" : 3202
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see correctly filtered and sorted products",
+      "time" : {
+        "start" : 1653336104878,
+        "stop" : 1653336105123,
+        "duration" : 245
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-4"
+  }, {
+    "name" : "suite",
+    "value" : "Aggregations & Filters Functionality"
+  }, {
+    "name" : "testClass",
+    "value" : "Aggregations & Filters Functionality"
+  }, {
+    "name" : "testMethod",
+    "value" : "Perform sort after single select"
+  }, {
+    "name" : "package",
+    "value" : "Aggregations & Filters Functionality"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Mobile Safari-11.0"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@prepush"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e04193cdf27cb849",
+      "status" : "passed",
+      "time" : {
+        "start" : 1652426270709,
+        "stop" : 1652426294887,
+        "duration" : 24178
+      }
+    }, {
+      "uid" : "b83549532b998a1d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1650442815840,
+        "stop" : 1650442837356,
+        "duration" : 21516
+      }
+    }, {
+      "uid" : "e1599892c9364cd8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649412013087,
+        "stop" : 1649412035386,
+        "duration" : 22299
+      }
+    }, {
+      "uid" : "a27e47be898d00e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1649328390479,
+        "stop" : 1649328413152,
+        "duration" : 22673
+      }
+    }, {
+      "uid" : "101a19d75077950d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1648723479348,
+        "stop" : 1648723500035,
+        "duration" : 20687
+      }
+    }, {
+      "uid" : "d56cbed42fc8e8ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1648722952232,
+        "stop" : 1648722977724,
+        "duration" : 25492
+      }
+    }, {
+      "uid" : "15ff52ed7984a883",
+      "status" : "passed",
+      "time" : {
+        "start" : 1648480291752,
+        "stop" : 1648480319588,
+        "duration" : 27836
+      }
+    }, {
+      "uid" : "9830ac89e58f7fbf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1648471907643,
+        "stop" : 1648471933746,
+        "duration" : 26103
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "156a5150e357d68e.json",
+  "parameterValues" : [ "Mobile Safari-11.0", "Windows 10 Chrome 96.0", "@prepush" ]
+}

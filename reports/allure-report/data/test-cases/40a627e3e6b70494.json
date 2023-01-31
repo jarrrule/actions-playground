@@ -1,0 +1,107 @@
+{
+  "uid" : "40a627e3e6b70494",
+  "name" : "Content in PLP list",
+  "fullName" : "CMS content in list.Content in PLP list",
+  "historyId" : "1d253f739278a5c4649c3026896ac09",
+  "time" : {
+    "start" : 1660143017171,
+    "stop" : 1660143039411,
+    "duration" : 22240
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "Error: Expect $(`[data-test=\"product-list\"] [data-test=\"product-list-m053\"]`) not to be displayed",
+  "statusTrace" : "Error: Expect $(`[data-test=\"product-list\"] [data-test=\"product-list-m053\"]`) not to be displayed\n                \n                Expected [not]: \"not displayed\"\n                Received      : \"displayed\"\n                    at fn (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:161:46)\n                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:243:11)\n                    at World.<anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:159:21)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at wrapPromiseWithTimeout (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/time.ts:56:10)\n                    at Object.run (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/user_code_runner.ts:86:16)\n                    at Object.run (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/step_runner.ts:50:20)\n                    at TestCaseRunner.invokeStep (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:130:12)\n                    at TestCaseRunner.runStep (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:307:20)\n                    at /Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:210:36\n                    at TestCaseRunner.aroundTestStep (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:162:28)\n                    at TestCaseRunner.run (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:191:9)\n                    at Runtime.runTestCase (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/index.ts:91:20)\n                    at Runtime.start (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/index.ts:121:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Error: Expect $(`[data-test=\"product-list\"] [data-test=\"product-list-m053\"]`) not to be displayed",
+    "statusTrace" : "Error: Expect $(`[data-test=\"product-list\"] [data-test=\"product-list-m053\"]`) not to be displayed\n                \n                Expected [not]: \"not displayed\"\n                Received      : \"displayed\"\n                    at fn (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:161:46)\n                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:243:11)\n                    at World.<anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:159:21)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at wrapPromiseWithTimeout (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/time.ts:56:10)\n                    at Object.run (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/user_code_runner.ts:86:16)\n                    at Object.run (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/step_runner.ts:50:20)\n                    at TestCaseRunner.invokeStep (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:130:12)\n                    at TestCaseRunner.runStep (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:307:20)\n                    at /Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:210:36\n                    at TestCaseRunner.aroundTestStep (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:162:28)\n                    at TestCaseRunner.run (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:191:9)\n                    at Runtime.runTestCase (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/index.ts:91:20)\n                    at Runtime.start (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/index.ts:121:7)",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"browse\" page",
+      "time" : {
+        "start" : 1660143025112,
+        "stop" : 1660143034323,
+        "duration" : 9211
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see content in list",
+      "time" : {
+        "start" : 1660143034324,
+        "stop" : 1660143039411,
+        "duration" : 5087
+      },
+      "status" : "failed",
+      "statusMessage" : "Error: Expect $(`[data-test=\"product-list\"] [data-test=\"product-list-m053\"]`) not to be displayed\n                \n                Expected [not]: \"not displayed\"\n                Received      : \"displayed\"\n                    at fn (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:161:46)\n                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:243:11)\n                    at World.<anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:159:21)\n                    at runMicrotasks (<anonymous>)\n                    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n                    at wrapPromiseWithTimeout (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/time.ts:56:10)\n                    at Object.run (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/user_code_runner.ts:86:16)\n                    at Object.run (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/step_runner.ts:50:20)\n                    at TestCaseRunner.invokeStep (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:130:12)\n                    at TestCaseRunner.runStep (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:307:20)\n                    at /Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:210:36\n                    at TestCaseRunner.aroundTestStep (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:162:28)\n                    at TestCaseRunner.run (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:191:9)\n                    at Runtime.runTestCase (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/index.ts:91:20)\n                    at Runtime.start (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@cucumber/cucumber/src/runtime/index.ts:121:7)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "CMS content in list"
+  }, {
+    "name" : "testClass",
+    "value" : "CMS content in list"
+  }, {
+    "name" : "testMethod",
+    "value" : "Content in PLP list"
+  }, {
+    "name" : "package",
+    "value" : "CMS content in list"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Chrome-104.0.5112.79"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 99.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "40a627e3e6b70494.json",
+  "parameterValues" : [ "Chrome-104.0.5112.79", "Windows 10 Chrome 99.0", "@test" ]
+}

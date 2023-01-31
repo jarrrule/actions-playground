@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648723424593' stop='1648723450097'>
+    <name>All Categories Link</name>
+    <title>All Categories Link</title>
+    <test-cases>
+        <test-case start='1648723428607' status='passed' stop='1648723450096'>
+            <name>selecting all categories link displays all categories for users search</name>
+            <title>selecting all categories link displays all categories for users search</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Mobile Safari-11.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1648723428615' status='passed' stop='1648723437229'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648723437229' status='passed' stop='1648723445997'>
+                    <name>When I click any unselected category</name>
+                    <title>When I click any unselected category</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648723445997' status='passed' stop='1648723450042'>
+                    <name>And I click the all categories button</name>
+                    <title>And I click the all categories button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648723450042' status='passed' stop='1648723450094'>
+                    <name>Then I should see the available category options</name>
+                    <title>Then I should see the available category options</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,2521 @@
+[ {
+  "uid" : "838bc4d98e41f809",
+  "name" : "Add to trolley modal and close by clicking the background overlay",
+  "time" : {
+    "start" : 1648817624884,
+    "stop" : 1648817655048,
+    "duration" : 30164
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "89ee0d3561407ab2",
+  "name" : "Selecting single value in a filter",
+  "time" : {
+    "start" : 1650911661889,
+    "stop" : 1650911674395,
+    "duration" : 12506
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ffc82e42a9b5aed1",
+  "name" : "display 2 citrus products on plain browse and sort (mobile)",
+  "time" : {
+    "start" : 1660204537527,
+    "stop" : 1660204551410,
+    "duration" : 13883
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "71fe75e88e313014",
+  "name" : "Perform sort after single select",
+  "time" : {
+    "start" : 1648723988807,
+    "stop" : 1648724007389,
+    "duration" : 18582
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6d01bb6ca95ac4d7",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1650442861960,
+    "stop" : 1650442876148,
+    "duration" : 14188
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7c1b4ca6d8e9a59f",
+  "name" : "Bookmarked filtered browse page should see applied filters section",
+  "time" : {
+    "start" : 1650896425243,
+    "stop" : 1650896429401,
+    "duration" : 4158
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "49f55fe70c3782ba",
+  "name" : "Navigating directly to the /sd route",
+  "time" : {
+    "start" : 1648724008828,
+    "stop" : 1648724015005,
+    "duration" : 6177
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2f2344878290551a",
+  "name" : "selecting all categories link displays all categories for users search",
+  "time" : {
+    "start" : 1649412109708,
+    "stop" : 1649412124360,
+    "duration" : 14652
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ac026fc0484e35e9",
+  "name" : "Content in PLP list",
+  "time" : {
+    "start" : 1660143190418,
+    "stop" : 1660143207509,
+    "duration" : 17091
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "17844190edfcbbf",
+  "name" : "Localised and product is OOS for collection and delivery (prepush)",
+  "time" : {
+    "start" : 1650442947158,
+    "stop" : 1650442959150,
+    "duration" : 11992
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b381c28b196e74c1",
+  "name" : "Add your postcode link displays when not localised (prepush)",
+  "time" : {
+    "start" : 1653336125578,
+    "stop" : 1653336135771,
+    "duration" : 10193
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "412d95f656283d29",
+  "name" : "prepush - search sorting by Price: Low - High",
+  "time" : {
+    "start" : 1648723995201,
+    "stop" : 1648724008034,
+    "duration" : 12833
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e2f1a25aa9d5534c",
+  "name" : "Selected browse page filters should see in the applied filter section",
+  "time" : {
+    "start" : 1650905606380,
+    "stop" : 1650905617683,
+    "duration" : 11303
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2026f04fdaf47543",
+  "name" : "Localised and product is OOS for collection and delivery (prepush)",
+  "time" : {
+    "start" : 1653336263597,
+    "stop" : 1653336443657,
+    "duration" : 180060
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "6d9d1cf3287e31ca",
+  "name" : "Customer browsing reviews page with an unsupported browser",
+  "time" : {
+    "start" : 1654520830902,
+    "stop" : 1654520846050,
+    "duration" : 15148
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b2d6c82072a8bea9",
+  "name" : "Localise tooltip prompt search",
+  "time" : {
+    "start" : 1649325494443,
+    "stop" : 1649325502837,
+    "duration" : 8394
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f8a265c36b900b23",
+  "name" : "Correct product card links for size searched variants medium suitcase",
+  "time" : {
+    "start" : 1652768717969,
+    "stop" : 1652768730104,
+    "duration" : 12135
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f2d97b7f393277f0",
+  "name" : "Content in PLP list",
+  "time" : {
+    "start" : 1663852084984,
+    "stop" : 1663852093674,
+    "duration" : 8690
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e5a7d266be1d25cf",
+  "name" : "prepush - search sorting by Price: Low - High",
+  "time" : {
+    "start" : 1653336240923,
+    "stop" : 1653336254326,
+    "duration" : 13403
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "34b2a95d5a5f2d7a",
+  "name" : "Access the dyson stub server",
+  "time" : {
+    "start" : 1649412097900,
+    "stop" : 1649412102616,
+    "duration" : 4716
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "291e35b3160f2546",
+  "name" : "Multi-select and pagination Argos",
+  "time" : {
+    "start" : 1650911795327,
+    "stop" : 1650911827980,
+    "duration" : 32653
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8abcd4ed5f3d8073",
+  "name" : "Customer continues to use unsupported browser",
+  "time" : {
+    "start" : 1654520825952,
+    "stop" : 1654520867446,
+    "duration" : 41494
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c798ef86ded62333",
+  "name" : "Bookmarked cat-match search page should not see applied filters section",
+  "time" : {
+    "start" : 1650896412218,
+    "stop" : 1650896416409,
+    "duration" : 4191
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f03fb35b96d655e5",
+  "name" : "AdSense requests when updating search term",
+  "time" : {
+    "start" : 1653336264267,
+    "stop" : 1653336279979,
+    "duration" : 15712
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "650060e03469ddbf",
+  "name" : "Prepush : Product count in search title",
+  "time" : {
+    "start" : 1648723972587,
+    "stop" : 1648723980205,
+    "duration" : 7618
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b0109849567cdc34",
+  "name" : "Expanded category facet contains 20+ categories",
+  "time" : {
+    "start" : 1650980171459,
+    "stop" : 1650980182002,
+    "duration" : 10543
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bf08d715c31b3b0c",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1648480424838,
+    "stop" : 1648480435466,
+    "duration" : 10628
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e41c64e797ce9094",
+  "name" : "AdSense requests are called with correct adPage param",
+  "time" : {
+    "start" : 1653336240714,
+    "stop" : 1653336264267,
+    "duration" : 23553
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "10a73024ed834000",
+  "name" : "Add to trolley modal and close using the continue shopping button",
+  "time" : {
+    "start" : 1648817518943,
+    "stop" : 1648817547625,
+    "duration" : 28682
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c9536d217f3c2c86",
+  "name" : "Bookmarked browse page should not see applied filters section",
+  "time" : {
+    "start" : 1650896429401,
+    "stop" : 1650896434376,
+    "duration" : 4975
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a32b629044e76cc4",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1649412055401,
+    "stop" : 1649412061938,
+    "duration" : 6537
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eb0921413da78353",
+  "name" : "AdSense requests are called with correct channel ids on desktop/tablet",
+  "time" : {
+    "start" : 1650442969130,
+    "stop" : 1650442992451,
+    "duration" : 23321
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1967e18c300e7d4e",
+  "name" : "Apply Reset All after filters",
+  "time" : {
+    "start" : 1653333661361,
+    "stop" : 1653333700898,
+    "duration" : 39537
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "793e1969b33914ad",
+  "name" : "Localised and products available to collect from <date>",
+  "time" : {
+    "start" : 1650993139747,
+    "stop" : 1650993150437,
+    "duration" : 10690
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "68f3cbe68964c55a",
+  "name" : "AdSense requests when navigating from browse PLP to search and back again",
+  "time" : {
+    "start" : 1649412055775,
+    "stop" : 1649412074398,
+    "duration" : 18623
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "966fe575a272aba3",
+  "name" : "Navigating directly to the /sd route",
+  "time" : {
+    "start" : 1648480371437,
+    "stop" : 1648480381397,
+    "duration" : 9960
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "77b7907d0e05b42",
+  "name" : "prepush: citrus products on plain search and sort (desktop/tablet)",
+  "time" : {
+    "start" : 1648472083903,
+    "stop" : 1648472100049,
+    "duration" : 16146
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1f4b469d7f8e6b7d",
+  "name" : "selecting all categories link displays all categories for users search",
+  "time" : {
+    "start" : 1653336253414,
+    "stop" : 1653336268131,
+    "duration" : 14717
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a05373562b15f271",
+  "name" : "Filter panel persists after filtering search page",
+  "time" : {
+    "start" : 1650911882714,
+    "stop" : 1650911892304,
+    "duration" : 9590
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba0fa217d21e4c79",
+  "name" : "Navigating directly to the /sd route",
+  "time" : {
+    "start" : 1649412089574,
+    "stop" : 1649412097663,
+    "duration" : 8089
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c5449b4247e42c2b",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1653336246189,
+    "stop" : 1653336253631,
+    "duration" : 7442
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "559686087f243eef",
+  "name" : "prepush - search sorting by Price: Low - High",
+  "time" : {
+    "start" : 1650442862442,
+    "stop" : 1650442878613,
+    "duration" : 16171
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b3ad0ac393bb6a00",
+  "name" : "Selecting single filters in different facets",
+  "time" : {
+    "start" : 1650911562596,
+    "stop" : 1650911570190,
+    "duration" : 7594
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "db0fde243c82aca2",
+  "name" : "prepush - search sorting by Price: Low - High",
+  "time" : {
+    "start" : 1649412108988,
+    "stop" : 1649412120416,
+    "duration" : 11428
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "539dd705144f3492",
+  "name" : "Localised and products available to collect right away",
+  "time" : {
+    "start" : 1664380963139,
+    "stop" : 1664380973653,
+    "duration" : 10514
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b8997d933b219743",
+  "name" : "AdSense requests when going to no results",
+  "time" : {
+    "start" : 1649412130367,
+    "stop" : 1649412144958,
+    "duration" : 14591
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9e3211e61cd6b486",
+  "name" : "Navigate down through the search taxonomy",
+  "time" : {
+    "start" : 1650992170908,
+    "stop" : 1650992181425,
+    "duration" : 10517
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d3e5ba8184494f5c",
+  "name" : "Perform sort after single select",
+  "time" : {
+    "start" : 1648480412931,
+    "stop" : 1648480432684,
+    "duration" : 19753
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9a120a11311235c4",
+  "name" : "Closing error modal via the close button",
+  "time" : {
+    "start" : 1650912308343,
+    "stop" : 1650912318398,
+    "duration" : 10055
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bac2a3c76e59b663",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1650442943194,
+    "stop" : 1650442952807,
+    "duration" : 9613
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b882895028ec3c",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1653336220268,
+    "stop" : 1653336233287,
+    "duration" : 13019
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6697f7958235ff38",
+  "name" : "Serving the correct component 404 page <expired canned search>",
+  "time" : {
+    "start" : 1649417836417,
+    "stop" : 1649417847478,
+    "duration" : 11061
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "21608d060370a2bf",
+  "name" : "Add to trolley modal and close using the X button",
+  "time" : {
+    "start" : 1648817576711,
+    "stop" : 1648817606636,
+    "duration" : 29925
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5cfe945f9746a9cb",
+  "name" : "Add to trolley modal and close using the X button",
+  "time" : {
+    "start" : 1649334625002,
+    "stop" : 1649334637386,
+    "duration" : 12384
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5afe2e0b4e7ea3ab",
+  "name" : "display 1 citrus products on plain search (desktop/tablet)",
+  "time" : {
+    "start" : 1650986536923,
+    "stop" : 1650986545705,
+    "duration" : 8782
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4c4490a0c7f6a329",
+  "name" : "AdSense requests are called with correct channel ids on desktop/tablet",
+  "time" : {
+    "start" : 1649412144958,
+    "stop" : 1649412167574,
+    "duration" : 22616
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8840c2ef8c2db9a0",
+  "name" : "Add to trolley modal and close using the X button",
+  "time" : {
+    "start" : 1648817565883,
+    "stop" : 1648817596113,
+    "duration" : 30230
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "115f25d80891ec38",
+  "name" : "Correct product card links for size searched variants medium suitcase",
+  "time" : {
+    "start" : 1652715115627,
+    "stop" : 1652715128702,
+    "duration" : 13075
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b1d70ca07d2714f",
+  "name" : "Customer browsing stores page with an unsupported browser",
+  "time" : {
+    "start" : 1654520829904,
+    "stop" : 1654520842076,
+    "duration" : 12172
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1f4ca2b7ba3f8064",
+  "name" : "all categories link displayed after searching and selecting a category",
+  "time" : {
+    "start" : 1650895761472,
+    "stop" : 1650895771179,
+    "duration" : 9707
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "22208611932c9a6a",
+  "name" : "Clear filters per facet - multi-select",
+  "time" : {
+    "start" : 1650911855837,
+    "stop" : 1650911882713,
+    "duration" : 26876
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7d1ead4c0c3d5691",
+  "name" : "Perform sort after single select",
+  "time" : {
+    "start" : 1653336219619,
+    "stop" : 1653336241379,
+    "duration" : 21760
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b451cc7f3e1a636c",
+  "name" : "prepush: display 3 citrus products on plain search and sort (desktop/tablet)",
+  "time" : {
+    "start" : 1649412054418,
+    "stop" : 1649412070743,
+    "duration" : 16325
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "91060319f066625c",
+  "name" : "all categories link displayed after searching and selecting a category",
+  "time" : {
+    "start" : 1650895808862,
+    "stop" : 1650895824549,
+    "duration" : 15687
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "93b4905d39adfc10",
+  "name" : "User is happy with their searching experience so clicks the 'Yes' button in the feedback box",
+  "time" : {
+    "start" : 1650441407293,
+    "stop" : 1650441415579,
+    "duration" : 8286
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "309db2c835170f2d",
+  "name" : "AdSense requests when coming from no results",
+  "time" : {
+    "start" : 1648724000477,
+    "stop" : 1648724013677,
+    "duration" : 13200
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b9f9488cd46ec7fb",
+  "name" : "Add to trolley modal and close using the continue shopping button",
+  "time" : {
+    "start" : 1650892357815,
+    "stop" : 1650892367273,
+    "duration" : 9458
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2b35fe5993f69a70",
+  "name" : "Add your postcode link displays when not localised (prepush)",
+  "time" : {
+    "start" : 1649412080191,
+    "stop" : 1649412088855,
+    "duration" : 8664
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3fbe6b4a3fca4ad0",
+  "name" : "Content in PLP list",
+  "time" : {
+    "start" : 1663751273219,
+    "stop" : 1663751328860,
+    "duration" : 55641
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "935fac1de2d7c3d4",
+  "name" : "Paginating backwards and forwards through the results with next and previous buttons",
+  "time" : {
+    "start" : 1650442912536,
+    "stop" : 1650442933984,
+    "duration" : 21448
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bbbdb8f977e43f62",
+  "name" : "Add to trolley modal and close by clicking the background overlay",
+  "time" : {
+    "start" : 1648817616761,
+    "stop" : 1648817643543,
+    "duration" : 26782
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "28630e69f26bb4b8",
+  "name" : "Bookmarked filtered search page should see applied filters section",
+  "time" : {
+    "start" : 1650896416410,
+    "stop" : 1650896421054,
+    "duration" : 4644
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "89b5f90bc4efecef",
+  "name" : "Localised and product is OOS for collection and delivery (prepush)",
+  "time" : {
+    "start" : 1653336149803,
+    "stop" : 1653336160570,
+    "duration" : 10767
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8cbcd9e67efafb2b",
+  "name" : "Pre-push The feedback box should be reset when the user navigates to a different search term",
+  "time" : {
+    "start" : 1649412093051,
+    "stop" : 1649412101117,
+    "duration" : 8066
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7ad6d94a9730d82f",
+  "name" : "selecting all categories link displays all categories for users search",
+  "time" : {
+    "start" : 1650896084170,
+    "stop" : 1650896102200,
+    "duration" : 18030
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "88aa13c9ef226753",
+  "name" : "Search term matches a category. Refinement automatically applied to tagging",
+  "time" : {
+    "start" : 1659948904139,
+    "stop" : 1659948920389,
+    "duration" : 16250
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "7fdb2f7048e9af4b",
+  "name" : "Correct product card links for size searched variants small suitcase",
+  "time" : {
+    "start" : 1652768704525,
+    "stop" : 1652768717969,
+    "duration" : 13444
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fa3d3c5812f4084e",
+  "name" : "Bookmarked search page should not see applied filters section",
+  "time" : {
+    "start" : 1650896406765,
+    "stop" : 1650896412218,
+    "duration" : 5453
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7016dc43234e461b",
+  "name" : "Selecting multiple values in the same PRICE filter facet",
+  "time" : {
+    "start" : 1650911544159,
+    "stop" : 1650911562596,
+    "duration" : 18437
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d12375e9932b2a67",
+  "name" : "AdSense requests when updating search term",
+  "time" : {
+    "start" : 1649412097277,
+    "stop" : 1649412117501,
+    "duration" : 20224
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7a6e6d485a156dca",
+  "name" : "Localised and product is OOS for collection and delivery (prepush)",
+  "time" : {
+    "start" : 1649412108943,
+    "stop" : 1649412120361,
+    "duration" : 11418
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b747dc74550082f5",
+  "name" : "AdSense requests when navigating from browse PLP to search and back again",
+  "time" : {
+    "start" : 1653336219824,
+    "stop" : 1653336240713,
+    "duration" : 20889
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "89246dd33a20390c",
+  "name" : "Customer browsing basket page with an unsupported browser",
+  "time" : {
+    "start" : 1654520825471,
+    "stop" : 1654520837819,
+    "duration" : 12348
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "94b75b63e9bb0cd",
+  "name" : "Add your postcode link displays when not localised (prepush)",
+  "time" : {
+    "start" : 1648480425152,
+    "stop" : 1648480435357,
+    "duration" : 10205
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "66f6522690052e01",
+  "name" : "Apply Customer Rating filter updates the URL",
+  "time" : {
+    "start" : 1648723939970,
+    "stop" : 1648723964161,
+    "duration" : 24191
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "27dcb429fb0b98a6",
+  "name" : "Pre-push The feedback box should be reset when the user navigates to a different search term",
+  "time" : {
+    "start" : 1653336219499,
+    "stop" : 1653336227431,
+    "duration" : 7932
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a217a577d988e32",
+  "name" : "prepush: display 3 citrus products on plain search and sort (desktop/tablet)",
+  "time" : {
+    "start" : 1648480377175,
+    "stop" : 1648480395603,
+    "duration" : 18428
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d86d07e17469faa2",
+  "name" : "Filter panel persists after filtering browse page",
+  "time" : {
+    "start" : 1650911892304,
+    "stop" : 1650911901334,
+    "duration" : 9030
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3c13261d3e33bed9",
+  "name" : "Apply Customer Rating filter updates the URL",
+  "time" : {
+    "start" : 1648480342731,
+    "stop" : 1648480377077,
+    "duration" : 34346
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e705cea55ab26c86",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1648723977325,
+    "stop" : 1648723989487,
+    "duration" : 12162
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fab4d65f667a6591",
+  "name" : "Access the dyson stub server",
+  "time" : {
+    "start" : 1653336262826,
+    "stop" : 1653336442974,
+    "duration" : 180148
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "a532de8ea4d543f8",
+  "name" : "Access the dyson stub server",
+  "time" : {
+    "start" : 1650442913132,
+    "stop" : 1650442917988,
+    "duration" : 4856
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ec3c9cdc7574e5e5",
+  "name" : "Localise tooltip prompt browse",
+  "time" : {
+    "start" : 1649325484645,
+    "stop" : 1649325494441,
+    "duration" : 9796
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "5139c7cdf9e22730",
+  "name" : "Add to trolley modal and close using the continue shopping button",
+  "time" : {
+    "start" : 1648817519579,
+    "stop" : 1648817557742,
+    "duration" : 38163
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c8b0f1e099647583",
+  "name" : "Add your postcode link displays when not localised using browse",
+  "time" : {
+    "start" : 1649327707422,
+    "stop" : 1649327716242,
+    "duration" : 8820
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7036de67901bdb9",
+  "name" : "Customer browsing search page with an unsupported browser",
+  "time" : {
+    "start" : 1654520826432,
+    "stop" : 1654520838351,
+    "duration" : 11919
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c5ae3f964ee94e67",
+  "name" : "AdSense requests are called with correct adPage param",
+  "time" : {
+    "start" : 1649412074398,
+    "stop" : 1649412097277,
+    "duration" : 22879
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "90f33e1f3444f68",
+  "name" : "Search page: category filter should not display in applied filter section",
+  "time" : {
+    "start" : 1650976099765,
+    "stop" : 1650976115321,
+    "duration" : 15556
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "727b0fc3ad23f255",
+  "name" : "display 1 citrus product on plain search (mobile)",
+  "time" : {
+    "start" : 1660130695361,
+    "stop" : 1660130719045,
+    "duration" : 23684
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e3fce312cd04ea35",
+  "name" : "Paginating backwards and forwards through the results with next and previous buttons",
+  "time" : {
+    "start" : 1653336125143,
+    "stop" : 1653336139663,
+    "duration" : 14520
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "16248f26e94d93e6",
+  "name" : "Pre-push The feedback box should be reset when the user navigates to a different search term",
+  "time" : {
+    "start" : 1648723964936,
+    "stop" : 1648723971680,
+    "duration" : 6744
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ecd0e83c02511bd9",
+  "name" : "Correct product card links for size searched variants large suitcase",
+  "time" : {
+    "start" : 1652719612664,
+    "stop" : 1652721563544,
+    "duration" : 1950880
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "46639c68f0c88c38",
+  "name" : "Prepush : Product count in search title",
+  "time" : {
+    "start" : 1653336151331,
+    "stop" : 1653336157923,
+    "duration" : 6592
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "be73b566eb6b382c",
+  "name" : "Localise tooltip prompt displays on browse page",
+  "time" : {
+    "start" : 1649325719445,
+    "stop" : 1649325727185,
+    "duration" : 7740
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "70e38efaf8bdb4f7",
+  "name" : "Remove filters from within applied filter section",
+  "time" : {
+    "start" : 1650909664274,
+    "stop" : 1650909673188,
+    "duration" : 8914
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a0d45c231228760",
+  "name" : "Bookmarked PLP+ page should not see applied filters section",
+  "time" : {
+    "start" : 1650896421055,
+    "stop" : 1650896425243,
+    "duration" : 4188
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5d08aead33940999",
+  "name" : "Apply Reset All after filters",
+  "time" : {
+    "start" : 1653326348387,
+    "stop" : 1653326362392,
+    "duration" : 14005
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b207ab5cbb62eb9d",
+  "name" : "prepush - search sorting by Price: Low - High",
+  "time" : {
+    "start" : 1653336125242,
+    "stop" : 1653336140553,
+    "duration" : 15311
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a27c1cdcf6372bd",
+  "name" : "Apply Customer Rating filter updates the URL",
+  "time" : {
+    "start" : 1653336149856,
+    "stop" : 1653336175850,
+    "duration" : 25994
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ffebd8760aac95a5",
+  "name" : "Clicking the wishlist icon on a browse lister page",
+  "time" : {
+    "start" : 1660732000081,
+    "stop" : 1660732009773,
+    "duration" : 9692
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "463a2fc9dfabe994",
+  "name" : "Add to trolley modal and close by clicking the background overlay",
+  "time" : {
+    "start" : 1648817640308,
+    "stop" : 1648817666086,
+    "duration" : 25778
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1b3055cf9c8b4a75",
+  "name" : "display 3 citrus products on plain search and sort (desktop/tablet)",
+  "time" : {
+    "start" : 1650988892422,
+    "stop" : 1650988930241,
+    "duration" : 37819
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "66a6366e7dcbd77d",
+  "name" : "Serving 1 citrus ads canned search /list/test-test-test/ (mobile)",
+  "time" : {
+    "start" : 1660145986991,
+    "stop" : 1660146000512,
+    "duration" : 13521
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "35f845011f00a9f",
+  "name" : "Bespoke white goods product cards displayed on white goods browse lister",
+  "time" : {
+    "start" : 1653336219613,
+    "stop" : 1653336229534,
+    "duration" : 9921
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4053a9b45a8d1fc0",
+  "name" : "Selected search page filters should see in the applied filter section",
+  "time" : {
+    "start" : 1650905655039,
+    "stop" : 1650905672843,
+    "duration" : 17804
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bb525fb725686115",
+  "name" : "prepush: display 3 citrus products on plain search and sort (desktop/tablet)",
+  "time" : {
+    "start" : 1650442861848,
+    "stop" : 1650442883448,
+    "duration" : 21600
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dd58cd266448be29",
+  "name" : "Add to trolley modal and close using the continue shopping button",
+  "time" : {
+    "start" : 1648817690893,
+    "stop" : 1648817715733,
+    "duration" : 24840
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a4f28b542978fafa",
+  "name" : "Pre-push The feedback box should be reset when the user navigates to a different search term",
+  "time" : {
+    "start" : 1650442884741,
+    "stop" : 1650442892696,
+    "duration" : 7955
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3c90e4835dcbde32",
+  "name" : "Prepush : Product count in search title",
+  "time" : {
+    "start" : 1650442893636,
+    "stop" : 1650442901687,
+    "duration" : 8051
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "98a0b57df86eade",
+  "name" : "Bespoke white goods product cards displayed on white goods browse lister",
+  "time" : {
+    "start" : 1648723962874,
+    "stop" : 1648723969899,
+    "duration" : 7025
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f066e212cbd0fc80",
+  "name" : "Correct product card links for size searched variants large suitcase",
+  "time" : {
+    "start" : 1652768730105,
+    "stop" : 1652768733345,
+    "duration" : 3240
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "37c4b7e15a8970eb",
+  "name" : "AdSense requests when navigating from browse PLP to search and back again",
+  "time" : {
+    "start" : 1648480342978,
+    "stop" : 1648480370352,
+    "duration" : 27374
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6d9c510d64a451f2",
+  "name" : "Accessibility violations on browse page",
+  "time" : {
+    "start" : 1654012054077,
+    "stop" : 1654012097313,
+    "duration" : 43236
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "acc54304ea187856",
+  "name" : "Check then un-check multi-select filter",
+  "time" : {
+    "start" : 1650911759256,
+    "stop" : 1650911795326,
+    "duration" : 36070
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "156a5150e357d68e",
+  "name" : "Perform sort after single select",
+  "time" : {
+    "start" : 1653336080685,
+    "stop" : 1653336105125,
+    "duration" : 24440
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "549198746b7a81b2",
+  "name" : "Add your postcode link displays when not localised using search",
+  "time" : {
+    "start" : 1649327716242,
+    "stop" : 1649327723020,
+    "duration" : 6778
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e1dd0d5de81ecc1",
+  "name" : "Serving 1 citrus ads canned search /list/test-test-test/ (desktop/tablet)",
+  "time" : {
+    "start" : 1649414075885,
+    "stop" : 1649414088883,
+    "duration" : 12998
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "db161fb6c3de35a8",
+  "name" : "Bespoke white goods product cards displayed on white goods browse lister",
+  "time" : {
+    "start" : 1650442894757,
+    "stop" : 1650442902106,
+    "duration" : 7349
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "361e1609898f1d08",
+  "name" : "AdSense requests when updating search term",
+  "time" : {
+    "start" : 1650442912258,
+    "stop" : 1650442936681,
+    "duration" : 24423
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "442b62017b63f8bb",
+  "name" : "Close localise tooltip prompt on search page",
+  "time" : {
+    "start" : 1649326946984,
+    "stop" : 1649327043526,
+    "duration" : 96542
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1b561e0f97fca8fd",
+  "name" : "selecting all categories link displays all categories for users search",
+  "time" : {
+    "start" : 1653336125176,
+    "stop" : 1653336149927,
+    "duration" : 24751
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "550ccf3ef26db303",
+  "name" : "AdSense requests are called with correct adPage param",
+  "time" : {
+    "start" : 1648723960609,
+    "stop" : 1648723983453,
+    "duration" : 22844
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fdd313103f6cabd5",
+  "name" : "AdSense requests when coming from no results",
+  "time" : {
+    "start" : 1648480420871,
+    "stop" : 1648480436368,
+    "duration" : 15497
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "62527e48eed81164",
+  "name" : "AdSense requests when coming from no results",
+  "time" : {
+    "start" : 1649412117501,
+    "stop" : 1649412130367,
+    "duration" : 12866
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d8023acbd51316e5",
+  "name" : "Add your postcode link displays when not localised (prepush)",
+  "time" : {
+    "start" : 1650442913066,
+    "stop" : 1650442929449,
+    "duration" : 16383
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "33c5363f2cf87a66",
+  "name" : "AdSense requests when coming from no results",
+  "time" : {
+    "start" : 1650442936682,
+    "stop" : 1650442953042,
+    "duration" : 16360
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9760752de132658b",
+  "name" : "Customer browsing browse page with an unsupported browser",
+  "time" : {
+    "start" : 1654520826569,
+    "stop" : 1654520841431,
+    "duration" : 14862
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "95012d5e4f013095",
+  "name" : "prepush - search sorting by Price: Low - High",
+  "time" : {
+    "start" : 1648480365364,
+    "stop" : 1648480382868,
+    "duration" : 17504
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f60eb570014cf9dc",
+  "name" : "AdSense requests when going to no results",
+  "time" : {
+    "start" : 1648724013677,
+    "stop" : 1648724028898,
+    "duration" : 15221
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "951be6dcab45bb64",
+  "name" : "Perform sort after single select",
+  "time" : {
+    "start" : 1650442950516,
+    "stop" : 1650442968914,
+    "duration" : 18398
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f29482576876ce9",
+  "name" : "Correct product card links for size searched variants large suitcase",
+  "time" : {
+    "start" : 1652715128702,
+    "stop" : 1652715140917,
+    "duration" : 12215
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1e63c3d4a707c76b",
+  "name" : "Prepush : Product count in search title",
+  "time" : {
+    "start" : 1649412073321,
+    "stop" : 1649412080877,
+    "duration" : 7556
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "821a054104cdfa5b",
+  "name" : "Add your postcode link displays when not localised (prepush)",
+  "time" : {
+    "start" : 1648723978481,
+    "stop" : 1648723984857,
+    "duration" : 6376
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e258fdd45a5abdc6",
+  "name" : "AdSense requests when updating search term",
+  "time" : {
+    "start" : 1648480399457,
+    "stop" : 1648480420871,
+    "duration" : 21414
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f3f4645e4f91f80",
+  "name" : "Pre-push The feedback box should be reset when the user navigates to a different search term",
+  "time" : {
+    "start" : 1653336080647,
+    "stop" : 1653336090981,
+    "duration" : 10334
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8d686921a762c0d8",
+  "name" : "Access the dyson stub server",
+  "time" : {
+    "start" : 1653336145787,
+    "stop" : 1653336150551,
+    "duration" : 4764
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c038013f1f506479",
+  "name" : "Paginating backwards and forwards through the results with next and previous buttons",
+  "time" : {
+    "start" : 1649412086725,
+    "stop" : 1649412098949,
+    "duration" : 12224
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c0ad17373b3675ce",
+  "name" : "Add to trolley modal and close using the X button",
+  "time" : {
+    "start" : 1672848792892,
+    "stop" : 1672848794923,
+    "duration" : 2031
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "7cfd1477635725e4",
+  "name" : "Selected search page filters should see in the applied filter section",
+  "time" : {
+    "start" : 1650905582808,
+    "stop" : 1650905595043,
+    "duration" : 12235
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "89aeca629d22e4a3",
+  "name" : "display 1 citrus product on plain search (mobile)",
+  "time" : {
+    "start" : 1660129531139,
+    "stop" : 1660129547844,
+    "duration" : 16705
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e8a01f595593b2c8",
+  "name" : "Prepush : Product count in search title",
+  "time" : {
+    "start" : 1648480425335,
+    "stop" : 1648480435638,
+    "duration" : 10303
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a4b644e3c7644c0d",
+  "name" : "Perform sort after multi-select PRICE> and BRANDS",
+  "time" : {
+    "start" : 1650911732540,
+    "stop" : 1650911759255,
+    "duration" : 26715
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4f74d47523e36532",
+  "name" : "Filter panel persists after filtering PLP+ page",
+  "time" : {
+    "start" : 1650911901335,
+    "stop" : 1650911910371,
+    "duration" : 9036
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b9c413f93b7e3613",
+  "name" : "AdSense requests when going to no results",
+  "time" : {
+    "start" : 1648480436368,
+    "stop" : 1648480450924,
+    "duration" : 14556
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6a6ee452c8e34c12",
+  "name" : "Paginating backwards and forwards through the results with next and previous buttons",
+  "time" : {
+    "start" : 1653336241038,
+    "stop" : 1653336253850,
+    "duration" : 12812
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ed56158924e987ea",
+  "name" : "Serving 1 citrus ads canned search /list/test-test-test/ (desktop/tablet)",
+  "time" : {
+    "start" : 1650978000344,
+    "stop" : 1650978007076,
+    "duration" : 6732
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bd8adb28877bb63c",
+  "name" : "Navigating directly to the /sd route",
+  "time" : {
+    "start" : 1650442861193,
+    "stop" : 1650442869242,
+    "duration" : 8049
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d84511a30f4e1951",
+  "name" : "Add your postcode link does not display when localised using browse",
+  "time" : {
+    "start" : 1664378093277,
+    "stop" : 1664378104067,
+    "duration" : 10790
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "41ac7ea63785697e",
+  "name" : "Add to trolley modal and close using the X button",
+  "time" : {
+    "start" : 1649334662423,
+    "stop" : 1649334673036,
+    "duration" : 10613
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bfc04231dc836835",
+  "name" : "Customer browsing wishlist page with an unsupported browser",
+  "time" : {
+    "start" : 1654520826661,
+    "stop" : 1654520842538,
+    "duration" : 15877
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8b975fae606b5294",
+  "name" : "Legacy apache static redirect to new browse page",
+  "time" : {
+    "start" : 1650977017862,
+    "stop" : 1650977021899,
+    "duration" : 4037
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d1e5d5a3becaf609",
+  "name" : "AdSense requests are called with correct channel ids on mobile",
+  "time" : {
+    "start" : 1653336080687,
+    "stop" : 1653336107981,
+    "duration" : 27294
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba44580f9ffe12c6",
+  "name" : "Customer browsing canned search test page with an unsupported browser",
+  "time" : {
+    "start" : 1654520826404,
+    "stop" : 1654520836981,
+    "duration" : 10577
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b12227948b8d0f72",
+  "name" : "Clicking the wishlist icon on a browse lister page",
+  "time" : {
+    "start" : 1660731966419,
+    "stop" : 1660731976337,
+    "duration" : 9918
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bb38cb98262d705a",
+  "name" : "AdSense requests when navigating from browse PLP to search and back again",
+  "time" : {
+    "start" : 1648723941179,
+    "stop" : 1648723960608,
+    "duration" : 19429
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8f188eec83eaef68",
+  "name" : "Filter maintained after Sorting Price: High - Low",
+  "time" : {
+    "start" : 1650989978373,
+    "stop" : 1650989992930,
+    "duration" : 14557
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "557beb61c82cfd04",
+  "name" : "Content in PLP list not visible on pagination",
+  "time" : {
+    "start" : 1663852150208,
+    "stop" : 1663852170432,
+    "duration" : 20224
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bcffda6e12af7afe",
+  "name" : "prepush: citrus products on plain search and sort (desktop/tablet)",
+  "time" : {
+    "start" : 1648723981355,
+    "stop" : 1648723999957,
+    "duration" : 18602
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c09ecdc637632f08",
+  "name" : "Search resulting in a brands not in catalogue experience WITH suggestions banner",
+  "time" : {
+    "start" : 1650978392619,
+    "stop" : 1650978419620,
+    "duration" : 27001
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6edcf5d2a07ebc69",
+  "name" : "Selected PLP+ page filters should not see in the applied filter section",
+  "time" : {
+    "start" : 1650905595043,
+    "stop" : 1650905606380,
+    "duration" : 11337
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2e6ff3a3c070a066",
+  "name" : "Clear all should remove applied filters section",
+  "time" : {
+    "start" : 1650905812228,
+    "stop" : 1650905818606,
+    "duration" : 6378
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "55251be8cdd4c0d0",
+  "name" : "AdSense requests are called with correct channel ids on desktop/tablet",
+  "time" : {
+    "start" : 1648480450924,
+    "stop" : 1648480473473,
+    "duration" : 22549
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7cc6693d729563fb",
+  "name" : "Close localise tooltip prompt on search page",
+  "time" : {
+    "start" : 1649327130807,
+    "stop" : 1649327229512,
+    "duration" : 98705
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ba02d171cd47dd19",
+  "name" : "Serving the correct canned search /list/test-test-test/ after filter",
+  "time" : {
+    "start" : 1660227719290,
+    "stop" : 1660227740336,
+    "duration" : 21046
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "cfc4d380aea43be3",
+  "name" : "Add to trolley modal and close using the continue shopping button",
+  "time" : {
+    "start" : 1648817524621,
+    "stop" : 1648817559664,
+    "duration" : 35043
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "976d74206022e496",
+  "name" : "Close filter panel by clicking on background overlay",
+  "time" : {
+    "start" : 1650912345074,
+    "stop" : 1650912350806,
+    "duration" : 5732
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "92c4fc3c60b28e9b",
+  "name" : "selecting all categories link displays all categories for users search",
+  "time" : {
+    "start" : 1648480389636,
+    "stop" : 1648480411443,
+    "duration" : 21807
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ed26407c605232a3",
+  "name" : "Filter panel persists after filtering clearance page",
+  "time" : {
+    "start" : 1650911910371,
+    "stop" : 1650911919278,
+    "duration" : 8907
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e3b5c940267a6187",
+  "name" : "User enters an exact category match, then applies a filter",
+  "time" : {
+    "start" : 1659948083799,
+    "stop" : 1659948134731,
+    "duration" : 50932
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "35aebee91044230f",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1648480398954,
+    "stop" : 1648480411633,
+    "duration" : 12679
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4cf19ec1d927d451",
+  "name" : "display 3 citrus products filtered by price in browse (desktop/tablet)",
+  "time" : {
+    "start" : 1660142438220,
+    "stop" : 1660142487380,
+    "duration" : 49160
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "5699cdde1270cd0e",
+  "name" : "Localised and product is OOS for collection and delivery (prepush)",
+  "time" : {
+    "start" : 1648723941166,
+    "stop" : 1648723953263,
+    "duration" : 12097
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8f92dea3a7939255",
+  "name" : "Navigating directly to the /sd route",
+  "time" : {
+    "start" : 1653336308783,
+    "stop" : 1653336314545,
+    "duration" : 5762
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "afd448806194cd6a",
+  "name" : "AdSense requests when going to no results",
+  "time" : {
+    "start" : 1650442953042,
+    "stop" : 1650442969130,
+    "duration" : 16088
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b2f9012c7a2670df",
+  "name" : "Navigating directly to the /sd route",
+  "time" : {
+    "start" : 1653336160367,
+    "stop" : 1653336165924,
+    "duration" : 5557
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "993e55248525308c",
+  "name" : "Correct product card links for size searched variants small suitcase",
+  "time" : {
+    "start" : 1652715104383,
+    "stop" : 1652715115627,
+    "duration" : 11244
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9a3d055b1aa493d4",
+  "name" : "Serving 1 citrus ads canned search /list/test-test-test/ (mobile)",
+  "time" : {
+    "start" : 1649411328035,
+    "stop" : 1649411344709,
+    "duration" : 16674
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "606af78e880a57a5",
+  "name" : "AdSense requests are called with correct channel ids on desktop/tablet",
+  "time" : {
+    "start" : 1653336308668,
+    "stop" : 1653336330542,
+    "duration" : 21874
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3d26bb098bee4e4a",
+  "name" : "Apply Customer Rating filter updates the URL",
+  "time" : {
+    "start" : 1650442934812,
+    "stop" : 1650442960760,
+    "duration" : 25948
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "420939b1579e4746",
+  "name" : "Perform sort after single select",
+  "time" : {
+    "start" : 1649412111353,
+    "stop" : 1649412129039,
+    "duration" : 17686
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b1550b7743101746",
+  "name" : "AdSense requests are called with correct adPage param",
+  "time" : {
+    "start" : 1650442886052,
+    "stop" : 1650442912258,
+    "duration" : 26206
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b990a93be0ae0001",
+  "name" : "AdSense requests are called with correct adPage param",
+  "time" : {
+    "start" : 1648480370352,
+    "stop" : 1648480399456,
+    "duration" : 29104
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4f8aa5bcc6122cee",
+  "name" : "Close localise tooltip prompt on browse page",
+  "time" : {
+    "start" : 1649327587431,
+    "stop" : 1649327598823,
+    "duration" : 11392
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "be5ef01a9d409fa3",
+  "name" : "prepush: citrus products on plain search and sort (desktop/tablet)",
+  "time" : {
+    "start" : 1649328434862,
+    "stop" : 1649328451699,
+    "duration" : 16837
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d3eecdd23f3e7b28",
+  "name" : "Perform sort after single select",
+  "time" : {
+    "start" : 1650911715624,
+    "stop" : 1650911728378,
+    "duration" : 12754
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6ae2d651151ec69d",
+  "name" : "Access the dyson stub server",
+  "time" : {
+    "start" : 1648480442921,
+    "stop" : 1648480448930,
+    "duration" : 6009
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8b569df518f498fa",
+  "name" : "AdSense requests are called with correct channel ids on desktop/tablet",
+  "time" : {
+    "start" : 1648724028898,
+    "stop" : 1648724051846,
+    "duration" : 22948
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "14d59cf45270009c",
+  "name" : "Add to trolley modal and close by clicking the background overlay",
+  "time" : {
+    "start" : 1649425191593,
+    "stop" : 1649425210695,
+    "duration" : 19102
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2aedbf45ef9b1917",
+  "name" : "Close localise tooltip prompt on browse page",
+  "time" : {
+    "start" : 1649326933787,
+    "stop" : 1649326946984,
+    "duration" : 13197
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "adda2407a232eef3",
+  "name" : "Add to trolley modal and close by clicking the background overlay",
+  "time" : {
+    "start" : 1650892226797,
+    "stop" : 1650892234534,
+    "duration" : 7737
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "11c8a6bd8570e74b",
+  "name" : "display 1 citrus product filtered by price in browse (mobile)",
+  "time" : {
+    "start" : 1660128818054,
+    "stop" : 1660128833990,
+    "duration" : 15936
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6819fe5f6b4b7699",
+  "name" : "AdSense requests when navigating from browse PLP to search and back again",
+  "time" : {
+    "start" : 1650442862425,
+    "stop" : 1650442886052,
+    "duration" : 23627
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7242994ad48d463a",
+  "name" : "Customer browsing account page with an unsupported browser",
+  "time" : {
+    "start" : 1654520826368,
+    "stop" : 1654520841823,
+    "duration" : 15455
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b02051aa6ae423ca",
+  "name" : "Accessibility violations on white goods browse page",
+  "time" : {
+    "start" : 1654012137592,
+    "stop" : 1654012164258,
+    "duration" : 26666
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "33fed4f16d2b43",
+  "name" : "Apply Customer Rating filter updates the URL",
+  "time" : {
+    "start" : 1649412055702,
+    "stop" : 1649412077705,
+    "duration" : 22003
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9940310392d33fd2",
+  "name" : "Search page: category filter should not display in applied filter section",
+  "time" : {
+    "start" : 1650909728514,
+    "stop" : 1650909737811,
+    "duration" : 9297
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b1c6a1cb90667213",
+  "name" : "Ensure sorting is maintained after single select",
+  "time" : {
+    "start" : 1650911703750,
+    "stop" : 1650911715624,
+    "duration" : 11874
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d50e9b02df12e1df",
+  "name" : "Add to trolley modal and close using the X button",
+  "time" : {
+    "start" : 1648817588842,
+    "stop" : 1648817619278,
+    "duration" : 30436
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4bc9a64a2ea37288",
+  "name" : "selecting all categories link displays all categories for users search",
+  "time" : {
+    "start" : 1648723940257,
+    "stop" : 1648723955919,
+    "duration" : 15662
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7987c7ac66dd453b",
+  "name" : "User enters an exact category match, then applies a filter",
+  "time" : {
+    "start" : 1659947745934,
+    "stop" : 1659947795920,
+    "duration" : 49986
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "51aa0a7d6a23895e",
+  "name" : "Accessibility violations on search page",
+  "time" : {
+    "start" : 1654012029064,
+    "stop" : 1654012054075,
+    "duration" : 25011
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "a759c9912a888a9d",
+  "name" : "Access the dyson stub server",
+  "time" : {
+    "start" : 1648723963884,
+    "stop" : 1648723968800,
+    "duration" : 4916
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2972d09b8b76664a",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1653336080685,
+    "stop" : 1653336094829,
+    "duration" : 14144
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ca6b8038569b316f",
+  "name" : "Multi-select and pagination habitat",
+  "time" : {
+    "start" : 1650911827980,
+    "stop" : 1650911855837,
+    "duration" : 27857
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7ce224f5567e8fda",
+  "name" : "Paginating backwards and forwards through the results with next and previous buttons",
+  "time" : {
+    "start" : 1648723940933,
+    "stop" : 1648723953965,
+    "duration" : 13032
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a746d48aae00cc97",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1653336125476,
+    "stop" : 1653336139687,
+    "duration" : 14211
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "32dfacb810e39639",
+  "name" : "Pre-push The feedback box should be reset when the user navigates to a different search term",
+  "time" : {
+    "start" : 1648480342569,
+    "stop" : 1648480355999,
+    "duration" : 13430
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "113d0d45fdcd6c2d",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1649412054620,
+    "stop" : 1649412066236,
+    "duration" : 11616
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f1c6771a77493806",
+  "name" : "Apply Customer Rating filter updates the URL",
+  "time" : {
+    "start" : 1653336278018,
+    "stop" : 1653336299502,
+    "duration" : 21484
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cccd607371485b4e",
+  "name" : "display 1 citrus product filtered by price in browse (mobile)",
+  "time" : {
+    "start" : 1660129322523,
+    "stop" : 1660129351697,
+    "duration" : 29174
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f0df7b1f9abdcfe2",
+  "name" : "selecting all categories link displays all categories for users search",
+  "time" : {
+    "start" : 1650442913009,
+    "stop" : 1650442937782,
+    "duration" : 24773
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2aa52bba6ca0c154",
+  "name" : "Search lister page displaying clearance badges",
+  "time" : {
+    "start" : 1650987059702,
+    "stop" : 1650987069712,
+    "duration" : 10010
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c5410cb220ab6dfe",
+  "name" : "Serving 1 citrus ads canned search /list/test-test-test/ (desktop/tablet)",
+  "time" : {
+    "start" : 1649414012783,
+    "stop" : 1649414025973,
+    "duration" : 13190
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "d989c0c72c3701ef",
+  "name" : "AdSense requests when going to no results",
+  "time" : {
+    "start" : 1653336293359,
+    "stop" : 1653336308668,
+    "duration" : 15309
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2670e39e5d8e5956",
+  "name" : "display 2 citrus products on plain browse and sort (mobile)",
+  "time" : {
+    "start" : 1660210014716,
+    "stop" : 1660210038785,
+    "duration" : 24069
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "dd556d127f1b851d",
+  "name" : "Bespoke white goods product cards displayed on white goods browse lister",
+  "time" : {
+    "start" : 1653336080684,
+    "stop" : 1653336092021,
+    "duration" : 11337
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6f832e7aff790433",
+  "name" : "prepush",
+  "time" : {
+    "start" : 1648724000961,
+    "stop" : 1648724007690,
+    "duration" : 6729
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ebcddba4c6e20c1",
+  "name" : "AdSense requests when updating search term",
+  "time" : {
+    "start" : 1648723983453,
+    "stop" : 1648724000477,
+    "duration" : 17024
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ff7cecbc9a66f65",
+  "name" : "Accessibility violations on clothing lister page",
+  "time" : {
+    "start" : 1654012097314,
+    "stop" : 1654012137591,
+    "duration" : 40277
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ab0e169a71eac1b",
+  "name" : "Localised and products available to collect from <date>",
+  "time" : {
+    "start" : 1664379453419,
+    "stop" : 1664379475690,
+    "duration" : 22271
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "e66d353fa3cc35b4",
+  "name" : "Selected PLP+ page filters should not see in the applied filter section",
+  "time" : {
+    "start" : 1650905672844,
+    "stop" : 1650905690297,
+    "duration" : 17453
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ffb09efbc7878e13",
+  "name" : "Localised and product is OOS for collection and delivery (prepush)",
+  "time" : {
+    "start" : 1648480396002,
+    "stop" : 1648480410597,
+    "duration" : 14595
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "76127550ba615293",
+  "name" : "Close filter panel by clicking on background overlay",
+  "time" : {
+    "start" : 1650963029498,
+    "stop" : 1650963037894,
+    "duration" : 8396
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7e609b0c4e3e1444",
+  "name" : "Closing error modal via the 'x' button",
+  "time" : {
+    "start" : 1650912231006,
+    "stop" : 1650912240923,
+    "duration" : 9917
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cbdede7ce55dd6bd",
+  "name" : "AdSense requests when coming from no results",
+  "time" : {
+    "start" : 1653336279979,
+    "stop" : 1653336293358,
+    "duration" : 13379
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3f3b4f5745b2cbc9",
+  "name" : "Content in canned list visible on filtering",
+  "time" : {
+    "start" : 1660679238055,
+    "stop" : 1660679245746,
+    "duration" : 7691
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "335d26597a11f36c",
+  "name" : "Localise tooltip prompt displays on search page",
+  "time" : {
+    "start" : 1649325727185,
+    "stop" : 1649325734292,
+    "duration" : 7107
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5c3a7092c0f3bc1b",
+  "name" : "Selecting multiple filters across different facets PRICE and BRANDS",
+  "time" : {
+    "start" : 1650911674395,
+    "stop" : 1650911703750,
+    "duration" : 29355
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c5dbc3fced8249cd",
+  "name" : "Selected browse page filters should see in the applied filter section",
+  "time" : {
+    "start" : 1650905690297,
+    "stop" : 1650905708739,
+    "duration" : 18442
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8af706e6d0c995c7",
+  "name" : "Add your postcode link displays when not localised (prepush)",
+  "time" : {
+    "start" : 1653336262967,
+    "stop" : 1653336270290,
+    "duration" : 7323
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f5f7bd4f89eaf24b",
+  "name" : "Add to trolley modal and close using the X button",
+  "time" : {
+    "start" : 1660140522537,
+    "stop" : 1660140531406,
+    "duration" : 8869
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "598500ac24c72514",
+  "name" : "Bespoke white goods product cards displayed on white goods browse lister",
+  "time" : {
+    "start" : 1649412076112,
+    "stop" : 1649412083116,
+    "duration" : 7004
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "485a60462e1f5c06",
+  "name" : "Bespoke white goods product cards displayed on white goods browse lister",
+  "time" : {
+    "start" : 1648480342118,
+    "stop" : 1648480351973,
+    "duration" : 9855
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cc6641e9d7d33a6a",
+  "name" : "Paginating backwards and forwards through the results with next and previous buttons",
+  "time" : {
+    "start" : 1648480342902,
+    "stop" : 1648480360949,
+    "duration" : 18047
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e5c0702e75fafc3c",
+  "name" : "Prepush : Product count in search title",
+  "time" : {
+    "start" : 1653336302024,
+    "stop" : 1653336309096,
+    "duration" : 7072
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "31ebe0cbc579eb47",
+  "name" : "Correct product card links for size searched variants small suitcase",
+  "time" : {
+    "start" : 1652719555285,
+    "stop" : 1652719584881,
+    "duration" : 29596
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "df82d91ec0af9736",
+  "name" : "display 1 citrus product on plain search (mobile)",
+  "time" : {
+    "start" : 1649409942396,
+    "stop" : 1649409956804,
+    "duration" : 14408
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4923de999f44d480",
+  "name" : "Navigation from CLP content link",
+  "time" : {
+    "start" : 1663852335447,
+    "stop" : 1663852347105,
+    "duration" : 11658
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c0a46cd2ce0bc9bb",
+  "name" : "Customer browsing clearance page with an unsupported browser",
+  "time" : {
+    "start" : 1654520826731,
+    "stop" : 1654520840474,
+    "duration" : 13743
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5cd1912f7e283d50",
+  "name" : "Correct product card links for size searched variants medium suitcase",
+  "time" : {
+    "start" : 1652719584883,
+    "stop" : 1652719612662,
+    "duration" : 27779
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "2edfa093eef1a7d6",
+  "name" : "User enters an exact category match, then applies a filter",
+  "time" : {
+    "start" : 1659947548959,
+    "stop" : 1659947569988,
+    "duration" : 21029
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e85435bbeae997ce",
+  "name" : "prepush: display 3 citrus products on plain search and sort (desktop/tablet)",
+  "time" : {
+    "start" : 1653336277794,
+    "stop" : 1653336293451,
+    "duration" : 15657
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

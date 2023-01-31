@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1649418618203' stop='1649418656206'>
+    <name>Add to Trolley</name>
+    <title>Add to Trolley</title>
+    <test-cases>
+        <test-case start='1649418627756' status='failed' stop='1649418656203'>
+            <name>Add to trolley modal and close by clicking the background overlay</name>
+            <title>Add to trolley modal and close by clicking the background overlay</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-96.0.4664.110'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1649418627904' status='passed' stop='1649418649732'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649418649732' status='passed' stop='1649418656053'>
+                    <name>When I click the add to trolley button</name>
+                    <title>When I click the add to trolley button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649418656053' status='failed' stop='1649418656202'>
+                    <name>Then I should not see the att modal</name>
+                    <title>Then I should not see the att modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toEqual(expected) // deep equality</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: false
+                Received: true
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/browser_steps.js:33:46)</stack-trace>
+            </failure>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/6aa1b23b2592be69c3e375d06f798430c14ea4f0" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

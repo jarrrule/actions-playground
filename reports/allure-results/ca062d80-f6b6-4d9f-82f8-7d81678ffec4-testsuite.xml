@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660129868303' stop='1660129928105'>
+    <name>Citrus in search</name>
+    <title>Citrus in search</title>
+    <test-cases>
+        <test-case start='1660129875068' status='failed' stop='1660129928103'>
+            <name>display 1 citrus product on plain search (mobile)</name>
+            <title>display 1 citrus product on plain search (mobile)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='chrome-11'/>
+                <parameter kind='argument' name='browser' value='Android 11.0 Samsung Galaxy S21'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>unknown error: An unknown server-side error occurred while processing the command. Original error: unknown error: unexpected command response</message>
+                <stack-trace>unknown error: An unknown server-side error occurred while processing the command. Original error: unknown error: unexpected command response
+                  (Session info: chrome=103.0.5060.53)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at Browser.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/hooks.js:51:5)</stack-trace>
+            </failure>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/51b9c547e0c214944bebe39b01c8ab4a7c72a49e" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

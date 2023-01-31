@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1659947544435' stop='1659947569989'>
+    <name>Category facet exact match</name>
+    <title>Category facet exact match</title>
+    <test-cases>
+        <test-case start='1659947548959' status='passed' stop='1659947569988'>
+            <name>User enters an exact category match, then applies a filter</name>
+            <title>User enters an exact category match, then applies a filter</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Mobile Safari-11.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1659947548970' status='passed' stop='1659947554686'>
+                    <name>Given I navigate to a "cat-match search" page</name>
+                    <title>Given I navigate to a "cat-match search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1659947554686' status='passed' stop='1659947567638'>
+                    <name>When I apply a filter to the "PRICE" that hasn't yet been used</name>
+                    <title>When I apply a filter to the "PRICE" that hasn't yet been used</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1659947567638' status='passed' stop='1659947567672'>
+                    <name>Then I should see the back to search results breadcrumb link</name>
+                    <title>Then I should see the back to search results breadcrumb link</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1659947567673' status='passed' stop='1659947569987'>
+                    <name>And I should see the all categories button</name>
+                    <title>And I should see the all categories button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

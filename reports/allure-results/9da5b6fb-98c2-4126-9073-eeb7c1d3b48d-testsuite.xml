@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648817632447' stop='1648817666088'>
+    <name>Add to Trolley</name>
+    <title>Add to Trolley</title>
+    <test-cases>
+        <test-case start='1648817640308' status='passed' stop='1648817666086'>
+            <name>Add to trolley modal and close by clicking the background overlay</name>
+            <title>Add to trolley modal and close by clicking the background overlay</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='1-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='firefox-94.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Firefox 94.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@att and not @wip and not @ignoredesktop and not @ignoreStub and not @prepush and not @ignoreargos'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1648817640381' status='passed' stop='1648817662171'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648817662171' status='passed' stop='1648817665661'>
+                    <name>When I click the add to trolley button</name>
+                    <title>When I click the add to trolley button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648817665661' status='passed' stop='1648817665741'>
+                    <name>Then I should see the att modal</name>
+                    <title>Then I should see the att modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648817665741' status='passed' stop='1648817665960'>
+                    <name>When I click the att background overlay</name>
+                    <title>When I click the att background overlay</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648817665961' status='passed' stop='1648817666084'>
+                    <name>Then I should not see the att modal</name>
+                    <title>Then I should not see the att modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/bae22f85f72a76f52a4a8d919dbfebd090bdc37f" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

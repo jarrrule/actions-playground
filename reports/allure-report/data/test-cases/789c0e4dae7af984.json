@@ -1,0 +1,107 @@
+{
+  "uid" : "789c0e4dae7af984",
+  "name" : "Correct product card links for size searched variants medium suitcase",
+  "fullName" : "Product Card Variations.Correct product card links for size searched variants medium suitcase",
+  "historyId" : "5ab21dc57deb7e3d8f9d97852cf5b893",
+  "time" : {
+    "start" : 1652717903682,
+    "stop" : 1652717919604,
+    "duration" : 15922
+  },
+  "description" : "",
+  "descriptionHtml" : "<p><a href=\"https://automate.browserstack.com/dashboard/v2/sessions/ee756e0b262e0284be795af20d283eb6a5879537\" target=\"_blank\">Browserstack Console</a></p>",
+  "status" : "failed",
+  "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality",
+  "statusTrace" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                - Expected  - 54\n                + Received  +  1\n                \n                - Array [\n                -   Object {\n                -     \"name\": \"simple value soft 2 wheel cabin suitcase\",\n                -     \"partnumber\": \"7006454\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 4 wheel hard cabin-sized suitcase\",\n                -     \"partnumber\": \"8469966\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone hard 4 wheel suitcase - black\",\n                -     \"partnumber\": \"8444448\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 4 wheel soft cabin-size suitcase\",\n                -     \"partnumber\": \"7840225\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 8 wheel soft cabin-size suitcase\",\n                -     \"partnumber\": \"8482802\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 8 wheel soft cabin-size suitcase\",\n                -     \"partnumber\": \"7952553\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone hard 8 wheel suitcase\",\n                -     \"partnumber\": \"8270076\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage world's lightest 8 wheel soft cabin suitcase\",\n                -     \"partnumber\": \"4090205\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone hard 8 wheel suitcase - silver\",\n                -     \"partnumber\": \"8112512\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage world's lightest 4 wheel soft cabin suitcase\",\n                -     \"partnumber\": \"6826329\",\n                -   },\n                -   Object {\n                -     \"name\": \"american tourister bon air hard cabin suitcase\",\n                -     \"partnumber\": \"4650968\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage expandable 8 wheel hard cabin suitcase\",\n                -     \"partnumber\": \"8671376\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage 8 wheel maxspace cabin case\",\n                -     \"partnumber\": \"7857012\",\n                -   },\n                - ]\n                + Array []\n                    at fn (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/variant_steps.js:27:34)\n                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:240:5)\n                    at World.<anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/variant_steps.js:20:15)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality",
+    "statusTrace" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                - Expected  - 54\n                + Received  +  1\n                \n                - Array [\n                -   Object {\n                -     \"name\": \"simple value soft 2 wheel cabin suitcase\",\n                -     \"partnumber\": \"7006454\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 4 wheel hard cabin-sized suitcase\",\n                -     \"partnumber\": \"8469966\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone hard 4 wheel suitcase - black\",\n                -     \"partnumber\": \"8444448\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 4 wheel soft cabin-size suitcase\",\n                -     \"partnumber\": \"7840225\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 8 wheel soft cabin-size suitcase\",\n                -     \"partnumber\": \"8482802\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 8 wheel soft cabin-size suitcase\",\n                -     \"partnumber\": \"7952553\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone hard 8 wheel suitcase\",\n                -     \"partnumber\": \"8270076\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage world's lightest 8 wheel soft cabin suitcase\",\n                -     \"partnumber\": \"4090205\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone hard 8 wheel suitcase - silver\",\n                -     \"partnumber\": \"8112512\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage world's lightest 4 wheel soft cabin suitcase\",\n                -     \"partnumber\": \"6826329\",\n                -   },\n                -   Object {\n                -     \"name\": \"american tourister bon air hard cabin suitcase\",\n                -     \"partnumber\": \"4650968\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage expandable 8 wheel hard cabin suitcase\",\n                -     \"partnumber\": \"8671376\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage 8 wheel maxspace cabin case\",\n                -     \"partnumber\": \"7857012\",\n                -   },\n                - ]\n                + Array []\n                    at fn (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/variant_steps.js:27:34)\n                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:240:5)\n                    at World.<anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/variant_steps.js:20:15)",
+    "steps" : [ {
+      "name" : "Given I search for a \"medium suitcase\"",
+      "time" : {
+        "start" : 1652717904204,
+        "stop" : 1652717916459,
+        "duration" : 12255
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see correct size variant product cards links",
+      "time" : {
+        "start" : 1652717916460,
+        "stop" : 1652717919604,
+        "duration" : 3144
+      },
+      "status" : "failed",
+      "statusMessage" : "Error: expect(received).toEqual(expected) // deep equality\n                \n                - Expected  - 54\n                + Received  +  1\n                \n                - Array [\n                -   Object {\n                -     \"name\": \"simple value soft 2 wheel cabin suitcase\",\n                -     \"partnumber\": \"7006454\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 4 wheel hard cabin-sized suitcase\",\n                -     \"partnumber\": \"8469966\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone hard 4 wheel suitcase - black\",\n                -     \"partnumber\": \"8444448\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 4 wheel soft cabin-size suitcase\",\n                -     \"partnumber\": \"7840225\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 8 wheel soft cabin-size suitcase\",\n                -     \"partnumber\": \"8482802\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone 8 wheel soft cabin-size suitcase\",\n                -     \"partnumber\": \"7952553\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone hard 8 wheel suitcase\",\n                -     \"partnumber\": \"8270076\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage world's lightest 8 wheel soft cabin suitcase\",\n                -     \"partnumber\": \"4090205\",\n                -   },\n                -   Object {\n                -     \"name\": \"featherstone hard 8 wheel suitcase - silver\",\n                -     \"partnumber\": \"8112512\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage world's lightest 4 wheel soft cabin suitcase\",\n                -     \"partnumber\": \"6826329\",\n                -   },\n                -   Object {\n                -     \"name\": \"american tourister bon air hard cabin suitcase\",\n                -     \"partnumber\": \"4650968\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage expandable 8 wheel hard cabin suitcase\",\n                -     \"partnumber\": \"8671376\",\n                -   },\n                -   Object {\n                -     \"name\": \"it luggage 8 wheel maxspace cabin case\",\n                -     \"partnumber\": \"7857012\",\n                -   },\n                - ]\n                + Array []\n                    at fn (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/variant_steps.js:27:34)\n                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:240:5)\n                    at World.<anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/variant_steps.js:20:15)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Product Card Variations"
+  }, {
+    "name" : "testClass",
+    "value" : "Product Card Variations"
+  }, {
+    "name" : "testMethod",
+    "value" : "Correct product card links for size searched variants medium suitcase"
+  }, {
+    "name" : "package",
+    "value" : "Product Card Variations"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Windows 10 Firefox 94.0"
+  }, {
+    "name" : "browser",
+    "value" : "firefox-94.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "789c0e4dae7af984.json",
+  "parameterValues" : [ "Windows 10 Firefox 94.0", "firefox-94.0", "@test" ]
+}

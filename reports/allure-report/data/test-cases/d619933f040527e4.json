@@ -1,0 +1,102 @@
+{
+  "uid" : "d619933f040527e4",
+  "name" : "Bespoke white goods product cards displayed on white goods browse lister",
+  "fullName" : "Bespoke white goods product card.Bespoke white goods product cards displayed on white goods browse lister",
+  "historyId" : "dd8446a03f20a53b7466fb45d5f86a0b",
+  "time" : {
+    "start" : 1649328372427,
+    "stop" : 1649328379287,
+    "duration" : 6860
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"white goods browse\" page",
+      "time" : {
+        "start" : 1649328372446,
+        "stop" : 1649328379261,
+        "duration" : 6815
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see bespoke white goods product cards",
+      "time" : {
+        "start" : 1649328379261,
+        "stop" : 1649328379286,
+        "duration" : 25
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-7"
+  }, {
+    "name" : "suite",
+    "value" : "Bespoke white goods product card"
+  }, {
+    "name" : "testClass",
+    "value" : "Bespoke white goods product card"
+  }, {
+    "name" : "testMethod",
+    "value" : "Bespoke white goods product cards displayed on white goods browse lister"
+  }, {
+    "name" : "package",
+    "value" : "Bespoke white goods product card"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Mobile Safari-11.0"
+  }, {
+    "name" : "browser",
+    "value" : "Windows 10 Chrome 96.0"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@prepush"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d619933f040527e4.json",
+  "parameterValues" : [ "Mobile Safari-11.0", "Windows 10 Chrome 96.0", "@prepush" ]
+}

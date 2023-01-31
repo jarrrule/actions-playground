@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650912225648' stop='1650912240923'>
+    <name>Aggregations &amp; Filters Functionality</name>
+    <title>Aggregations &amp; Filters Functionality</title>
+    <test-cases>
+        <test-case start='1650912231006' status='passed' stop='1650912240923'>
+            <name>Closing error modal via the 'x' button</name>
+            <title>Closing error modal via the 'x' button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650912231009' status='passed' stop='1650912239020'>
+                    <name>Given I see the no results modal</name>
+                    <title>Given I see the no results modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912239020' status='passed' stop='1650912240883'>
+                    <name>When I click the no results modal X button</name>
+                    <title>When I click the no results modal X button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912240884' status='passed' stop='1650912240917'>
+                    <name>Then I should see some search results</name>
+                    <title>Then I should see some search results</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912240917' status='passed' stop='1650912240922'>
+                    <name>And I should not see the no results modal</name>
+                    <title>And I should not see the no results modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
