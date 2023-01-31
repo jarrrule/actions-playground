@@ -8,6 +8,10 @@ jobs:
   allure:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout project
+        uses: actions/checkout@v2
+      - name: list directories
+        run: ls
       - name: Get allure history
         uses: actions/checkout@v2
         if: always()
@@ -15,9 +19,7 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
-      - name: checkout project
-        uses: actions/checkout@v2
-      - name: list directories
+      - name: list directories after history
         run: ls
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
