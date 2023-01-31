@@ -1,7 +1,0 @@
-[ {
-  "values" : [ "selenium-standalone" ],
-  "name" : "service"
-}, {
-  "values" : [ "https://ui-global-service-develop.service.eu-west-1.dev.deveng.systems" ],
-  "name" : "UI domain"
-} ]

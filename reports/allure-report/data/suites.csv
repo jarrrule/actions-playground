@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Oct 21 11:14:18 BST 2022","Fri Oct 21 11:14:18 BST 2022","500","","API proxies","","API proxies","Events page CMS API proxy","Events page CMS API proxy",""
-"passed","Thu Oct 20 19:48:51 BST 2022","Thu Oct 20 19:48:53 BST 2022","1870","","Search bar","","Search bar","Search bar displays","Search bar displays",""
-"failed","Thu Oct 20 17:15:40 BST 2022","Thu Oct 20 17:15:47 BST 2022","6802","","Argos credit banner is present","","Argos credit banner is present","Argos credit banner proposition","Argos credit banner proposition",""
-"passed","Fri Oct 21 11:14:18 BST 2022","Fri Oct 21 11:14:19 BST 2022","403","","API proxies","","API proxies","Homepage CMS API proxy","Homepage CMS API proxy",""
-"passed","Thu Oct 20 19:51:44 BST 2022","Thu Oct 20 19:51:47 BST 2022","3044","","Search bar","","Search bar","Dismiss search term","Dismiss search term",""
