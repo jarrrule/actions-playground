@@ -1,5 +1,5 @@
 name: Allure with history
-run-name: ${{ github.actor }}s allure history workflow
+run-name: ${{ github.actor }}s action playground
 
 on:
   workflow_dispatch:
@@ -13,10 +13,10 @@ jobs:
         if: always()
         id: allure-report
         with:
-          allure_results: ./reports/allure-results
+          allure_results: ../../reports/allure-results
           gh_pages: gh-pages
-          allure_report: ./reports/allure-report
-          allure_history: ./reports/allure-report/history
+          allure_report: ../../reports/allure-report
+          allure_history: ../../reports/allure-report/history/allure-history
       - name: Deploy report to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v2
