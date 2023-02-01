@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1664378646210' stop='1664378668718'>
+    <name>Perceived Availability</name>
+    <title>Perceived Availability</title>
+    <test-cases>
+        <test-case start='1664378652835' status='passed' stop='1664378668717'>
+            <name>Localised and products available to collect right away</name>
+            <title>Localised and products available to collect right away</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-105.0.0.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3000'/>
+            </parameters>
+            <steps>
+                <step start='1664378656693' status='passed' stop='1664378668682'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1664378668682' status='passed' stop='1664378668698'>
+                    <name>Then I should see a single Green tick icon on the product card</name>
+                    <title>Then I should see a single Green tick icon on the product card</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1664378668699' status='passed' stop='1664378668715'>
+                    <name>And I should see a single Same day collection message on the product card</name>
+                    <title>And I should see a single Same day collection message on the product card</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

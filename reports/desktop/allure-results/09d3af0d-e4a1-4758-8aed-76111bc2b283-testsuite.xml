@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648480367252' stop='1648480381399'>
+    <name>Back to search results page from search directory page</name>
+    <title>Back to search results page from search directory page</title>
+    <test-cases>
+        <test-case start='1648480371437' status='passed' stop='1648480381397'>
+            <name>Navigating directly to the /sd route</name>
+            <title>Navigating directly to the /sd route</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-6'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-99.0.4844.83'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1648480371444' status='passed' stop='1648480381374'>
+                    <name>Given I navigate to a "search directory" page</name>
+                    <title>Given I navigate to a "search directory" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648480381374' status='passed' stop='1648480381396'>
+                    <name>Then I should see some search results</name>
+                    <title>Then I should see some search results</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

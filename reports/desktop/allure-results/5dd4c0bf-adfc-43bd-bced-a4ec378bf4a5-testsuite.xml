@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660679234225' stop='1660679245748'>
+    <name>CMS content in list</name>
+    <title>CMS content in list</title>
+    <test-cases>
+        <test-case start='1660679238055' status='passed' stop='1660679245746'>
+            <name>Content in canned list visible on filtering</name>
+            <title>Content in canned list visible on filtering</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-104.0.5112.79'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1660679241243' status='passed' stop='1660679245736'>
+                    <name>Given I navigate to a "canned search test" page</name>
+                    <title>Given I navigate to a "canned search test" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1660679245736' status='passed' stop='1660679245744'>
+                    <name>Then I should see content in list</name>
+                    <title>Then I should see content in list</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

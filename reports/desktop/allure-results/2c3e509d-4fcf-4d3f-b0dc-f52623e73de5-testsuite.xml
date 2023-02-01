@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1652426409000' stop='1652426423594'>
+    <name>Perceived Availability</name>
+    <title>Perceived Availability</title>
+    <test-cases>
+        <test-case start='1652426413176' status='passed' stop='1652426423593'>
+            <name>Localised and product is OOS for collection and delivery (prepush)</name>
+            <title>Localised and product is OOS for collection and delivery (prepush)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-14'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-101.0.4951.64'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1652426416480' status='passed' stop='1652426423559'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426423559' status='passed' stop='1652426423574'>
+                    <name>Then I should see a single Out of stock icon on the product card</name>
+                    <title>Then I should see a single Out of stock icon on the product card</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426423574' status='passed' stop='1652426423592'>
+                    <name>And I should see a single Out of stock message on the product card</name>
+                    <title>And I should see a single Out of stock message on the product card</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

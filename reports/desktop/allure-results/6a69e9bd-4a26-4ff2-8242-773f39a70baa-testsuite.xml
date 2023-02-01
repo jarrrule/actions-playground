@@ -1,0 +1,62 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1649411953029' stop='1649411989249'>
+    <name>Google AdSense</name>
+    <title>Google AdSense</title>
+    <test-cases>
+        <test-case start='1649411959951' status='passed' stop='1649411989247'>
+            <name>AdSense requests are called with correct channel ids on mobile</name>
+            <title>AdSense requests are called with correct channel ids on mobile</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Mobile Safari-11.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1649411962751' status='passed' stop='1649411971944'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649411971944' status='passed' stop='1649411973527'>
+                    <name>Then I should see "7269222731" channel id param in the adsense request</name>
+                    <title>Then I should see "7269222731" channel id param in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649411973527' status='passed' stop='1649411977990'>
+                    <name>Given I navigate to a "no results" page</name>
+                    <title>Given I navigate to a "no results" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649411977990' status='passed' stop='1649411979586'>
+                    <name>Then I should see "8862901932" channel id param in the adsense request</name>
+                    <title>Then I should see "8862901932" channel id param in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649411979586' status='passed' stop='1649411987610'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1649411987611' status='passed' stop='1649411989245'>
+                    <name>Then I should see "4222615939" channel id param in the adsense request</name>
+                    <title>Then I should see "4222615939" channel id param in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

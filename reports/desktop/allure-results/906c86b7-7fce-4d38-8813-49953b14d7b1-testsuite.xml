@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648471998214' stop='1648472017935'>
+    <name>Pagination on search results page</name>
+    <title>Pagination on search results page</title>
+    <test-cases>
+        <test-case start='1648472003058' status='passed' stop='1648472017933'>
+            <name>Paginating backwards and forwards through the results with next and previous buttons</name>
+            <title>Paginating backwards and forwards through the results with next and previous buttons</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-99.0.4844.83'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1648472003260' status='passed' stop='1648472013440'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648472013440' status='passed' stop='1648472017394'>
+                    <name>When I click the pagination next button</name>
+                    <title>When I click the pagination next button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648472017394' status='passed' stop='1648472017931'>
+                    <name>Then I should be on the 2nd page of results</name>
+                    <title>Then I should be on the 2nd page of results</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

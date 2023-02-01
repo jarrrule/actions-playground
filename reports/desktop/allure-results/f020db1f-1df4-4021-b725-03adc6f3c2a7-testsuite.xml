@@ -1,0 +1,237 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1654012023620' stop='1654012164259'>
+    <name>Accessibility</name>
+    <title>Accessibility</title>
+    <test-cases>
+        <test-case start='1654012029064' status='broken' stop='1654012054075'>
+            <name>Accessibility violations on search page</name>
+            <title>Accessibility violations on search page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-102.0.5005.61'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1654012029077' status='passed' stop='1654012034379'>
+                    <name>Given I navigate to the "search" page</name>
+                    <title>Given I navigate to the "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654012034379' status='passed' stop='1654012052201'>
+                    <name>When I lazy scroll down the page</name>
+                    <title>When I lazy scroll down the page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654012052201' status='broken' stop='1654012054075'>
+                    <name>Then I should not see any accessibility violations for "search"</name>
+                    <title>Then I should not see any accessibility violations for "search"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>A11yError: 4 Accessibility issues found</message>
+                <stack-trace>A11yError: 4 Accessibility issues found
+                 * (heading-order) Heading levels should only increase by one: h4[data-el="search-title__label"]
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/heading-order
+                
+                * (landmark-unique) Ensures landmarks are unique: .google__dfp
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/landmark-unique
+                
+                * (aria-allowed-role) ARIA role should be appropriate for the element: #google_ads_iframe_\/42685526\/argos\.co\.uk\/search\/red\/bottom_0
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/aria-allowed-role
+                
+                * (duplicate-id) id attribute value must be unique: script[charset="utf-8"][type="text\/javascript"][async=""]:nth-child(79)
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/duplicate-id
+                    at Function.checkAndThrow (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sa11y/format/dist/format.js:45:19)
+                    at assertAccessible (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sa11y/wdio/dist/wdio.js:104:24)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/accessibility_steps.js:34:3)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1654012054077' status='broken' stop='1654012097313'>
+            <name>Accessibility violations on browse page</name>
+            <title>Accessibility violations on browse page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-102.0.5005.61'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1654012054080' status='passed' stop='1654012058173'>
+                    <name>Given I navigate to the "browse" page</name>
+                    <title>Given I navigate to the "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654012058173' status='passed' stop='1654012094000'>
+                    <name>When I lazy scroll down the page</name>
+                    <title>When I lazy scroll down the page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654012094001' status='broken' stop='1654012097313'>
+                    <name>Then I should not see any accessibility violations for "browse"</name>
+                    <title>Then I should not see any accessibility violations for "browse"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>A11yError: 4 Accessibility issues found</message>
+                <stack-trace>A11yError: 4 Accessibility issues found
+                 * (heading-order) Heading levels should only increase by one: h4[data-test="m053-heading"]
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/heading-order
+                
+                * (landmark-unique) Ensures landmarks are unique: .google__dfp
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/landmark-unique
+                
+                * (aria-allowed-role) ARIA role should be appropriate for the element: #google_ads_iframe_\/42685526\/argos\.co\.uk\/plp\/televisions\/bottom_0
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/aria-allowed-role
+                
+                * (duplicate-id) id attribute value must be unique: script[charset="utf-8"][type="text\/javascript"][async=""]:nth-child(75)
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/duplicate-id
+                    at Function.checkAndThrow (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sa11y/format/dist/format.js:45:19)
+                    at assertAccessible (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sa11y/wdio/dist/wdio.js:104:24)
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/accessibility_steps.js:34:3)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1654012097314' status='broken' stop='1654012137591'>
+            <name>Accessibility violations on clothing lister page</name>
+            <title>Accessibility violations on clothing lister page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-102.0.5005.61'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1654012097317' status='passed' stop='1654012101657'>
+                    <name>Given I navigate to the "clothing lister" page</name>
+                    <title>Given I navigate to the "clothing lister" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654012101657' status='passed' stop='1654012135481'>
+                    <name>When I lazy scroll down the page</name>
+                    <title>When I lazy scroll down the page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654012135481' status='broken' stop='1654012137591'>
+                    <name>Then I should not see any accessibility violations for "clothing lister"</name>
+                    <title>Then I should not see any accessibility violations for "clothing lister"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>A11yError: 3 Accessibility issues found</message>
+                <stack-trace>A11yError: 3 Accessibility issues found
+                 * (duplicate-id-active) IDs of active elements must be unique: a[data-filter-id="s"]
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/duplicate-id-active
+                
+                * (landmark-unique) Ensures landmarks are unique: .google__dfp
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/landmark-unique
+                
+                * (aria-allowed-role) ARIA role should be appropriate for the element: #google_ads_iframe_\/42685526\/argos\.co\.uk\/plp\/jeans\/bottom_0
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/aria-allowed-role
+                    at Function.checkAndThrow (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sa11y/format/dist/format.js:45:19)
+                    at assertAccessible (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sa11y/wdio/dist/wdio.js:104:24)
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/accessibility_steps.js:34:3)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1654012137592' status='broken' stop='1654012164258'>
+            <name>Accessibility violations on white goods browse page</name>
+            <title>Accessibility violations on white goods browse page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-102.0.5005.61'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1654012137595' status='passed' stop='1654012141680'>
+                    <name>Given I navigate to the "white goods browse" page</name>
+                    <title>Given I navigate to the "white goods browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654012141680' status='passed' stop='1654012162499'>
+                    <name>When I lazy scroll down the page</name>
+                    <title>When I lazy scroll down the page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654012162499' status='broken' stop='1654012164258'>
+                    <name>Then I should not see any accessibility violations for "white goods browse"</name>
+                    <title>Then I should not see any accessibility violations for "white goods browse"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>A11yError: 6 Accessibility issues found</message>
+                <stack-trace>A11yError: 6 Accessibility issues found
+                 * (duplicate-id-aria) IDs used in ARIA and labels must be unique: div[data-product-id="\39 339631"] > .lliUcZ.xs-4--none.sm-2--none > .kChEEk.SpecCardstyles__ImageContainer-lugbee-1[loading="true"] > svg[aria-labelledby="sc-desktop-content-loader-aria"][viewBox="\30 \ 0\ 410\ 410"][role="img"] > title
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/duplicate-id-aria
+                
+                * (heading-order) Heading levels should only increase by one: div[data-product-id="\39 339631"] > .SpecCardstyles__SpecContainer-lugbee-13.IOqHN.md-8--none > .WgSpecificationTablestyles__WgSpecificationTable-pbju1y-0.OlFPv[data-test="wg-specification-table"] > .WgSpecificationTablestyles__WgSpecDetails-pbju1y-2.WjWtp > .WgSpecificationTablestyles__WgSpecTableAttributes-pbju1y-4.gDxPwi.no-title > .sm-row > .WgSpecificationTablestyles__WgSpecTableOverview-pbju1y-3.dhsVJp.sm-8--none > .WgSpecificationTablestyles__WgSpecTableHeader-pbju1y-1.lcoNLF > h4
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/heading-order
+                
+                * (landmark-unique) Ensures landmarks are unique: .google__dfp
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/landmark-unique
+                
+                * (aria-allowed-role) ARIA role should be appropriate for the element: #google_ads_iframe_\/42685526\/argos\.co\.uk\/plp\/washing-machines\/bottom_0
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/aria-allowed-role
+                
+                * (duplicate-id) id attribute value must be unique: div[data-product-id="\39 339631"] > .lliUcZ.xs-4--none.sm-2--none > .kChEEk.SpecCardstyles__ImageContainer-lugbee-1[loading="true"] > svg[aria-labelledby="sc-desktop-content-loader-aria"][viewBox="\30 \ 0\ 410\ 410"][role="img"] > defs > clippath
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/duplicate-id
+                
+                * (duplicate-id) id attribute value must be unique: div[data-product-id="\39 339631"] > .lliUcZ.xs-4--none.sm-2--none > .kChEEk.SpecCardstyles__ImageContainer-lugbee-1[loading="true"] > svg[aria-labelledby="sc-desktop-content-loader-aria"][viewBox="\30 \ 0\ 410\ 410"][role="img"] > defs > lineargradient
+                	- Help URL: https://dequeuniversity.com/rules/axe/4.3/duplicate-id
+                    at Function.checkAndThrow (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sa11y/format/dist/format.js:45:19)
+                    at assertAccessible (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sa11y/wdio/dist/wdio.js:104:24)
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/accessibility_steps.js:34:3)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660148747967' stop='1660148779536'>
+    <name>Citrus in browse</name>
+    <title>Citrus in browse</title>
+    <test-cases>
+        <test-case start='1660148754181' status='broken' stop='1660148779531'>
+            <name>display 2 citrus products on plain browse and sort (mobile)</name>
+            <title>display 2 citrus products on plain browse and sort (mobile)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='chrome-12'/>
+                <parameter kind='argument' name='browser' value='Android 12.0 Samsung Galaxy S21'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: write EPIPE</message>
+                <stack-trace>Error: write EPIPE
+                    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+                    at writeGeneric (node:internal/stream_base_commons:151:3)
+                    at Socket._writeGeneric (node:net:795:11)
+                    at Socket._write (node:net:807:8)
+                    at writeOrBuffer (node:internal/streams/writable:389:12)
+                    at _write (node:internal/streams/writable:330:10)
+                    at Socket.Writable.write (node:internal/streams/writable:334:10)
+                    at Console.log (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sainsburys-tech/wdio-framework/node_modules/winston/lib/winston/transports/console.js:79:23)
+                    at Console._write (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/winston-transport/index.js:103:17)
+                    at doWrite (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_writable.js:409:139)
+                    at writeOrBuffer (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_writable.js:398:5)
+                    at Console.Writable.write (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_writable.js:307:11)
+                    at DerivedLogger.ondata (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+                    at DerivedLogger.emit (node:events:532:35)
+                    at DerivedLogger.emit (node:domain:475:12)
+                    at addChunk (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+                    at readableAddChunk (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_readable.js:280:11)
+                    at DerivedLogger.Readable.push (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_readable.js:241:10)
+                    at DerivedLogger.Transform.push (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_transform.js:139:32)
+                    at DerivedLogger._transform (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@sainsburys-tech/wdio-framework/node_modules/winston/lib/winston/logger.js:313:12)
+                    at DerivedLogger.Transform._read (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_transform.js:177:10)
+                    at DerivedLogger.Transform._write (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/readable-stream/lib/_stream_transform.js:164:83)</stack-trace>
+            </failure>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/273f942c8e2badcdc00b3d63e03bc5c37f43d343" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

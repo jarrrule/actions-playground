@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650990467369' stop='1650990481194'>
+    <name>Category facet</name>
+    <title>Category facet</title>
+    <test-cases>
+        <test-case start='1650990472113' status='broken' stop='1650990481191'>
+            <name>Navigate down through the search taxonomy</name>
+            <title>Navigate down through the search taxonomy</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650990472120' status='passed' stop='1650990479515'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: _SearchServiceHelper.default.getLeafCategoryNames(...).forEach is not a function</message>
+                <stack-trace>TypeError: _SearchServiceHelper.default.getLeafCategoryNames(...).forEach is not a function
+                    at FilterPanel.click (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:190:55)
+                    at /Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/category_steps.js:12:5
+                    at FilterPanel.requiresExpandedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:229:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/category_steps.js:11:3)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,140 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650978387701' stop='1650978419621'>
+    <name>Brands Not In Catalogue</name>
+    <title>Brands Not In Catalogue</title>
+    <test-cases>
+        <test-case start='1650978392619' status='passed' stop='1650978419620'>
+            <name>Search resulting in a brands not in catalogue experience WITH suggestions banner</name>
+            <title>Search resulting in a brands not in catalogue experience WITH suggestions banner</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650978396380' status='passed' stop='1650978404516'>
+                    <name>Given I navigate to a "brands nic with banner" page</name>
+                    <title>Given I navigate to a "brands nic with banner" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978404516' status='passed' stop='1650978405038'>
+                    <name>Then I should see the search term in the brands not in catalogue message</name>
+                    <title>Then I should see the search term in the brands not in catalogue message</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978405038' status='passed' stop='1650978405553'>
+                    <name>And I should see "hair straighteners" in the search page heading</name>
+                    <title>And I should see "hair straighteners" in the search page heading</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978405553' status='passed' stop='1650978405559'>
+                    <name>And I should see the brands not in catalogue suggestion banner</name>
+                    <title>And I should see the brands not in catalogue suggestion banner</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978405560' status='passed' stop='1650978405577'>
+                    <name>And I should see some search results</name>
+                    <title>And I should see some search results</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978405577' status='passed' stop='1650978405580'>
+                    <name>And I should see an empty search bar</name>
+                    <title>And I should see an empty search bar</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978405580' status='passed' stop='1650978409264'>
+                    <name>When I click the pagination next button</name>
+                    <title>When I click the pagination next button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978409264' status='passed' stop='1650978409267'>
+                    <name>Then I should not see the brands not in catalogue message</name>
+                    <title>Then I should not see the brands not in catalogue message</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978409267' status='passed' stop='1650978409784'>
+                    <name>And I should see "hair straighteners" in the search page heading</name>
+                    <title>And I should see "hair straighteners" in the search page heading</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978409784' status='passed' stop='1650978409787'>
+                    <name>And I should not see the brands not in catalogue suggestion banner</name>
+                    <title>And I should not see the brands not in catalogue suggestion banner</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978409787' status='passed' stop='1650978416470'>
+                    <name>When I apply a filter in "any facet" that hasn't yet been used</name>
+                    <title>When I apply a filter in "any facet" that hasn't yet been used</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978416470' status='passed' stop='1650978416472'>
+                    <name>Then I should not see "type:nic" in the url</name>
+                    <title>Then I should not see "type:nic" in the url</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978416472' status='passed' stop='1650978416475'>
+                    <name>And I should not see the brands not in catalogue message</name>
+                    <title>And I should not see the brands not in catalogue message</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978416475' status='passed' stop='1650978416995'>
+                    <name>And I should see "hair straighteners" in the search page heading</name>
+                    <title>And I should see "hair straighteners" in the search page heading</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978416995' status='passed' stop='1650978416999'>
+                    <name>And I should not see the brands not in catalogue suggestion banner</name>
+                    <title>And I should not see the brands not in catalogue suggestion banner</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978416999' status='passed' stop='1650978419092'>
+                    <name>When I sort by Price: High - Low</name>
+                    <title>When I sort by Price: High - Low</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978419092' status='passed' stop='1650978419096'>
+                    <name>Then I should not see the brands not in catalogue message</name>
+                    <title>Then I should not see the brands not in catalogue message</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978419096' status='passed' stop='1650978419616'>
+                    <name>And I should see "hair straighteners" in the search page heading</name>
+                    <title>And I should see "hair straighteners" in the search page heading</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650978419616' status='passed' stop='1650978419619'>
+                    <name>And I should not see the brands not in catalogue suggestion banner</name>
+                    <title>And I should not see the brands not in catalogue suggestion banner</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

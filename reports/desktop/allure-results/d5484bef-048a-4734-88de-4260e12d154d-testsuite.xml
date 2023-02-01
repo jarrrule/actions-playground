@@ -1,0 +1,870 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1666345852527' stop='1666345949851'>
+    <name>API proxies</name>
+    <title>API proxies</title>
+    <test-cases>
+        <test-case start='1666345858827' status='failed' stop='1666345949850'>
+            <name>Events page CMS API proxy</name>
+            <title>Events page CMS API proxy</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-106.0.0.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://ui-global-service-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1666345858829' status='passed' stop='1666345859763'>
+                    <name>Given I request the global-api cms events endpoint</name>
+                    <title>Given I request the global-api cms events endpoint</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1666345859763' status='failed' stop='1666345949849'>
+                    <name>Then I should see the correct api response</name>
+                    <title>Then I should see the correct api response</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Expect   {</message>
+                <stack-trace>Error: Expect   {
+                  "meta":{
+                  "title" : "Christmas gifts 2022 - Argos",
+                  "description" : "It’s never too early to start thinking about Christmas 2022. Shop gift ideas &amp; more. Same day delivery 7 days a week, or fast store collection."
+                  }
+                  , "template" :
+                {
+                  "data":[
+                    {
+                      "type":"template",
+                      "id":"T013",
+                      "desc":"Hybrid",
+                      "attributes":{
+                                "hasAnchorNavigation": true      }
+                    },
+                    {
+                      "type": "area",
+                      "id": "A",
+                      "desc": "Area A",
+                      "attributes": [ 
+                  {
+                    
+                  "type": "M0012",
+                  "desc": "Hero with caps subhead",
+                  "backgroundImageUrl": "//media.4rgos.it/i/Argos/sb-2522-m0012-christmasgifts-header-v2",
+                  "altText": "Christmas gifts 2022.",
+                  "heading": "Christmas gifts 2022",
+                  "subheading": "Our one-stop shop for presents, trees and decorations.",
+                  "textColor": "white",
+                  "height": "small"
+                }
+                
+                   ]
+                
+                    },
+                    {
+                      "type": "area",
+                      "id": "B",
+                      "desc": "Area B",
+                      "attributes": [ 
+                  {
+                  
+                  "type": "M017",
+                  "desc": "Anchor navigation",
+                  "theme": "light",
+                  "anchorNavigation": [
+                   "Trending",
+                     "Gifts by recipient",
+                     "Gifts by price",
+                     "Decorations",
+                     "Winter clothing",
+                     "Hosting"]
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Trending",
+                  "isStart": true
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M0091",
+                  "desc": "Heading with CTA",
+                  "textColor": "grey-charcoal",
+                  "textPosition": "left",
+                  "heading": "Trending this week"
+                }
+                
+                  
+                  ,{
+                  "type": "UG002",
+                  "desc": "Universal grid 2",
+                  "imageStyle": "normal",
+                  "isVertical": false,
+                  "mobileLayout": "stack",
+                  "included": [ 
+                  {
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Christmas decorations",
+                    "bodyCopy": "&lt;p>The wait is (almost) over. Get a head start in your preparation by sorting out all the festive decorations.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "bottom",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop decorations",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-all-christmas-decorations?tag=ar:events:christmas:trending:decorationsavailablenow",
+                          "linkTitle": "Shop decorations.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/3521-m0014-m007-m050-asym-m008-m022-christmas-lightanddecoration-9433726",
+                      "altText":"Christmas decorations."
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Beauty gifts",
+                    "bodyCopy": "&lt;p>From fancy hair stylers to pampering skincare- pick a gift to make your loved one look and feel their best.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "bottom",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop beauty gifts",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-for-beauty-and-grooming-gifts?tag=ar:events:christmas:trending:beautygifts",
+                          "linkTitle": "Shop beauty gifts.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/sb-2522-m0014-m007-m050-asym-m008-m022-christmasgifts-9487239-9509117-v2",
+                      "altText":"Beauty gifts."
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Top toys",
+                    "bodyCopy": "&lt;p>Make the kids leap with joy by gifting from our selection of top toys.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "bottom",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop top toys",
+                          "linkUrl": "https://www.argos.co.uk/events/top-toys?tag=ar:events:christmas:trending:toptoys",
+                          "linkTitle": "Shop top toys.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/0122-m0014-m007-m050-asym-m008-m022-toptoys-header-7863721",
+                      "altText":"Top toys."
+                }
+                
+                   ]
+                
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Trending",
+                  "isStart": false
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Gifts by recipient",
+                  "isStart": true
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M0091",
+                  "desc": "Heading with CTA",
+                  "textColor": "grey-charcoal",
+                  "textPosition": "left",
+                  "heading": "Christmas gifts"
+                }
+                
+                  
+                  ,{
+                  "type": "UG002",
+                  "desc": "Universal grid 2",
+                  "imageStyle": "normal",
+                  "isVertical": false,
+                  "mobileLayout": "stack",
+                  "included": [ 
+                  {
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Gifts for kids",
+                    "bodyCopy": "&lt;p>Well, anything gift-wrapped is enough to get the little ones excited. Pick something super fun and double their joy.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "bottom",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop gifts for kids",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-for-christmas-gifts-for-kids?tag=ar:events:christmas:gifts:kids",
+                          "linkTitle": "Shop gifts for kids.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/sb-2522-m0014-m007-m050-asym-m008-m022-christmasgifts-7694354-3081923-v2",
+                      "altText":"Gifts for kids."
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Gifts for her",
+                    "bodyCopy": "&lt;p>No matter her age or personality- we&amp;#39;ve put together all the thoughtful gifts to put a smile on her face.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "bottom",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop gifts for her",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-for-christmas-gifts-for-her?tag=ar:events:christmas:gifts:her",
+                          "linkTitle": "Shop gifts for her.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/sb-2522-m0014-m007-m050-asym-m008-m022-christmasgifts-1402054-9231760-v2",
+                      "altText":"Gifts for her."
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Gifts for him",
+                    "bodyCopy": "&lt;p>Whether he&amp;#39;s gadget-obsessed or a fitness enthusiast, find the perfect gift to make him feel extra special.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "bottom",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop gifts for him",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-for-christmas-gifts-for-him?tag=ar:events:christmas:gifts:him",
+                          "linkTitle": "Shop gifts for him.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/sb-2522-m0014-m007-m050-asym-m008-m022-christmasgifts-8956431-8395078-v2",
+                      "altText":"Gifts for him."
+                }
+                
+                   ]
+                
+                }
+                
+                  
+                  ,{
+                  "type": "UG002",
+                  "desc": "Universal grid 2",
+                  "imageStyle": "normal",
+                  "isVertical": false,
+                  "mobileLayout": "stack",
+                  "included": [ 
+                  {
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Gifts for grandparents",
+                    "bodyCopy": "&lt;p>It&amp;#39;s impossible to spoil our grandparents the way they spoil us, but we can try. Get them a gift (or three) they can treasure for life.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "bottom",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop gifts for grandparents",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-for-christmas-gifts-for-grandparents?tag=ar:events:christmas:gifts:grandparents",
+                          "linkTitle": "Shop gifts for grandparents.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/sb-2522-m0014-m007-m050-asym-m008-m022-christmasgifts-9178373-7890244-v2",
+                      "altText":"Gifts for grandparents."
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Gifts for the whole family",
+                    "bodyCopy": "&lt;p>Looking forward to spending the holiday season with your loved ones? Here&amp;#39;s a selection of gifts to help you create memories with your fam.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "bottom",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop gifts for the whole family",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-for-christmas-gifts-for-the-whole-family?tag=ar:events:christmas:gifts:family",
+                          "linkTitle": "Shop gifts for the whole family.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/sb-2522-m0014-m007-m050-asym-m008-m022-christmasgifts-9300938-3900468-v2",
+                      "altText":"Gifts for the whole family."
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Gifts for pets",
+                    "bodyCopy": "&lt;p>Your furry friend deserves the best. Shop from our selection of treats, toys, and other awesome stuff that&amp;#39;ll have them wagging their tails in delight.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "bottom",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop gifts for pets",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-for-christmas-gifts-for-pets?tag=ar:events:christmas:gifts:pets",
+                          "linkTitle": "Shop gifts for pets.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/sb-2522-m0014-m007-m050-asym-m008-m022-christmasgifts-9344554-9206434-v2",
+                      "altText":"Gifts for pets."
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Gifts for baby",
+                    "bodyCopy": "&lt;p>From play mats to cuddly toys- shop for new gifts for the newest addition to your family.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "bottom",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop gifts for baby",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-for-christmas-gifts-for-baby?tag=ar:events:christmas:gifts:baby",
+                          "linkTitle": "Shop gifts for baby.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/sb-2522-m0014-m007-m050-asym-m008-m022-christmasgifts-4192938-4834911-v2",
+                      "altText":"Gifts for baby."
+                }
+                
+                   ]
+                
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Gifts by recipient",
+                  "isStart": false
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Gifts by price",
+                  "isStart": true
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M0091",
+                  "desc": "Heading with CTA",
+                  "textColor": "grey-charcoal",
+                  "textPosition": "left",
+                  "heading": "Gifts by price"
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M035",
+                  "desc": "Category Signposts",
+                  "backgroundColor": "cerulean-light",
+                  "kind": "primary",
+                  "links": [
+                    {
+                      "linkName": "Under £15",
+                      "linkUrl": "https://www.argos.co.uk/list/shop-all-christmas-gifts/price:£10-%252D-£15,£5-%252D-£10,under-£5/?tag=ar:events:christmas:gifts:under15",
+                      "linkTitle": "Under £15."
+                    },    {
+                      "linkName": "Under £25",
+                      "linkUrl": "https://www.argos.co.uk/list/shop-all-christmas-gifts/price:£10-%252D-£15,£15-%252D-£20,£20-%252D-£25,£5-%252D-£10,under-£5/?tag=ar:events:christmas:gifts:under25",
+                      "linkTitle": "Under £25."
+                    },    {
+                      "linkName": "Under £50",
+                      "linkUrl": "https://www.argos.co.uk/list/shop-all-christmas-gifts/price:£10-%252D-£15,£15-%252D-£20,£20-%252D-£25,£25-%252D-£50,£5-%252D-£10,under-£5/?tag=ar:events:christmas:gifts:under50",
+                      "linkTitle": "Under £50."
+                    },    {
+                      "linkName": "Spoil them",
+                      "linkUrl": "https://www.argos.co.uk/list/shop-all-christmas-gifts/price:£100-%252D-£150,£1000-%252D-£2000,£150-%252D-£200,£200-%252D-£250,£250-%252D-£500,£50-%252D-£100,£500-%252D-£1000/?tag=ar:events:christmas:gifts:spoilthem",
+                      "linkTitle": "Spoil them."
+                    }
+                  ]
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Gifts by price",
+                  "isStart": false
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Decorations",
+                  "isStart": true
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M0091",
+                  "desc": "Heading with CTA",
+                  "textColor": "grey-charcoal",
+                  "textPosition": "left",
+                  "heading": "Christmas decorations"
+                }
+                
+                  
+                  ,{
+                  "type": "UG002",
+                  "desc": "Universal grid 2",
+                  "imageStyle": "normal",
+                  "isVertical": false,
+                  "mobileLayout": "stack",
+                  "included": [ 
+                  {
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Christmas decorations available now",
+                    "bodyCopy": "&lt;p>From fairy lights to baubles to wreaths- find everything you need to get your home Christmas-ready ahead of time.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "left",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop decorations available now",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-all-christmas-decorations?tag=ar:events:christmas:decorations:availablenow",
+                          "linkTitle": "Shop decorations available now.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/4020-m0014-m007-m050-asym-m008-m022-newhomeessentials-outdoorchristmaslightsanddecs-6866152",
+                      "altText":"Christmas decorations available now."
+                }
+                
+                   ]
+                
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Decorations",
+                  "isStart": false
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Winter clothing",
+                  "isStart": true
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M0091",
+                  "desc": "Heading with CTA",
+                  "textColor": "grey-charcoal",
+                  "textPosition": "left",
+                  "heading": "Tu winter clothing"
+                }
+                
+                  
+                  ,{
+                  "type": "UG002",
+                  "desc": "Universal grid 2",
+                  "imageStyle": "square",
+                  "isVertical": false,
+                  "mobileLayout": "stack",
+                  "included": [ 
+                  {
+                  
+                  "type": "M0072",
+                  "desc": "One column promo with lifestyle image",
+                  "mainImage": "//media.4rgos.it/i/Argos/sb-2522-m038-m0072tall-m0074tall-christmasgifts-nightwear",
+                  "altText": "Nightwear.",
+                  "textColor": "grey-charcoal",
+                  "heading": "Nightwear",
+                  "bodyCopy": "Tackle the chilly nights.",
+                  "linkUrl": "https://www.argos.co.uk/list/shop-for-tu-winter-nightwear?tag=ar:events:christmas:winterclothing:nightwear",
+                  "linkTitle": "Shop now."
+                }
+                
+                
+                  
+                  ,{
+                  
+                  "type": "M0072",
+                  "desc": "One column promo with lifestyle image",
+                  "mainImage": "//media.4rgos.it/i/Argos/sb-2522-m038-m0072tall-m0074tall-christmasgifts-kidswinter",
+                  "altText": "Kids' winter  clothing.",
+                  "textColor": "grey-charcoal",
+                  "heading": "Kids' winter clothing",
+                  "bodyCopy": "Refresh your little one’s wardrobe.",
+                  "linkUrl": "https://www.argos.co.uk/list/shop-for-tu-kids-winter-clothing?tag=ar:events:christmas:winterclothing:kids",
+                  "linkTitle": "Shop now."
+                }
+                
+                
+                  
+                  ,{
+                  
+                  "type": "M0072",
+                  "desc": "One column promo with lifestyle image",
+                  "mainImage": "//media.4rgos.it/i/Argos/sb-2522-m038-m0072tall-m0074tall-christmasgifts-knitwear",
+                  "altText": "Knitwear.",
+                  "textColor": "grey-charcoal",
+                  "heading": "Knitwear",
+                  "bodyCopy": "Wrap up warm this winter.",
+                  "linkUrl": "https://www.argos.co.uk/list/shop-for-tu-winter-knitwear?tag=ar:events:christmas:winterclothing:knitwear",
+                  "linkTitle": "Shop now."
+                }
+                
+                
+                  
+                  ,{
+                  
+                  "type": "M0072",
+                  "desc": "One column promo with lifestyle image",
+                  "mainImage": "//media.4rgos.it/i/Argos/sb-2522-m038-m0072tall-m0074tall-christmasgifts-occasionwear",
+                  "altText": "Occasionwear.",
+                  "textColor": "grey-charcoal",
+                  "heading": "Occasionwear",
+                  "bodyCopy": "Get ready to celebrate in style.",
+                  "linkUrl": "https://www.argos.co.uk/list/shop-for-tu-winter-occasionwear?tag=ar:events:christmas:winterclothing:occasionwear",
+                  "linkTitle": "Shop now."
+                }
+                
+                
+                   ]
+                
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Winter clothing",
+                  "isStart": false
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Hosting",
+                  "isStart": true
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M0091",
+                  "desc": "Heading with CTA",
+                  "textColor": "grey-charcoal",
+                  "textPosition": "left",
+                  "heading": "Christmas hosting"
+                }
+                
+                  
+                  ,{
+                  "type": "UG002",
+                  "desc": "Universal grid 2",
+                  "imageStyle": "normal",
+                  "isVertical": false,
+                  "mobileLayout": "stack",
+                  "included": [ 
+                  {
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Preparing for guests",
+                    "bodyCopy": "&lt;p>Play the perfect host. Here&amp;#39;s everything you need to cosy up your home for guests.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "right",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Shop now",
+                          "linkUrl": "https://www.argos.co.uk/list/shop-for-christmas-guests?tag=ar:events:christmas:hosting:preparingforguests",
+                          "linkTitle": "Shop now.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/3521-m0014-m007-m050-asym-m008-m022-christmas-guestssayingover",
+                      "altText":"Preparing for guests."
+                }
+                
+                   ]
+                
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M017",
+                  "desc": "Anchor point",
+                  "anchorName": "Hosting",
+                  "isStart": false
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M0091",
+                  "desc": "Heading with CTA",
+                  "textColor": "grey-charcoal",
+                  "textPosition": "left",
+                  "heading": "Discover more with Argos"
+                }
+                
+                  
+                  ,{
+                  "type": "UG002",
+                  "desc": "Universal grid 2",
+                  "imageStyle": "normal",
+                  "isVertical": false,
+                  "mobileLayout": "stack",
+                  "included": [ 
+                  {
+                  
+                  "type": "M050",
+                  "desc": "Media and copy"
+                  ,
+                    "heading": "Don't miss out",
+                    "bodyCopy": "&lt;p>You can now collect Nectar points at Argos.&lt;/p>",
+                    "textAlign": "left",
+                    "textPosition": "left",
+                    "callouts": [
+                      ]
+                    ,
+                      "links": [
+                        {
+                          "linkName": "Collect 1 point for every £1 you spend",
+                          "linkUrl": "https://www.argos.co.uk/help/nectar?tag=ar:events:christmas:usp:nectar",
+                          "linkTitle": "Collect 1 point for every £1 you spend.",
+                          "linkTarget": "_self"
+                        }]
+                  ,
+                    "mediaRatio": "3-by-2",
+                      "backgroundImageUrl": "//media.4rgos.it/i/Argos/sb-0922-m0014-m007-m050-asym-m008-m022-fathersday-nectarpoints",
+                      "altText":"Don't miss out."
+                }
+                
+                   ]
+                
+                }
+                
+                  
+                  ,{
+                  "type": "M045",
+                  "desc": "Product finder",
+                    "steps": [
+                  {
+                	"name": "a",
+                	"heading": "b",
+                	"bodyCopy": "c",
+                	"filterType": "brands",
+                	"filters": [
+                		{
+                  	"label": "abc",
+                			"values": "",
+                			"mainImage": {
+                				"source": "//media.4rgos.it/i/Argos/sb-1222-M045-fathersday-event-jewlleryandwatches",
+                				"altText": "alt"
+                			}
+                		},
+                		{
+                  	"label": "s",
+                			"values": "",
+                			"mainImage": {
+                				"source": "//media.4rgos.it/i/Argos/sb-1222-M045-fathersday-event-jewlleryandwatches",
+                				"altText": "a"
+                			}
+                		}	]
+                }
+                
+                  ,{
+                	"name": "2nd",
+                	"heading": "b",
+                	"bodyCopy": "c",
+                	"filterType": "brands",
+                	"filters": [
+                		{
+                  	"label": "abc",
+                			"values": "",
+                			"mainImage": {
+                				"source": "//media.4rgos.it/i/Argos/sb-1222-M045-fathersday-event-jewlleryandwatches",
+                				"altText": "alt"
+                			}
+                		},
+                		{
+                  	"label": "s",
+                			"values": "",
+                			"mainImage": {
+                				"source": "//media.4rgos.it/i/Argos/sb-1222-M045-fathersday-event-jewlleryandwatches",
+                				"altText": "a"
+                			}
+                		}	]
+                }
+                
+                  ]
+                }
+                
+                   ]
+                
+                    },
+                    {
+                      "type": "area",
+                      "id": "C",
+                      "desc": "Area C",
+                      "attributes": [ 
+                  {
+                  "type": "UG002",
+                  "desc": "Universal grid 2",
+                  "imageStyle": "normal",
+                  "isVertical": false,
+                  "mobileLayout": "stack",
+                  "included": [  ]
+                
+                }
+                
+                  
+                  ,{
+                  
+                  "type": "M0182",
+                  "desc": "SEO text",
+                  "bodyCopy": "&lt;p>Let&amp;rsquo;s make Christmas 2022 one to remember &amp;ndash; full of fun and of course &lt;a href='https://www.argos.co.uk/browse/gifts/c:29164/'>gifts&lt;/a> for friends and family. Start planning early to reduce the whirl of activity in December to ensure stress free festivities. All the family will enjoy counting down the days even more with an &lt;a href='https://www.argos.co.uk/browse/home-and-furniture/home-furnishings/christmas/advent-calendars/c:786027/'>advent calendar&lt;/a>. There are plenty to choose from for the kids and big kids of your family. What to choose for the big day? There is a gift for everyone, whether you are looking for foodie gifts for the food lovers in your life, or a makeup set to treat yourself.&lt;/p>&lt;p>If you&amp;rsquo;re hosting Christmas, use this time to make sure you&amp;rsquo;re proud of your home. Get your outdoor Christmas lights early to ensure a cheery welcome for your guests. Spoil them and the family with Christmas bedding including ranges with all the kids&amp;#39; favourite characters. Keep your floors clean with our vacuum cleaners and carpet steamers and turn your dining space into a hosting heaven with our dining tables, chairs and tableware. Put those all-important finishing touches with stylish &lt;a href='https://www.argos.co.uk/browse/home-and-furniture/home-furnishings/christmas/c:29378/'>Christmas decorations&lt;/a>. As you entertain, make sure you&amp;rsquo;re all donning your most outrageous Christmas jumpers.&lt;/p>&lt;p>For those looking to fill some stockings, need some &lt;a href='https://www.argos.co.uk/features/christmas-eve-box-ideas'>Christmas Eve box ideas&lt;/a>, or are searching Christmas gifts for their &lt;a href='https://www.argos.co.uk/features/secret-santa'>Secret Santa&lt;/a>, there&amp;rsquo;s no better place to be than Argos. We&amp;rsquo;ve got loads of small gifts, perfect for all the above. Browse our clothing range for winter gear such as hats, scarves, socks, gloves, nightwear and underwear. Toys are a wonderful way to bulk out your Christmas presents for kids. Why not treat them to some discovery and science kits? It&amp;rsquo;s amazing how even complex things like coding can be made child-friendly.&lt;/p>"
+                }
+                
+                   ]
+                
+                    }
+                 ]
+                }
+                  }
+                 to have property meta
+                
+                Expected: true
+                Received: false
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/argos-ui-global-service/test/support/step_definitions/api_proxy_steps.js:20:41)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
