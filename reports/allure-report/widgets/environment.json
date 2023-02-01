@@ -1,7 +1,0 @@
-[ {
-  "values" : [ "browserstack" ],
-  "name" : "service"
-}, {
-  "values" : [ "https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems" ],
-  "name" : "UI domain"
-} ]
