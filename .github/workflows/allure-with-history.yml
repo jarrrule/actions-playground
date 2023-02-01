@@ -27,7 +27,7 @@ jobs:
         id: allure-report
         with:
           allure_results: reports/allure-results
-          allure_history: reports/allure-report/history
+#          allure_history: reports/allure-report/history
           subfolder: desktop
           keep_reports: 20
       - name: Deploy report to Github Pages
