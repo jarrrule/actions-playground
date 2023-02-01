@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650892316093' stop='1650892328758'>
+    <name>Add to Trolley</name>
+    <title>Add to Trolley</title>
+    <test-cases>
+        <test-case start='1650892319500' status='passed' stop='1650892328758'>
+            <name>Add to trolley modal and close using the continue shopping button</name>
+            <title>Add to trolley modal and close using the continue shopping button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650892319527' status='passed' stop='1650892324627'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650892324627' status='passed' stop='1650892326901'>
+                    <name>When I click the add to trolley button</name>
+                    <title>When I click the add to trolley button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650892326901' status='passed' stop='1650892326908'>
+                    <name>Then I should see the product in the att modal</name>
+                    <title>Then I should see the product in the att modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650892326909' status='passed' stop='1650892326913'>
+                    <name>And I should see the att modal go to trolley button</name>
+                    <title>And I should see the att modal go to trolley button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650892326913' status='passed' stop='1650892326916'>
+                    <name>And I should see the att modal continue shopping button</name>
+                    <title>And I should see the att modal continue shopping button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650892326917' status='passed' stop='1650892328737'>
+                    <name>When I click the att modal continue shopping button</name>
+                    <title>When I click the att modal continue shopping button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650892328737' status='passed' stop='1650892328756'>
+                    <name>Then I should not see the att modal</name>
+                    <title>Then I should not see the att modal</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

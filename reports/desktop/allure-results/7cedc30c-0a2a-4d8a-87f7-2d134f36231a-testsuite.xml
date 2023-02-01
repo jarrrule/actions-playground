@@ -1,0 +1,158 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1654011037317' stop='1654011105486'>
+    <name>Accessibility</name>
+    <title>Accessibility</title>
+    <test-cases>
+        <test-case start='1654011041979' status='passed' stop='1654011066743'>
+            <name>Accessibility violations on search page</name>
+            <title>Accessibility violations on search page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-102.0.5005.61'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1654011041995' status='passed' stop='1654011048916'>
+                    <name>Given I navigate to the "search" page</name>
+                    <title>Given I navigate to the "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654011048916' status='passed' stop='1654011066736'>
+                    <name>When I lazy scroll down the page</name>
+                    <title>When I lazy scroll down the page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654011066737' status='passed' stop='1654011066741'>
+                    <name>Then I should not see any accessibility violations for "search"</name>
+                    <title>Then I should not see any accessibility violations for "search"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1654011066743' status='broken' stop='1654011066810'>
+            <name>Accessibility violations on browse page</name>
+            <title>Accessibility violations on browse page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-102.0.5005.61'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Evaluation failed: ReferenceError: axe is not defined</message>
+                <stack-trace>Evaluation failed: ReferenceError: axe is not defined
+                    at eval (eval at &lt;anonymous> (:3:20), &lt;anonymous>:1:13)
+                    at eval (eval at &lt;anonymous> (:3:20), &lt;anonymous>:1:86)
+                    at __puppeteer_evaluation_script__:3:20
+                Error: Evaluation failed: ReferenceError: axe is not defined
+                    at eval (eval at &lt;anonymous> (:3:20), &lt;anonymous>:1:13)
+                    at eval (eval at &lt;anonymous> (:3:20), &lt;anonymous>:1:86)
+                    at __puppeteer_evaluation_script__:3:20
+                    at ExecutionContext._evaluateInternal (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/ExecutionContext.ts:273:13)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at ExecutionContext.evaluate (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/ExecutionContext.ts:140:12)
+                    at ElementHandle.evaluate (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/JSHandle.ts:168:12)
+                    at ElementHandle.$eval (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/JSHandle.ts:1035:20)
+                    at DevToolsDriver.executeScript (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/devtools/build/commands/executeScript.js:39:20)
+                    at Browser.wrappedCommand (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/devtools/build/devtoolsdriver.js:102:26)
+                    at Browser.wrapCommandFn (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@wdio/utils/build/shim.js:137:29)
+                    at Browser.wrapCommandFn (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@wdio/utils/build/shim.js:137:29)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1654011066812' status='passed' stop='1654011105472'>
+            <name>Accessibility violations on clothing lister page</name>
+            <title>Accessibility violations on clothing lister page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-102.0.5005.61'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1654011066824' status='passed' stop='1654011071641'>
+                    <name>Given I navigate to the "clothing lister" page</name>
+                    <title>Given I navigate to the "clothing lister" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654011071641' status='passed' stop='1654011105470'>
+                    <name>When I lazy scroll down the page</name>
+                    <title>When I lazy scroll down the page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1654011105470' status='passed' stop='1654011105471'>
+                    <name>Then I should not see any accessibility violations for "clothing lister"</name>
+                    <title>Then I should not see any accessibility violations for "clothing lister"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1654011105472' status='broken' stop='1654011105484'>
+            <name>Accessibility violations on white goods browse page</name>
+            <title>Accessibility violations on white goods browse page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-102.0.5005.61'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Evaluation failed: ReferenceError: axe is not defined</message>
+                <stack-trace>Evaluation failed: ReferenceError: axe is not defined
+                    at eval (eval at &lt;anonymous> (:3:20), &lt;anonymous>:1:13)
+                    at eval (eval at &lt;anonymous> (:3:20), &lt;anonymous>:1:86)
+                    at __puppeteer_evaluation_script__:3:20
+                Error: Evaluation failed: ReferenceError: axe is not defined
+                    at eval (eval at &lt;anonymous> (:3:20), &lt;anonymous>:1:13)
+                    at eval (eval at &lt;anonymous> (:3:20), &lt;anonymous>:1:86)
+                    at __puppeteer_evaluation_script__:3:20
+                    at ExecutionContext._evaluateInternal (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/ExecutionContext.ts:273:13)
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at ExecutionContext.evaluate (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/ExecutionContext.ts:140:12)
+                    at ElementHandle.evaluate (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/JSHandle.ts:168:12)
+                    at ElementHandle.$eval (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/puppeteer-core/src/common/JSHandle.ts:1035:20)
+                    at DevToolsDriver.executeScript (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/devtools/build/commands/executeScript.js:39:20)
+                    at Browser.wrappedCommand (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/devtools/build/devtoolsdriver.js:102:26)
+                    at Browser.wrapCommandFn (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@wdio/utils/build/shim.js:137:29)
+                    at Browser.wrapCommandFn (/Users/sean.darley/projects/dig-navigation-ui-search/test/node_modules/@wdio/utils/build/shim.js:137:29)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1666291726013' stop='1666291733592'>
+    <name>Search bar</name>
+    <title>Search bar</title>
+    <test-cases>
+        <test-case start='1666291731721' status='passed' stop='1666291733591'>
+            <name>Search bar displays</name>
+            <title>Search bar displays</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-106.0.0.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://ui-global-service-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1666291731723' status='passed' stop='1666291733576'>
+                    <name>Given I navigate to the homepage</name>
+                    <title>Given I navigate to the homepage</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1666291733576' status='passed' stop='1666291733590'>
+                    <name>Then I should see the search box</name>
+                    <title>Then I should see the search box</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

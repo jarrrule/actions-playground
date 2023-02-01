@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1666347116004' stop='1666347124602'>
+    <name>API proxies</name>
+    <title>API proxies</title>
+    <test-cases>
+        <test-case start='1666347123887' status='broken' stop='1666347124600'>
+            <name>Events page CMS API proxy</name>
+            <title>Events page CMS API proxy</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-106.0.0.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 99.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://ui-global-service-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1666347123890' status='passed' stop='1666347124564'>
+                    <name>Given I request the global-api cms events endpoint</name>
+                    <title>Given I request the global-api cms events endpoint</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1666347124564' status='broken' stop='1666347124600'>
+                    <name>Then I should see the correct api response</name>
+                    <title>Then I should see the correct api response</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read properties of undefined (reading 'not')</message>
+                <stack-trace>TypeError: Cannot read properties of undefined (reading 'not')
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/argos-ui-global-service/test/support/step_definitions/api_proxy_steps.js:17:5)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at wrapPromiseWithTimeout (/Users/sean.darley/projects/argos-ui-global-service/test/node_modules/@cucumber/cucumber/src/time.ts:56:10)
+                    at Object.run (/Users/sean.darley/projects/argos-ui-global-service/test/node_modules/@cucumber/cucumber/src/user_code_runner.ts:86:16)
+                    at Object.run (/Users/sean.darley/projects/argos-ui-global-service/test/node_modules/@cucumber/cucumber/src/runtime/step_runner.ts:50:20)
+                    at TestCaseRunner.invokeStep (/Users/sean.darley/projects/argos-ui-global-service/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:130:12)
+                    at TestCaseRunner.runStep (/Users/sean.darley/projects/argos-ui-global-service/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:307:20)
+                    at /Users/sean.darley/projects/argos-ui-global-service/test/node_modules/@cucumber/cucumber/src/runtime/test_case_runner.ts:210:36</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

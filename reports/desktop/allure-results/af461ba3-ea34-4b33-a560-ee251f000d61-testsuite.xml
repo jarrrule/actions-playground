@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660130691423' stop='1660130719046'>
+    <name>Citrus in search</name>
+    <title>Citrus in search</title>
+    <test-cases>
+        <test-case start='1660130695361' status='passed' stop='1660130719045'>
+            <name>display 1 citrus product on plain search (mobile)</name>
+            <title>display 1 citrus product on plain search (mobile)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='chrome-11'/>
+                <parameter kind='argument' name='browser' value='Android 11.0 Samsung Galaxy S21'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1660130699316' status='passed' stop='1660130716243'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1660130716243' status='passed' stop='1660130719043'>
+                    <name>Then I should see 1 citrus sponsored products listed in position 3</name>
+                    <title>Then I should see 1 citrus sponsored products listed in position 3</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/adacf05b9cdf7612171c263c35ddf0e092093dc1" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

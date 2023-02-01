@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648471930007' stop='1648471942662'>
+    <name>Validate Filter Product Counts</name>
+    <title>Validate Filter Product Counts</title>
+    <test-cases>
+        <test-case start='1648471934605' status='passed' stop='1648471942660'>
+            <name>Prepush : Product count in search title</name>
+            <title>Prepush : Product count in search title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-7'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Mobile Safari-11.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1648471934614' status='passed' stop='1648471942605'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648471942605' status='passed' stop='1648471942658'>
+                    <name>Then I should see '### products' as the search page title</name>
+                    <title>Then I should see '### products' as the search page title</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

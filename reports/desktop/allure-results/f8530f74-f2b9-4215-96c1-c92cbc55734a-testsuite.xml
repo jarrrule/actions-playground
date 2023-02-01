@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650989973856' stop='1650989992931'>
+    <name>Sorting Functionality</name>
+    <title>Sorting Functionality</title>
+    <test-cases>
+        <test-case start='1650989978373' status='passed' stop='1650989992930'>
+            <name>Filter maintained after Sorting Price: High - Low</name>
+            <title>Filter maintained after Sorting Price: High - Low</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650989978382' status='passed' stop='1650989983537'>
+                    <name>Given I navigate to a "cat-match search" page</name>
+                    <title>Given I navigate to a "cat-match search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650989983537' status='passed' stop='1650989990832'>
+                    <name>When I apply a filter in any facet that will return between 5 and 29 results</name>
+                    <title>When I apply a filter in any facet that will return between 5 and 29 results</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650989990832' status='passed' stop='1650989992926'>
+                    <name>And I sort by Price: High - Low</name>
+                    <title>And I sort by Price: High - Low</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650989992926' status='passed' stop='1650989992929'>
+                    <name>Then The last 2 results pages should have exactly the same products shown</name>
+                    <title>Then The last 2 results pages should have exactly the same products shown</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

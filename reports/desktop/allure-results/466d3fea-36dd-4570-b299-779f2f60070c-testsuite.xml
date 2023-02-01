@@ -1,0 +1,187 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1652768448918' stop='1652768500383'>
+    <name>Product Card Variations</name>
+    <title>Product Card Variations</title>
+    <test-cases>
+        <test-case start='1652768458765' status='passed' stop='1652768471867'>
+            <name>Correct product card links for size searched variants small suitcase</name>
+            <title>Correct product card links for size searched variants small suitcase</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='firefox-100.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Firefox 94.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1652768458851' status='passed' stop='1652768466115'>
+                    <name>Given I search for a "small suitcase"</name>
+                    <title>Given I search for a "small suitcase"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652768466115' status='passed' stop='1652768471866'>
+                    <name>Then I should see correct size variant product cards links</name>
+                    <title>Then I should see correct size variant product cards links</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/a2a59aea55013ce061546482fd8669d9f3ad85a7" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+        <test-case start='1652768471867' status='passed' stop='1652768486524'>
+            <name>Correct product card links for size searched variants medium suitcase</name>
+            <title>Correct product card links for size searched variants medium suitcase</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='firefox-100.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Firefox 94.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1652768471983' status='passed' stop='1652768479693'>
+                    <name>Given I search for a "medium suitcase"</name>
+                    <title>Given I search for a "medium suitcase"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652768479693' status='passed' stop='1652768486523'>
+                    <name>Then I should see correct size variant product cards links</name>
+                    <title>Then I should see correct size variant product cards links</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/a2a59aea55013ce061546482fd8669d9f3ad85a7" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+        <test-case start='1652768486525' status='failed' stop='1652768500380'>
+            <name>Correct product card links for size searched variants large suitcase</name>
+            <title>Correct product card links for size searched variants large suitcase</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='firefox-100.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Firefox 94.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='browserstack'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1652768486597' status='passed' stop='1652768495853'>
+                    <name>Given I search for a "large suitcase"</name>
+                    <title>Given I search for a "large suitcase"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652768495853' status='failed' stop='1652768500380'>
+                    <name>Then I should see correct size variant product cards links</name>
+                    <title>Then I should see correct size variant product cards links</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toEqual(expected) // deep equality</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                - Expected  - 19
+                + Received  + 19
+                
+                  Array [
+                    Object {
+                      "name": "simple value soft 2 wheel cabin suitcase",
+                -     "partnumber": "6876317",
+                +     "partnumber": "7006454",
+                    },
+                    Object {
+                      "name": "featherstone 4 wheel hard cabin-sized suitcase",
+                -     "partnumber": "8567507",
+                +     "partnumber": "8469966",
+                    },
+                    Object {
+                      "name": "featherstone hard 4 wheel suitcase - black",
+                -     "partnumber": "8028448",
+                +     "partnumber": "8444448",
+                    },
+                    Object {
+                -     "name": "it luggage expandable 8 wheel hard cabin suitcase",
+                -     "partnumber": "8671376",
+                -   },
+                -   Object {
+                      "name": "featherstone 4 wheel soft cabin-size suitcase",
+                -     "partnumber": "8596341",
+                -   },
+                -   Object {
+                -     "name": "it luggage 8 wheel maxspace cabin case",
+                -     "partnumber": "7857012",
+                +     "partnumber": "7840225",
+                    },
+                    Object {
+                      "name": "featherstone 8 wheel soft cabin-size suitcase",
+                -     "partnumber": "7638815",
+                +     "partnumber": "8482802",
+                    },
+                    Object {
+                      "name": "featherstone hard 8 wheel suitcase",
+                -     "partnumber": "8276908",
+                +     "partnumber": "8270076",
+                    },
+                    Object {
+                      "name": "featherstone 8 wheel soft cabin-size suitcase",
+                -     "partnumber": "8274742",
+                +     "partnumber": "7952553",
+                    },
+                    Object {
+                      "name": "it luggage world's lightest 8 wheel soft cabin suitcase",
+                -     "partnumber": "2654454",
+                +     "partnumber": "4090205",
+                    },
+                    Object {
+                      "name": "featherstone hard 8 wheel suitcase - silver",
+                -     "partnumber": "7310016",
+                +     "partnumber": "8112512",
+                    },
+                    Object {
+                      "name": "it luggage world's lightest 4 wheel soft cabin suitcase",
+                -     "partnumber": "4885159",
+                +     "partnumber": "6826329",
+                    },
+                    Object {
+                      "name": "american tourister bon air hard cabin suitcase",
+                -     "partnumber": "4650913",
+                +     "partnumber": "4650968",
+                +   },
+                +   Object {
+                +     "name": "it luggage expandable 8 wheel hard cabin suitcase",
+                +     "partnumber": "8671376",
+                +   },
+                +   Object {
+                +     "name": "it luggage 8 wheel maxspace cabin case",
+                +     "partnumber": "7857012",
+                    },
+                  ]
+                    at fn (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/variant_steps.js:28:34)
+                    at FilterPanel.requiresClosedFilterSection (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/pages/sections/FilterPanel.js:240:5)
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/variant_steps.js:20:15)</stack-trace>
+            </failure>
+            <description type='html'>&lt;p>&lt;a href="https://automate.browserstack.com/dashboard/v2/sessions/a2a59aea55013ce061546482fd8669d9f3ad85a7" target="_blank">Browserstack Console&lt;/a>&lt;/p></description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

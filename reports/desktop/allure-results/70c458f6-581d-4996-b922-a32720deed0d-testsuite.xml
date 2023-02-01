@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1652426392141' stop='1652426400284'>
+    <name>Dyson stub server</name>
+    <title>Dyson stub server</title>
+    <test-cases>
+        <test-case start='1652426395631' status='passed' stop='1652426400283'>
+            <name>Access the dyson stub server</name>
+            <title>Access the dyson stub server</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-10'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-101.0.4951.64'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1652426395638' status='passed' stop='1652426400273'>
+                    <name>Given I navigate to the "dyson stub dashboard" page</name>
+                    <title>Given I navigate to the "dyson stub dashboard" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426400274' status='passed' stop='1652426400281'>
+                    <name>Then I should see the dyson stub dashboard</name>
+                    <title>Then I should see the dyson stub dashboard</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

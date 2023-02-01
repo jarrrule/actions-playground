@@ -1,0 +1,295 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1652426337249' stop='1652426452046'>
+    <name>Google AdSense</name>
+    <title>Google AdSense</title>
+    <test-cases>
+        <test-case start='1652426342234' status='passed' stop='1652426361498'>
+            <name>AdSense requests when navigating from browse PLP to search and back again</name>
+            <title>AdSense requests when navigating from browse PLP to search and back again</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-101.0.4951.64'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1652426345652' status='passed' stop='1652426353906'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426353906' status='passed' stop='1652426355464'>
+                    <name>Then I should see the taxonomy query parameter in the adsense request</name>
+                    <title>Then I should see the taxonomy query parameter in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426355464' status='passed' stop='1652426359939'>
+                    <name>When I search for a "microwave"</name>
+                    <title>When I search for a "microwave"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426359939' status='passed' stop='1652426361496'>
+                    <name>Then I should see the search term query parameter in the adsense request</name>
+                    <title>Then I should see the search term query parameter in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1652426361499' status='passed' stop='1652426384950'>
+            <name>AdSense requests are called with correct adPage param</name>
+            <title>AdSense requests are called with correct adPage param</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-101.0.4951.64'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1652426363343' status='passed' stop='1652426371106'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426371106' status='passed' stop='1652426372700'>
+                    <name>Then I should see "1" adpage param in the adsense request</name>
+                    <title>Then I should see "1" adpage param in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426372700' status='passed' stop='1652426376579'>
+                    <name>When I click the pagination next button</name>
+                    <title>When I click the pagination next button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426376579' status='passed' stop='1652426378098'>
+                    <name>Then I should see "2" adpage param in the adsense request</name>
+                    <title>Then I should see "2" adpage param in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426378098' status='passed' stop='1652426381902'>
+                    <name>When I click the pagination previous button</name>
+                    <title>When I click the pagination previous button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426381902' status='passed' stop='1652426383433'>
+                    <name>Then I should see "1" adpage param in the adsense request</name>
+                    <title>Then I should see "1" adpage param in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426383434' status='passed' stop='1652426384949'>
+                    <name>Then I should see the search term query parameter in the adsense request</name>
+                    <title>Then I should see the search term query parameter in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1652426384950' status='passed' stop='1652426400033'>
+            <name>AdSense requests when updating search term</name>
+            <title>AdSense requests when updating search term</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-101.0.4951.64'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1652426386598' status='passed' stop='1652426392921'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426392921' status='passed' stop='1652426394507'>
+                    <name>Then I should see the search term query parameter in the adsense request</name>
+                    <title>Then I should see the search term query parameter in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426394507' status='passed' stop='1652426398504'>
+                    <name>When I search for a "microwave"</name>
+                    <title>When I search for a "microwave"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426398504' status='passed' stop='1652426400032'>
+                    <name>Then I should see the search term query parameter in the adsense request</name>
+                    <title>Then I should see the search term query parameter in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1652426400033' status='passed' stop='1652426413335'>
+            <name>AdSense requests when coming from no results</name>
+            <title>AdSense requests when coming from no results</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-101.0.4951.64'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1652426401710' status='passed' stop='1652426406000'>
+                    <name>Given I navigate to a "no results" page</name>
+                    <title>Given I navigate to a "no results" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426406000' status='passed' stop='1652426407580'>
+                    <name>Then I should see the search term query parameter in the adsense request</name>
+                    <title>Then I should see the search term query parameter in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426407580' status='passed' stop='1652426411821'>
+                    <name>When I search for a "microwave"</name>
+                    <title>When I search for a "microwave"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426411821' status='passed' stop='1652426413335'>
+                    <name>Then I should see the search term query parameter in the adsense request</name>
+                    <title>Then I should see the search term query parameter in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1652426413336' status='passed' stop='1652426428852'>
+            <name>AdSense requests when going to no results</name>
+            <title>AdSense requests when going to no results</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-101.0.4951.64'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1652426414963' status='passed' stop='1652426421540'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426421540' status='passed' stop='1652426423252'>
+                    <name>Then I should see the search term query parameter in the adsense request</name>
+                    <title>Then I should see the search term query parameter in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426423252' status='passed' stop='1652426427333'>
+                    <name>When I search for a "44444rubbish4444"</name>
+                    <title>When I search for a "44444rubbish4444"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426427333' status='passed' stop='1652426428851'>
+                    <name>Then I should see the search term query parameter in the adsense request</name>
+                    <title>Then I should see the search term query parameter in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1652426428852' status='passed' stop='1652426452044'>
+            <name>AdSense requests are called with correct channel ids on desktop/tablet</name>
+            <title>AdSense requests are called with correct channel ids on desktop/tablet</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-101.0.4951.64'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1652426430466' status='passed' stop='1652426436741'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426436741' status='passed' stop='1652426438418'>
+                    <name>Then I should see "8745955930" channel id param in the adsense request</name>
+                    <title>Then I should see "8745955930" channel id param in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426438418' status='passed' stop='1652426442413'>
+                    <name>Given I navigate to a "no results" page</name>
+                    <title>Given I navigate to a "no results" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426442413' status='passed' stop='1652426443982'>
+                    <name>Then I should see "7386168737" channel id param in the adsense request</name>
+                    <title>Then I should see "7386168737" channel id param in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426443982' status='passed' stop='1652426450477'>
+                    <name>Given I navigate to a "browse" page</name>
+                    <title>Given I navigate to a "browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1652426450477' status='passed' stop='1652426452043'>
+                    <name>Then I should see "6768544131" channel id param in the adsense request</name>
+                    <title>Then I should see "6768544131" channel id param in the adsense request</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

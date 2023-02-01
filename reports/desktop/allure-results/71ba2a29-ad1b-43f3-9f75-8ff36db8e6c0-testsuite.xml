@@ -1,0 +1,66 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1650912339254' stop='1650912350809'>
+    <name>Aggregations &amp; Filters Functionality</name>
+    <title>Aggregations &amp; Filters Functionality</title>
+    <test-cases>
+        <test-case start='1650912345074' status='failed' stop='1650912350806'>
+            <name>Close filter panel by clicking on background overlay</name>
+            <title>Close filter panel by clicking on background overlay</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-100.0.4896.127'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@test'/>
+                <parameter kind='environment-variable' name='service' value='selenium-standalone'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://argos-stub-findability-ui-develop.service.eu-west-1.dev.deveng.systems'/>
+            </parameters>
+            <steps>
+                <step start='1650912345078' status='passed' stop='1650912350780'>
+                    <name>Given I navigate to a "cat-match search" page</name>
+                    <title>Given I navigate to a "cat-match search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912350780' status='passed' stop='1650912350781'>
+                    <name>When I click the edit filters button</name>
+                    <title>When I click the edit filters button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912350781' status='passed' stop='1650912350787'>
+                    <name>Then I should see the filter panel</name>
+                    <title>Then I should see the filter panel</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912350787' status='passed' stop='1650912350792'>
+                    <name>When I click the filter panel background overlay</name>
+                    <title>When I click the filter panel background overlay</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1650912350792' status='failed' stop='1650912350806'>
+                    <name>Then I should not see the filter panel</name>
+                    <title>Then I should not see the filter panel</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toEqual(expected) // deep equality</message>
+                <stack-trace>Error: expect(received).toEqual(expected) // deep equality
+                
+                Expected: 0
+                Received: 1
+                    at World.&lt;anonymous> (/Users/sean.darley/projects/dig-navigation-ui-search/test/support/step_definitions/filtering_steps.js:106:56)
+                    at runMicrotasks (&lt;anonymous>)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

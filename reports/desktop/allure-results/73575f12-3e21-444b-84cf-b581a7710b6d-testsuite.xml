@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648723463271' stop='1648723477220'>
+    <name>Tagging - Lister Page</name>
+    <title>Tagging - Lister Page</title>
+    <test-cases>
+        <test-case start='1648723466902' status='passed' stop='1648723477219'>
+            <name>prepush</name>
+            <title>prepush</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-9'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Mobile Safari-11.0'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1648723466909' status='passed' stop='1648723473397'>
+                    <name>Given I navigate to a "white goods browse" page</name>
+                    <title>Given I navigate to a "white goods browse" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648723473397' status='passed' stop='1648723477197'>
+                    <name>When I click the pagination next button</name>
+                    <title>When I click the pagination next button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648723477198' status='passed' stop='1648723477217'>
+                    <name>Then the following global data layer variables should be present:</name>
+                    <title>Then the following global data layer variables should be present:</title>
+                    <attachments>
+                        <attachment title='Data Table' source='e2901049-f611-456a-83e3-3bfebf8f3b62-attachment.csv' type='text/csv' size='93'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

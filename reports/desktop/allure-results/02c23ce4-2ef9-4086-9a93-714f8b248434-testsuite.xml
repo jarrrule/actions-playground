@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1648723062381' stop='1648723082339'>
+    <name>Sorting Functionality</name>
+    <title>Sorting Functionality</title>
+    <test-cases>
+        <test-case start='1648723068920' status='passed' stop='1648723082337'>
+            <name>prepush - search sorting by Price: Low - High</name>
+            <title>prepush - search sorting by Price: Low - High</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome Headless-100.0.4896.60'/>
+                <parameter kind='argument' name='browser' value='Windows 10 Chrome 96.0'/>
+                <parameter kind='argument' name='cucumber tags' value='@prepush'/>
+                <parameter kind='environment-variable' name='service' value='chromedriver'/>
+                <parameter kind='environment-variable' name='UI domain' value='https://localhost:3003'/>
+            </parameters>
+            <steps>
+                <step start='1648723068930' status='passed' stop='1648723077700'>
+                    <name>Given I navigate to a "search" page</name>
+                    <title>Given I navigate to a "search" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648723077700' status='passed' stop='1648723081809'>
+                    <name>When I sort by Price: Low - High</name>
+                    <title>When I sort by Price: Low - High</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1648723081809' status='passed' stop='1648723082335'>
+                    <name>Then I should see "Price: Low - High" as the the sort drop down value</name>
+                    <title>Then I should see "Price: Low - High" as the the sort drop down value</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
