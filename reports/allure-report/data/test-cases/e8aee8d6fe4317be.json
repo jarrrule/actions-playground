@@ -1,0 +1,179 @@
+{
+  "uid" : "e8aee8d6fe4317be",
+  "name" : "Add to trolley modal and close using the X button",
+  "fullName" : "Add to Trolley.Add to trolley modal and close using the X button",
+  "historyId" : "45ea4160f378067eeb2f434b6ecc5bed",
+  "time" : {
+    "start" : 1675247526884,
+    "stop" : 1675247549385,
+    "duration" : 22501
+  },
+  "description" : "",
+  "descriptionHtml" : "<p><a href=\"https://automate.browserstack.com/dashboard/v2/sessions/437e54cd665568e4808d6c1c4ce188647f4cee2e\" target=\"_blank\">Browserstack Console</a></p>",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I navigate to a \"browse\" page",
+      "time" : {
+        "start" : 1675247530463,
+        "stop" : 1675247541884,
+        "duration" : 11421
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I click the add to trolley button",
+      "time" : {
+        "start" : 1675247541884,
+        "stop" : 1675247545962,
+        "duration" : 4078
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should see the product in the att modal",
+      "time" : {
+        "start" : 1675247545962,
+        "stop" : 1675247546287,
+        "duration" : 325
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I should see the att modal go to trolley button",
+      "time" : {
+        "start" : 1675247546287,
+        "stop" : 1675247546461,
+        "duration" : 174
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I should see the att modal continue shopping button",
+      "time" : {
+        "start" : 1675247546461,
+        "stop" : 1675247546648,
+        "duration" : 187
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I click the att modal close button",
+      "time" : {
+        "start" : 1675247546648,
+        "stop" : 1675247549175,
+        "duration" : 2527
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I should not see the att modal",
+      "time" : {
+        "start" : 1675247549175,
+        "stop" : 1675247549382,
+        "duration" : 207
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Add to Trolley"
+  }, {
+    "name" : "testClass",
+    "value" : "Add to Trolley"
+  }, {
+    "name" : "testMethod",
+    "value" : "Add to trolley modal and close using the X button"
+  }, {
+    "name" : "package",
+    "value" : "Add to Trolley"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "Android 11.0 Samsung Galaxy S21"
+  }, {
+    "name" : "cucumber tags",
+    "value" : "@test"
+  }, {
+    "name" : "device",
+    "value" : "chrome-11"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e8aee8d6fe4317be.json",
+  "parameterValues" : [ "Android 11.0 Samsung Galaxy S21", "@test", "chrome-11" ]
+}

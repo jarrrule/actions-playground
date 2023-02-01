@@ -1,0 +1,11 @@
+[ {
+  "uid" : "e8aee8d6fe4317be",
+  "name" : "Add to trolley modal and close using the X button",
+  "time" : {
+    "start" : 1675247526884,
+    "stop" : 1675247549385,
+    "duration" : 22501
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
