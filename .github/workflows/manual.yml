@@ -14,7 +14,7 @@ on:
           - false
       deploy-suffix:
         description: "Feature branch url suffix"
-        default: "[${{ github.head_ref }}]"
+        default: [${{ github.head_ref }}]
       brand:
         type: choice
         required: true
