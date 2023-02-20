@@ -4773,6 +4773,7 @@ const github = __webpack_require__(469)
 try {
   const deployTo = core.getInput('deploy-to')
   const branch = core.getInput('branch')
+  console.log('do we have the banch ', branch)
   core.setOutput('node-env', 'sean darley')
   core.setOutput('clean-deploy-suffix', branch.replace('/', '').toLowerCase())
 } catch (error) {
