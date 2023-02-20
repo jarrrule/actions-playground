@@ -49,94 +49,103 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: configureEnvironmentVariables
-        run: echo "maybe an action to do this"
-
-  create-and-publish-docker-image:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - name:
-        run: echo "call /reusable-build.yaml here"
-
-  acceptance-tests:
-    needs:
-      - setup
-      - create-and-publish-docker-image
-      - deploy-stub-server
-      - deploy-stub-app
-    if: ${{ inputs.run-acceptance-tests == 'true' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: run acceptance tests
-        run: echo "call /.github/workflows/reusable-wdio-acceptance.yaml"
-
-  upload-s3-assets:
-    needs:
-      - setup
-      - create-and-publish-docker-image
-      - acceptance-tests
-    if: ${{ inputs.deploy-to == 'staging' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: upload s3 assets
-        run: echo "use eamons change but only for staging/production"
-
-  deploy-stub-server:
-    needs:
-      - setup
-      - create-and-publish-docker-image
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy stub server
-        run: echo "kicks off the build deploy stub server workflow"
-
-  deploy-stub-app:
-    needs:
-      - setup
-      - create-and-publish-docker-image
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy stub app
-        run: echo "deploy stub app"
-
-  deploy-app:
-    needs:
-      - setup
-      - create-and-publish-docker-image
-      - acceptance-tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy app
-        run: echo "deploy app"
-
-  deploy-integrated-environments:
-    needs:
-      - setup
-      - create-and-publish-docker-image
-      - acceptance-tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy integrated environment
-        run: echo "deploy integrated environment"
-
-  deploy-auth-preview:
-    needs:
-      - setup
-      - create-and-publish-docker-image
-      - acceptance-tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy auth preview
-        run: echo "will only run for production"
-
-  allure:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: allure report
-        uses: Xotabu4/send-to-allure-server-action@1
-        # always() needed because we want report for failed tests as well
-        if: ${{ always() }}
+        uses: ./.github/actions/setup
         with:
-          allure-server-url: 'https://qa-allure.service.eu-west-1.dev.deveng.systems'
+          deploy-to: ${{ inputs.deploy-to }}
+
+#  can-we-access-vars:
+#    needs: setup
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name:
+#        run: echo "value from setup ${{ needs.setup.outputs.webpack-build-env"
+
+#  create-and-publish-docker-image:
+#    needs: setup
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name:
+#        run: echo "call /reusable-build.yaml here"
+
+#  acceptance-tests:
+#    needs:
+#      - setup
+#      - create-and-publish-docker-image
+#      - deploy-stub-server
+#      - deploy-stub-app
+#    if: ${{ inputs.run-acceptance-tests == 'true' }}
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: run acceptance tests
+#        run: echo "call /.github/workflows/reusable-wdio-acceptance.yaml"
+#
+#  upload-s3-assets:
+#    needs:
+#      - setup
+#      - create-and-publish-docker-image
+#      - acceptance-tests
+#    if: ${{ inputs.deploy-to == 'staging' }}
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: upload s3 assets
+#        run: echo "use eamons change but only for staging/production"
+#
+#  deploy-stub-server:
+#    needs:
+#      - setup
+#      - create-and-publish-docker-image
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: deploy stub server
+#        run: echo "kicks off the build deploy stub server workflow"
+#
+#  deploy-stub-app:
+#    needs:
+#      - setup
+#      - create-and-publish-docker-image
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Deploy stub app
+#        run: echo "deploy stub app"
+#
+#  deploy-app:
+#    needs:
+#      - setup
+#      - create-and-publish-docker-image
+#      - acceptance-tests
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: deploy app
+#        run: echo "deploy app"
+#
+#  deploy-integrated-environments:
+#    needs:
+#      - setup
+#      - create-and-publish-docker-image
+#      - acceptance-tests
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: deploy integrated environment
+#        run: echo "deploy integrated environment"
+#
+#  deploy-auth-preview:
+#    needs:
+#      - setup
+#      - create-and-publish-docker-image
+#      - acceptance-tests
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: deploy auth preview
+#        run: echo "will only run for production"
+#
+#  allure:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: checkout
+#        uses: actions/checkout@v3
+#      - name: allure report
+#        uses: Xotabu4/send-to-allure-server-action@1
+#        # always() needed because we want report for failed tests as well
+#        if: ${{ always() }}
+#        with:
+#          allure-server-url: 'https://qa-allure.service.eu-west-1.dev.deveng.systems'
