@@ -1,1 +1,18 @@
 name: Manual Deploy Workflow
+run-name: ${{ github.actor }} is manually deploying
+on:
+  workflow_dispatch:
+    inputs:
+      brand:
+        type: choice
+        options:
+          - argos
+          - habitat
+          - tu
+      env:
+        type: choice
+        options:
+          - dev
+          - stg
+
+jobs:
