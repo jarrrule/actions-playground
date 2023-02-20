@@ -38,7 +38,7 @@ on:
         default: dev
         options:
           - dev
-          - staging
+          - stg
 
 jobs:
   test-reusable-workflow:
