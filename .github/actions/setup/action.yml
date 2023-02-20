@@ -13,6 +13,8 @@ inputs:
 outputs:
   webpack-build-env:
     description: webpack build environment
+  clean-deploy-suffix:
+    description: all lowercase no forward slash
 runs:
   using: node16
   main: dist/index.js
