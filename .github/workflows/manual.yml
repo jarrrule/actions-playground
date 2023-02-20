@@ -16,3 +16,10 @@ on:
           - stg
 
 jobs:
+  runs-on: ubuntu-latest
+  name: 'todo'
+  steps:
+    - uses: actions/checkout@v2
+    - name: list directory
+      run: |
+        ls -a
