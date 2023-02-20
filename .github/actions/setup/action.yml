@@ -6,6 +6,10 @@ inputs:
     description: envivronment to deploy to
     required: false
     default: ''
+  branch:
+    description: current branch
+    required: false
+    default: ''
 outputs:
   webpack-build-env:
     description: webpack build environment
