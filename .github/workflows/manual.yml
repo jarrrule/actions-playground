@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       webpack-build-env: ${{ steps.workflow-vars.outputs.node-env }}
-      clean-deploy-suffix: ${{ steps.workflow-vars.outputs.clean-url }}
+      clean-deploy-suffix: ${{ steps.workflow-vars.outputs.clean-deploy-suffix }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
