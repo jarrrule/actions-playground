@@ -59,7 +59,7 @@ jobs:
         uses: ./.github/actions/setup
         with:
           deploy-to: ${{ inputs.deploy-to }}
-          branch: ${{ GITHUB_REF##*/ }}
+          branch: ${{ github.ref_name }}
 
   can-we-access-vars:
     needs: setup
