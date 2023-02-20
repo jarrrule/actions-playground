@@ -64,7 +64,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name:
-        run: echo "value from setup ${{ needs.setup.outputs.webpack-build-env"
+        run: echo "value from setup ${{ needs.setup.outputs.webpack-build-env }}"
 
 #  create-and-publish-docker-image:
 #    needs: setup
