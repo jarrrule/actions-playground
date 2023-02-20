@@ -50,6 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       webpack-build-env: ${{ steps.workflow-vars.outputs.node-env }}
+      deploy-suffix: ${{ steps.workflow-vars.outputs.clean-url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -64,7 +65,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name:
-        run: echo "value from setup ${{ needs.setup.outputs.webpack-build-env }}"
+        run: |
+          echo "value from setup ${{ needs.setup.outputs.webpack-build-env }}"
+          echo "value from setup ${{ needs.setup.outputs.deploy-suffix }}"
 
 #  create-and-publish-docker-image:
 #    needs: setup
