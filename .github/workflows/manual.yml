@@ -59,7 +59,7 @@ jobs:
         uses: ./.github/actions/setup
         with:
           deploy-to: ${{ inputs.deploy-to }}
-          branch: tests/NAV-345
+          branch: ${{ GITHUB_REF##*/ }}
 
   can-we-access-vars:
     needs: setup
