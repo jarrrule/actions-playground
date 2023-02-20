@@ -14,7 +14,7 @@ on:
 #          - false
 #      deploy-suffix:
 #        description: "Feature branch url suffix"
-#        default: "${{ github.head_ref }}"
+#        default: ""
 #      brand:
 #        type: choice
 #        required: true
@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       webpack-build-env: ${{ steps.workflow-vars.outputs.node-env }}
-      deploy-suffix: ${{ steps.workflow-vars.outputs.clean-url }}
+      clean-deploy-suffix: ${{ steps.workflow-vars.outputs.clean-url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -59,6 +59,7 @@ jobs:
         uses: ./.github/actions/setup
         with:
           deploy-to: ${{ inputs.deploy-to }}
+          branch: ${{ github.head_ref }}
 
   can-we-access-vars:
     needs: setup
@@ -67,7 +68,7 @@ jobs:
       - name:
         run: |
           echo "value from setup ${{ needs.setup.outputs.webpack-build-env }}"
-          echo "value from setup ${{ needs.setup.outputs.deploy-suffix }}"
+          echo "value from setup ${{ needs.setup.outputs.clean-deploy-suffix }}"
 
 #  create-and-publish-docker-image:
 #    needs: setup

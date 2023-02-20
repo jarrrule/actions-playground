@@ -1,10 +1,11 @@
 const core = require('@actions/core')
+const github = require('@actions/github')
 
 try {
   const deployTo = core.getInput('deploy-to')
-  console.log('inside action ', deployTo)
+  const branch = core.getInput('branch')
   core.setOutput('node-env', 'sean darley')
-  core.setOutput('clean-url', 'url that will be cleaned')
+  core.setOutput('clean-deploy-suffix', branch.replace('/', '').toLowerCase())
 } catch (error) {
   core.setFailed(error.message)
 }
