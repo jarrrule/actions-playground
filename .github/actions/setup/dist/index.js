@@ -40,7 +40,7 @@ module.exports =
 /******/ 	// the startup function
 /******/ 	function startup() {
 /******/ 		// Load entry module and return exports
-/******/ 		return __webpack_require__(282);
+/******/ 		return __webpack_require__(458);
 /******/ 	};
 /******/
 /******/ 	// run startup
@@ -789,23 +789,6 @@ function _default(name, version, hashfunc) {
   generateUUID.URL = URL;
   return generateUUID;
 }
-
-/***/ }),
-
-/***/ 282:
-/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
-
-const core = __webpack_require__(470)
-
-try {
-  const deployTo = core.getInput('deploy-to')
-  console.log('inside action ', deployTo)
-  core.setOutput('node-env', 'sean darley')
-  core.setOutput('clean-url', 'url that will be cleaned')
-} catch (error) {
-  core.setFailed(error.message)
-}
-
 
 /***/ }),
 
@@ -1638,6 +1621,23 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;
 exports.default = _default;
+
+/***/ }),
+
+/***/ 458:
+/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
+
+const core = __webpack_require__(470)
+
+try {
+  const deployTo = core.getInput('deploy-to')
+  console.log('inside action ', deployTo)
+  core.setOutput('node-env', 'sean darley')
+  core.setOutput('clean-url', 'url that will be cleaned')
+} catch (error) {
+  core.setFailed(error.message)
+}
+
 
 /***/ }),
 
