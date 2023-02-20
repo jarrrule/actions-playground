@@ -40,7 +40,7 @@ module.exports =
 /******/ 	// the startup function
 /******/ 	function startup() {
 /******/ 		// Load entry module and return exports
-/******/ 		return __webpack_require__(458);
+/******/ 		return __webpack_require__(676);
 /******/ 	};
 /******/
 /******/ 	// run startup
@@ -4764,25 +4764,6 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 458:
-/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
-
-const core = __webpack_require__(470)
-const github = __webpack_require__(469)
-
-try {
-  const deployTo = core.getInput('deploy-to')
-  const branch = core.getInput('branch')
-  console.log('do we have the banch ', branch)
-  core.setOutput('node-env', 'sean darley')
-  core.setOutput('clean-deploy-suffix', branch.replace('/', '').toLowerCase())
-} catch (error) {
-  core.setFailed(error.message)
-}
-
-
-/***/ }),
-
 /***/ 463:
 /***/ (function(__unusedmodule, exports, __webpack_require__) {
 
@@ -6140,6 +6121,30 @@ exports.summary = _summary;
 /***/ (function(module) {
 
 module.exports = require("util");
+
+/***/ }),
+
+/***/ 676:
+/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
+
+const core = __webpack_require__(470)
+const github = __webpack_require__(469)
+
+const setNodeEnv = (env) => {
+  if (env === 'dev') return 'development'
+  if (env === 'stg') return 'staging'
+}
+
+
+try {
+  const env = core.getInput('deploy-to')
+  const branch = core.getInput('branch')
+  console.log('do we have the banch ', branch)
+  core.setOutput('node-env', setNodeEnv(env))
+} catch (error) {
+  core.setFailed(error.message)
+}
+
 
 /***/ }),
 
