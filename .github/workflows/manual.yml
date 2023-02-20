@@ -49,7 +49,7 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     outputs:
-      node-env: ${{ steps.workflow-vars.outputs.* }}
+      webpack-build-env: ${{ steps.workflow-vars.outputs.node-env }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -59,12 +59,12 @@ jobs:
         with:
           deploy-to: ${{ inputs.deploy-to }}
 
-#  can-we-access-vars:
-#    needs: setup
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name:
-#        run: echo "value from setup ${{ needs.setup.outputs.webpack-build-env"
+  can-we-access-vars:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run: echo "value from setup ${{ needs.setup.outputs.webpack-build-env"
 
 #  create-and-publish-docker-image:
 #    needs: setup
