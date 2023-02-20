@@ -70,7 +70,6 @@ jobs:
 
   acceptance-tests:
     needs:
-      - setup
       - create-and-publish-docker-image
       - deploy-stub-server
       - deploy-stub-app
@@ -82,7 +81,6 @@ jobs:
 
   upload-s3-assets:
     needs:
-      - setup
       - create-and-publish-docker-image
       - acceptance-tests
     if: ${{ inputs.deploy-to == 'staging' }}
@@ -93,7 +91,6 @@ jobs:
 
   deploy-stub-server:
     needs:
-      - setup
       - create-and-publish-docker-image
     runs-on: ubuntu-latest
     steps:
@@ -102,7 +99,6 @@ jobs:
 
   deploy-stub-app:
     needs:
-      - setup
       - create-and-publish-docker-image
     runs-on: ubuntu-latest
     steps:
@@ -111,7 +107,6 @@ jobs:
 
   deploy-app:
     needs:
-      - setup
       - create-and-publish-docker-image
       - acceptance-tests
     runs-on: ubuntu-latest
@@ -121,7 +116,6 @@ jobs:
 
   deploy-integrated-environments:
     needs:
-      - setup
       - create-and-publish-docker-image
       - acceptance-tests
     runs-on: ubuntu-latest
@@ -131,7 +125,6 @@ jobs:
 
   deploy-auth-preview:
     needs:
-      - setup
       - create-and-publish-docker-image
       - acceptance-tests
     runs-on: ubuntu-latest
