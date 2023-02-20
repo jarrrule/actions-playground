@@ -15,7 +15,7 @@ on:
           - dev
           - stg
 
-jobs
+jobs:
   test:
     runs-on: ubuntu-latest
     name: 'todo'
