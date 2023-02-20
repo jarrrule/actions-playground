@@ -4,33 +4,33 @@ run-name: ${{ github.actor }}s action playground
 on:
   workflow_dispatch:
     inputs:
-      run-acceptance-tests:
-        type: choice
-        description: 'Run the Acceptance Tests?'
-        required: true
-        default: false
-        options:
-          - true
-          - false
-      deploy-suffix:
-        description: "Feature branch url suffix"
-        default: "${{ github.head_ref }}"
-      brand:
-        type: choice
-        required: true
-        default: all
-        description: 'BRAND - Choose brand environment.'
-        options:
-          - all
-          - argos
-          - habitat
-          - tu
-      url-ext:
-        description: 'Enter a custom name for this app all lowercase'
-        required: true
-      stub-service-endpoint:
-        description: 'Override stub service endpoint'
-        required: false
+#      run-acceptance-tests:
+#        type: choice
+#        description: 'Run the Acceptance Tests?'
+#        required: true
+#        default: false
+#        options:
+#          - true
+#          - false
+#      deploy-suffix:
+#        description: "Feature branch url suffix"
+#        default: "${{ github.head_ref }}"
+#      brand:
+#        type: choice
+#        required: true
+#        default: all
+#        description: 'BRAND - Choose brand environment.'
+#        options:
+#          - all
+#          - argos
+#          - habitat
+#          - tu
+#      url-ext:
+#        description: 'Enter a custom name for this app all lowercase'
+#        required: true
+#      stub-service-endpoint:
+#        description: 'Override stub service endpoint'
+#        required: false
       deploy-to:
         description: 'Deploy to dev/staging/'
         require: true
