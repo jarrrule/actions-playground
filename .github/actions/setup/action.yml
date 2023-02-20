@@ -1,0 +1,14 @@
+name: setup
+author: Sean Darley
+description: setup workflow properties
+inputs:
+  deploy-to:
+    description: envivronment to deploy to
+    required: false
+    default: ''
+outputs:
+  webpack-build-env:
+    description: webpack build environment
+runs:
+  using: node16
+  main: dist/index.js
