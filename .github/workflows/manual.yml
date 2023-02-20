@@ -33,6 +33,7 @@ on:
 #        required: false
       deploy-to:
         description: 'Deploy to dev/staging/'
+        type: choice
         require: true
         default: dev
         options:
