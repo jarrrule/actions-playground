@@ -45,25 +45,23 @@ jobs:
     with:
       NAME: sean darley
 
-  setup:
-    runs-on: ubuntu-latest
-    steps:
-      - name: configureEnvironmentVariables
-        uses: ./.github/actions/setup
-        with:
-          deploy-to: ${{ inputs.deploy-to }}
+#  setup:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: configureEnvironmentVariables
+#        uses: ./.github/actions/setup
+#        with:
+#          deploy-to: ${{ inputs.deploy-to }}
 
 
 
   create-and-publish-docker-image:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name:
         run: echo "call /reusable-build.yaml here"
 
   concat-deploy-suffix:
-    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: concat
