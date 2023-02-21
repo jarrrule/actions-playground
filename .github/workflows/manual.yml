@@ -33,9 +33,10 @@ jobs:
           env: ${{ inputs.env }}
           branch: ${{ github.ref_name }}
           deploy-suffix: ${{ inputs.deploy-suffix }}
+
   test-output:
     needs: setup
     runs-on: ubuntu-latest
-      steps:
-        - name: test output
-          run: echo "do we have the value ${{ inputs.brand }}${{ needs.setup.outputs.brand-deploy-suffix }}"
+    steps:
+      - name: test output
+        run: echo "do we have the value ${{ inputs.brand }}${{ needs.setup.outputs.brand-deploy-suffix }}"
