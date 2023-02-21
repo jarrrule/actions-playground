@@ -2,19 +2,21 @@ name: setup
 author: Sean Darley
 description: setup workflow properties
 inputs:
-  deploy-to:
+  env:
     description: envivronment to deploy to
-    required: false
+    required: true
     default: ''
   branch:
-    description: current branch
+    description: git branch
     required: false
+  deploy-suffix:
+    description: deploy-suffix to clean
     default: ''
 outputs:
-  webpack-build-env:
+  node-env:
     description: webpack build environment
-  clean-deploy-suffix:
-    description: all lowercase no forward slash
+  brand-deploy-suffix:
+    description: url friendly suffix to include with brand
 runs:
   using: node16
   main: dist/index.js

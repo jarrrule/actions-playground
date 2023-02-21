@@ -1,145 +1,41 @@
-name: Manual Deploy
-run-name: ${{ github.actor }}s action playground
-
+name: Manual Deploy Workflow
+run-name: ${{ github.actor }} is manually deploying
 on:
   workflow_dispatch:
     inputs:
-      run-acceptance-tests:
-        type: choice
-        description: 'Run the Acceptance Tests?'
-        required: true
-        default: false
-        options:
-          - true
-          - false
-      deploy-suffix:
-        description: "Feature branch url suffix"
-        default: ""
       brand:
         type: choice
-        required: true
-        default: all
-        description: 'BRAND - Choose brand environment.'
         options:
-          - all
           - argos
           - habitat
           - tu
-      url-ext:
-        description: 'Enter a custom name for this app all lowercase'
-        required: true
-      stub-service-endpoint:
-        description: 'Override stub service endpoint'
-        required: false
-      deploy-to:
-        description: 'Deploy to dev/staging/'
-        require: true
-        default: dev
+      env:
+        type: choice
         options:
           - dev
-          - staging
+          - stg
+      deploy-suffix:
+        type: string
+        description:
 
 jobs:
-  test-reusable-workflow:
-    uses: ./.github/workflows/called-workflow.yml
-    with:
-      NAME: sean darley
-
-#  setup:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: configureEnvironmentVariables
-#        uses: ./.github/actions/setup
-#        with:
-#          deploy-to: ${{ inputs.deploy-to }}
-
-
-
-  create-and-publish-docker-image:
+  setup:
     runs-on: ubuntu-latest
+    outputs:
+      node-env: ${{ steps.conf-env.outputs.node-env }}
+      brand-deploy-suffix: ${{ steps.conf-env.outputs.brand-deploy-suffix }}
     steps:
-      - name:
-        run: echo "call /reusable-build.yaml here"
-
-  concat-deploy-suffix:
-    runs-on: ubuntu-latest
-    steps:
-      - name: concat
-        run: |
-          echo "${{ join(inputs.brand.*.deploy-suffix, '-') }}"
-
-  acceptance-tests:
-    needs:
-      - create-and-publish-docker-image
-      - deploy-stub-server
-      - deploy-stub-app
-    if: ${{ inputs.run-acceptance-tests == 'true' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: run acceptance tests
-        run: echo "call /.github/workflows/reusable-wdio-acceptance.yaml"
-
-  upload-s3-assets:
-    needs:
-      - create-and-publish-docker-image
-      - acceptance-tests
-    if: ${{ inputs.deploy-to == 'staging' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: upload s3 assets
-        run: echo "use eamons change but only for staging/production"
-
-  deploy-stub-server:
-    needs:
-      - create-and-publish-docker-image
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy stub server
-        run: echo "kicks off the build deploy stub server workflow"
-
-  deploy-stub-app:
-    needs:
-      - create-and-publish-docker-image
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy stub app
-        run: echo "deploy stub app"
-
-  deploy-app:
-    needs:
-      - create-and-publish-docker-image
-      - acceptance-tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy app
-        run: echo "deploy app"
-
-  deploy-integrated-environments:
-    needs:
-      - create-and-publish-docker-image
-      - acceptance-tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy integrated environment
-        run: echo "deploy integrated environment"
-
-  deploy-auth-preview:
-    needs:
-      - create-and-publish-docker-image
-      - acceptance-tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy auth preview
-        run: echo "will only run for production"
-
-  allure:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: allure report
-        uses: Xotabu4/send-to-allure-server-action@1
-        # always() needed because we want report for failed tests as well
-        if: ${{ always() }}
+      - uses: actions/checkout@v3
+      - name: Configure environment variables
+        id: conf-env
+        uses: ./.github/actions/setup
         with:
-          allure-server-url: 'https://qa-allure.service.eu-west-1.dev.deveng.systems'
+          env: ${{ inputs.env }}
+          branch: ${{ github.ref_name }}
+          deploy-suffix: ${{ inputs.deploy-suffix }}
+  test-output:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      run: |
+        echo "do we have the value ${{ inputs.brand }}${{ needs.setup.outputs.brand-deploy-suffix }}"

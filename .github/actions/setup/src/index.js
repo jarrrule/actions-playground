@@ -1,17 +1,20 @@
 const core = require('@actions/core')
-const github = require('@actions/github')
 
-const setNodeEnv = (env) => {
+const getNodeEnv = (env) => {
   if (env === 'dev') return 'development'
   if (env === 'stg') return 'staging'
 }
 
+const getCleanDeploySuffix = (deploySuffix) => {
+  if (!deploySuffix) return ''
+  return deploySuffix.replaceAll('/', '-').toLowerCase()
+}
 
 try {
-  const env = core.getInput('deploy-to')
-  const branch = core.getInput('branch')
-  console.log('do we have the banch ', branch)
-  core.setOutput('node-env', setNodeEnv(env))
+  const env = core.getInput('env')
+  const deploySuffix = core.getInput('deploy-suffix')
+  core.setOutput('node-env', getNodeEnv(env))
+  core.setOutput('brand-deploy-suffix', `-${getCleanDeploySuffix(deploySuffix)}`)
 } catch (error) {
   core.setFailed(error.message)
 }
