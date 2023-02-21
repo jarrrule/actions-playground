@@ -37,5 +37,6 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
+      name: test output
       run: |
         echo "do we have the value ${{ inputs.brand }}${{ needs.setup.outputs.brand-deploy-suffix }}"
