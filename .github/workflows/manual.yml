@@ -46,5 +46,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: upload s3 assets
-        runs: echo "todo"
-        
+        run: echo "todo"
