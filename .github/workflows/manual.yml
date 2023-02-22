@@ -40,3 +40,11 @@ jobs:
     steps:
       - name: test output
         run: echo "do we have the value ${{ inputs.brand }}${{ needs.setup.outputs.brand-deploy-suffix }}"
+
+  upload-s3-assets:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: upload s3 assets
+        runs: echo "todo"
+        
