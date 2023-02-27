@@ -36,9 +36,9 @@ jobs:
       - name: get head commit
         id: release-docker-tag
         run: |
-          echo "release-docker-tag=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
+          echo "release-docker-tag=$(git rev-list HEAD | head -2 | tail -1).trim().take(8)" >> $GITHUB_OUTPUT
       - name: output docker tag
-        run: echo "docker tag ${{ steps.release-docker-tag.outputs.release-docker-tag::8 }}"
+        run: echo "docker tag ${{ steps.release-docker-tag.outputs.release-docker-tag }}"
 
   test-output:
     needs: setup
