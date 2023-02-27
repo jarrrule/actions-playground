@@ -35,7 +35,11 @@ jobs:
           deploy-suffix: ${{ inputs.deploy-suffix }}
       - name: get head commit
         id: release-docker-tag
-        run: echo "release-docker-tag=$(echo ${{ git rev-list HEAD | head -2 | tail -1 }})" >> $GITHUB_OUTPUT
+        run: |
+        echo "release-docker-tag=$(echo sh(
+        script: "git rev-list HEAD | head -2 | tail -1",
+        returnStdout: true
+        ).trim().take(11))" >> $GITHUB_OUTPUT
       - name: output docker tag
         run: echo "docker tag ${{ steps.release-docker-tag.outputs.release-docker-tag }}"
 
