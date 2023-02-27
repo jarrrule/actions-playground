@@ -36,11 +36,8 @@ jobs:
           branch: ${{ github.ref_name }}
           deploy-suffix: ${{ inputs.deploy-suffix }}
       - name: get head commit
-        id: release-docker-tag
-        run: |
-          echo "release-docker-tag=$(git rev-list HEAD | head -2 | tail -1 |  cut -c 1-8)" >> $GITHUB_OUTPUT
-      - name: output docker tag
-        run: echo "docker tag ${{ steps.release-docker-tag.outputs.release-docker-tag }}"
+        id: release-build
+        run: echo "commit=$(git rev-list HEAD | head -2 | tail -1 |  cut -c 1-8)" >> $GITHUB_OUTPUT
 
   test-output:
     needs: setup
@@ -55,3 +52,5 @@ jobs:
     steps:
       - name: upload s3 assets
         run: echo "todo"
+      - name: Release commit
+        run: echo "docker tag ${{ jobs.setup.release-build.outputs.commit }}"
