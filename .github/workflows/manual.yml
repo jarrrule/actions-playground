@@ -24,6 +24,7 @@ jobs:
     outputs:
       node-env: ${{ steps.conf-env.outputs.node-env }}
       brand-deploy-suffix: ${{ steps.conf-env.outputs.brand-deploy-suffix }}
+      release-commit: ${{ steps.release.outputs.commit }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -36,7 +37,7 @@ jobs:
           branch: ${{ github.ref_name }}
           deploy-suffix: ${{ inputs.deploy-suffix }}
       - name: get head commit
-        id: release-build
+        id: release
         run: echo "commit=$(git rev-list HEAD | head -2 | tail -1 |  cut -c 1-8)" >> $GITHUB_OUTPUT
 
   test-output:
@@ -53,4 +54,4 @@ jobs:
       - name: upload s3 assets
         run: echo "todo"
       - name: Release commit
-        run: echo "docker tag ${{ needs.setup.release-build.outputs.commit }}"
+        run: echo "docker tag ${{ needs.setup.outputs.release-commit }}"
