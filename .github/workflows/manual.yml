@@ -26,6 +26,8 @@ jobs:
       brand-deploy-suffix: ${{ steps.conf-env.outputs.brand-deploy-suffix }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Configure environment variables
         id: conf-env
         uses: ./.github/actions/setup
