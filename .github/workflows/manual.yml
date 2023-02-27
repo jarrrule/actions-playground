@@ -53,4 +53,4 @@ jobs:
       - name: upload s3 assets
         run: echo "todo"
       - name: Release commit
-        run: echo "docker tag ${{ jobs.setup.release-build.outputs.commit }}"
+        run: echo "docker tag ${{ needs.setup.release-build.outputs.commit }}"
