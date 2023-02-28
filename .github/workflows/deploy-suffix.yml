@@ -2,21 +2,33 @@ name: "Deploy suffix example"
 
 on:
   workflow_dispatch:
+    deploy-suffix:
+      description: "Feature branch url suffix"
+      default: ""
+    brand:
+      type: choice
+      required: true
+      default: all
+      description: 'BRAND - Choose brand environment.'
+      options:
+        - argos
+        - habitat
+        - tu
 jobs:
   deployment:
     runs-on: ubuntu-latest
-    name: 'Geneate the deploy suffix for sub-environment'
+    name: 'Generate the deploy suffix for sub-environment'
     steps:
       - uses: actions/checkout@v2
       - name: list directory
         run: |
           ls -a
-      - uses: ./.github/actions/deploy-suffix
+      - uses: ./.github/actions/setup
         name: get deploy-suffix from action
         id: deploy-suffix
         with:
-          brand: argos
-          deploy-suffix: 'features/NAV-1898-blar-blar'
+          brand: ${{ inputs.brand }}
+          deploy-suffix: ${{ inputs.deploy-suffix }}
       - name: output deploy-suffix
-        run: echo ${{  steps.deploy-suffix.outputs.value }}
+        run: echo ${{ steps.deploy-suffix.outputs[format('{0}-deploy-suffix', matrix.brand)] }}
 
