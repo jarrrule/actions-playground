@@ -1,0 +1,11 @@
+name: Pull Requests
+
+on:
+  pull_request
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output github ref
+        runs: echo "branch name ${{ github.head_ref }} and ${{ github.ref_name }}
