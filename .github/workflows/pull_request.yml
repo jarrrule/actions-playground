@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: output github ref
-        run: echo "branch name ${{ github.head_ref }} and ${{ github.ref_name }}
+        run: echo "branch name ${{ github.head_ref }} and ${{ github.ref_name }}"
