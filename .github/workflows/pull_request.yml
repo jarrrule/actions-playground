@@ -5,6 +5,7 @@ on:
 
 jobs:
   ci:
+    if: (${{ !contains(github.head_ref, 'xxxx') }} || ${{ !contains(github.head_ref, 'xxxxx') }})
     runs-on: ubuntu-latest
     steps:
       - name: output github ref
