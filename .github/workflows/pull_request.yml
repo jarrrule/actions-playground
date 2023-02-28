@@ -1,4 +1,4 @@
-name: Pull Requests hello
+name: Pull Requests x
 
 on:
   pull_request
