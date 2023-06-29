@@ -6,16 +6,14 @@ on:
 jobs:
   tag_release:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Get release commit
-        id: release-commit
-        run: echo "hash=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
-      - name: Create release tag
-        run: |
-          git config user.name "sean darley"
-          git config user.email "your.email@example.com"
-          git checkout $(steps.release-commit.outputs.hash)
-          git tag -a "v1.0" -m "Release v1.0"
-          git push origin "v1.0"
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1.12.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: ${{steps.build_changelog.outputs.changelog}}
+          draft: false
+          prerelease: false
