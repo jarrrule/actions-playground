@@ -7,6 +7,7 @@ jobs:
   tag_release:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "$GITHUB_CONTEXT"
       - name: Create release
         id: create_release
         uses: actions/create-release@latest
@@ -15,6 +16,5 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          body: ${{steps.build_changelog.outputs.changelog}}
           draft: false
           prerelease: false
