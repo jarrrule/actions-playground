@@ -14,6 +14,8 @@ jobs:
         run: echo "hash=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
       - name: Create release tag
         run: |
+          git config user.name "sean darley"
+          git config user.email "your.email@example.com"
           git checkout $(steps.release-commit.outputs.hash)
           git tag -a "v1.0" -m "Release v1.0"
           git push origin "v1.0"
