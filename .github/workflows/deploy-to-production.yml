@@ -10,7 +10,10 @@ jobs:
       - name: checkout project
         uses: actions/checkout@v3
       - run: echo "$GITHUB_CONTEXT"
-      - run: git notes add -m 'realeaseId:454544555' -f
+      - run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          git notes add -m 'realeaseId:454544555' -f
 #      - name: Create release
 #        id: create_release
 #        uses: actions/create-release@latest
