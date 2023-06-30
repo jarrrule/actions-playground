@@ -7,6 +7,8 @@ jobs:
   tag_release:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout project
+        uses: actions/checkout@v3
       - run: echo "$GITHUB_CONTEXT"
       - run: git notes add -m 'realeaseId:454544555' -f
       - name: Create release
