@@ -14,7 +14,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: 'pre-release'
-          release_name: Release 'FY25-343433'
-          draft: true
-          prerelease: true
+          commitish: 'b2a5ae34dd17c1a8cabff837c2d798ed13cdf8a3'
+          draft: false
+          prerelease: false
