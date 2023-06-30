@@ -16,5 +16,5 @@ jobs:
         with:
           tag_name: 'friday-evening'
           release_name: Release 'friday evening'
-          draft: true
-          prerelease: true
+          draft: false
+          prerelease: false
