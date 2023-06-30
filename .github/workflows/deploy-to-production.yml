@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "$GITHUB_CONTEXT"
+      - run: git notes add -m 'realeaseId:454544555' -f
       - name: Create release
         id: create_release
         uses: actions/create-release@latest
