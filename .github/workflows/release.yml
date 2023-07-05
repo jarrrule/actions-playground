@@ -13,25 +13,32 @@ jobs:
   tag_release:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout project
-        uses: actions/checkout@v3
-      - name: Create release
-        id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: 'FY24-06-01'
-          release_name: Release FY24-06-01
-          draft: true
-          prerelease: true
-      - name: output release id
-        run: echo "releases id is ${{ steps.create_release.outputs.id }}"
-      - name: add git note
-        run: |
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - uses: actions/checkout@v2
+      - run: |
           git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git fetch origin "refs/notes/*:refs/notes/*"
-          git notes add -m 'releaseId:oh hello' -f
-          git notes show
-          git push origin "refs/notes/*"
+          git notes append -m "Testing notes with github actions. Ref: ${GITHUB_REF} - ${GITHUB_SHA}"
+          git push origin "refs/notes/*"#
+#      - name: checkout project
+#        uses: actions/checkout@v3
+#      - name: Create release
+#        id: create_release
+#        uses: actions/create-release@latest
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          tag_name: 'FY24-06-01'
+#          release_name: Release FY24-06-01
+#          draft: true
+#          prerelease: true
+#      - name: output release id
+#        run: echo "releases id is ${{ steps.create_release.outputs.id }}"
+#      - name: add git note
+#        run: |
+#          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+#          git config user.name "${GITHUB_ACTOR}"
+#          git fetch origin "refs/notes/*:refs/notes/*"
+#          git notes add -m 'releaseId:oh hello' -f
+#          git notes show
+#          git push origin "refs/notes/*"
