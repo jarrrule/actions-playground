@@ -30,4 +30,4 @@ jobs:
       - name: add git note
         run: |
           git notes add -m 'releaseId:${{ steps.create_release.outputs.id }}' -f
-          
+          git push origin 'refs/notes/*'
