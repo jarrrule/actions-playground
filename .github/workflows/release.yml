@@ -26,4 +26,4 @@ jobs:
           draft: true
           prerelease: true
       - name: output release id
-        run: echo "releases id is $steps.create_release.outputs.id"
+        run: echo "releases id is ${{ steps.create_release.outputs.id }}"
