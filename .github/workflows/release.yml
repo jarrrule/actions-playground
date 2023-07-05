@@ -1,0 +1,29 @@
+name: Release Workflow
+run-name: ${{ github.actor }} running ${{ github.ref_name }} workflow
+concurrency:
+  group: release-${{ github.head_ref }}
+  cancel-in-progress: true
+on:
+  push:
+    branches:
+      - release**
+  workflow_dispatch:
+
+jobs:
+  tag_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout project
+        uses: actions/checkout@v3
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: 'FY24-06-01'
+          release_name: Release FY24-06-01
+          draft: true
+          prerelease: true
+      - name: output release id
+        run: echo "releases id is $steps.create_release.outputs.id"
