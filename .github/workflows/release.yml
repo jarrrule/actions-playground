@@ -37,5 +37,5 @@ jobs:
           git config user.name "Your Name"
           git notes add -m 'releaseId:${{ steps.create_release.outputs.id }}' -f
           git notes show
-          git push origin refs/notes/*
+          git push origin 'refs/notes/*'
           
