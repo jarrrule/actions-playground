@@ -18,8 +18,8 @@ jobs:
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git fetch origin "refs/notes/*:refs/notes/*"
-          git notes append -m "Testing notes with github actions. Ref: ${GITHUB_REF} - ${GITHUB_SHA}"
-          git push origin "refs/notes/*"#
+          git notes add -m "Testing notes with githubfgdfgdgd  actions. Ref: ${GITHUB_REF} - ${GITHUB_SHA}" -f
+          git push origin "refs/notes/*"
 #      - name: checkout project
 #        uses: actions/checkout@v3
 #      - name: Create release
