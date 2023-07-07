@@ -20,7 +20,7 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git fetch origin refs/notes/commits:refs/notes/commits
           notes_output="hello there"
-          echo "NOTES=$(notes_output)" >> $GITHUB_OUTPUT
+          echo "NOTES=$notes_output" >> $GITHUB_OUTPUT
       - name: git notes output
         run: echo "output from step ${{ steps.releaseId.outputs.NOTES }}"
 #          git notes add -m "Testing notes with githubfgdfgdgd" -f
