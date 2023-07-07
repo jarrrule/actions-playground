@@ -21,6 +21,7 @@ jobs:
           git fetch origin refs/notes/commits:refs/notes/commits
           notes_output="hello there"
           echo "NOTES=what is going on" >> $GITHUB_OUTPUT
+          echo "from the notes $(notes_output)"
       - name: git notes output
         run: echo "output from step ${{ needs.steps.releaseId.outputs.NOTES }}"
 #          git notes add -m "Testing notes with githubfgdfgdgd" -f
