@@ -20,7 +20,7 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git fetch origin refs/notes/commits:refs/notes/commits
           notes_output="$(git notes show fe5cef8526ed6857a011aa8295ecd0843e673e40)"
-          echo "blar=boom" >> $GITHUB_OUTPUT
+          echo "blar=boom" >> "$GITHUB_OUTPUT"
           echo "from the notes $notes_output"
           echo "output from within the same step ${{ steps.release.outputs.blar }}"
       - name: git notes output
