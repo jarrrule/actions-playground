@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: releaseid
         id: release
-      - run: |
+        run: |
           git config user.name "fdffdfdfd"
           git config user.email "dfdfdfdfd@users.noreply.github.com"
           git fetch origin refs/notes/commits:refs/notes/commits
