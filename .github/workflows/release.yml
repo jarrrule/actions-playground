@@ -17,7 +17,7 @@ jobs:
       - run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git fetch origin "refs/notes/commits"
+          git fetch origin refs/notes/commits:refs/notes/commits
           git notes show fe5cef8526ed6857a011aa8295ecd0843e673e40
 #          git notes add -m "Testing notes with githubfgdfgdgd" -f
 #          git push origin "refs/notes/*"
