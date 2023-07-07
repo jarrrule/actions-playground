@@ -20,10 +20,10 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git fetch origin refs/notes/commits:refs/notes/commits
           notes_output="$(git notes show fe5cef8526ed6857a011aa8295ecd0843e673e40)"
-          echo "NOTES=what is going on" >> $GITHUB_OUTPUT
+          echo "NOTES=what_is_going_on" >> $GITHUB_OUTPUT
           echo "from the notes $notes_output"
       - name: git notes output
-        run: echo "output from step ${{ needs.steps.releaseId.outputs.NOTES }}"
+        run: echo "output from step ${{ steps.releaseId.outputs.NOTES }}"
 #          git notes add -m "Testing notes with githubfgdfgdgd" -f
 #          git push origin "refs/notes/*"
 #      - name: checkout project
