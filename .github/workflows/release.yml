@@ -15,7 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         id: release
-        shell: bash
       - run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
@@ -25,9 +24,8 @@ jobs:
           echo "from the notes $notes_output"
           echo "output from within the same step ${{ steps.release.outputs.blar }}"
       - name: git notes output
-        shell: bash
         run: |
-          echo "output from step ${{ needs.tag_release.release.outputs.blar }}"
+          echo "output from step $(needs.tag_release.release.outputs.blar)"
 #          git notes add -m "Testing notes with githubfgdfgdgd" -f
 #          git push origin "refs/notes/*"
 #      - name: checkout project
