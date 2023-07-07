@@ -13,7 +13,8 @@ jobs:
   tag_release:
     runs-on: ubuntu-latest
     steps:
-      - name: get release stuff
+      - uses: actions/checkout@v
+      - name: release stuff
         id: release
         run: |
           git config user.name "fdffdfdfd"
