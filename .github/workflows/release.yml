@@ -22,7 +22,7 @@ jobs:
           notes_output="hello there"
           echo "NOTES=$notes_output" >> $GITHUB_OUTPUT
       - name: git notes output
-        run: echo "output from step ${{ steps.releaseId.outputs.NOTES }}"
+        run: echo "output from step ${{ releaseId.outputs.NOTES }}"
 #          git notes add -m "Testing notes with githubfgdfgdgd" -f
 #          git push origin "refs/notes/*"
 #      - name: checkout project
