@@ -20,9 +20,9 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git fetch origin refs/notes/commits:refs/notes/commits
           notes_output="hello there"
-          echo "NOTES=what is going on" >> env.GITHUB_OUTPUT
+          echo "NOTES=what is going on" >> $GITHUB_OUTPUT
       - name: git notes output
-        run: echo "output from step ${{ steps.releaseId.outputs.NOTES }}"
+        run: echo "output from step ${{ needs.steps.releaseId.outputs.NOTES }}"
 #          git notes add -m "Testing notes with githubfgdfgdgd" -f
 #          git push origin "refs/notes/*"
 #      - name: checkout project
