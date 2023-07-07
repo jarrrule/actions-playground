@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        id: releaseId
+        id: release
       - run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
@@ -24,7 +24,7 @@ jobs:
           echo "from the notes $notes_output"
       - name: git notes output
         run: |
-          echo "output from step ${{ steps.releaseId.outputs.blar }}"
+          echo "output from step ${{ steps.release.outputs.blar }}"
 #          git notes add -m "Testing notes with githubfgdfgdgd" -f
 #          git push origin "refs/notes/*"
 #      - name: checkout project
