@@ -23,8 +23,11 @@ jobs:
       - name: git notes output
         run: |
           echo "output from step ${{ steps.release.outputs.id }}"
-      - name: toJson
-        run: echo 'Job context is ${{ toJSON(steps.release.outputs.id) }}'
+      - name: release id from notes
+        run: |
+          releaseId="${{ steps.release.outputs.id }}"
+          id=${releaseId#*:}
+          echo "we have the release id $id"
 
 
 #      - name: checkout project
