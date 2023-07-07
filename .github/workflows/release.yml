@@ -13,7 +13,7 @@ jobs:
   tag_release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         id: release
       - run: |
           git config user.name "${GITHUB_ACTOR}"
@@ -21,11 +21,10 @@ jobs:
           git fetch origin refs/notes/commits:refs/notes/commits
           notes_output="$(git notes show fe5cef8526ed6857a011aa8295ecd0843e673e40)"
           echo "blar=boom" >> $GITHUB_OUTPUT
-          echo "from the notes $notes_output"
-          echo "output from within the same step ${{ steps.release.outputs.blar }}"
       - name: git notes output
         run: |
-          echo "output from step ${steps.release.outputs.blar}"
+          echo "with even using output $notes_output"
+          echo "output from step ${{ steps.release.outputs.blar}} "
 #          git notes add -m "Testing notes with githubfgdfgdgd" -f
 #          git push origin "refs/notes/*"
 #      - name: checkout project
