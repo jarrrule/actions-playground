@@ -14,38 +14,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: release stuff
-        id: release
-        run: |
-          git config user.name "fdffdfdfd"
-          git config user.email "dfdfdfdfd@users.noreply.github.com"
-          git fetch origin refs/notes/commits:refs/notes/commits
-          notes_output="$(git notes show fe5cef8526ed6857a011aa8295ecd0843e673e40)"
-          echo "id=$notes_output" >> $GITHUB_OUTPUT
-      - name: git notes output
-        run: |
-          echo "output from step ${{ steps.release.outputs.id }}"
+#      - name: release stuff
+#        id: release
+#        run: |
+#          git fetch origin refs/notes/commits:refs/notes/commits
+#          notes_output="$(git notes show fe5cef8526ed6857a011aa8295ecd0843e673e40)"
+#          echo "id=$notes_output" >> $GITHUB_OUTPUT
+#      - name: git notes output
+#        run: |
+#          echo "output from step ${{ steps.release.outputs.id }}"
 #          git notes add -m "Testing notes with githubfgdfgdgd" -f
 #          git push origin "refs/notes/*"
 #      - name: checkout project
 #        uses: actions/checkout@v3
-#      - name: Create release
-#        id: create_release
-#        uses: actions/create-release@latest
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        with:
-#          tag_name: 'FY24-06-01'
-#          release_name: Release FY24-06-01
-#          draft: true
-#          prerelease: true
-#      - name: output release id
-#        run: echo "releases id is ${{ steps.create_release.outputs.id }}"
-#      - name: add git note
-#        run: |
-#          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-#          git config user.name "${GITHUB_ACTOR}"
-#          git fetch origin "refs/notes/*:refs/notes/*"
-#          git notes add -m 'releaseId:oh hello' -f
-#          git notes show
-#          git push origin "refs/notes/*"
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: 'FY24-06-01'
+          release_name: Release FY24-06-01
+          draft: true
+          prerelease: true
+      - name: output release id
+        run: echo "releases id is ${{ steps.create_release.outputs.id }}"
+      - name: add git note
+        run: |
+          git config user.email "fgfgfgfgfg@users.noreply.github.com"
+          git config user.name "fgfgfgfgf"
+          git fetch origin refs/notes/commits:refs/notes/commits
+          git notes add -m "releaseId:${{ steps.create_release.outputs.id }}" -f
+          git notes show
+          git push origin refs/notes/commits:refs/notes/commits
