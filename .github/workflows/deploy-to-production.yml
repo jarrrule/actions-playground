@@ -7,20 +7,54 @@ jobs:
   tag_release:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout project
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Github commit sha
+        run: echo "github commit sha on checkout $GITHUB_SHA"
+      - name: Get release commit
+        id: release
+        run: echo "commit=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
+      - name: Checkout release commit
         uses: actions/checkout@v3
-      - run: echo "$GITHUB_CONTEXT"
-      - run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
-          git notes add -m 'realeaseId:454544555' -f
-#      - name: Create release
-#        id: create_release
+        with:
+          ref: ${{ steps.release.outputs.commit }}
+      - name: Github commit sha of release commit
+        run: echo "github commit sha of release commit $GITHUB_SHA"
+      - name: release stuff
+        id: release
+        run: |
+          git fetch origin refs/notes/commits:refs/notes/commits
+          notes_output="$(git notes show $GITHUB_SHA)"
+          echo "id=${releaseId#*:}" >> $GITHUB_OUTPUT
+      - name: git notes output
+        run: |
+          echo "output from step ${{ steps.release.outputs.id }}"
+#      - name: update release
 #        uses: actions/create-release@latest
 #        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
 #        with:
-#          tag_name: 'friday-evening'
-#          release_name: Release 'friday evening'
-#          draft: false
-#          prerelease: false
+#          tag_name: 'fcds999'
+#          draft: true
+#          prerelease: true
+
+      - name: Update pre-release
+        uses: actions/github-script@v4
+        with:
+          script: |
+            await github.repos.updateRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: ${{ steps.release.outputs.id }},
+              prerelease: false
+            });         
+
+
+
+
+
+        run: |
+          releaseId="${{ steps.release.outputs.id }}"
+          id=${releaseId#*:}
+          echo "we have the release id $id"
