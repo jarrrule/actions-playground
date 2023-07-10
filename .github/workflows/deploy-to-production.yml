@@ -49,6 +49,7 @@ jobs:
               repo: context.repo.repo,
               release_id: ${{ steps.release.outputs.id }},
               prerelease: false
+              draft: false
             });         
 
 #
