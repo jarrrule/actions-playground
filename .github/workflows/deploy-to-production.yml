@@ -27,7 +27,7 @@ jobs:
         run: |
           git fetch origin refs/notes/commits:refs/notes/commits
           notes_output="$(git notes show $(git rev-parse HEAD))"
-          echo "id=${releaseId#*:}" >> $GITHUB_OUTPUT
+          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
       - name: git notes output
         run: |
           echo "output from step ${{ steps.release.outputs.id }}"
