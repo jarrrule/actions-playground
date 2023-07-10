@@ -14,20 +14,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: release stuff
-        id: release
-        run: |
-          git fetch origin refs/notes/commits:refs/notes/commits
-          notes_output="$(git notes show 6b10fcaf671a2ddde3842b7c81391139bf901d3a)"
-          echo "id=$notes_output" >> $GITHUB_OUTPUT
-      - name: git notes output
-        run: |
-          echo "output from step ${{ steps.release.outputs.id }}"
-      - name: release id from notes
-        run: |
-          releaseId="${{ steps.release.outputs.id }}"
-          id=${releaseId#*:}
-          echo "we have the release id $id"
+      - name: version
+        id: version
+        uses: flatherskevin/semver-action@v1
+        with:
+          incrementLevel: patch
+          source: tags
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: ${{ steps.version.outputs.nextVersion }}
+          tag_name: ${{ steps.version.outputs.nextVersion }}
+#      - name: release stuff
+#        id: release
+#        run: |
+#          git fetch origin refs/notes/commits:refs/notes/commits
+#          notes_output="$(git notes show 6b10fcaf671a2ddde3842b7c81391139bf901d3a)"
+#          echo "id=$notes_output" >> $GITHUB_OUTPUT
+#      - name: git notes output
+#        run: |
+#          echo "output from step ${{ steps.release.outputs.id }}"
+#      - name: release id from notes
+#        run: |
+#          releaseId="${{ steps.release.outputs.id }}"
+#          id=${releaseId#*:}
+#          echo "we have the release id $id"
 
 
 #      - name: checkout project
