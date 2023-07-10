@@ -20,6 +20,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: 'fcx-78'
           body_path: ${{ github.workspace }}-CHANGELOG.txt
           token: ${{ secrets.GITHUB_TOKEN }}
 #      - name: release stuff
