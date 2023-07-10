@@ -31,6 +31,15 @@ jobs:
       - name: git notes output
         run: |
           echo "output from step ${{ steps.release.outputs.id }}"
+
+      - name: Edit Release
+        uses: irongut/EditRelease@v1.2.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          id: ${{ steps.release.outputs.id }}
+          prerelease: false
+          draft: false
+
 #      - name: update release
 #        uses: actions/create-release@latest
 #        env:
@@ -40,17 +49,17 @@ jobs:
 #          draft: true
 #          prerelease: true
 
-      - name: Update pre-release
-        uses: actions/github-script@v4
-        with:
-          script: |
-            await github.repos.updateRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              release_id: ${{ steps.release.outputs.id }},
-              prerelease: false
-              draft: false
-            });         
+#      - name: Update pre-release
+#        uses: actions/github-script@v4
+#        with:
+#          script: |
+#            await github.repos.updateRelease({
+#              owner: context.repo.owner,
+#              repo: context.repo.repo,
+#              release_id: ${{ steps.release.outputs.id }},
+#              prerelease: false
+#              draft: false
+#            });
 
 #
 #
