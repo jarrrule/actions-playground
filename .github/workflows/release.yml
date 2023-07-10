@@ -11,20 +11,16 @@ on:
 
 jobs:
   tag_release:
-    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: version
-        id: version
-        uses: flatherskevin/semver-action@v1
-        with:
-          incrementLevel: patch
-          source: tags
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Generate Changelog
+        run: echo "# Good things have arrived" > ${{ github.workspace }}-CHANGELOG.txt
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: ${{ steps.version.outputs.nextVersion }}
-          tag_name: ${{ steps.version.outputs.nextVersion }}
+          body_path: ${{ github.workspace }}-CHANGELOG.txt
+          token: ${{ secrets.GITHUB_TOKEN }}
 #      - name: release stuff
 #        id: release
 #        run: |
