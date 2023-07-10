@@ -21,12 +21,12 @@ jobs:
           ref: ${{ steps.releaseCommit.outputs.sha }}
           fetch-depth: 0
       - name: Github commit sha of release commit
-        run: echo "github commit sha of release commit ${{ github.sha }}"
+        run: echo "github commit sha of release commit $(git rev-parse HEAD)"
       - name: release stuff
         id: release
         run: |
           git fetch origin refs/notes/commits:refs/notes/commits
-          notes_output="$(git notes show ${{ github.sha }})"
+          notes_output="$(git notes show $(git rev-parse HEAD))"
           echo "id=${releaseId#*:}" >> $GITHUB_OUTPUT
       - name: git notes output
         run: |
