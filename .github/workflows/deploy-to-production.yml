@@ -13,12 +13,12 @@ jobs:
       - name: Github commit sha
         run: echo "github commit sha on checkout $GITHUB_SHA"
       - name: Get release commit
-        id: release
-        run: echo "commit=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
+        id: releaseCommit
+        run: echo "sha=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
       - name: Checkout release commit
         uses: actions/checkout@v3
         with:
-          ref: ${{ steps.release.outputs.commit }}
+          ref: ${{ steps.releaseCommit.outputs.sha }}
       - name: Github commit sha of release commit
         run: echo "github commit sha of release commit $GITHUB_SHA"
       - name: release stuff
