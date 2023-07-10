@@ -50,11 +50,11 @@ jobs:
               prerelease: false
             });         
 
-
-
-
-
-        run: |
-          releaseId="${{ steps.release.outputs.id }}"
-          id=${releaseId#*:}
-          echo "we have the release id $id"
+#
+#
+#
+#
+#        run: |
+#          releaseId="${{ steps.release.outputs.id }}"
+#          id=${releaseId#*:}
+#          echo "we have the release id $id"
