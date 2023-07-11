@@ -1,12 +1,85 @@
-name: Pull Requests hello
+name: Release PR
 
 on:
-  pull_request
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
 
 jobs:
-  ci:
-    if: (!(contains(github.head_ref, 'xxxx') || contains(github.head_ref, 'xxxxx')))
+  create-tag-release:
+    if: startsWith(github.head_ref, 'release')
     runs-on: ubuntu-latest
     steps:
-      - name: output github ref
-        run: echo "branch name ${{ github.head_ref }} and ${{ github.ref_name }}"
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Extract branch name
+        id: extractRelease
+        run: |
+          branch_ref=${{ github.head_ref }}
+          branch_name=${branch_ref##*/}
+          echo "name=$branch_name" >> $GITHUB_OUTPUT
+          echo "Branch Name: $branch_name"
+      - name: Changelog
+        uses: Bullrich/generate-release-changelog@master
+        id: Changelog
+        env:
+          REPO: ${{ github.repository }}
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ steps.extractRelease.outputs.name }}
+          release_name: Release ${{ steps.extractRelease.outputs.name }}
+          body: |
+            ${{ steps.Changelog.outputs.changelog }}
+          prerelease: true
+
+      #      - name: release stuff
+      #        id: release
+      #        run: |
+      #          git fetch origin refs/notes/commits:refs/notes/commits
+      #          notes_output="$(git notes show 6b10fcaf671a2ddde3842b7c81391139bf901d3a)"
+      #          echo "id=$notes_output" >> $GITHUB_OUTPUT
+      #      - name: git notes output
+      #        run: |
+      #          echo "output from step ${{ steps.release.outputs.id }}"
+      #      - name: release id from notes
+      #        run: |
+      #          releaseId="${{ steps.release.outputs.id }}"
+      #          id=${releaseId#*:}
+      #          echo "we have the release id $id"
+
+
+      #      - name: checkout project
+      #        uses: actions/checkout@v3
+      #      - name: Create release
+      #        id: create_release
+      #        uses: actions/create-release@latest
+      #        env:
+      #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #        with:
+      #          tag_name: 'FY24-06-01'
+      #          release_name: Release FY24-06-01
+      #          draft: true
+      #          prerelease: true
+      #      - name: Add release id to github notes
+      #        run: echo "releases id is ${{ steps.create_release.outputs.id }}"
+      - name: Add release id to git note
+        run: |
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git config user.name "${{ github.actor }}"
+          git fetch origin refs/notes/commits:refs/notes/commits
+          git notes add -m "releaseId:${{ steps.create_release.outputs.id }}" -f
+          git notes show
+          git push origin refs/notes/commits:refs/notes/commits
+
+#jobs:
+#  ci:
+#    if: (!(contains(github.head_ref, 'xxxx') || contains(github.head_ref, 'xxxxx')))
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: output github ref
+#        run: echo "branch name ${{ github.head_ref }} and ${{ github.ref_name }}"
