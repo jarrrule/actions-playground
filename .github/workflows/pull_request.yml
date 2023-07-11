@@ -3,7 +3,7 @@ name: Release PR
 on:
   pull_request:
     branches:
-      - mainss
+      - main
   workflow_dispatch:
 
 jobs:
@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       - name: Github commit sha
         run: echo "github commit sha on checkout $GITHUB_SHA"
       - name: Extract branch name
