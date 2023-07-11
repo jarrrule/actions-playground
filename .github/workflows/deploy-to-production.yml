@@ -10,35 +10,40 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
       - name: Github commit sha
         run: echo "github commit sha on checkout $GITHUB_SHA"
+
       - name: Get release commit
         id: releaseCommit
         run: echo "sha=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
+
       - name: Checkout release commit
         uses: actions/checkout@v3
         with:
           ref: ${{ steps.releaseCommit.outputs.sha }}
           fetch-depth: 0
+
       - name: Github commit sha of release commit
         run: echo "github commit sha of release commit $(git rev-parse HEAD)"
-      - name: release stuff
+
+      - name: Get release Id
         id: release
         run: |
           git fetch origin refs/notes/commits:refs/notes/commits
           notes_output="$(git notes show $(git rev-parse HEAD))"
           echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
+
       - name: git notes output
         run: |
           echo "output from step ${{ steps.release.outputs.id }}"
 
-      - name: Edit Release
+      - name: Update Release
         uses: irongut/EditRelease@v1.2.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           id: ${{ steps.release.outputs.id }}
           prerelease: false
-          draft: false
 
 #      - name: update release
 #        uses: actions/create-release@latest
