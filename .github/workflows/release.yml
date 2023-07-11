@@ -1,4 +1,4 @@
-name: Release Workflow
+name: Release Workflows
 run-name: ${{ github.actor }} running ${{ github.ref_name }} workflow
 concurrency:
   group: release-${{ github.head_ref }}
@@ -6,7 +6,7 @@ concurrency:
 on:
   push:
     branches:
-      - release**
+      - releasegg**
   workflow_dispatch:
 
 jobs:
