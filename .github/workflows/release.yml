@@ -6,7 +6,7 @@ concurrency:
 on:
   push:
     branches:
-      - releasegg**
+      - releasess**
   workflow_dispatch:
 
 jobs:
