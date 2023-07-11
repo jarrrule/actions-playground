@@ -7,9 +7,12 @@ on:
       - main
 
 jobs:
-  create-tag-release:
+  create-change-log:
     if: startsWith(github.head_ref, 'release')
     runs-on: ubuntu-latest
+    outputs:
+      changeLog: ${{ steps.Changelog.outputs.changelog }}
+      tag: ${{ steps.extractRelease.outputs.name }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -30,20 +33,28 @@ jobs:
         env:
           REPO: ${{ github.repository }}
 
+  create-release:
+    needs: [ create-change-log ]
+    runs-on: ubuntu-latest
+    outputs:
+      releaseId: ${{ steps.Changelog.outputs.changelog }}
+    steps:
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.extractRelease.outputs.name }}
-          release_name: Release ${{ steps.extractRelease.outputs.name }}
+          tag_name: ${{ needs.create-change-log.outputs.tag }}
+          release_name: Release ${{ needs.create-change-log.outputs.tag }}
           body: |
-            ${{ steps.Changelog.outputs.changelog }}
+            ${{ needs.create-change-log.outputs.changeLog }}
           prerelease: true
 
-      - name: Clean previous files
-        uses: AutoModality/action-clean@v1
+  update-notes:
+    needs: [ create-release ]
+    runs-on: ubuntu-latest
+    steps:
       - name: Checkout Release commit
         uses: actions/checkout@v3
         with:
@@ -54,7 +65,7 @@ jobs:
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git config user.name "${{ github.actor }}"
           git fetch origin refs/notes/commits:refs/notes/commits
-          git notes add -m "releaseId:${{ steps.create_release.outputs.id }}" -f
+          git notes add -m "releaseId:${{ needs.create-release.outputs.releaseId }}" -f
           git notes show
           git push origin refs/notes/commits:refs/notes/commits
           
