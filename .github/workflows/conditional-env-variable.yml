@@ -2,7 +2,8 @@ name: "Conditional envs"
 
 on:
   push:
-    branch: xxxx
+    branches:
+      - xmain
 
 jobs:
   test:
