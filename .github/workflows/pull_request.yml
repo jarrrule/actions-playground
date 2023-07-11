@@ -37,7 +37,7 @@ jobs:
     needs: [ create-change-log ]
     runs-on: ubuntu-latest
     outputs:
-      releaseId: ${{ steps.Changelog.outputs.changelog }}
+      releaseId: ${{ steps.create_release.outputs.changelog }}
     steps:
       - name: Create Release
         id: create_release
