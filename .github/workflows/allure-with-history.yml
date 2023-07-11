@@ -1,4 +1,4 @@
-name: Allure with history
+name: Allure with history x
 run-name: ${{ github.actor }}s action playground
 
 on:
