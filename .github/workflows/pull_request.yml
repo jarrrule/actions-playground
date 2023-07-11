@@ -13,12 +13,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Github commit sha
-        run: echo "github commit sha on checkout $GITHUB_SHA"
+      - name: Get Latest Commit SHA
+        id: info
+        uses: keirlawson/pull-request-info@v2
+      - name: Print Latest Commit SHA
+        run: |
+          echo "Latest commit SHA: ${{ steps.info.outputs.latest_commit_sha }}"
       - name: Extract branch name
         id: extractRelease
         run: |
-          branch_ref=${{ github.head_ref }}
+          branch_ref=${{ steps.info.outputs.latest_commit_sha }}
           branch_name=${branch_ref##*/}
           echo "name=$branch_name" >> $GITHUB_OUTPUT
           echo "Branch Name: $branch_name"
