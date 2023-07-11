@@ -42,6 +42,11 @@ jobs:
             ${{ steps.Changelog.outputs.changelog }}
           prerelease: true
 
+      - name: Checkout Release commit
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
       - name: Add release id to git notes
         run: |
           git config user.email "${{ github.actor }}@users.noreply.github.com"
@@ -84,7 +89,7 @@ jobs:
       #        run: echo "releases id is ${{ steps.create_release.outputs.id }}"
 
 
-#jobs:
+
 #  ci:
 #    if: (!(contains(github.head_ref, 'xxxx') || contains(github.head_ref, 'xxxxx')))
 #    runs-on: ubuntu-latest
