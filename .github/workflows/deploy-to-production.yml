@@ -26,13 +26,18 @@ jobs:
 #      - name: Github commit sha of release commit
 #        run: echo "github commit sha of release commit $(git rev-parse HEAD)"
 
-      - name: Get pushed branch name
-        id: branch_name
-        run: echo "BRANCH_NAME=${{ github.head.ref }}" >> $GITHUB_ENV
-
-      - name: Display pushed branch name
+      - name: Get merged branch name
+        id: get_merged_branch
         run: |
-          echo "Pushed branch: ${{ env.BRANCH_NAME }}"
+          branch_name=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/commits/${{ github.sha }}/pulls" | \
+            jq -r '.[0].head.ref')
+
+          echo "BRANCH_NAME=${branch_name}" >> $GITHUB_ENV
+
+      - name: Display merged branch name
+        run: |
+          echo "Merged branch: ${{ env.BRANCH_NAME }}"
 
 #      - name: Get release Id
 #        id: release
