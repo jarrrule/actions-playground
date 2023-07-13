@@ -4,7 +4,7 @@ run-name: ${{ github.actor }} -> Release PR (${{ github.event.action }})
 on:
   pull_request:
     branches:
-      - main
+      - mainvv
 
 jobs:
   create-change-log:

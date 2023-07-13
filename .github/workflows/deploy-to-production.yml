@@ -23,9 +23,22 @@ jobs:
         with:
           ref: ${{ steps.releaseCommit.outputs.sha }}
 
+
+
+
+
 #      - name: Github commit sha of release commit
 #        run: echo "github commit sha of release commit $(git rev-parse HEAD)"
 
+
+          
+
+  create-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ steps.releaseCommit.outputs.sha }}
       - name: Get merged branch name
         id: get_merged_branch
         run: |
@@ -37,7 +50,14 @@ jobs:
 
       - name: Display merged branch name
         run: |
-          echo "Merged branch: ${{ env.BRANCH_NAME }}"
+          echo "Merged branch: ${{ env.BRANCH_NAME }}"   
+
+      - uses: rickstaa/action-create-tag@v1
+        id: "tag_create"
+        with:
+          tag: ${{ env.BRANCH_NAME }}
+          tag_exists_error: false
+          message: ${{ branch_name }}
 
 #      - name: Get release Id
 #        id: release
