@@ -1,11 +1,13 @@
 on:
   push:
     branches:
-      - xmain
+      - main
 
 jobs:
-  tag_release:
+  release-sha:
     runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.releaseCommit.outputs.sha }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -18,10 +20,10 @@ jobs:
         id: releaseCommit
         run: echo "sha=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
 
-      - name: Checkout release commit
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ steps.releaseCommit.outputs.sha }}
+#      - name: Checkout release commit
+#        uses: actions/checkout@v3
+#        with:
+#          ref: ${{ steps.releaseCommit.outputs.sha }}
 
 
 
@@ -33,24 +35,24 @@ jobs:
 
           
 
-  create-tag:
+  update-release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ steps.releaseCommit.outputs.sha }}
-      - name: Get merged branch name
-        id: get_merged_branch
-        run: |
-          branch_name=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/commits/${{ github.sha }}/pulls" | \
-            jq -r '.[0].head.ref')
-
-          echo "BRANCH_NAME=${branch_name#*/}" >> $GITHUB_ENV
-
-      - name: Display merged branch name
-        run: |
-          echo "Merged branch: ${{ env.BRANCH_NAME }}"   
+          ref: ${{ needs.release-sha.outputs.sha }}
+#      - name: Get merged branch name
+#        id: get_merged_branch
+#        run: |
+#          branch_name=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+#            "https://api.github.com/repos/${{ github.repository }}/commits/${{ github.sha }}/pulls" | \
+#            jq -r '.[0].head.ref')
+#
+#          echo "BRANCH_NAME=${branch_name#*/}" >> $GITHUB_ENV
+#
+#      - name: Display merged branch name
+#        run: |
+#          echo "Merged branch: ${{ env.BRANCH_NAME }}"
 
 #      - uses: rickstaa/action-create-tag@v1
 #        id: "tag_create"
@@ -60,30 +62,30 @@ jobs:
 #          tag_exists_error: false
 #          message: "Release: ${{ env.BRANCH_NAME }}"
 
-      - uses: ncipollo/release-action@v1
-        with:
-          name: "Release: ${{ env.BRANCH_NAME }}"
-          tag: ${{ env.BRANCH_NAME }}
-          commit: ${{ steps.releaseCommit.outputs.sha }}
-
-
-#      - name: Get release Id blar balr
-#        id: release
-#        run: |
-#          git fetch origin refs/notes/commits:refs/notes/commits
-#          notes_output="$(git notes show $(git rev-parse HEAD))"
-#          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
-#
-#      - name: git notes output
-#        run: |
-#          echo "output from step ${{ steps.release.outputs.id }}"
-#
-#      - name: Update Release
-#        uses: irongut/EditRelease@v1.2.0
+#      - uses: ncipollo/release-action@v1
 #        with:
-#          token: ${{ secrets.GITHUB_TOKEN }}
-#          id: ${{ steps.release.outputs.id }}
-#          prerelease: false
+#          name: "Release: ${{ env.BRANCH_NAME }}"
+#          tag: ${{ env.BRANCH_NAME }}
+#          commit: ${{ steps.releaseCommit.outputs.sha }}
+
+
+      - name: Get release Id
+        id: release
+        run: |
+          git fetch origin refs/notes/commits:refs/notes/commits
+          notes_output="$(git notes show $GITHUB_SHA"
+          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
+
+      - name: git notes output
+        run: |
+          echo "output from step ${{ steps.release.outputs.id }}"
+
+      - name: Update Release
+        uses: irongut/EditRelease@v1.2.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          id: ${{ steps.release.outputs.id }}
+          prerelease: false
 
 #      - name: update release
 #        uses: actions/create-release@latest
