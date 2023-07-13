@@ -63,7 +63,7 @@ jobs:
 
       - uses: ncipollo/release-action@v1
         with:
-          name: Release: on feature branch
+          name: "Release: on feature branch"
           tag: v1.2.6
 
 
