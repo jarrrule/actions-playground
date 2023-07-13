@@ -2,7 +2,7 @@ on:
   pull_request:
     branches:
       - main
-    types: [closed]
+    types: [open]
 
 jobs:
 #  tag_release:
@@ -63,8 +63,8 @@ jobs:
 
       - uses: ncipollo/release-action@v1
         with:
-          name: "Release: {{ github.event.pull_request.head.ref  }}"
-          tag: v1.2.3
+          name: "Release: on feature branch"
+          tag: v1.2.6
 
 
 
