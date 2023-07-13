@@ -57,7 +57,7 @@ jobs:
         with:
           tag: ${{ env.BRANCH_NAME }}
           tag_exists_error: false
-          message: "Release: "${{ env.BRANCH_NAME }}"
+          message: "Release: ${{ env.BRANCH_NAME }}"
 
 #      - name: Get release Id
 #        id: release
