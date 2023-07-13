@@ -27,23 +27,31 @@ jobs:
       - name: Github commit sha of release commit
         run: echo "github commit sha of release commit $(git rev-parse HEAD)"
 
-      - name: Get release Id
-        id: release
-        run: |
-          git fetch origin refs/notes/commits:refs/notes/commits
-          notes_output="$(git notes show $(git rev-parse HEAD))"
-          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
+      - name: Get pushed branch name
+        id: branch_name
+        run: echo "BRANCH_NAME=${{ github.ref }}" >> $GITHUB_ENV
 
-      - name: git notes output
+      - name: Display pushed branch name
         run: |
-          echo "output from step ${{ steps.release.outputs.id }}"
+          echo "Pushed branch: ${{ env.BRANCH_NAME }}"
 
-      - name: Update Release
-        uses: irongut/EditRelease@v1.2.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          id: ${{ steps.release.outputs.id }}
-          prerelease: false
+#      - name: Get release Id
+#        id: release
+#        run: |
+#          git fetch origin refs/notes/commits:refs/notes/commits
+#          notes_output="$(git notes show $(git rev-parse HEAD))"
+#          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
+#
+#      - name: git notes output
+#        run: |
+#          echo "output from step ${{ steps.release.outputs.id }}"
+#
+#      - name: Update Release
+#        uses: irongut/EditRelease@v1.2.0
+#        with:
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          id: ${{ steps.release.outputs.id }}
+#          prerelease: false
 
 #      - name: update release
 #        uses: actions/create-release@latest
