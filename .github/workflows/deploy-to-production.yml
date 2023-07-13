@@ -74,7 +74,7 @@ jobs:
         id: release
         run: |
           git fetch origin refs/notes/commits:refs/notes/commits
-          notes_output="$(git notes show $GITHUB_SHA"
+          notes_output="$(git notes show $GITHUB_SHA)"
           echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
 
       - name: git notes output
