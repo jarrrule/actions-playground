@@ -1,8 +1,7 @@
 on:
   pull_request:
-    branches:
-      - main
-    types: [open]
+    branches: [ main ]
+    types: [ opened ]
 
 jobs:
 #  tag_release:
