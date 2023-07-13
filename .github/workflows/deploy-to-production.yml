@@ -60,7 +60,7 @@ jobs:
           tag_exists_error: false
           message: "Release: ${{ env.BRANCH_NAME }}"
 
-#      - name: Get release Id
+#      - name: Get release Id blar balr
 #        id: release
 #        run: |
 #          git fetch origin refs/notes/commits:refs/notes/commits
