@@ -1,8 +1,7 @@
 on:
   pull_request:
-    branches:
-      - main
-    types: [open]
+    branches: [ main ]
+    types: [ opened ]
 
 jobs:
 #  tag_release:
@@ -64,7 +63,7 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           name: "Release: on feature branch"
-          tag: v1.2.6
+          tag: v1.2.7
 
 
 
