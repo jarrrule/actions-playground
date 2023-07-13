@@ -55,6 +55,7 @@ jobs:
       - uses: rickstaa/action-create-tag@v1
         id: "tag_create"
         with:
+          commit_sha: ${{ steps.releaseCommit.outputs.sha }}
           tag: ${{ env.BRANCH_NAME }}
           tag_exists_error: false
           message: "Release: ${{ env.BRANCH_NAME }}"
