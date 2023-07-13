@@ -4,52 +4,48 @@ run-name: ${{ github.actor }} -> Release PR (${{ github.event.action }})
 on:
   pull_request:
     branches:
-      - mainvv
+      - main
 
 jobs:
-  create-change-log:
-    if: startsWith(github.head_ref, 'release')
-    runs-on: ubuntu-latest
-    outputs:
-      changeLog: ${{ steps.Changelog.outputs.changelog }}
-      tag: ${{ steps.extractRelease.outputs.name }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          fetch-depth: 0
-
-      - name: Extract branch name
-        id: extractRelease
-        run: |
-          branch_ref=${{ github.head_ref }}
-          branch_name=${branch_ref##*/}
-          echo "name=$branch_name" >> $GITHUB_OUTPUT
-          echo "Branch Name: $branch_name"
-
-      - name: Create Changelog
-        uses: Bullrich/generate-release-changelog@master
-        id: Changelog
-        env:
-          REPO: ${{ github.repository }}
+#  create-change-log:
+#    if: startsWith(github.head_ref, 'release')
+#    runs-on: ubuntu-latest
+#    outputs:
+#      changeLog: ${{ steps.Changelog.outputs.changelog }}
+#      tag: ${{ steps.extractRelease.outputs.name }}
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+#        with:
+#          ref: ${{ github.event.pull_request.head.sha }}
+#          fetch-depth: 0
+#
+#      - name: Extract branch name
+#        id: extractRelease
+#        run: |
+#          branch_ref=${{ github.head_ref }}
+#          branch_name=${branch_ref##*/}
+#          echo "name=$branch_name" >> $GITHUB_OUTPUT
+#          echo "Branch Name: $branch_name"
+#
+#      - name: Create Changelog
+#        uses: Bullrich/generate-release-changelog@master
+#        id: Changelog
+#        env:
+#          REPO: ${{ github.repository }}
 
   create-release:
-    needs: [ create-change-log ]
+#    needs: [ create-change-log ]
     runs-on: ubuntu-latest
     outputs:
       releaseId: ${{ steps.create_release.outputs.id }}
     steps:
       - name: Create Release
         id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: ${{ needs.create-change-log.outputs.tag }}
-          release_name: Release ${{ needs.create-change-log.outputs.tag }}
-          body: |
-            ${{ needs.create-change-log.outputs.changeLog }}
+          tag: v1.1.20
+          name: Release the release name
           prerelease: true
 
   update-notes:
