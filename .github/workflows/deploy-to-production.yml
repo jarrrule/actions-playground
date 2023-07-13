@@ -70,16 +70,16 @@ jobs:
 #          commit: ${{ steps.releaseCommit.outputs.sha }}
 
 
-      - name: Get release Id
-        id: release
-        run: |
-          git fetch origin refs/notes/commits:refs/notes/commits
-          notes_output="$(git notes show $GITHUB_SHA)"
-          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
-
-      - name: git notes output
-        run: |
-          echo "output from step ${{ steps.release.outputs.id }}"
+#      - name: Get release Id
+#        id: release
+#        run: |
+#          git fetch origin refs/notes/commits:refs/notes/commits
+#          notes_output="$(git notes show $GITHUB_SHA)"
+#          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
+#
+#      - name: git notes output
+#        run: |
+#          echo "output from step ${{ steps.release.outputs.id }}"
 
       - name: Update Release
         uses: irongut/EditRelease@v1.2.0
