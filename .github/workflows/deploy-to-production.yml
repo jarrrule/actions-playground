@@ -39,9 +39,15 @@ jobs:
     needs: [ release-sha ]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ needs.release-sha.outputs.sha }}
+#      - uses: actions/checkout@v3
+#        with:
+#          ref: ${{ needs.release-sha.outputs.sha }}
+#
+#      - name: github release sha
+#        run: |
+#          echo "release sha ${{ needs.release-sha.outputs.sha }}"
+#      - name: Github commit sha
+#        run: echo "github commit sha on checkout of ref $GITHUB_SHA"
 #      - name: Get merged branch name
 #        id: get_merged_branch
 #        run: |
@@ -70,23 +76,22 @@ jobs:
 #          commit: ${{ steps.releaseCommit.outputs.sha }}
 
 
-#      - name: Get release Id
-#        id: release
-#        run: |
-#          git fetch origin refs/notes/commits:refs/notes/commits
-#          notes_output="$(git notes show $GITHUB_SHA)"
-#          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
-#
-#      - name: git notes output
-#        run: |
-#          echo "output from step ${{ steps.release.outputs.id }}"
+      - name: Get release Id
+        id: release
+        run: |
+          git fetch origin refs/notes/commits:refs/notes/commits
+          notes_output="$(git notes show ${{ needs.release-sha.outputs.sha }})"
+          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
+
+      - name: git notes output
+        run: |
+          echo "output from step ${{ steps.release.outputs.id }}"
 
       - name: Update Release
         uses: irongut/EditRelease@v1.2.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-#          id: ${{ steps.release.outputs.id }}
-          id: 112087598
+          id: ${{ steps.release.outputs.id }}
           prerelease: false
 
 #      - name: update release

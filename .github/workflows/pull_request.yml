@@ -44,9 +44,10 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          tag: v1.1.38
+          tag: v1.1.39
           name: Release the release name
           prerelease: true
+          generateReleaseNotes: true
 
   update-notes:
     needs: [ create-release ]
