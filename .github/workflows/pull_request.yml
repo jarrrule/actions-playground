@@ -39,6 +39,7 @@ jobs:
     outputs:
       release-tag: ${{ steps.createTag.outputs.tag }}
     steps:
+      - uses: actions/checkout@v3
       - name: create-tag
         id: createTag
         run: |
