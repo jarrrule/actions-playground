@@ -45,8 +45,8 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          tag: v1.1.46
-          name: Release the release July 14
+          tag: ${{ GITHUB_REF }}
+          name: Release ${{ GITHUB_REF }}
           prerelease: true
           allowUpdates: true
       - name: release sha
