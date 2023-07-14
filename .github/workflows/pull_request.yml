@@ -1,8 +1,9 @@
-name: Release PR
+name: Release PR change
 run-name: ${{ github.actor }} -> Release PR (${{ github.event.action }})
 
 on:
   pull_request:
+    types: [ opened, reopened, synchronize ]
     branches:
       - main
 
@@ -44,10 +45,13 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          tag: v1.1.40
-          name: Release the release name
+          tag: v9.1.0
+          name: ${{ github.head_ref }}
           prerelease: true
-          generateReleaseNotes: true
+          allowUpdates: true
+      - name: release sha
+        run: echo "the release commit ${{ github.event.pull_request.head.sha }}"
+
 
   update-notes:
     needs: [ create-release ]
