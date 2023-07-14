@@ -41,11 +41,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.sha }}
       - name: create-tag
         id: createTag
         run: |
-          git tag ${{ github.head_ref }} ${{ github.event.pull_request.head.sha }}
+          git tag ${{ github.head_ref }} ${{ github.sha }}
     
 
   create-release:
