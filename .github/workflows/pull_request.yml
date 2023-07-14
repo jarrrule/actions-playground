@@ -34,8 +34,22 @@ jobs:
 #        id: Changelog
 #        env:
 #          REPO: ${{ github.repository }}
+  create-tag:
+    runs-on: ubuntu-latest
+    outputs:
+      release-tag: ${{ steps.createTag.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.sha }}
+      - name: create-tag
+        id: createTag
+        run: |
+          git tag ${{ github.head_ref }} ${{ github.sha }}
+    
 
   create-release:
+    needs: [ create-tag ]
 #    needs: [ create-change-log ]
     runs-on: ubuntu-latest
     outputs:
@@ -45,7 +59,7 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          tag: v9.1.0
+          tag: ${{ github.head_ref }}
           name: ${{ github.head_ref }}
           prerelease: true
           allowUpdates: true
