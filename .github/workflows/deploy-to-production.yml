@@ -17,6 +17,19 @@ jobs:
         run: |
           echo "sha=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
 
+  release-name:
+    runs-on: ubuntu-latest
+    outputs:
+      name: ${{ steps.release.outputs.name }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get release name
+        id: release
+        run: |
+          git fetch origin refs/notes/commits:refs/notes/commits
+          notes_output="$(git notes show ${{ needs.release-sha.outputs.sha }})"
+          echo "name=${notes_output#*:}" >> $GITHUB_OUTPUT
+
   create-tag:
     needs: [ release-sha ]
     runs-on: ubuntu-latest
@@ -29,9 +42,9 @@ jobs:
       - name: create-tag
         id: createTag
         run: |
-          git tag v99.0.0 ${{ needs.release-sha.outputs.sha }}
-          git push origin v99.0.0
-          echo "id=v99.0.0" >> $GITHUB_OUTPUT
+          git tag ${{ needs.release-name.outputs.name }} ${{ needs.release-sha.outputs.sha }}
+          git push origin ${{ needs.release-name.outputs.name }}
+          echo "tag=${{ needs.release-name.outputs.name }}" >> $GITHUB_OUTPUT
 #      - name: Checkout release commit
 #        uses: actions/checkout@v3
 #        with:
@@ -48,7 +61,7 @@ jobs:
         with:
           tag: ${{ needs.create-tag.outputs.release-tag }}
           generateReleaseNotes: true
-#      - name: release sha
+          name: "Release: ${{ needs.create-tag.outputs.release-tag }}"
 #        run: echo "the release commit ${{ github.event.pull_request.head.sha }}"
 
 

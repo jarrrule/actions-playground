@@ -5,7 +5,7 @@ on:
   pull_request:
     types: [ opened, reopened, synchronize ]
     branches:
-      - xxxxmain
+      - main
 
 jobs:
 #  create-change-log:
@@ -34,54 +34,59 @@ jobs:
 #        id: Changelog
 #        env:
 #          REPO: ${{ github.repository }}
-  create-tag:
-    runs-on: ubuntu-latest
-    outputs:
-      release-tag: ${{ steps.createTag.outputs.tag }}
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: create-tag
-        id: createTag
-        run: |
-          git tag ${{ github.head_ref }} ${{ github.event.pull_request.head.sha }}
+#  create-tag:
+#    runs-on: ubuntu-latest
+#    outputs:
+#      release-tag: ${{ steps.createTag.outputs.tag }}
+#    steps:
+#      - uses: actions/checkout@v3
+#        with:
+#          ref: ${{ github.event.pull_request.head.sha }}
+#      - name: create-tag
+#        id: createTag
+#        run: |
+#          git tag ${{ github.head_ref }} ${{ github.event.pull_request.head.sha }}
     
 
-  create-release:
-    needs: [ create-tag ]
-#    needs: [ create-change-log ]
-    runs-on: ubuntu-latest
-    outputs:
-      releaseId: ${{ steps.create_release.outputs.id }}
-    steps:
-      - name: Create Release
-        id: create_release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ github.head_ref }}
-          name: ${{ github.head_ref }}
-          prerelease: true
-          allowUpdates: true
-      - name: release sha
-        run: echo "the release commit ${{ github.event.pull_request.head.sha }}"
+#  create-release:
+#    needs: [ create-tag ]
+##    needs: [ create-change-log ]
+#    runs-on: ubuntu-latest
+#    outputs:
+#      releaseId: ${{ steps.create_release.outputs.id }}
+#    steps:
+#      - name: Create Release
+#        id: create_release
+#        uses: ncipollo/release-action@v1
+#        with:
+#          tag: ${{ github.head_ref }}
+#          name: ${{ github.head_ref }}
+#          prerelease: true
+#          allowUpdates: true
+#      - name: release sha
+#        run: echo "the release commit ${{ github.event.pull_request.head.sha }}"
 
 
-  update-notes:
-    needs: [ create-release ]
+  create-github-notes:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Release commit
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Add release id to git notes
+      - name: Extract branch name
+        id: release
+        run: |
+          branch_ref=${{ github.head_ref }}
+          branch_name=${branch_ref##*/}
+          echo "name=$branch_name" >> $GITHUB_OUTPUT
+          echo "Branch Name: $branch_name"
+      - name: Add release name to git notes
         run: |
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git config user.name "${{ github.actor }}"
           git fetch origin refs/notes/commits:refs/notes/commits
-          git notes add -m "releaseId:${{ needs.create-release.outputs.releaseId }}" -f
+          git notes add -m "release-name:${{ steps.release.outputs.name }}" -f
           git notes show
           git push origin refs/notes/commits:refs/notes/commits
           
