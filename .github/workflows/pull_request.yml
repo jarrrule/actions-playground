@@ -44,12 +44,13 @@ jobs:
       - name: Create Release
         id: create_release
         uses: ncipollo/release-action@v1
-        commit: ${{ GITHUB_SHA }}
         with:
 #          tag: v1.1.45
           name: Release the release July 14
           prerelease: true
           allowUpdates: true
+          commit: ${{ GITHUB_SHA }}
+
 
   update-notes:
     needs: [ create-release ]
