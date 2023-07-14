@@ -25,9 +25,9 @@ jobs:
       - name: create-tag
         id: createTag
         run: |
-          git tag v1.99 ${{ needs.release-sha.outputs.sha }}
-          git push origin v1.22
-          echo "id=v1.22" >> $GITHUB_OUTPUT
+          git tag v2.0.0 ${{ needs.release-sha.outputs.sha }}
+          git push origin v2.0.0
+          echo "id=v2.0.0" >> $GITHUB_OUTPUT
 #      - name: Checkout release commit
 #        uses: actions/checkout@v3
 #        with:
