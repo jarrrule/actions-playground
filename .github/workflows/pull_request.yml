@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} -> Release PR (${{ github.event.action }})
 
 on:
   pull_request:
+    types: [ opened, reopened, synchronize ]
     branches:
       - main
 
@@ -44,10 +45,10 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          tag: v1.1.40
-          name: Release the release name
+#          tag: v1.1.45
+          name: Release the release July 14
           prerelease: true
-          generateReleaseNotes: true
+          allowUpdates: true
 
   update-notes:
     needs: [ create-release ]

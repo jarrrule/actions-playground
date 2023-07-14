@@ -18,7 +18,8 @@ jobs:
 
       - name: Get release commit
         id: releaseCommit
-        run: echo "sha=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
+        run: |
+          echo "sha=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
 
 #      - name: Checkout release commit
 #        uses: actions/checkout@v3
