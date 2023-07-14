@@ -10,23 +10,42 @@ jobs:
       sha: ${{ steps.releaseCommit.outputs.sha }}
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Github commit sha
-        run: echo "github commit sha on checkout $GITHUB_SHA"
-
       - name: Get release commit
         id: releaseCommit
         run: |
           echo "sha=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
 
+  create-tag:
+    needs: [ release-sha ]
+    runs-on: ubuntu-latest
+    outputs:
+      release-tag: ${{ steps.createTag.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: create-tag
+        id: createTag
+        run: |
+          git tag v1.99 ${{ needs.release-sha.outputs.sha }}
+          git push origin v1.99
+          echo "id=v1.99" >> $GITHUB_OUTPUT
 #      - name: Checkout release commit
 #        uses: actions/checkout@v3
 #        with:
 #          ref: ${{ steps.releaseCommit.outputs.sha }}
 
-
+  create-release:
+    needs: [ create-tag ]
+    #    needs: [ create-change-log ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Release
+        id: create_release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ needs.create-tag.outputs.release-tag }}
+          generateReleaseNotes: true
+#      - name: release sha
+#        run: echo "the release commit ${{ github.event.pull_request.head.sha }}"
 
 
 
@@ -36,11 +55,11 @@ jobs:
 
           
 
-  update-release:
-    needs: [ release-sha ]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+#  update-release:
+#    needs: [ release-sha ]
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
 #        with:
 #          ref: ${{ needs.release-sha.outputs.sha }}
 #
@@ -77,23 +96,23 @@ jobs:
 #          commit: ${{ steps.releaseCommit.outputs.sha }}
 
 
-      - name: Get release Id
-        id: release
-        run: |
-          git fetch origin refs/notes/commits:refs/notes/commits
-          notes_output="$(git notes show ${{ needs.release-sha.outputs.sha }})"
-          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
-
-      - name: git notes output
-        run: |
-          echo "output from step ${{ steps.release.outputs.id }}"
-
-      - name: Update Release
-        uses: irongut/EditRelease@v1.2.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          id: ${{ steps.release.outputs.id }}
-          prerelease: false
+#      - name: Get release Id
+#        id: release
+#        run: |
+#          git fetch origin refs/notes/commits:refs/notes/commits
+#          notes_output="$(git notes show ${{ needs.release-sha.outputs.sha }})"
+#          echo "id=${notes_output#*:}" >> $GITHUB_OUTPUT
+#
+#      - name: git notes output
+#        run: |
+#          echo "output from step ${{ steps.release.outputs.id }}"
+#
+#      - name: Update Release
+#        uses: irongut/EditRelease@v1.2.0
+#        with:
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          id: ${{ steps.release.outputs.id }}
+#          prerelease: false
 
 #      - name: update release
 #        uses: actions/create-release@latest
