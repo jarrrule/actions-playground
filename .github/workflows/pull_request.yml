@@ -49,7 +49,7 @@ jobs:
           name: Release the release July 14
           prerelease: true
           allowUpdates: true
-          commit: $GITHUB_SHA
+          commit: 0fbf666609f2ee5b59a699b931f47bdce6b34543
 
 
   update-notes:
