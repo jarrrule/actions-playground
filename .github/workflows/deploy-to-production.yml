@@ -18,6 +18,7 @@ jobs:
           echo "sha=$(git rev-list HEAD | head -2 | tail -1)" >> $GITHUB_OUTPUT
 
   release-name:
+    needs: [ release-sha ]
     runs-on: ubuntu-latest
     outputs:
       name: ${{ steps.release.outputs.name }}
@@ -31,7 +32,7 @@ jobs:
           echo "name=${notes_output#*:}" >> $GITHUB_OUTPUT
 
   create-tag:
-    needs: [ release-sha ]
+    needs: [ release-name, release-sha ]
     runs-on: ubuntu-latest
     outputs:
       release-tag: ${{ steps.createTag.outputs.id }}
