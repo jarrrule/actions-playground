@@ -19,15 +19,15 @@ jobs:
     needs: [ release-sha ]
     runs-on: ubuntu-latest
     outputs:
-      release-tag: ${{ steps.createTag.outputs.tag }}
+      release-tag: ${{ steps.createTag.outputs.id }}
     steps:
       - uses: actions/checkout@v3
       - name: create-tag
         id: createTag
         run: |
           git tag v1.99 ${{ needs.release-sha.outputs.sha }}
-          git push origin v1.99
-          echo "id=v1.99" >> $GITHUB_OUTPUT
+          git push origin v1.22
+          echo "id=v1.22" >> $GITHUB_OUTPUT
 #      - name: Checkout release commit
 #        uses: actions/checkout@v3
 #        with:
