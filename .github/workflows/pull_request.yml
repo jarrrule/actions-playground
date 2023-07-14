@@ -45,8 +45,8 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-          tag: ${GITHUB_REF}
-          name: Release ${GITHUB_REF}
+          tag: $GITHUB_REF
+          name: Release $GITHUB_REF
           prerelease: true
           allowUpdates: true
       - name: release sha
