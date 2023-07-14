@@ -24,12 +24,14 @@ jobs:
       release-tag: ${{ steps.createTag.outputs.id }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ needs.release-sha.outputs.sha }}
       - name: create-tag
         id: createTag
         run: |
-          git tag v8.0.0 ${{ needs.release-sha.outputs.sha }}
-          git push origin v8.0.0
-          echo "id=v8.0.0" >> $GITHUB_OUTPUT
+          git tag v99.0.0 ${{ needs.release-sha.outputs.sha }}
+          git push origin v99.0.0
+          echo "id=v99.0.0" >> $GITHUB_OUTPUT
 #      - name: Checkout release commit
 #        uses: actions/checkout@v3
 #        with:
