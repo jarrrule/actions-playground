@@ -63,6 +63,7 @@ jobs:
           tag: ${{ needs.create-tag.outputs.release-tag }}
           generateReleaseNotes: true
           name: "Release: ${{ needs.create-tag.outputs.release-tag }}"
+          prerelease: false
 #        run: echo "the release commit ${{ github.event.pull_request.head.sha }}"
 
 
