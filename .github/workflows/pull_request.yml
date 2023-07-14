@@ -45,11 +45,12 @@ jobs:
         id: create_release
         uses: ncipollo/release-action@v1
         with:
-#          tag: v1.1.45
+          tag: v1.1.46
           name: Release the release July 14
           prerelease: true
           allowUpdates: true
-          commit: '0fbf666609f2ee5b59a699b931f47bdce6b34543'
+      - name: release sha
+        run: echo "the release commit ${{ github.event.pull_request.head.sha }}"
 
 
   update-notes:
