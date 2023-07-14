@@ -35,7 +35,7 @@ jobs:
     needs: [ release-name, release-sha ]
     runs-on: ubuntu-latest
     outputs:
-      release-tag: ${{ steps.createTag.outputs.id }}
+      release-tag: ${{ steps.createTag.outputs.tag }}
     steps:
       - uses: actions/checkout@v3
         with:
