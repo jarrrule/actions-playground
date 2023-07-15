@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       releaseName:
-        description: 'Name of version  (ie 5.5.0)'
+        description: 'Name of version  (FY)'
         required: true
 jobs:
   createrelease:
