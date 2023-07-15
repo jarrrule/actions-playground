@@ -51,7 +51,7 @@ jobs:
 #        with:
 #          ref: ${{ steps.releaseCommit.outputs.sha }}
 
-  create-release:
+  publish-release:
     needs: [ create-tag ]
     #    needs: [ create-change-log ]
     runs-on: ubuntu-latest

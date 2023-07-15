@@ -1,0 +1,30 @@
+name: Create Release Branch
+on:
+  workflow_dispatch:
+    inputs:
+      releaseName:
+        description: 'Name of version  (ie 5.5.0)'
+        required: true
+jobs:
+  createrelease:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Create release branch
+        run: git checkout -b release/${{ github.event.inputs.releaseName }}
+      - name: Push new branch
+        run: git push origin release/${{ github.event.inputs.releaseName }}
+      - name: Create pull request into main
+        uses: thomaseizinger/create-pull-request@1.0.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          head: release/${{ github.event.inputs.releaseName }}
+          base: main
+          title: v${{ github.event.inputs.releaseName }} into main
+          reviewers: ${{ github.event.issue.user.login }}
+          body: |
+            Hi!
+            This PR was created in response workflow running.
+            I've updated the version name and code commit: ${{ steps.make-commit.outputs.commit }}.
