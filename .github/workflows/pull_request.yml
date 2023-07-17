@@ -6,6 +6,9 @@ on:
     branches:
       - release**
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GH_WORKFLOW_TOKEN }}
+
 jobs:
 #  create-change-log:
 #    if: startsWith(github.head_ref, 'release')
@@ -69,8 +72,6 @@ jobs:
   create-github-notes:
     runs-on: ubuntu-latest
     steps:
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GH_WORKFLOW_TOKEN }}
       - name: Checkout Release commit
         uses: actions/checkout@v3
 #        with:
