@@ -6,9 +6,6 @@ on:
     branches:
       - release**
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GH_WORKFLOW_TOKEN }}
-
 jobs:
 #  create-change-log:
 #    if: startsWith(github.head_ref, 'release')
