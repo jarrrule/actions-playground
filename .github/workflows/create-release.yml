@@ -29,4 +29,5 @@ jobs:
           body: |
             Hi!
             This PR was created in response workflow running.
-            I've updated the version name and code commit: ${{ steps.make-commit.outputs.commit }}.
+            :exclamation: Before merging please check release workflow :exclamation:
+            [Release worflow ](${{ github.server_url }}/${{ github.repository }}/actions/workflows/release.yml)
