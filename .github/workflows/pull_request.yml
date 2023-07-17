@@ -1,11 +1,10 @@
-name: Release PR
+name: Release PR b
 run-name: ${{ github.actor }} -> Release PR (${{ github.event.action }})
 
 on:
-  pull_request:
-    types: [ opened, reopened, synchronize ]
+  push:
     branches:
-      - main
+      - release**
 
 jobs:
 #  create-change-log:
@@ -72,12 +71,12 @@ jobs:
     steps:
       - name: Checkout Release commit
         uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+#        with:
+#          ref: ${{ github.event.pull_request.head.sha }}
       - name: Extract branch name
         id: release
         run: |
-          branch_ref=${{ github.head_ref }}
+          branch_ref=${{ github.ref }}
           branch_name=${branch_ref##*/}
           echo "name=$branch_name" >> $GITHUB_OUTPUT
           echo "Branch Name: $branch_name"

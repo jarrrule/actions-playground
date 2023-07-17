@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       releaseName:
-        description: 'Name of version  (ie 5.5.0)'
+        description: 'Name of version  (FY)'
         required: true
 jobs:
   createrelease:
@@ -19,7 +19,7 @@ jobs:
       - name: Create pull request into main
         uses: thomaseizinger/create-pull-request@1.3.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_WORKFLOW_TOKEN }}
           head: release/${{ github.event.inputs.releaseName }}
           base: main
           title: ${{ github.event.inputs.releaseName }} into main
