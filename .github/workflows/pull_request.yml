@@ -69,6 +69,8 @@ jobs:
   create-github-notes:
     runs-on: ubuntu-latest
     steps:
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GH_WORKFLOW_TOKEN }}
       - name: Checkout Release commit
         uses: actions/checkout@v3
 #        with:
