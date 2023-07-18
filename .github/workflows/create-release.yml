@@ -19,11 +19,11 @@ jobs:
         run: git checkout -b release/${{ steps.release.outputs.name }}
       - name: Push new branch
         run: git push origin release/${{ steps.release.outputs.name }}
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+      - name: Create pull request into main
+        uses: thomaseizinger/create-pull-request@1.3.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: release/${{ steps.release.outputs.name }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          head: release/${{ steps.release.outputs.name }}
           base: main
           title: "Release: ${{ steps.release.outputs.name }}"
           body: |
