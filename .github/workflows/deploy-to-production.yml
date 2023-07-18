@@ -59,7 +59,7 @@ jobs:
       - name: GH Release
         uses: softprops/action-gh-release@v0.1.15
         with:
-          tag: ${{ needs.create-tag.outputs.release-tag }}
+          tag_name: ${{ needs.create-tag.outputs.release-tag }}
           generate_release_notes: true
           name: "Release: ${{ needs.create-tag.outputs.release-tag }}"
           prerelease: false
