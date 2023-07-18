@@ -56,14 +56,21 @@ jobs:
     #    needs: [ create-change-log ]
     runs-on: ubuntu-latest
     steps:
-      - name: Create Release
-        id: create_release
-        uses: ncipollo/release-action@v1
+      - name: GH Release
+        uses: softprops/action-gh-release@v0.1.15
         with:
           tag: ${{ needs.create-tag.outputs.release-tag }}
-          generateReleaseNotes: true
+          generate_release_notes: true
           name: "Release: ${{ needs.create-tag.outputs.release-tag }}"
           prerelease: false
+  #      - name: Create Release
+#        id: create_release
+#        uses: ncipollo/release-action@v1
+#        with:
+#          tag: ${{ needs.create-tag.outputs.release-tag }}
+#          generateReleaseNotes: true
+#          name: "Release: ${{ needs.create-tag.outputs.release-tag }}"
+#          prerelease: false
 #        run: echo "the release commit ${{ github.event.pull_request.head.sha }}"
 
 

@@ -66,13 +66,11 @@ jobs:
 #        run: echo "the release commit ${{ github.event.pull_request.head.sha }}"
 
 
-  create-github-notes:
+  add-release-github-notes:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Release commit
         uses: actions/checkout@v3
-#        with:
-#          ref: ${{ github.event.pull_request.head.sha }}
       - name: Extract branch name
         id: release
         run: |

@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       releaseName:
-        description: 'Name of version  (FY)'
+        description: 'Release name (NAP-GLOBAL-FY24-7.3)'
         required: true
 
 jobs:
@@ -25,9 +25,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           head: release/${{ github.event.inputs.releaseName }}
           base: main
-          title: ${{ github.event.inputs.releaseName }} into main
+          title: "Release: ${{ github.event.inputs.releaseName }}"
           body: |
-            Hi!
-            This PR was created in response workflow running.
-            :exclamation: Before merging please check release workflow :exclamation:
+            :exclamation: Before merging please check release workflow and ensure acceptance tests are :green_apple: :exclamation:
             [Release worflow ](${{ github.server_url }}/${{ github.repository }}/actions/workflows/release.yml)
