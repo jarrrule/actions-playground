@@ -17,7 +17,7 @@ jobs:
           token: ${{ secrets.GH_WORKFLOW_TOKEN }}
       - name: branch prefix
         id: branch
-        run: echo "prefix=${{ !inputs.hotfix && 'hotfix' || 'release' }}" >> $GITHUB_OUTPUT
+        run: echo "prefix=${{ !inputs.hotfix && 'release' || 'hotfix' }}" >> $GITHUB_OUTPUT
 #      - name: Get current time
 #        id: release
 #        run: echo "name=$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
