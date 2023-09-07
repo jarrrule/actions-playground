@@ -24,7 +24,7 @@ jobs:
       - name: Set branch name
         run: echo "branch-name=${{ !inputs.hotfix && format( 'release/{0}', steps.release.outputs.name) || github.ref_name }}" >> $GITHUB_OUTPUT
       - name: display branch name
-        run: echo "branch name is ${{ steps.release.outputs.branch-name }}
+        run: echo "branch name is ${{ steps.release.outputs.branch-name }}"
 #      - name: Show current time
 #        run: echo "Current time is ${{ steps.release.outputs.name }}"
 #      - name: Create release branch
