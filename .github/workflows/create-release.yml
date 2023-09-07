@@ -15,12 +15,16 @@ jobs:
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GH_WORKFLOW_TOKEN }}
-      - name: branch prefix
-        id: branch
-        run: echo "prefix=${{ !inputs.hotfix && 'release' || 'hotfix' }}" >> $GITHUB_OUTPUT
-#      - name: Get current time
-#        id: release
-#        run: echo "name=$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
+#      - name: branch prefix
+#        id: branch
+#        run: echo "prefix=${{ !inputs.hotfix && 'release' || 'hotfix' }}" >> $GITHUB_OUTPUT
+      - name: Get current time
+        id: release
+        run: echo "name=$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
+      - name: Set branch name
+        run: echo "branch-name=${{ !inputs.hotfix && format( 'release/{0}', steps.release.outputs.name) || github.ref_name }}" >> $GITHUB_OUTPUT
+      - name: display branch name
+        run: echo "branch name is ${{ steps.release.outputs.branch-name }}
 #      - name: Show current time
 #        run: echo "Current time is ${{ steps.release.outputs.name }}"
 #      - name: Create release branch
