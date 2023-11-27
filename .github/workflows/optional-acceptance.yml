@@ -4,9 +4,10 @@ on:
     branches:
       - develop
   workflow_dispatch:
-    skip-acceptance:
-      type: boolean
-      default: false
+    inputs:
+      skip-acceptance:
+        type: boolean
+        default: false
 
 jobs:
   set-up:
