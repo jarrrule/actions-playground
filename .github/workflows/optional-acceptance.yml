@@ -1,0 +1,39 @@
+name: Create Release Branch
+on:
+  push:
+    branches:
+      - develop
+  workflow_dispatch:
+    skip-acceptance:
+      type: boolean
+      default: false
+
+jobs:
+  set-up:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "set-up"
+
+  argos-acceptance:
+    needs: [ set-up ]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "argos acceptance"
+
+  habitat-acceptance:
+    needs: [ set-up ]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "habitat acceptance"
+
+  tu-acceptance:
+    needs: [ set-up ]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "tu acceptance"
+
+  s3-upload:
+    needs: [ argos-acceptance, habitat-acceptance, tu-acceptance ]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "upload s3"
