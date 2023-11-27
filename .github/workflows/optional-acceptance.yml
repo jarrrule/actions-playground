@@ -39,13 +39,14 @@ jobs:
   s3-upload:
     if: |
       always() && 
-      (needs.argos-acceptance.result == 'success' && needs.habitat-acceptance.result == 'success' && needs.tu-acceptance.result == 'success') && 
-      (inputs.skip-acceptance || true)
+      (needs.argos-acceptance.result == 'success' && needs.habitat-acceptance.result == 'success' && needs.tu-acceptance.result == 'success') || 
+      inputs.skip-acceptance && 
+      (needs.argos-acceptance.result == 'skipped' && needs.habitat-acceptance.result == 'skipped' && needs.tu-acceptance.result == 'skipped')
     needs: [ argos-acceptance, habitat-acceptance, tu-acceptance ]
     runs-on: ubuntu-latest
     steps:
       - run: |
          echo "upload s3"
-         echo "argos acceptance ${{ needs.argos-acceptance.result }}
-         echo "habitat acceptance ${{ needs.habitat-acceptance.result }}
-         echo "tu acceptance ${{ needs.tu-acceptance.result }}
+         echo "argos acceptance ${{ needs.argos-acceptance.result }}"
+         echo "habitat acceptance ${{ needs.habitat-acceptance.result }}"
+         echo "tu acceptance ${{ needs.tu-acceptance.result }}"
