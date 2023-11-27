@@ -19,21 +19,30 @@ jobs:
     
 
   argos-acceptance:
-    if: always() && !inputs.skip-acceptance
+    if: |
+      always() && 
+      needs.set-up.result == 'success' &&
+      !inputs.skip-acceptance
     needs: [ set-up ]
     runs-on: ubuntu-latest
     steps:
       - run: echo "argos acceptance"
 
   habitat-acceptance:
-    if: always() && !inputs.skip-acceptance
+    if: |
+      always() && 
+      needs.set-up.result == 'success' &&
+      !inputs.skip-acceptance
     needs: [ set-up ]
     runs-on: ubuntu-latest
     steps:
       - run: echo "habitat acceptance"
 
   tu-acceptance:
-    if: always() && !inputs.skip-acceptance
+    if: |
+      always() && 
+      needs.set-up.result == 'success' &&
+      !inputs.skip-acceptance
     needs: [ set-up ]
     runs-on: ubuntu-latest
     steps:
