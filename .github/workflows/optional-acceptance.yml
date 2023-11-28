@@ -52,8 +52,7 @@ jobs:
     if: |
       always() && 
       (needs.argos-acceptance.result == 'success' && needs.habitat-acceptance.result == 'success' && needs.tu-acceptance.result == 'success') || 
-      inputs.skip-acceptance && 
-      (needs.argos-acceptance.result == 'skipped' && needs.habitat-acceptance.result == 'skipped' && needs.tu-acceptance.result == 'skipped')
+      inputs.skip-acceptance
     needs: [ argos-acceptance, habitat-acceptance, tu-acceptance ]
     runs-on: ubuntu-latest
     steps:
