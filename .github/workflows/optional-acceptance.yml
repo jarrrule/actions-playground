@@ -14,19 +14,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "set-up"
           run: exit 1
-    
+    outputs:
+      argos-deployed: ${{ success() }}
 
   argos-acceptance:
     if: |
       always() && 
-      needs.set-up.result == 'success' &&
+      needs.set-up.outputs.argos-deployed &&
       !inputs.skip-acceptance
     needs: [ set-up ]
     runs-on: ubuntu-latest
     steps:
-      - run: echo "argos acceptance"
+      - run: |
+          echo "argos acceptance"
+          echo "argos deployed ${{ needs.set-up.outputs.argos-deployed }}"
 
   habitat-acceptance:
     if: |
