@@ -16,7 +16,8 @@ jobs:
       - id: argos
         run: |
           echo "hello argos"
-          echo "deployed=${{ success() }}" >> $GITHUB_OUTPUT
+          echo "deployed=true" >> $GITHUB_OUTPUT
+        if: success()
     outputs:
       argos-deployed: ${{ steps.argos.outputs.deployed }}
 
