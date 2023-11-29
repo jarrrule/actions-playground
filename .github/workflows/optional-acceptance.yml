@@ -13,10 +13,12 @@ jobs:
   set-up:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          run: exit 1
+      - id: argos
+        run: |
+          echo "hello argos"
+          echo "deployed=${{ success() }}" >> $GITHUB_OUTPUT
     outputs:
-      argos-deployed: ${{ success() }}
+      argos-deployed: ${{ steps.argos.outputs.deployed }}
 
   argos-acceptance:
     if: |
