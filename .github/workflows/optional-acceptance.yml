@@ -15,6 +15,7 @@ jobs:
     steps:
       - id: argos
         run: |
+          run: exit 1
           echo "hello argos"
           echo "deployed=true" >> $GITHUB_OUTPUT
         if: success()
