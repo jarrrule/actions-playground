@@ -33,7 +33,7 @@ jobs:
       - run: |
           echo "argos acceptance"
           echo "argos deployed ${{ needs.set-up.outputs.argos-deployed }}"
-
+        if: needs.set-up.outputs.argos-deployed
   habitat-acceptance:
     if: |
       always() && 
