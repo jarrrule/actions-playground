@@ -24,7 +24,7 @@ jobs:
   argos-acceptance:
     if: |
       always() && 
-      needs.set-up.outputs.argos-deployed == true &&
+      needs.set-up.outputs.argos-deployed == 'true' &&
       !inputs.skip-acceptance
     needs: [ set-up ]
     runs-on: ubuntu-latest
