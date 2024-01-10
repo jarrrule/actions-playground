@@ -12,23 +12,23 @@ on:
 jobs:
   tag_release:
     runs-on: ubuntu-latest
-  outputs:
-    release-name: ${{ steps.release.outputs.name }}
-  steps:
-    - name: Create release name
-      id: release
-      run: |
-        echo "name=$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
-    - uses: actions/checkout@v3
-    - name: create-tag
-      id: createTag
-      run: |
-        git tag ${{ steps.release.outputs.name }}
-        git push origin ${{ steps.release.outputs.name }}
-        echo "tag=${{ steps.release.outputs.name }}" >> $GITHUB_OUTPUT
-    - name: GH Release
-      uses: softprops/action-gh-release@v0.1.15
-      with:
-        tag_name: ${{ steps.release.outputs.name }}
-        generate_release_notes: true
-        name: 'Release: ${{ steps.release.outputs.name }}'
+    outputs:
+      release-name: ${{ steps.release.outputs.name }}
+    steps:
+      - name: Create release name
+        id: release
+        run: |
+          echo "name=$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
+      - uses: actions/checkout@v3
+      - name: create-tag
+        id: createTag
+        run: |
+          git tag ${{ steps.release.outputs.name }}
+          git push origin ${{ steps.release.outputs.name }}
+          echo "tag=${{ steps.release.outputs.name }}" >> $GITHUB_OUTPUT
+      - name: GH Release
+        uses: softprops/action-gh-release@v0.1.15
+        with:
+          tag_name: ${{ steps.release.outputs.name }}
+          generate_release_notes: true
+          name: 'Release: ${{ steps.release.outputs.name }}'
