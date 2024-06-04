@@ -1,4 +1,4 @@
-name: Github Var
+name: Github Var output
 run-name: ${{ github.actor }}s action playground
 
 on:
