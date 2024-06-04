@@ -11,4 +11,4 @@ jobs:
       - name: checkout project
         uses: actions/checkout@v2
       - name: The GitHub var
-        run: echo "The GitHub var is ${{ var.PROJECT_ID }}"
+        run: echo "The GitHub var is ${{ vars.PROJECT_ID }}"
