@@ -1,0 +1,14 @@
+name: Github Var
+run-name: ${{ github.actor }}s action playground
+
+on:
+  workflow_dispatch:
+
+jobs:
+  github-var:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout project
+        uses: actions/checkout@v2
+      - name: The GitHub var
+        run: echo "The GitHub var is ${{ var.PROJECT_ID }}"
