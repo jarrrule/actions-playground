@@ -24,4 +24,4 @@ jobs:
       - name: The GitHub var
         id: github-var
         run: |
-          echo "Release Name: ${{ steps.github-var.outputs.name }}"
+          echo "Release Name: ${{ needs.github-var.outputs.name }}"
