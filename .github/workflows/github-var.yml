@@ -11,7 +11,17 @@ jobs:
       - name: checkout project
         uses: actions/checkout@v2
       - name: The GitHub var
+        id: github-var
         run: |
           release_name='hello-world'
           echo "name=${{ vars.PROJECT_ID }}:$release_name" >> $GITHUB_OUTPUT
           echo "Release Name: $release_name"
+
+  github-var-is:
+    runs-on: ubuntu-latest
+    needs: [ github-var ]
+    steps:
+      - name: The GitHub var
+        id: github-var
+        run: |
+          echo "Release Name: ${{ steps.github-var.outputs.name }}"
