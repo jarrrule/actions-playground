@@ -14,10 +14,11 @@ jobs:
         id: varName
         run: |
           release_name='hello-world'
-          echo "name=${{ vars.PROJECT_ID }}:$release_name" >> $GITHUB_OUTPUT
+          echo "name=${{ vars.PROJECT_ID }}-$release_name" >> $GITHUB_OUTPUT
       - name: display
         run: | 
           echo "Release Name: ${{ steps.varName.outputs.name }}"
+          echo "name=${{ vars.PROJECT_ID }}-$(date +'%Y-%m-%d_%H-%M')"
 
 #  github-var-is:
 #    runs-on: ubuntu-latest
