@@ -17,16 +17,22 @@ const makeRequest = async () => {
   })
 }
 
-try {
-  const prNumber = core.getInput('pr-number');
-  console.log(`Hello ${prNumber}!`);
-  core.setOutput('jira-issues', ['NAP-1234', 'NAP-1235', 'NAP-1236', 'NAP-1237'])
-  const token = core.getInput('token')
-  console.log('can you see the token ', token)
-  console.log(JSON.stringify(await makeRequest(), null, 2))
-} catch (error) {
-  core.setFailed(error.message)
-}
+
+
+
+(async () => {
+  try {
+    const prNumber = core.getInput('pr-number');
+    console.log(`Hello ${prNumber}!`);
+    core.setOutput('jira-issues', ['NAP-1234', 'NAP-1235', 'NAP-1236', 'NAP-1237'])
+    const token = core.getInput('token')
+    console.log('can you see the token ', token)
+    const response = await makeRequest()
+    console.log(JSON.stringify(response, null, 2))
+  } catch (error) {
+    core.setFailed(error.message)
+  }
+})()
 
 
 
