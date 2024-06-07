@@ -1,5 +1,5 @@
 name: "Get jira issues in release"
-
+run-name: Get jira issues in release
 on: [push]
 jobs:
   deployment:
@@ -13,4 +13,4 @@ jobs:
         with:
           pr-number: 12
       - name: output jira issues in release
-        run: echo ${{ steps.jira.outputs.jira-issues }}
+        run: echo "here we are ${{ steps.jira.outputs.jira-issues }}"
