@@ -33301,7 +33301,7 @@ const octokit = new Octokit({
 })
 
 const makeRequest = async () => {
-  await octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}/commits', {
+  return await octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}/commits', {
     owner: 'jarrrule',
     repo: 'actions-playground',
     pull_number: '95',
