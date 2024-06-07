@@ -6,9 +6,9 @@ inputs:
     description: pr number
     required: true
     default: ''
-token:
-  description: github token
-  required: true
+  token:
+    description: github token
+    required: true
 outputs:
   jira-issues:
     description: csv of jira issues in release
