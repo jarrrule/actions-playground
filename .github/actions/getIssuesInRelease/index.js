@@ -1,5 +1,6 @@
-const core = require('@actions/core')
-const github = require('@actions/github');
+import core from '@actions/core'
+import github from '@actions/github'
+import { Octokit } from "@octokit/core"
 
 try {
   const prNumber = core.getInput('pr-number');
@@ -8,3 +9,17 @@ try {
 } catch (error) {
   core.setFailed(error.message)
 }
+
+
+// const octokit = new Octokit({
+//   auth: 'YOUR-TOKEN'
+// })
+//
+// await octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}', {
+//   owner: 'OWNER',
+//   repo: 'REPO',
+//   pull_number: 'PULL_NUMBER',
+//   headers: {
+//     'X-GitHub-Api-Version': '2022-11-28'
+//   }
+// })

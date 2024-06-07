@@ -4,7 +4,7 @@ on: [push]
 jobs:
   deployment:
     runs-on: ubuntu-latest
-    name: 'Generate the deploy suffix for sub-environment'
+    name: 'Get jira issues in release'
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/getIssuesInRelease
