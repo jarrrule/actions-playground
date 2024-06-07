@@ -40,7 +40,7 @@ module.exports =
 /******/ 	// the startup function
 /******/ 	function startup() {
 /******/ 		// Load entry module and return exports
-/******/ 		return __webpack_require__(676);
+/******/ 		return __webpack_require__(458);
 /******/ 	};
 /******/
 /******/ 	// run startup
@@ -1624,6 +1624,33 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ 458:
+/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
+
+const core = __webpack_require__(470)
+
+const getNodeEnv = (env) => {
+  if (env === 'dev') return 'development'
+  if (env === 'stg') return 'staging'
+}
+
+const getCleanDeploySuffix = (deploySuffix) => {
+  if (!deploySuffix) return ''
+  return `-${deploySuffix.replaceAll('/', '-').toLowerCase()}`
+}
+
+try {
+  const env = core.getInput('env')
+  const deploySuffix = core.getInput('deploy-suffix')
+  core.setOutput('node-env', getNodeEnv(env))
+  core.setOutput('brand-deploy-suffix', `${getCleanDeploySuffix(deploySuffix)}`)
+} catch (error) {
+  core.setFailed(error.message)
+}
+
+
+/***/ }),
+
 /***/ 470:
 /***/ (function(__unusedmodule, exports, __webpack_require__) {
 
@@ -2472,33 +2499,6 @@ exports.summary = _summary;
 /***/ (function(module) {
 
 module.exports = require("util");
-
-/***/ }),
-
-/***/ 676:
-/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
-
-const core = __webpack_require__(470)
-
-const getNodeEnv = (env) => {
-  if (env === 'dev') return 'development'
-  if (env === 'stg') return 'staging'
-}
-
-const getCleanDeploySuffix = (deploySuffix) => {
-  if (!deploySuffix) return ''
-  return `-${deploySuffix.replaceAll('/', '-').toLowerCase()}`
-}
-
-try {
-  const env = core.getInput('env')
-  const deploySuffix = core.getInput('deploy-suffix')
-  core.setOutput('node-env', getNodeEnv(env))
-  core.setOutput('brand-deploy-suffix', `${getCleanDeploySuffix(deploySuffix)}`)
-} catch (error) {
-  core.setFailed(error.message)
-}
-
 
 /***/ }),
 

@@ -1,0 +1,14 @@
+name: GetIssuesInRelease
+author: Sean Darley
+description: Get Jira issues in release
+inputs:
+  pr-number:
+    description: pr number
+    required: true
+    default: ''
+outputs:
+  jira-issues:
+    description: csv of jira issues in release
+runs:
+  using: node20
+  main: 'dist/index.js'

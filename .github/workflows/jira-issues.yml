@@ -1,0 +1,16 @@
+name: "Get jira issues in release"
+
+on: [push]
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    name: 'Generate the deploy suffix for sub-environment'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/getIssuesInRelease
+        name: get deploy-suffix from action
+        id: jira
+        with:
+          pr-number: 12
+      - name: output jira issues in release
+        run: echo ${{ steps.jira.outputs.jira-issues
