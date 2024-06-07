@@ -12,6 +12,6 @@ jobs:
         id: jira
         with:
           pr-number: 1719
-          token: ${{ secrets.GH_WORKFLOW_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: output jira issues in release
         run: echo "here we are ${{ steps.jira.outputs.jira-issues }}"
