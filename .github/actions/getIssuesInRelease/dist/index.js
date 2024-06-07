@@ -33302,9 +33302,9 @@ const octokit = new Octokit({
 
 const makeRequest = async () => {
   await octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}/commits', {
-    owner: 'sainsburys-tech',
-    repo: 'argos-pdp-ui-service',
-    pull_number: '1719',
+    owner: 'jarrrule',
+    repo: 'actions-playground',
+    pull_number: '95',
     headers: {
       'X-GitHub-Api-Version': '2022-11-28'
     }
