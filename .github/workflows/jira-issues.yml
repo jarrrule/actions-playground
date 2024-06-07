@@ -13,4 +13,4 @@ jobs:
         with:
           pr-number: 12
       - name: output jira issues in release
-        run: echo ${{ steps.jira.outputs.jira-issues
+        run: echo ${{ steps.jira.outputs.jira-issues }}

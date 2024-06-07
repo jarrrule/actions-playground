@@ -1,4 +1,4 @@
-name: GetIssuesInRelease
+name: Get jira issues in release
 author: Sean Darley
 description: Get Jira issues in release
 inputs:
