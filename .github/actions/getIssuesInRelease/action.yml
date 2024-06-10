@@ -5,7 +5,9 @@ inputs:
   pr-number:
     description: pr number
     required: true
-    default: ''
+  repo-name:
+    description: repository name
+    required: true
   token:
     description: github token
     required: true

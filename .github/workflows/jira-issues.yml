@@ -8,10 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/getIssuesInRelease
-        name: get deploy-suffix from action
+        name: get jira issue from release pr
         id: jira
         with:
           pr-number: 1719
+          repo-name: argos-pdp-ui-service
           token: ${{ secrets.GH_WORKFLOW_TOKEN }}
       - name: output jira issues in release
         run: echo "here we are ${{ steps.jira.outputs.jira-issues }}"
