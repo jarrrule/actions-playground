@@ -2,6 +2,10 @@ name: Get jira issues in release
 author: Sean Darley
 description: Get Jira issues in release
 inputs:
+  repo-owner:
+    description: repository owner
+    required: true
+    default: 'sainsburys-tech'
   pr-number:
     description: pr number
     required: true

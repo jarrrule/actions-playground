@@ -5,9 +5,9 @@ const octokit = new Octokit({
   auth: core.getInput('token')
 })
 
-const makeRequest = async (repoName, prNumber) => {
+const makeRequest = async (repoOwner, repoName, prNumber) => {
   return await octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}/commits', {
-    owner: 'sainsburys-tech',
+    owner: repoOwner,
     repo: repoName,
     pull_number: prNumber,
     headers: {
@@ -17,22 +17,23 @@ const makeRequest = async (repoName, prNumber) => {
 }
 
 const filterJiraIssues = (commits) => {
-  return commits.data.filter(commit => {
+  return [...new Set(commits.data.filter(commit => {
     const jiraIssues = commit.commit.message.match(/(NAP-\d+)/g)
-    if (jiraIssues) {
+    if (jiraIssues.length) {
       return true
     } else {
       const author = commit.author.author
       console.log(`Commit by ${author} does not contain any JIRA issue`)
       return false
     }
-  }).map(filteredCommit => filteredCommit.commit.message.match(/(NAP-\d+)/g))[0]
+  }).map(filteredCommit => filteredCommit.commit.message.match(/(NAP-\d+)/g)[0]))]
 }
 
 try {
-  const prNumber = core.getInput('pr-number');
+  const prNumber = core.getInput('pr-number')
   const repoName = core.getInput('repo-name')
-  const response = await makeRequest(repoName, prNumber)
+  const repoOwner = core.getInput('repo-owner')
+  const response = await makeRequest(repoOwner, repoName, prNumber)
   const filteredIssues = filterJiraIssues(response)
   core.setOutput('jira-issues', filteredIssues)
 } catch (error) {
