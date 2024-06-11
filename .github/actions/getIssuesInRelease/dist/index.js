@@ -2767,10 +2767,10 @@ const filterJiraIssues = (commits, regex) => {
   const regexObj = new RegExp(regex)
   return [...new Set(commits.data.filter(commit => {
     const jiraIssues = commit.commit.message.match(regexObj)
-    if (jiraIssues?.length) {
+    if (jiraIssues?.length === 0) {
       return true
     } else {
-      const author = commit.author.author
+      const author = commit.author
       console.log(`Commit by ${author} does not contain any JIRA issue`)
       return false
     }
