@@ -15,7 +15,7 @@ inputs:
   issue-regex:
     description: issue regex
     required: true
-    default: '/(NAP-\d+)/g'
+    default: '(NAP-\\d+)'
   token:
     description: github token
     required: true

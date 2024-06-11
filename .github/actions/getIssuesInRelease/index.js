@@ -17,16 +17,17 @@ const makeRequest = async (repoOwner, repoName, prNumber) => {
 }
 
 const filterJiraIssues = (commits, regex) => {
+  const regexObj = new RegExp(regex)
   return [...new Set(commits.data.filter(commit => {
-    const jiraIssues = commit.commit.message.match(regex)
-    if (jiraIssues.length) {
+    const jiraIssues = commit.commit.message.match(regexObj)
+    if (jiraIssues?.length) {
       return true
     } else {
       const author = commit.author.author
       console.log(`Commit by ${author} does not contain any JIRA issue`)
       return false
     }
-  }).map(filteredCommit => filteredCommit.commit.message.match(regex)[0]))]
+  }).map(filteredCommit => filteredCommit.commit.message.match(regexObj)[0]))]
 }
 
 try {
