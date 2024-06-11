@@ -13,6 +13,7 @@ jobs:
         with:
           pr-number: 1719
           repo-name: argos-pdp-ui-service
+          issue-regex: '/(NAP-\d+)/g'
           token: ${{ secrets.GH_WORKFLOW_TOKEN }}
       - name: output jira issues in release
         run: echo "here we are ${{ steps.jira.outputs.jira-issues }}"

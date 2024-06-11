@@ -2763,9 +2763,9 @@ const makeRequest = async (repoOwner, repoName, prNumber) => {
   })
 }
 
-const filterJiraIssues = (commits) => {
+const filterJiraIssues = (commits, regex) => {
   return [...new Set(commits.data.filter(commit => {
-    const jiraIssues = commit.commit.message.match(/(NAP-\d+)/g)
+    const jiraIssues = commit.commit.message.match(regex)
     if (jiraIssues.length) {
       return true
     } else {
@@ -2773,15 +2773,16 @@ const filterJiraIssues = (commits) => {
       console.log(`Commit by ${author} does not contain any JIRA issue`)
       return false
     }
-  }).map(filteredCommit => filteredCommit.commit.message.match(/(NAP-\d+)/g)[0]))]
+  }).map(filteredCommit => filteredCommit.commit.message.match(regex)[0]))]
 }
 
 try {
   const prNumber = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('pr-number')
   const repoName = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('repo-name')
   const repoOwner = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('repo-owner')
+  const issueRegex = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('issue-regex')
   const response = await makeRequest(repoOwner, repoName, prNumber)
-  const filteredIssues = filterJiraIssues(response)
+  const filteredIssues = filterJiraIssues(response, issueRegex)
   _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput('jira-issues', filteredIssues)
 } catch (error) {
   _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(error.message)

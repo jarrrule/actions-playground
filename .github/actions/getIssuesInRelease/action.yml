@@ -12,6 +12,10 @@ inputs:
   repo-name:
     description: repository name
     required: true
+  issue-regex:
+    description: issue regex
+    required: true
+    default: '/(NAP-\d+)/g'
   token:
     description: github token
     required: true

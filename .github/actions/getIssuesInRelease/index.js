@@ -16,9 +16,9 @@ const makeRequest = async (repoOwner, repoName, prNumber) => {
   })
 }
 
-const filterJiraIssues = (commits) => {
+const filterJiraIssues = (commits, regex) => {
   return [...new Set(commits.data.filter(commit => {
-    const jiraIssues = commit.commit.message.match(/(NAP-\d+)/g)
+    const jiraIssues = commit.commit.message.match(regex)
     if (jiraIssues.length) {
       return true
     } else {
@@ -26,15 +26,16 @@ const filterJiraIssues = (commits) => {
       console.log(`Commit by ${author} does not contain any JIRA issue`)
       return false
     }
-  }).map(filteredCommit => filteredCommit.commit.message.match(/(NAP-\d+)/g)[0]))]
+  }).map(filteredCommit => filteredCommit.commit.message.match(regex)[0]))]
 }
 
 try {
   const prNumber = core.getInput('pr-number')
   const repoName = core.getInput('repo-name')
   const repoOwner = core.getInput('repo-owner')
+  const issueRegex = core.getInput('issue-regex')
   const response = await makeRequest(repoOwner, repoName, prNumber)
-  const filteredIssues = filterJiraIssues(response)
+  const filteredIssues = filterJiraIssues(response, issueRegex)
   core.setOutput('jira-issues', filteredIssues)
 } catch (error) {
   core.setFailed(error.message)
