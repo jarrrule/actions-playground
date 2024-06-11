@@ -2767,7 +2767,7 @@ const filterJiraIssues = (commits, regex) => {
   const regexObj = new RegExp(regex)
   return [...new Set(commits.data.filter(commit => {
     const jiraIssues = commit.commit.message.match(regexObj)
-    if (jiraIssues?.length === 0) {
+    if (jiraIssues?.length) {
       return true
     } else {
       const author = commit.commit.author.name
