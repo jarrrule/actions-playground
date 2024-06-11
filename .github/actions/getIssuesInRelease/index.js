@@ -23,7 +23,7 @@ const filterJiraIssues = (commits, regex) => {
     if (jiraIssues?.length === 0) {
       return true
     } else {
-      const author = commit.author.name
+      const author = commit.commit.author.name
       console.log(`Commit by ${author} does not contain any JIRA issue`)
       return false
     }
