@@ -1,0 +1,18 @@
+name: "Release sha"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  pick:
+    name: Docker image names
+    runs-on: ubuntu-latest
+    steps:
+      - name: set env for docker tag
+        run: |
+          echo "dockerTag=${GITHUB_SHA:0:8}" >> $GITHUB_OUTPUT
+      - name: show tag id of release sha
+        run: echo "docker tags is ${{ env.dockerTag }}"
+

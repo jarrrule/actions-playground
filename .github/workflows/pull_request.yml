@@ -1,4 +1,4 @@
-name: Release PR b
+name: Release PR
 run-name: ${{ github.actor }} -> Release PR (${{ github.event.action }})
 
 on:
