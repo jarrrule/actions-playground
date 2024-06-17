@@ -14,5 +14,8 @@ jobs:
         run: |
           echo "dockerTag=${GITHUB_SHA:0:8}" >> $GITHUB_OUTPUT
       - name: show tag id of release sha
-        run: echo "docker tags is ${{ env.dockerTag }}"
+        run: |
+          echo "docker tags is ${{ env.dockerTag }}"
+          echo "release tags is ${GITHUB_SHA:0:8}"
+          
 
