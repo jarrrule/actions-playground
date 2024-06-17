@@ -1,0 +1,27 @@
+name: Get jira issues in release
+author: Sean Darley
+description: Get Jira issues in release
+inputs:
+  repo-owner:
+    description: repository owner
+    required: true
+    default: 'sainsburys-tech'
+  pr-number:
+    description: pr number
+    required: true
+  repo-name:
+    description: repository name
+    required: true
+  issue-regex:
+    description: issue regex
+    required: true
+    default: '(NAP-\\d+)'
+  token:
+    description: github token
+    required: true
+outputs:
+  jira-issues:
+    description: array of jira issues in release
+runs:
+  using: node20
+  main: 'dist/index.js'

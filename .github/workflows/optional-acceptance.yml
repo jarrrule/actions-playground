@@ -1,0 +1,69 @@
+name: Optional acceptance
+on:
+  push:
+    branches:
+      - develop
+  workflow_dispatch:
+    inputs:
+      skip-acceptance:
+        type: boolean
+        default: false
+
+jobs:
+  set-up:
+    runs-on: ubuntu-latest
+    steps:
+      - id: argos
+        run: |
+          echo "hello argos"
+          echo "deployed=true" >> $GITHUB_OUTPUT
+        if: success()
+    outputs:
+      argos-deployed: ${{ steps.argos.outputs.deployed }}
+
+  argos-acceptance:
+    if: |
+      always() && 
+      needs.set-up.outputs.argos-deployed == 'true' &&
+      !inputs.skip-acceptance
+    needs: [ set-up ]
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "argos acceptance"
+          echo "argos deployed ${{ needs.set-up.outputs.argos-deployed }}"
+        if: needs.set-up.outputs.argos-deployed
+  habitat-acceptance:
+    if: |
+      always() && 
+      needs.set-up.result == 'success' &&
+      !inputs.skip-acceptance
+    needs: [ set-up ]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "habitat acceptance"
+
+  tu-acceptance:
+    if: |
+      always() && 
+      needs.set-up.result == 'success' &&
+      !inputs.skip-acceptance
+    needs: [ set-up ]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "tu acceptance"
+
+  s3-upload:
+    if: |
+      always() && 
+      (needs.argos-acceptance.result == 'success' && needs.habitat-acceptance.result == 'success' && needs.tu-acceptance.result == 'success') || 
+      inputs.skip-acceptance &&
+      needs.set-up.result == 'success'
+    needs: [ argos-acceptance, habitat-acceptance, tu-acceptance ]
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+         echo "upload s3"
+         echo "argos acceptance ${{ needs.argos-acceptance.result }}"
+         echo "habitat acceptance ${{ needs.habitat-acceptance.result }}"
+         echo "tu acceptance ${{ needs.tu-acceptance.result }}"
