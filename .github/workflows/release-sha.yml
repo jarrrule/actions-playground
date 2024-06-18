@@ -13,13 +13,13 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: commit-sha
-          path: commit-sha.txt
+          name: commitSha
+          path: release/commitSha.txt
 
 
       - name: Read commit SHA
         id: read_sha
-        run: echo "SHA=$(cat commit-sha)" >> $GITHUB_ENV
+        run: echo "SHA=$(cat commitSha)" >> $GITHUB_ENV
 
       - name: Use commit SHA
         run: echo "The commit SHA from the first workflow is ${{ env.SHA }}"
