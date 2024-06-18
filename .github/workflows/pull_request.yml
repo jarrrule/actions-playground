@@ -4,9 +4,27 @@ run-name: ${{ github.actor }} -> Release PR (${{ github.event.action }})
 on:
   push:
     branches:
-      - release**
-
+      - release-sha
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get commit SHA
+        id: get_sha
+        run: echo "SHA=${GITHUB_SHA:0:8}" >> $GITHUB_ENV
+
+      - name: Create a file with the commit SHA
+        run: echo "${{ env.SHA }}" > commit-sha.txt
+
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: commit-sha
+          path: commit-sha.txt
 #  create-change-log:
 #    if: startsWith(github.head_ref, 'release')
 #    runs-on: ubuntu-latest
@@ -66,26 +84,26 @@ jobs:
 #        run: echo "the release commit ${{ github.event.pull_request.head.sha }}"
 
 
-  add-release-github-notes:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Release commit
-        uses: actions/checkout@v3
-      - name: Extract branch name
-        id: release
-        run: |
-          branch_ref=${{ github.ref }}
-          branch_name=${branch_ref##*/}
-          echo "name=$branch_name" >> $GITHUB_OUTPUT
-          echo "Branch Name: $branch_name"
-      - name: Add release name to git notes
-        run: |
-          git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git config user.name "${{ github.actor }}"
-          git fetch origin refs/notes/commits:refs/notes/commits
-          git notes add -m "release-name:${{ steps.release.outputs.name }}" -f
-          git notes show
-          git push origin refs/notes/commits:refs/notes/commits
+#  add-release-github-notes:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout Release commit
+#        uses: actions/checkout@v3
+#      - name: Extract branch name
+#        id: release
+#        run: |
+#          branch_ref=${{ github.ref }}
+#          branch_name=${branch_ref##*/}
+#          echo "name=$branch_name" >> $GITHUB_OUTPUT
+#          echo "Branch Name: $branch_name"
+#      - name: Add release name to git notes
+#        run: |
+#          git config user.email "${{ github.actor }}@users.noreply.github.com"
+#          git config user.name "${{ github.actor }}"
+#          git fetch origin refs/notes/commits:refs/notes/commits
+#          git notes add -m "release-name:${{ steps.release.outputs.name }}" -f
+#          git notes show
+#          git push origin refs/notes/commits:refs/notes/commits
           
 
       #      - name: release stuff
