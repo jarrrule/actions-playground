@@ -10,19 +10,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+
       - name: Get commit SHA
         id: get_sha
         run: echo "SHA=${GITHUB_SHA:0:8}" >> $GITHUB_ENV
-
+      - run: mkdir -p release/
       - name: Create a file with the commit SHA
-        run: echo "${{ env.SHA }}" > commit-sha.txt
-
+        run: echo "${{ env.SHA }}" > release/commit-sha.txt
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
           name: commit-sha
-          path: commit-sha.txt
+          path: release/commit-sha.txt
 #  create-change-log:
 #    if: startsWith(github.head_ref, 'release')
 #    runs-on: ubuntu-latest
