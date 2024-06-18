@@ -1,8 +1,13 @@
 name: Release PR
 run-name: ${{ github.actor }} -> Release PR (${{ github.event.action }})
 
+concurrency:
+  group: release-${{ github.head_ref }}
+  cancel-in-progress: true
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - release**
 jobs:
   build:
     runs-on: ubuntu-latest
