@@ -24,6 +24,6 @@ jobs:
           echo "data=$NOTES_DATA" >> $GITHUB_OUTPUT
       - name: Read the object
         run: |
-          echo "${{fromJson(steps.notes-json.outputs.data).jira-version}}"
-          echo "${{fromJson(steps.notes-json.outputs.data).release-name}}"
+          echo "${{fromJson(steps.notes-json.outputs.data)}}"
+          echo "${{fromJson(steps.notes-json.outputs.data)}}"
           
