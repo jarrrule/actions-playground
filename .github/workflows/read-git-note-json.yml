@@ -1,0 +1,22 @@
+name: Gitnote object Workflows
+run-name: ${{ github.actor }} running ${{ github.ref_name }} workflow
+concurrency:
+  group: release-${{ github.head_ref }}
+  cancel-in-progress: true
+on:
+  workflow_dispatch:
+
+jobs:
+  tag_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: '4c855bbf0963fae505179a1fc24fc6434804a036'
+      - name: Read git note json object
+        run: |
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git config user.name "${{ github.actor }}"
+          git fetch origin refs/notes/commits:refs/notes/commits
+          git notes show
