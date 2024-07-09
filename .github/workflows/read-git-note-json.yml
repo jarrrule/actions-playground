@@ -14,9 +14,16 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: '4c855bbf0963fae505179a1fc24fc6434804a036'
-      - name: Read git note json object
+      - name: get git note json object
+        id: notes-json
         run: |
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git config user.name "${{ github.actor }}"
           git fetch origin refs/notes/commits:refs/notes/commits
-          git notes show
+          NOTES_DATA=$(git notes show)
+          echo "data=$NOTES_DATA" >> $GITHUB_OUTPUT
+      - name: Read the object
+        run: |
+          echo "${{fromJson(steps.notes-json.outputs.data).jira-version}}"
+          echo "${{fromJson(steps.notes-json.outputs.data).release-name}}"
+          
