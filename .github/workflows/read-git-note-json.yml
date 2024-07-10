@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          ref: '4c855bbf0963fae505179a1fc24fc6434804a036'
+          ref: 'd64661c6cd9e241629f2c7bcb82844389a4283a8'
       - name: get git note json object
         id: notes-json
         run: |
@@ -25,6 +25,6 @@ jobs:
           echo "data=$NOTES_DATA" >> $GITHUB_OUTPUT
       - name: Read the object
         run: |
-          echo "${{steps.notes-json.outputs.data}}"
-          echo "${{steps.notes-json.outputs.data}}"
+          echo "${{fromJson(steps.notes-json.outputs.data).release-name}}"
+          echo "${{fromJson(steps.notes-json.outputs.data).jira-version}}"
           
