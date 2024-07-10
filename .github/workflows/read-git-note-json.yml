@@ -20,10 +20,11 @@ jobs:
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git config user.name "${{ github.actor }}"
           git fetch origin refs/notes/commits:refs/notes/commits
+          git notes show
           NOTES_DATA=$(git notes show)
           echo "data=$NOTES_DATA" >> $GITHUB_OUTPUT
       - name: Read the object
         run: |
-          echo "${{fromJson(steps.notes-json.outputs.data)}}"
-          echo "${{fromJson(steps.notes-json.outputs.data)}}"
+          echo "${{steps.notes-json.outputs.data}}"
+          echo "${{steps.notes-json.outputs.data}}"
           
