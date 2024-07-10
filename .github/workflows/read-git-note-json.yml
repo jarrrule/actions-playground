@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          ref: '52644d82162db5feb1ec6e0faed12327a1e10a0e'
+          ref: '48dc2c22f377400383ac1930b4d4dff93424d8a1'
       - name: get git note json object
         id: notes-json
         run: |
