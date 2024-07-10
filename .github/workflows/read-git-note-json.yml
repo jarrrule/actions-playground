@@ -27,4 +27,5 @@ jobs:
         run: |
           echo "${{fromJson(steps.notes-json.outputs.data).release-name}}"
           echo "${{fromJson(steps.notes-json.outputs.data).jira-version}}"
+          echo "${{fromJson(steps.notes-json.outputs.data).issue-keys}}"
           
