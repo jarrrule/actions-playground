@@ -29,6 +29,8 @@ jobs:
         run: git checkout -b release/${{ steps.release.outputs.name }}
       - name: Push new branch
         run: git push origin release/${{ steps.release.outputs.name }}
+        env:
+          GIT_AUTH_TOKEN: ${{ secrets.GH_WORKFLOW_TOKEN }}
       - name: Create pull request into main
         uses: thomaseizinger/create-pull-request@1.4.0
         with:
