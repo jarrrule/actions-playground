@@ -6,6 +6,8 @@ concurrency:
 on:
   pull_request:
     types: [opened, reopened, synchronize]
+    branches:
+      - 'release*'
 
 jobs:
   tag_release:
