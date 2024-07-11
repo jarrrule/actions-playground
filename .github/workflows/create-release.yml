@@ -10,7 +10,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_WORKFLOW_TOKEN }}
 #      - name: branch prefix
 #        id: branch
 #        run: echo "prefix=${{ !inputs.hotfix && 'release' || 'hotfix' }}" >> $GITHUB_OUTPUT
@@ -32,7 +32,7 @@ jobs:
       - name: Create pull request into main
         uses: thomaseizinger/create-pull-request@1.4.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_WORKFLOW_TOKEN }}
           head: release/${{ steps.release.outputs.name }}
           base: main
           title: "Release: ${{ steps.release.outputs.name }}"
