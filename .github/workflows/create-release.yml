@@ -10,7 +10,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_WORKFLOW_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 #      - name: branch prefix
 #        id: branch
 #        run: echo "prefix=${{ !inputs.hotfix && 'release' || 'hotfix' }}" >> $GITHUB_OUTPUT
