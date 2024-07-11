@@ -1,6 +1,6 @@
 name: "Get jira issues in release"
 run-name: Get jira issues in release
-on: [push]
+on: [xpush]
 jobs:
   deployment:
     runs-on: ubuntu-latest
