@@ -4,10 +4,9 @@ concurrency:
   group: release-${{ github.head_ref }}
   cancel-in-progress: true
 on:
-  push:
+  pull_request:
     branches:
-      - releasess**
-  workflow_dispatch:
+      - release**
 
 jobs:
   tag_release:
@@ -22,22 +21,22 @@ jobs:
           branch_name=${branch_ref##*/}
           echo "name=$branch_name" >> $GITHUB_OUTPUT
           echo "Branch Name: $branch_name"
-      - name: Changelog
-        uses: Bullrich/generate-release-changelog@master
-        id: Changelog
-        env:
-          REPO: ${{ github.repository }}
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ steps.extractRelease.outputs.name }}
-          release_name: Release ${{ steps.extractRelease.outputs.name }}
-          body: |
-            ${{ steps.Changelog.outputs.changelog }}
-          prerelease: true
+#      - name: Changelog
+#        uses: Bullrich/generate-release-changelog@master
+#        id: Changelog
+#        env:
+#          REPO: ${{ github.repository }}
+#      - name: Create Release
+#        id: create_release
+#        uses: actions/create-release@latest
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+#        with:
+#          tag_name: ${{ steps.extractRelease.outputs.name }}
+#          release_name: Release ${{ steps.extractRelease.outputs.name }}
+#          body: |
+#            ${{ steps.Changelog.outputs.changelog }}
+#          prerelease: true
 
 #      - name: release stuff
 #        id: release
@@ -71,8 +70,8 @@ jobs:
 #        run: echo "releases id is ${{ steps.create_release.outputs.id }}"
       - name: Add release id to git note
         run: |
-          git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git config user.name "${{ github.actor }}"
+#          git config user.email "${{ github.actor }}@users.noreply.github.com"
+#          git config user.name "${{ github.actor }}"
           git fetch origin refs/notes/commits:refs/notes/commits
           git notes add -m "releaseId:${{ steps.create_release.outputs.id }}" -f
           git notes show
