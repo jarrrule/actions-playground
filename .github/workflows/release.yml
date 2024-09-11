@@ -1,5 +1,4 @@
 name: Release Workflows
-run-name: ${{ github.actor }} running ${{ github.ref_name }} workflow
 concurrency:
   group: release-${{ github.head_ref }}
   cancel-in-progress: true
