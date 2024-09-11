@@ -22,11 +22,29 @@ jobs:
           branch_name=${branch_ref##*/}
           echo "name=$branch_name" >> $GITHUB_OUTPUT
           echo "Branch Name: $branch_name"
-      - name: Add release id to git note
-        run: |
-          git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git config user.name "${{ github.actor }}"
-          git fetch origin refs/notes/commits:refs/notes/commits
-          git notes add -m "releaseId:${{ steps.create_release.outputs.id }}" -f
-          git notes show
-          git push origin refs/notes/commits:refs/notes/commits
+#      - name: Add release id to git note
+#        run: |
+#          git config user.email "${{ github.actor }}@users.noreply.github.com"
+#          git config user.name "${{ github.actor }}"
+#          git fetch origin refs/notes/commits:refs/notes/commits
+#          git notes add -m "releaseId:${{ steps.create_release.outputs.id }}" -f
+#          git notes show
+#          git push origin refs/notes/commits:refs/notes/commits
+
+      - name: Generate Changelog
+        id: changelog
+        uses: github-changelog-generator/github-changelog-generator@v1
+        with:
+          user: ${{ github.repository_owner }}
+          project: ${{ github.event.repository.name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add Changelog to PR
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ## Changelog
+            ${{ steps.changelog.outputs.changelog }}
