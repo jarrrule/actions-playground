@@ -1,5 +1,4 @@
 name: Release Workflows
-run-name: ${{ github.actor }} running ${{ github.ref_name }} workflow
 concurrency:
   group: release-${{ github.head_ref }}
   cancel-in-progress: true
@@ -20,7 +19,7 @@ jobs:
       - name: Extract branch name
         id: extractRelease
         run: |
-          branch_ref=${{ github.ref }}
+          branch_ref=${{ github.head_ref }}
           branch_name=${branch_ref##*/}
           echo "name=$branch_name" >> $GITHUB_OUTPUT
           echo "Branch Name: $branch_name"
@@ -46,6 +45,8 @@ jobs:
           headerLabel: ${{ steps.extractRelease.outputs.name }}
           token: ${{ secrets.GITHUB_TOKEN }}
           sinceTag: ${{ env.latest_tag }}
+          pullRequests: false
+          base: CHANGELOG.md
       - name: Check if changelog has changes
         id: check_changes
         run: |
