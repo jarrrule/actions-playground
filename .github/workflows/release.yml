@@ -37,9 +37,9 @@ jobs:
         id: changelog
         uses: heinrichreimer/action-github-changelog-generator@v2.3
         with:
-          headerLabel: 'Release: PDP-2024-09-09_10-20'
+          headerLabel: 'Release: PDP-2024-09-09_12-15'
           token: ${{ secrets.GITHUB_TOKEN }}
-          sinceTag: 'PDP-2024-09-09_11-55'
+          sinceTag: ' PDP-2024-09-09_12-09'
 #      - name: Stash changes
 #        run: git stash --include-untracked
 #      - name: Configure Git to use rebase
