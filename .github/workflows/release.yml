@@ -37,41 +37,46 @@ jobs:
           latest_tag=$(git describe --tags --abbrev=0)
           echo "latest_tag=$latest_tag" >> $GITHUB_ENV
           echo "Latest Tag: $latest_tag"
-
-      - name: "Generate release changelog"
+      - name: Generate changelog
         id: changelog
-        uses: heinrichreimer/action-github-changelog-generator@v2.3
-        with:
-          headerLabel: ${{ steps.extractRelease.outputs.name }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          sinceTag: ${{ env.latest_tag }}
-          pullRequests: false
-          base: CHANGELOG.md
-      - name: Check if changelog has changes
-        id: check_changes
         run: |
-          if git diff --exit-code CHANGELOG.md; then
-            echo "No changes in CHANGELOG.md"
-            echo "skip_commit=true" >> $GITHUB_ENV
-          else
-            echo "Changes detected in CHANGELOG.md"
-            echo "skip_commit=false" >> $GITHUB_ENV
-          fi
-      - name: Commit Changelog
-        if: env.skip_commit == 'false'
-        run: |
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "${{ github.actor }}"
-          git add CHANGELOG.md
-          git commit -m "Update changelog"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Push changes
-        if: env.skip_commit == 'false'
-        run: |
-          git push origin HEAD:${{ github.head_ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git fetch --tags
+          git log ${{ env.latest_tag }}..HEAD --pretty=format:"%h - %s (%an)" > CHANGELOG.md
+          echo "Changelog generated"
+#      - name: "Generate release changelog"
+#        id: changelog
+#        uses: heinrichreimer/action-github-changelog-generator@v2.3
+#        with:
+#          headerLabel: ${{ steps.extractRelease.outputs.name }}
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          sinceTag: ${{ env.latest_tag }}
+#          pullRequests: false
+#          base: CHANGELOG.md
+#      - name: Check if changelog has changes
+#        id: check_changes
+#        run: |
+#          if git diff --exit-code CHANGELOG.md; then
+#            echo "No changes in CHANGELOG.md"
+#            echo "skip_commit=true" >> $GITHUB_ENV
+#          else
+#            echo "Changes detected in CHANGELOG.md"
+#            echo "skip_commit=false" >> $GITHUB_ENV
+#          fi
+#      - name: Commit Changelog
+#        if: env.skip_commit == 'false'
+#        run: |
+#          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+#          git config --global user.name "${{ github.actor }}"
+#          git add CHANGELOG.md
+#          git commit -m "Update changelog"
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Push changes
+#        if: env.skip_commit == 'false'
+#        run: |
+#          git push origin HEAD:${{ github.head_ref }}
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Find or create PR comment
         id: comment
         uses: peter-evans/create-or-update-comment@v3
