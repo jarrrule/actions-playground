@@ -44,6 +44,11 @@ jobs:
           git commit -m "Update changelog"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        run: |
+          git push origin HEAD:${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Add Changelog to PR
         uses: peter-evans/create-or-update-comment@v3
         with:
