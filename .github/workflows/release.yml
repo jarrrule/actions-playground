@@ -61,12 +61,14 @@ jobs:
           git push origin HEAD:${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Add Changelog to PR
+      - name: Find or create PR comment
+        id: comment
         uses: peter-evans/create-or-update-comment@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           issue-number: ${{ github.event.pull_request.number }}
+          comment-id: ${{ steps.comment.outputs.comment-id }}
           body: |
             ## Changelog
             ${{ steps.changelog.outputs.changelog }}
