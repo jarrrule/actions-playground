@@ -16,7 +16,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.head_ref }}
+          fetch-depth: 0  # Fetch all history for all tags and branches
       - name: Extract branch name
         id: extractRelease
         run: |
@@ -32,14 +32,20 @@ jobs:
 #          git notes add -m "releaseId:${{ steps.create_release.outputs.id }}" -f
 #          git notes show
 #          git push origin refs/notes/commits:refs/notes/commits
+      - name: Get the latest tag
+        id: get_latest_tag
+        run: |
+          latest_tag=$(git describe --tags --abbrev=0)
+          echo "latest_tag=$latest_tag" >> $GITHUB_ENV
+          echo "Latest Tag: $latest_tag"
 
       - name: "✏️ Generate release changelogs"
         id: changelog
         uses: heinrichreimer/action-github-changelog-generator@v2.3
         with:
-          headerLabel: 'Release: PDP-2024-09-09_12-15'
+          headerLabel: 'Release: PDP-2024-09-09_12-17'
           token: ${{ secrets.GITHUB_TOKEN }}
-          sinceTag: ' PDP-2024-09-09_12-09'
+          sinceTag: ${{ env.latest_tag }}
 #      - name: Stash changes
 #        run: git stash --include-untracked
 #      - name: Configure Git to use rebase
