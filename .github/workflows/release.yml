@@ -36,6 +36,11 @@ jobs:
         uses: heinrichreimer/action-github-changelog-generator@v2.3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull latest changes
+        run: |
+          git pull origin ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit Changelog
         run: |
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
