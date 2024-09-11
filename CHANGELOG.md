@@ -1,4 +1,4 @@
-# Changelog
+Release: PDP-2024-09-09_11-07
 
 ## [Unreleased](https://github.com/jarrrule/actions-playground/tree/HEAD)
 
