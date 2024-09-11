@@ -39,7 +39,7 @@ jobs:
         with:
           headerLabel: 'Release: PDP-2024-09-09_10-20'
           token: ${{ secrets.GITHUB_TOKEN }}
-          sinceTag: 'PDP-2024-09-09_11-38'
+          sinceTag: 'PDP-2024-09-09_11-55'
 #      - name: Stash changes
 #        run: git stash --include-untracked
 #      - name: Configure Git to use rebase
@@ -54,7 +54,10 @@ jobs:
       - name: Check if changelog has changes
         id: check_changes
         run: |
-          if git diff --exit-code CHANGELOG.md; then
+          if [ ! -f CHANGELOG.md ]; then
+            echo "CHANGELOG.md does not exist, treating as new file"
+            echo "skip_commit=false" >> $GITHUB_ENV
+          elif git diff --exit-code CHANGELOG.md; then
             echo "No changes in CHANGELOG.md"
             echo "skip_commit=true" >> $GITHUB_ENV
           else
