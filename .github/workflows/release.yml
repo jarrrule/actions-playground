@@ -36,6 +36,8 @@ jobs:
         uses: heinrichreimer/action-github-changelog-generator@v2.3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Configure Git to use rebase
+        run: git config pull.rebase true
       - name: Pull latest changes
         run: |
           git pull origin ${{ github.head_ref }}
