@@ -54,10 +54,7 @@ jobs:
       - name: Check if changelog has changes
         id: check_changes
         run: |
-          if [ ! -f CHANGELOG.md ]; then
-            echo "CHANGELOG.md does not exist, treating as new file"
-            echo "skip_commit=false" >> $GITHUB_ENV
-          elif git diff --exit-code CHANGELOG.md; then
+          if git diff --exit-code CHANGELOG.md; then
             echo "No changes in CHANGELOG.md"
             echo "skip_commit=true" >> $GITHUB_ENV
           else
