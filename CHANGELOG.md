@@ -1,16 +1,12 @@
-Release: PDP-2024-09-09_12-17
+merge
 
 ## [Unreleased](https://github.com/jarrrule/actions-playground/tree/HEAD)
 
-[Full Changelog](https://github.com/jarrrule/actions-playground/compare/PDP-2024-09-09_12-09...HEAD)
+[Full Changelog](https://github.com/jarrrule/actions-playground/compare/PDP-2024-09-09_12-21...HEAD)
 
 **Merged pull requests:**
 
-- PDP-2024-09-09\_12-08 [\#134](https://github.com/jarrrule/actions-playground/pull/134) ([jarrrule](https://github.com/jarrrule))
-- NAP-3434: update title and since tag [\#132](https://github.com/jarrrule/actions-playground/pull/132) ([jarrrule](https://github.com/jarrrule))
-- Release: PDP-2024-09-11\_11-33 [\#130](https://github.com/jarrrule/actions-playground/pull/130) ([jarrrule](https://github.com/jarrrule))
-- Release: PDP-2024-09-11\_11-07 [\#128](https://github.com/jarrrule/actions-playground/pull/128) ([jarrrule](https://github.com/jarrrule))
-- Release: 2024-07-11\_06-21 [\#112](https://github.com/jarrrule/actions-playground/pull/112) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Release: PDP-2024-09-09\_12-17 [\#136](https://github.com/jarrrule/actions-playground/pull/136) ([jarrrule](https://github.com/jarrrule))
 
 
 
