@@ -39,7 +39,7 @@ jobs:
           echo "latest_tag=$latest_tag" >> $GITHUB_ENV
           echo "Latest Tag: $latest_tag"
 
-      - name: "✏️ Generate release changelog"
+      - name: "Generate release changelog"
         id: changelog
         uses: heinrichreimer/action-github-changelog-generator@v2.3
         with:
