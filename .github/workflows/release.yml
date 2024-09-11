@@ -31,12 +31,10 @@ jobs:
 #          git notes show
 #          git push origin refs/notes/commits:refs/notes/commits
 
-      - name: Generate Changelog
+      - name: "✏️ Generate release changelog"
         id: changelog
-        uses: github-changelog-generator/github-changelog-generator@v1
+        uses: heinrichreimer/action-github-changelog-generator@v2.3
         with:
-          user: ${{ github.repository_owner }}
-          project: ${{ github.event.repository.name }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Add Changelog to PR
