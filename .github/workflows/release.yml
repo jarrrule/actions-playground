@@ -39,7 +39,7 @@ jobs:
         with:
           headerLabel: 'Release: PDP-2024-09-09_10-20'
           token: ${{ secrets.GITHUB_TOKEN }}
-          sinceTag: 'PDP-2024-09-09_11-38'
+          sinceTag: 'PDP-2024-09-09_11-55'
 #      - name: Stash changes
 #        run: git stash --include-untracked
 #      - name: Configure Git to use rebase
