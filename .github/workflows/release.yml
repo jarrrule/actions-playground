@@ -43,20 +43,9 @@ jobs:
         id: changelog
         uses: heinrichreimer/action-github-changelog-generator@v2.3
         with:
-          headerLabel: 'Release: PDP-2024-09-09_12-25'
+          headerLabel: ${{ steps.extractRelease.outputs.name }}
           token: ${{ secrets.GITHUB_TOKEN }}
           sinceTag: ${{ env.latest_tag }}
-#      - name: Stash changes
-#        run: git stash --include-untracked
-#      - name: Configure Git to use rebase
-#        run: git config pull.rebase true
-#      - name: Pull latest changes
-#        run: |
-#          git pull origin ${{ github.head_ref }}
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#      - name: Apply stashed changes
-#        run: git stash pop
       - name: Check if changelog has changes
         id: check_changes
         run: |

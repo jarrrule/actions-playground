@@ -1,4 +1,12 @@
-Release: PDP-2024-09-09_12-25
+merge
+
+## [Unreleased](https://github.com/jarrrule/actions-playground/tree/HEAD)
+
+[Full Changelog](https://github.com/jarrrule/actions-playground/compare/PDP-2024-09-09_12-21...HEAD)
+
+**Merged pull requests:**
+
+- Release: PDP-2024-09-09\_12-17 [\#136](https://github.com/jarrrule/actions-playground/pull/136) ([jarrrule](https://github.com/jarrrule))
 
 
 
