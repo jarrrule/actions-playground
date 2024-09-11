@@ -50,7 +50,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #      - name: Apply stashed changes
 #        run: git stash pop
+      - name: Check if changelog has changes
+        id: check_changes
+        run: |
+          if git diff --exit-code CHANGELOG.md; then
+            echo "No changes in CHANGELOG.md"
+            echo "skip_commit=true" >> $GITHUB_ENV
+          else
+            echo "Changes detected in CHANGELOG.md"
+            echo "skip_commit=false" >> $GITHUB_ENV
+          fi
       - name: Commit Changelog
+        if: env.skip_commit == 'false'
         run: |
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git config --global user.name "${{ github.actor }}"
@@ -59,6 +70,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Push changes
+        if: env.skip_commit == 'false'
         run: |
           git push origin HEAD:${{ github.head_ref }}
         env:
