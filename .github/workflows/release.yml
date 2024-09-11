@@ -41,8 +41,10 @@ jobs:
         id: changelog
         run: |
           git fetch --tags
-          git log ${{ env.latest_tag }}..HEAD --pretty=format:"%h - %s (%an)" > CHANGELOG.md
+          changelog=$(git log ${{ env.latest_tag }}..HEAD --pretty=format:"%h - %s (%an)")
           echo "Changelog generated"
+          echo "Changelog generated"
+          echo "changelog=$changelog" >> $GITHUB_OUTPUT
 #      - name: "Generate release changelog"
 #        id: changelog
 #        uses: heinrichreimer/action-github-changelog-generator@v2.3
