@@ -42,7 +42,11 @@ jobs:
         run: |
           git fetch --tags
           changelog=$(git log ${{ env.latest_tag }}..HEAD --pretty=format:"%h - %s (%an)")
-          echo "Changelog generated"
+          # Ensure the changelog is properly escaped
+          changelog="${changelog//'%'/'%25'}"
+          changelog="${changelog//$'\n'/'%0A'}"
+          changelog="${changelog//$'\r'/'%0D'}"
+          echo "changelog=$changelog" >> $GITHUB_OUTPUT
           echo "Changelog generated"
           echo "changelog=$changelog" >> $GITHUB_OUTPUT
 #      - name: "Generate release changelog"
