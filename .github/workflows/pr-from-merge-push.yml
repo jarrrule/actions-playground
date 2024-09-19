@@ -5,7 +5,7 @@ on:
 
 jobs:
   get-pr-number:
-    if: startsWith(github.ref, 'refs/pull/')
+    if: contains(github.event.head_commit.message, 'Merge pull request')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
