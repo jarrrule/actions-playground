@@ -1,5 +1,4 @@
 name: Release Workflows
-run-name: ${{ github.actor }} running ${{ github.ref_name }} workflow
 concurrency:
   group: release-${{ github.head_ref }}
   cancel-in-progress: true
@@ -20,7 +19,7 @@ jobs:
       - name: Extract branch name
         id: extractRelease
         run: |
-          branch_ref=${{ github.ref }}
+          branch_ref=${{ github.head_ref }}
           branch_name=${branch_ref##*/}
           echo "name=$branch_name" >> $GITHUB_OUTPUT
           echo "Branch Name: $branch_name"
@@ -38,39 +37,52 @@ jobs:
           latest_tag=$(git describe --tags --abbrev=0)
           echo "latest_tag=$latest_tag" >> $GITHUB_ENV
           echo "Latest Tag: $latest_tag"
-
-      - name: "Generate release changelog"
+      - name: Generate changelog
         id: changelog
-        uses: heinrichreimer/action-github-changelog-generator@v2.3
-        with:
-          headerLabel: ${{ steps.extractRelease.outputs.name }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          sinceTag: ${{ env.latest_tag }}
-      - name: Check if changelog has changes
-        id: check_changes
         run: |
-          if git diff --exit-code CHANGELOG.md; then
-            echo "No changes in CHANGELOG.md"
-            echo "skip_commit=true" >> $GITHUB_ENV
-          else
-            echo "Changes detected in CHANGELOG.md"
-            echo "skip_commit=false" >> $GITHUB_ENV
-          fi
-      - name: Commit Changelog
-        if: env.skip_commit == 'false'
-        run: |
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "${{ github.actor }}"
-          git add CHANGELOG.md
-          git commit -m "Update changelog"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Push changes
-        if: env.skip_commit == 'false'
-        run: |
-          git push origin HEAD:${{ github.head_ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git fetch --tags
+          changelog=$(git log ${{ env.latest_tag }}..HEAD --pretty=format:"%h - %s (%an)")
+          # Ensure the changelog is properly escaped
+          changelog="${changelog//'%'/'%25'}"
+          changelog="${changelog//$'\n'/'%0A'}"
+          changelog="${changelog//$'\r'/'%0D'}"
+          echo "changelog=$changelog" >> $GITHUB_OUTPUT
+          echo "Changelog generated"
+          echo "changelog=$changelog" >> $GITHUB_OUTPUT
+#      - name: "Generate release changelog"
+#        id: changelog
+#        uses: heinrichreimer/action-github-changelog-generator@v2.3
+#        with:
+#          headerLabel: ${{ steps.extractRelease.outputs.name }}
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          sinceTag: ${{ env.latest_tag }}
+#          pullRequests: false
+#          base: CHANGELOG.md
+#      - name: Check if changelog has changes
+#        id: check_changes
+#        run: |
+#          if git diff --exit-code CHANGELOG.md; then
+#            echo "No changes in CHANGELOG.md"
+#            echo "skip_commit=true" >> $GITHUB_ENV
+#          else
+#            echo "Changes detected in CHANGELOG.md"
+#            echo "skip_commit=false" >> $GITHUB_ENV
+#          fi
+#      - name: Commit Changelog
+#        if: env.skip_commit == 'false'
+#        run: |
+#          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+#          git config --global user.name "${{ github.actor }}"
+#          git add CHANGELOG.md
+#          git commit -m "Update changelog"
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Push changes
+#        if: env.skip_commit == 'false'
+#        run: |
+#          git push origin HEAD:${{ github.head_ref }}
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Find or create PR comment
         id: comment
         uses: peter-evans/create-or-update-comment@v3
