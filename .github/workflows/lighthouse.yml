@@ -31,10 +31,10 @@ jobs:
 
       - name: Upload Lighthouse Report
         if: success()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: lighthouse-report
-          path: '.lighthouseci'
+          path: '.lighthouseci/**/*'
 
 #      - name: Comment on PR with Lighthouse Scores
 #        uses: marocchino/sticky-pull-request-comment@v2
