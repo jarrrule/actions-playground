@@ -21,7 +21,10 @@ jobs:
         run: yarn global add @lhci/cli
 
       - name: Run Lighthouse CI (No Fail on Defaults)
-        run: lhci autorun --collect.url="https://bbc.com" --assert.fail-fast=false || echo "Lighthouse completed with warnings"
+        run: lhci autorun --collect.url="https://bbc.com" --upload.target=filesystem --upload.outputDir=.lighthouseci || echo "Lighthouse completed with warnings"
+
+      - name: Debug Lighthouse Output
+        run: ls -la .lighthouseci || echo "No reports found!"
 
       - name: Upload Lighthouse Report
         if: success()
