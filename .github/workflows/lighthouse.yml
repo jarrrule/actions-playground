@@ -21,17 +21,17 @@ jobs:
         run: yarn global add @lhci/cli
 
       - name: Run Lighthouse CI (No Fail on Defaults)
-        run: lhci autorun --collect.url="https://argos.co.uk" --upload.target='temporary-public-storage'|| echo "Lighthouse completed with warnings"
+        run: lhci autorun --collect.url="https://argos.co.uk" --upload.target=filesystem --upload.outputDir=lighthouseci || echo "Lighthouse completed with warnings"
 
       - name: Debug Lighthouse Output
-        run: ls -la .lighthouseci || echo "No reports found!"
+        run: ls -la lighthouseci || echo "No reports found!"
 
       - name: Upload Lighthouse Report
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-report
-          path: .lighthouseci/**/*
+          path: lighthouseci
 
       - name: Comment on PR with Lighthouse Scores
         uses: marocchino/sticky-pull-request-comment@v2
