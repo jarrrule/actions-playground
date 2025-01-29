@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-report
-          path: .lighthouseci/
+          path: .lighthouseci/**/*
 
       - name: Comment on PR with Lighthouse Scores
         uses: marocchino/sticky-pull-request-comment@v2
