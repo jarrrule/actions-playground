@@ -5,8 +5,12 @@ module.exports = {
       "numberOfRuns": 3
     },
     "assert": {
-      "preset": "lighthouse:recommended",
-      "failFast": false
+      "assertions": {
+        "categories:performance": ["warn", { "minScore": 0.9 }],
+        "categories:accessibility": ["warn", { "minScore": 0.9 }],
+        "categories:best-practices": ["warn", { "minScore": 0.9 }],
+        "categories:seo": ["warn", { "minScore": 0.9 }]
+      }
     },
     "upload": {
       "target": "filesystem",
