@@ -2,7 +2,10 @@ module.exports = {
   "ci": {
     "collect": {
       "url": [process.env.TEST_URL],
-      "numberOfRuns": 3
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "mobile"
+      }
     },
     "assert": {
       "assertions": {
