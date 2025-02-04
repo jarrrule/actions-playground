@@ -35,6 +35,9 @@ jobs:
       - name: Debug Lighthouse Output
         run: ls -la .lighthouseci || echo "No reports found!"
 
+      - name: Display Lighthouse Manifest
+        run: cat .lighthouseci/manifest.json
+
       - name: Upload Lighthouse Report
         if: success()
         uses: actions/upload-artifact@v4
