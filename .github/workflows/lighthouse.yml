@@ -14,14 +14,22 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Check jq Installation
+        run: jq --version
+
       - name: Install Dependencies
         run: yarn install
 
       - name: Install Lighthouse CI
         run: yarn global add @lhci/cli
 
+      - name: Set Dynamic URL
+        run: echo "TEST_URL=https://argos.co.uk" >> $GITHUB_ENV
+
       - name: Run Lighthouse CI (No Fail on Defaults)
-        run: lhci autorun --collect.url="https://argos.co.uk" --upload.target=filesystem --upload.outputDir='.lighthouseci' || echo "Lighthouse completed with warnings"
+        run: lhci autorun
+        env:
+          TEST_URL: ${{ env.TEST_URL }}
 
       - name: Debug Lighthouse Output
         run: ls -la .lighthouseci || echo "No reports found!"
