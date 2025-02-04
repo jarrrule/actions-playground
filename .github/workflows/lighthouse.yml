@@ -2,7 +2,7 @@ name: Lighthouse CI
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ develop ]
     types: [ opened, reopened, synchronize ]
   workflow_dispatch:
 
@@ -20,9 +20,6 @@ jobs:
       - name: Install Lighthouse CI
         run: yarn global add @lhci/cli
 
-      - name: Fix Permissions
-        run: chmod -R 755 .lighthouseci
-
       - name: Run Lighthouse CI (No Fail on Defaults)
         run: lhci autorun --collect.url="https://argos.co.uk" --upload.target=filesystem --upload.outputDir='.lighthouseci' || echo "Lighthouse completed with warnings"
 
@@ -37,11 +34,11 @@ jobs:
           include-hidden-files: true
           path: .lighthouseci/**/*
 
-#      - name: Comment on PR with Lighthouse Scores
-#        uses: marocchino/sticky-pull-request-comment@v2
-#        with:
-#          message: |
-#            🚦 **Lighthouse Audit Results**
-#            - 🏎️ Performance: **$(jq '.categories.performance.score' .lighthouseci/manifest.json)**
-#            - 🛠️ Accessibility: **$(jq '.categories.accessibility.score' .lighthouseci/manifest.json)**
-#            - 🔍 SEO: **$(jq '.categories.seo.score' .lighthouseci/manifest.json)**
+      - name: Comment on PR with Lighthouse Scores
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: |
+            🚦 **Lighthouse Audit Results**
+            - 🏎️ Performance: **$(jq '.categories.performance.score' .lighthouseci/manifest.json)**
+            - 🛠️ Accessibility: **$(jq '.categories.accessibility.score' .lighthouseci/manifest.json)**
+            - 🔍 SEO: **$(jq '.categories.seo.score' .lighthouseci/manifest.json)**
