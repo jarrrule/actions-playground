@@ -4,7 +4,7 @@ module.exports = {
       "url": [process.env.TEST_URL],
       "numberOfRuns": 3,
       "settings": {
-        "preset": "mobile"
+        "preset": "desktop"
       }
     },
     "assert": {
