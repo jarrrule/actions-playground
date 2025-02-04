@@ -61,5 +61,5 @@ jobs:
           message: |
             🚦 **Lighthouse Audit Results**
             - 🏎️ Performance: **${{ env.PERFORMANCE }}**
-            - 🛠️ Accessibility: **${{ env.ACCESSIBILLITY }}**
+            - 🛠️ Accessibility: **${{ env.ACCESSIBILITY }}**
             - 🔍 SEO: **${{ env.SEO }}**
