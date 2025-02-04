@@ -30,6 +30,7 @@ jobs:
         run: lhci autorun
         env:
           TEST_URL: ${{ env.TEST_URL }}
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Debug Lighthouse Output
         run: ls -la .lighthouseci || echo "No reports found!"
