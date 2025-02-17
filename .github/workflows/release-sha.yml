@@ -1,41 +1,23 @@
-name: "Release sha"
+name: Close Pull Request
 
+# only trigger on pull request closed events
 on:
   pull_request:
     types: [ closed ]
-    branches:
-      - main
 
 jobs:
-  deploy:
+  merge_job:
+    # this job will only run if the PR has been merged
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - run: |
+          echo PR #${{ github.event.number }} has been merged
 
-      - name: Get commit SHA
-        id: get_sha
-        run: echo "SHA=${{ github.event.pull_request.merge_commit_sha }}" >> $GITHUB_ENV
-
-      - name: Use commit SHA
-        run: echo "The commit SHA from the closed pull request is ${{ env.SHA }}"
-
-#  deploy:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v2
-#
-#      - name: Download artifact
-#        uses: actions/download-artifact@v4
-#        with:
-#          name: commitSha
-#          path: release/commitSha.txt
-#
-#
-#      - name: Read commit SHA
-#        id: read_sha
-#        run: echo "SHA=$(cat commitSha)" >> $GITHUB_ENV
-#
-#      - name: Use commit SHA
-#        run: echo "The commit SHA from the first workflow is ${{ env.SHA }}"
+  close_job:
+    # this job will only run if the PR has been closed without being merged
+    if: github.event.pull_request.merged == false
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo PR #${{ github.event.number }} has been closed without being merged
