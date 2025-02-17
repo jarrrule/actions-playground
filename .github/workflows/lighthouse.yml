@@ -1,8 +1,9 @@
 name: Lighthouse CI
 
 on:
-  push:
-    branches: [ lighthouse ]
+  pull_request:
+    branches: [ develop ]
+    types: [ opened, reopened, synchronize ]
   workflow_dispatch:
 
 jobs:
@@ -13,27 +14,46 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
-        run: yarn install
-
       - name: Install Lighthouse CI
         run: yarn global add @lhci/cli
 
-      - name: Run Lighthouse on Preview Deployment
-        run: lhci autorun --collect.url="https://bbc.com"
+      - name: Set Dynamic URL
+        run: echo "TEST_URL=https://argos.co.uk" >> $GITHUB_ENV
+
+      - name: Run Lighthouse CI (No Fail on Defaults)
+        run: lhci autorun
+        env:
+          TEST_URL: ${{ env.TEST_URL }}
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Debug Lighthouse Output
+        run: ls -la .lighthouseci || echo "No reports found!"
+
+      - name: Display Lighthouse Manifest
+        run: cat .lighthouseci/manifest.json
+
+      - name: Extract and Calculate Average Values
+        run: |
+          PERFORMANCE=$(jq -r '[.[].summary.performance] | add / length * 100 | ceil' .lighthouseci/manifest.json)
+          ACCESSIBILITY=$(jq -r '[.[].summary.accessibility] | add / length * 100 | ceil' .lighthouseci/manifest.json)
+          SEO=$(jq -r '[.[].summary.seo] | add / length * 100 | ceil' .lighthouseci/manifest.json)
+          echo "PERFORMANCE=$PERFORMANCE" >> $GITHUB_ENV
+          echo "ACCESSIBILITY=$ACCESSIBILITY" >> $GITHUB_ENV
+          echo "SEO=$SEO" >> $GITHUB_ENV  
 
       - name: Upload Lighthouse Report
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-report
-          path: .lighthouseci/
+          include-hidden-files: true
+          path: .lighthouseci/**/*
 
       - name: Comment on PR with Lighthouse Scores
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: |
             🚦 **Lighthouse Audit Results**
-            - 🏎️ Performance: **$(jq '.categories.performance.score' .lighthouseci/manifest.json)**
-            - 🛠️ Accessibility: **$(jq '.categories.accessibility.score' .lighthouseci/manifest.json)**
-            - 🔍 SEO: **$(jq '.categories.seo.score' .lighthouseci/manifest.json)**
+            - 🏎️ Performance: **${{ env.PERFORMANCE }}**
+            - 🛠️ Accessibility: **${{ env.ACCESSIBILITY }}**
+            - 🔍 SEO: **${{ env.SEO }}**
