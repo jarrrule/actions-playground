@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     concurrency:
-      group: latest-main-push
+      group: build
       cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
@@ -24,7 +24,7 @@ jobs:
 
   deploy-dev:
     concurrency:
-      group: latest-main-push
+      group: deploy-dev
       cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
@@ -41,7 +41,7 @@ jobs:
 
   deploy-stub:
     concurrency:
-      group: latest-main-push
+      group: deploy-stub
       cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
 
   upload-s3-assets:
     concurrency:
-      group: latest-main-push
+      group: upload-s3-assets
       cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
@@ -75,7 +75,7 @@ jobs:
 
   deploy-stg:
     concurrency:
-      group: latest-main-push
+      group: deploy-stg
       cancel-in-progress: true
     needs: [upload-s3-assets]
     runs-on: ubuntu-latest
@@ -92,7 +92,7 @@ jobs:
 
   release-name:
     concurrency:
-      group: latest-main-push
+      group: release-name
       cancel-in-progress: true
     needs: [ deploy-stg ]
     outputs:
@@ -111,7 +111,7 @@ jobs:
 
   service-now:
     concurrency:
-      group: latest-main-push
+      group: service-now
       cancel-in-progress: true
     needs: [deploy-stg, upload-s3-assets, release-name]
     runs-on: ubuntu-latest
@@ -159,7 +159,7 @@ jobs:
 
   deploy-prd:
     concurrency:
-      group: deploy-prd-${{ github.head_ref }}
+      group: deploy-prd
       cancel-in-progress: false  # Ensures a deployment in progress is not interrupted
     needs: [service-now]
     runs-on: ubuntu-latest
