@@ -128,7 +128,7 @@ jobs:
 
   extract-pr-number:
     concurrency:
-      group: latest-main-push-${{ github.head_ref }}
+      group: extract-pr-number-${{ github.head_ref }}
       cancel-in-progress: false  # Ensures a deployment in progress is not interrupted
     needs: [service-now]
     runs-on: ubuntu-latest
@@ -159,7 +159,7 @@ jobs:
 
   deploy-prd:
     concurrency:
-      group: latest-main-push-${{ github.head_ref }}
+      group: deploy-prd-${{ github.head_ref }}
       cancel-in-progress: false  # Ensures a deployment in progress is not interrupted
     needs: [service-now]
     runs-on: ubuntu-latest
