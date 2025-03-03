@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     concurrency:
-      group: build-${{ github.head_ref }}
+      group: latest-main-push-${{ github.head_ref }}
       cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
@@ -24,7 +24,7 @@ jobs:
 
   deploy-dev:
     concurrency:
-      group: deloy-dev-${{ github.head_ref }}
+      group: latest-main-push-${{ github.head_ref }}
       cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
@@ -41,7 +41,7 @@ jobs:
 
   deploy-stub:
     concurrency:
-      group: deploy-stub-${{ github.head_ref }}
+      group: latest-main-push-${{ github.head_ref }}
       cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
 
   upload-s3-assets:
     concurrency:
-      group: upload-s3-assets-${{ github.head_ref }}
+      group: latest-main-push-${{ github.head_ref }}
       cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
@@ -71,11 +71,11 @@ jobs:
         with:
           script: |
             const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
-            await wait(600000); // 30 seconds
+            await wait(30000); // 30 seconds
 
   deploy-stg:
     concurrency:
-      group: deploy-stg-${{ github.head_ref }}
+      group: latest-main-push-${{ github.head_ref }}
       cancel-in-progress: true
     needs: [upload-s3-assets]
     runs-on: ubuntu-latest
@@ -92,7 +92,7 @@ jobs:
 
   release-name:
     concurrency:
-      group: release-name-${{ github.head_ref }}
+      group: latest-main-push-${{ github.head_ref }}
       cancel-in-progress: true
     needs: [ deploy-stg ]
     outputs:
@@ -111,7 +111,7 @@ jobs:
 
   service-now:
     concurrency:
-      group: service-now-${{ github.head_ref }}
+      group: latest-main-push-${{ github.head_ref }}
       cancel-in-progress: true
     needs: [deploy-stg, upload-s3-assets, release-name]
     runs-on: ubuntu-latest
@@ -128,8 +128,9 @@ jobs:
 
   extract-pr-number:
     concurrency:
-      group: extract-pr-number-${{ github.ref }}
+      group: latest-main-push-${{ github.head_ref }}
       cancel-in-progress: false  # Ensures a deployment in progress is not interrupted
+    needs: [service-now]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -158,7 +159,7 @@ jobs:
 
   deploy-prd:
     concurrency:
-      group: deploy-prd-${{ github.ref }}
+      group: latest-main-push-${{ github.head_ref }}
       cancel-in-progress: false  # Ensures a deployment in progress is not interrupted
     needs: [service-now]
     runs-on: ubuntu-latest
