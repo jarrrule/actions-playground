@@ -1,0 +1,248 @@
+name: Build and Deploy on Main Push
+on:
+  push:
+    branches:
+      - test-release-concurrency
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  deploy-dev:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  deploy-stub:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  upload-s3-assets:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  deploy-stg:
+    needs: [upload-s3-assets]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  release-name:
+    needs: [ deploy-stg ]
+    outputs:
+      name: ${{ steps.release.outputs.name }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  service-now:
+    needs: [deploy-stg, upload-s3-assets, release-name]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  extract-pr-number:
+    concurrency:
+      group: extract-pr-number-${{ github.ref }}
+      cancel-in-progress: false  # Ensures a deployment in progress is not interrupted
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  jira-version-create:
+    needs: [extract-pr-number, release-name]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  deploy-prd:
+    concurrency:
+      group: deploy-prd-${{ github.ref }}
+      cancel-in-progress: false  # Ensures a deployment in progress is not interrupted
+    needs: [service-now]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(1200000);
+
+  jira-version-update:
+    needs: [ deploy-prd, jira-version-create ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  publish-release:
+    needs: [deploy-prd, release-name]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  slack-notification:
+    needs: [ publish-release, release-name ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  wiki-page-create:
+    needs: [ release-name, jira-version-update ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  newrelic-deployment-marker:
+    needs: [publish-release, release-name]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
+
+  newrelic-deployment-marker-lighthouse-checks:
+    needs: [publish-release, release-name]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Pause for 30 seconds
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+            await wait(30000); // 30 seconds
