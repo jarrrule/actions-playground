@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     concurrency:
-      group: x
+      group: build-main
       cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
@@ -20,12 +20,9 @@ jobs:
         with:
           script: |
             const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
-            await wait(30000); // 30 seconds
+            await wait(300000); // 5mins
 
   deploy-dev:
-    concurrency:
-      group: x
-      cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
     steps:
@@ -40,9 +37,6 @@ jobs:
             await wait(30000); // 30 seconds
 
   deploy-stub:
-    concurrency:
-      group: x
-      cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
     steps:
@@ -57,9 +51,6 @@ jobs:
             await wait(30000); // 30 seconds
 
   upload-s3-assets:
-    concurrency:
-      group: x
-      cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
     steps:
@@ -74,9 +65,6 @@ jobs:
             await wait(30000); // 30 seconds
 
   deploy-stg:
-    concurrency:
-      group: x
-      cancel-in-progress: true
     needs: [upload-s3-assets]
     runs-on: ubuntu-latest
     steps:
@@ -91,9 +79,6 @@ jobs:
             await wait(30000); // 30 seconds
 
   release-name:
-    concurrency:
-      group: x
-      cancel-in-progress: true
     needs: [ deploy-stg ]
     outputs:
       name: ${{ steps.release.outputs.name }}
@@ -110,9 +95,6 @@ jobs:
             await wait(30000); // 30 seconds
 
   service-now:
-    concurrency:
-      group: x
-      cancel-in-progress: true
     needs: [deploy-stg, upload-s3-assets, release-name]
     runs-on: ubuntu-latest
     steps:
