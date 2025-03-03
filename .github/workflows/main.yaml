@@ -1,7 +1,4 @@
 name: Build and Deploy on Main Push xx
-concurrency:
-  group: merge-pr-${{ github.head_ref }}
-  cancel-in-progress: true
 on:
   push:
     branches:
@@ -10,6 +7,9 @@ on:
 
 jobs:
   build:
+    concurrency:
+      group: build-${{ github.head_ref }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
