@@ -1,4 +1,7 @@
 name: Build and Deploy on Main Push
+concurrency:
+  group: merge-pr-${{ github.head_ref }}
+  cancel-in-progress: true
 on:
   push:
     branches:
