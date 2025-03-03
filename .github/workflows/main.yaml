@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     concurrency:
-      group: build
+      group: x
       cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
@@ -24,7 +24,7 @@ jobs:
 
   deploy-dev:
     concurrency:
-      group: deploy-dev
+      group: x
       cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
@@ -41,7 +41,7 @@ jobs:
 
   deploy-stub:
     concurrency:
-      group: deploy-stub
+      group: x
       cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
 
   upload-s3-assets:
     concurrency:
-      group: upload-s3-assets
+      group: x
       cancel-in-progress: true
     needs: [build]
     runs-on: ubuntu-latest
@@ -75,7 +75,7 @@ jobs:
 
   deploy-stg:
     concurrency:
-      group: deploy-stg
+      group: x
       cancel-in-progress: true
     needs: [upload-s3-assets]
     runs-on: ubuntu-latest
@@ -92,7 +92,7 @@ jobs:
 
   release-name:
     concurrency:
-      group: release-name
+      group: x
       cancel-in-progress: true
     needs: [ deploy-stg ]
     outputs:
@@ -111,7 +111,7 @@ jobs:
 
   service-now:
     concurrency:
-      group: service-now
+      group: x
       cancel-in-progress: true
     needs: [deploy-stg, upload-s3-assets, release-name]
     runs-on: ubuntu-latest
