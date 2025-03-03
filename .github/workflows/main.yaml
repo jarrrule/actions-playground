@@ -1,4 +1,4 @@
-name: Build and Deploy on Main Push x
+name: Build and Deploy on Main Push xx
 on:
   push:
     branches:
