@@ -73,7 +73,7 @@ jobs:
         with:
           script: |
             const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
-            await wait(30000); // 30 seconds
+            await wait(600000); // 30 seconds
 
   deploy-stg:
     needs: [upload-s3-assets]
