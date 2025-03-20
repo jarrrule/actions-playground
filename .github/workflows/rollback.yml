@@ -13,9 +13,7 @@ on:
 
 jobs:
   setup:
-    runs-on:
-      - self-hosted
-      - build
+    runs-on: ubuntu-latest
     outputs:
       release-meta: ${{ steps.release-meta.outputs.data }}
     steps:
