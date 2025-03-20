@@ -1,0 +1,75 @@
+name: Rollback
+on:
+  workflow_dispatch:
+    inputs:
+      description:
+        type: string
+        required: true
+        description: Reason for SNOW
+      sha:
+        type: string
+        required: false
+        description: just for testing purposes
+
+jobs:
+  setup:
+    runs-on:
+      - self-hosted
+      - build
+    outputs:
+      release-meta: ${{ steps.release-meta.outputs.data }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get release meta
+        id: release-meta
+        run: |
+          git fetch origin refs/notes/commits:refs/notes/commits
+          git notes show ${{ github.sha }}
+          NOTES_DATA="$(git notes show ${{ github.sha }})"
+          echo "data=$NOTES_DATA" >> $GITHUB_OUTPUT
+          echo "what is the sha ${{ github.sha }}"
+
+#  service-now:
+#    uses: sainsburys-tech/navigation-actions/.github/workflows/service-now-create.yaml@v7.5
+#    with:
+#      app: ui-pdp
+#      bosun-config: ./config/devops/bosun/bosun.yaml
+#      job-name: service-now / Create ServiceNow Change request
+#      assignment-group: "Navigation & PDP"
+#      deployment-item: "GM eComm - UI PDP"
+#      description: "Rollback: Due to ${{ inputs.description }}"
+#
+#  deploy:
+#    needs: [ setup, service-now ]
+#    strategy:
+#      matrix:
+#        brand: [ ARGOS, HABITAT, TU ]
+#    uses: sainsburys-tech/navigation-actions/.github/workflows/deploy-app.yaml@v7.5
+#    with:
+#      app: ui-pdp
+#      tags: $ECR/$BOSUN_PRODUCT/$BOSUN_APP:${{ matrix.brand }}-prd-$SHORT_SHA
+#      job-name: deploy (${{ matrix.brand }}) / deploy
+#      bosun-config: ./config/devops/bosun/bosun.yaml
+#      deploy-suffix: ${{ matrix.brand }}
+#      brand: ${{ matrix.brand }}
+#      environment: prd
+#      changeId: ${{ needs.service-now.outputs.changeId }}
+#      notifications: true
+#
+#  newrelic-deployment-marker:
+#    needs: [ deploy, setup ]
+#    runs-on: ubuntu-latest
+#    name: New Relic
+#    strategy:
+#      matrix:
+#        brand: [argos, habitat, tu]
+#    steps:
+#      - name: New Relic Application Deployment Marker
+#        uses: newrelic/deployment-marker-action@v2.5.0
+#        with:
+#          apiKey: ${{ secrets.NEW_RELIC_API_KEY }}
+#          guid: ${{ vars[format('NEW_RELIC_DEPLOYMENT_ENTITY_GUID_{0}_PDP_UI_PRD', matrix.brand)] }}
+#          version: Rollback-${{ fromJson(needs.setup.outputs.release-meta).release-name }}
+#          description: "Rollback: Due to ${{ inputs.description }}"
+#          user: ${{ github.actor }}
+#          deeplink: "https://github.com/sainsburys-tech/argos-pdp-ui-service/actions/runs/${{ github.run_id }}"
