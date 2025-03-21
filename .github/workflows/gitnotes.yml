@@ -24,7 +24,7 @@ jobs:
         id: release-meta
         run: |
           if git notes show ${{ steps.release.outputs.sha }}; then
-            NOTES_DATA="$(git notes show ${{ steps.release.outputs.sha }})"
+            NOTES_DATA="$(git notes show 3333)"
             echo "✅ Git notes found: $NOTES_DATA"
           else
             NOTES_DATA='{"release-name": "*****", "jira-version": "*****", "jira-issues": ["*****"]}'
