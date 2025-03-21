@@ -1,0 +1,49 @@
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      release-shortSha: ${{ steps.release.outputs.shortSha }}
+      release-sha: ${{ steps.release.outputs.sha }}
+      release-meta: ${{ steps.release-meta.outputs.data }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 30
+      - name: Get release sha
+        id: release
+        run: |
+          git fetch origin refs/notes/commits:refs/notes/commits
+          echo "shortSha=$(git log --notes --pretty=format:"%H %N" | grep -m1 '{"release-name"' | cut -c 1-8 | awk '{print $1}')" >> $GITHUB_OUTPUT
+          echo "sha=$(git log --notes --pretty=format:"%H %N" | grep -m1 '{"release-name"' | awk '{print $1}')" >> $GITHUB_OUTPUT
+      - name: Get release meta
+        id: release-meta
+        run: |
+          if git notes show ${{ steps.release.outputs.sha }}; then
+            NOTES_DATA="$(git notes show ${{ steps.release.outputs.sha }})"
+            echo "✅ Git notes found: $NOTES_DATA"
+          else
+            NOTES_DATA='{"release-name": "*****", "jira-version": "*****", "jira-issues": ["*****"]}'
+            echo "⚠️ No Git notes found. Using default: $NOTES_DATA"
+          fi
+          echo "data=$NOTES_DATA" >> $GITHUB_OUTPUT
+          echo "### Release SHA :hash:" >> $GITHUB_STEP_SUMMARY
+          echo "\`${{ steps.release.outputs.sha }}\`" >> $GITHUB_STEP_SUMMARY
+
+  outputs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 30
+      - name: Get release sha
+        id: release
+        run: |
+          echo "${{ fromJson(needs.setup.outputs.release-meta).jira-version }}"
+          echo "${{ fromJson(needs.setup.outputs.release-meta).jira-issues }}"
+          echo "${{ fromJson(needs.setup.outputs.release-meta).release-name }}"
+          
