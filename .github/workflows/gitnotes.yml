@@ -23,8 +23,8 @@ jobs:
       - name: Get release meta
         id: release-meta
         run: |
-          if git notes show ${{ steps.release.outputs.sha }}; then
-            NOTES_DATA="$(git notes show e15918b18113739ba7a8f22c23dbaf677567eb67)"
+          if git notes show e15918b18113739ba7a8f22c23dbaf677567eb67; then
+            NOTES_DATA="$(git notes show ${{ steps.release.outputs.sha }})"
             echo "✅ Git notes found: $NOTES_DATA"
           else
             NOTES_DATA='{"release-name": "*****", "jira-version": "*****", "jira-issues": ["*****"]}'
