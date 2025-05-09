@@ -12,7 +12,7 @@ jobs:
       release-meta: ${{ steps.release-meta.outputs.data }}
       release-name: ${{ steps.release-meta.outputs.release-name }}
     if: github.event.workflow_run.head_branch == 'develop'
-    runs-on: [ self-hosted, build ]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Download release metadata
@@ -29,7 +29,7 @@ jobs:
 
   test-output:
     needs: [setup]
-    runs-on: [ self-hosted, build ]
+    runs-on: ubuntu-latest
     steps:
       - name: Output release-meta
         run: |
