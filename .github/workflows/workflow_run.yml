@@ -1,4 +1,4 @@
-name: "find and replace"
+name: "listen for find and replace"
 
 on:
   workflow_run:
