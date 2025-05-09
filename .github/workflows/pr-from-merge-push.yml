@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   get-pr-number:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Print PR Number
         run: echo "The PR number is ${{ env.PR_NUMBER }}"
-        
+
   create-metadata-artifact: 
     runs-on: ubuntu-latest
     steps:
