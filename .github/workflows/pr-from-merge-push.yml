@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Create release metadata artifact
         run: |
-          commit_message=$(echo "${{ github.event.head_commit.message }}" | jq -R .)
+          commit_message=$(echo "${{ github.event.head_commit.message }}" | jq -R . | sed ':a;N;$!ba;s/\n/\\n/g')
           jq -n \
             --arg compare "${{ github.event.compare }}" \
             --arg commitMessage "$commit_message" \
