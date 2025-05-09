@@ -1,4 +1,4 @@
-name: "listen for find and replace"
+name: "merge pull"
 
 on:
   workflow_run:
