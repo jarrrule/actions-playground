@@ -1,8 +1,8 @@
-name: "merge pull"
+name: "merge pull listener"
 
 on:
   workflow_run:
-    workflows: ["find and replace"]
+    workflows: ["merge pull"]
     types:
       - completed
 
