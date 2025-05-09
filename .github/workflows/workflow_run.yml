@@ -8,18 +8,37 @@ on:
 
 jobs:
   setup:
+    if: github.event.workflow_run.head_branch == 'develop'
+    runs-on: ubuntu-latest
     outputs:
       release-meta: ${{ steps.release-meta.outputs.data }}
       release-name: ${{ steps.release-meta.outputs.release-name }}
-    if: github.event.workflow_run.head_branch == 'develop'
-    runs-on: ubuntu-latest
 
     steps:
-      - name: Download release metadata
-        uses: actions/download-artifact@v4
-        with:
-          name: release-metadata
-          path: ./metadata
+      - name: Get artifact download URL
+        id: get-artifact-url
+        run: |
+          run_id="${{ github.event.workflow_run.id }}"
+          artifacts_url="https://api.github.com/repos/${{ github.repository }}/actions/runs/${run_id}/artifacts"
+          echo "Fetching artifacts from $artifacts_url"
+
+          curl -sSL -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" "$artifacts_url" > artifacts.json
+
+          # Find the download URL of the artifact named "release-metadata"
+          download_url=$(jq -r '.artifacts[] | select(.name == "release-metadata") | .archive_download_url' artifacts.json)
+
+          if [ -z "$download_url" ]; then
+            echo "❌ Artifact 'release-metadata' not found."
+            exit 1
+          fi
+
+          echo "download_url=$download_url" >> $GITHUB_OUTPUT
+
+      - name: Download and unzip artifact
+        run: |
+          curl -L -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" "${{ steps.get-artifact-url.outputs.download_url }}" -o artifact.zip
+          unzip artifact.zip -d metadata
+
       - name: Set release metadata
         id: release-meta
         run: |
