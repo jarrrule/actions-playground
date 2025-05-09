@@ -1,0 +1,16 @@
+name: "find and replace"
+
+on:
+  workflow_run:
+    workflows: ["find and replace"]
+    types:
+      - completed
+
+jobs:
+  find-and-replace-job:
+    runs-on: ubuntu-latest
+    name: 'Find and replace on a string'
+    steps:
+      - name: say hello
+        run: echo hello
+       
