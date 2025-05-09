@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       release-meta: ${{ steps.release-meta.outputs.data }}
+      commit-message: ${{ steps.release-meta.outputs.decoded-message }}
       release-name: ${{ steps.release-meta.outputs.release-name }}
 
     steps:
@@ -43,7 +44,9 @@ jobs:
         id: release-meta
         run: |
           metadata=$(jq -c . ./metadata/release-metadata.json)
+          decoded_message=$(echo "$metadata" | jq -r '.["commit-message"]' | sed 's/\\n/\n/g')
           echo "data=$metadata" >> $GITHUB_OUTPUT
+          echo "decoded-message=$decoded_message" >> $GITHUB_OUTPUT
           echo "release-name=${{ vars.PROJECT_ID }}-$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
 
   test-output:
@@ -53,7 +56,6 @@ jobs:
       - name: Output release-meta
         run: |
           echo "compare : ${{ fromJson(needs.setup.outputs.release-meta).compare }}"
-          echo "compare : ${{ fromJson(needs.setup.outputs.release-meta).commit-message }}"
-          echo $GITHUB_SHA
-          echo $SHORT_SHA
-       
+          echo "compare : ${{ needs.setup.outputs.commit-message }}"
+
+      
