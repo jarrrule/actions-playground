@@ -11,8 +11,8 @@ jobs:
     if: github.event.workflow_run.head_branch == 'develop'
     runs-on: ubuntu-latest
     outputs:
-      release-meta: ${{ steps.release-meta.outputs.data }}
-      commit-message: ${{ steps.release-meta.outputs.decoded-message }}
+#      release-meta: ${{ steps.release-meta.outputs.data }}
+      commit-message: ${{ steps.release-meta.outputs.commit-message }}
       release-name: ${{ steps.release-meta.outputs.release-name }}
 
     steps:
@@ -43,11 +43,15 @@ jobs:
       - name: Set release metadata
         id: release-meta
         run: |
-          metadata=$(jq -c . ./metadata/release-metadata.json)
-          decoded_message=$(echo "$metadata" | jq -r '.["commit-message"]' | sed 's/\\n/\n/g')
-          echo "data=$metadata" >> $GITHUB_OUTPUT
-          echo "decoded-message=$decoded_message" >> $GITHUB_OUTPUT
+#          metadata=$(jq -c . ./metadata/release-metadata.json)
+#          decoded_message=$(echo "$metadata" | jq -r '.["commit-message"]' | sed 's/\\n/\n/g')
+#          echo "data=$metadata" >> $GITHUB_OUTPUT
+#          echo "decoded-message=$decoded_message" >> $GITHUB_OUTPUT
           echo "release-name=${{ vars.PROJECT_ID }}-$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
+          COMMIT_MESSAGE=$(jq -r '.["commit-message"]' ./metadata/release-metadata.json)
+          echo "commit_message<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
 
   test-output:
     needs: [setup]
@@ -55,7 +59,7 @@ jobs:
     steps:
       - name: Output release-meta
         run: |
-          echo "compare : ${{ fromJson(needs.setup.outputs.release-meta).compare }}"
           echo "compare : ${{ needs.setup.outputs.commit-message }}"
+          echo "release name : ${{ needs.setup.outputs.release-name }}"
 
       
