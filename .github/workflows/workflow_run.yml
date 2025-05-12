@@ -45,9 +45,8 @@ jobs:
         id: release-meta
         run: |
           echo "release-name=${{ vars.PROJECT_ID }}-$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
-          SHORT_SHA=$(jq -r '.["short-sha"]' ./metadata/release-metadata.json)
+          echo "short-sha=${{ github.event.workflow_run.head_sha }}" | cut -c1-8 >> $GITHUB_OUTPUT
           echo "$COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
-          echo "short-sha=$SHORT_SHA" >> $GITHUB_OUTPUT
           COMPARE=$(jq -r '.["compare"]' ./metadata/release-metadata.json)
           echo "compare=$COMPARE" >> $GITHUB_OUTPUT
           echo "$COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
