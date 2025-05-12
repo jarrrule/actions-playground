@@ -11,9 +11,10 @@ jobs:
     if: github.event.workflow_run.head_branch == 'develop'
     runs-on: ubuntu-latest
     outputs:
-#      release-meta: ${{ steps.release-meta.outputs.data }}
+      compare: ${{ steps.release-meta.outputs.compare }}
       commit-message: ${{ steps.release-meta.outputs.commit-message }}
       release-name: ${{ steps.release-meta.outputs.release-name }}
+      short-sha: ${{ steps.release-meta.outputs.short-sha }}
 
     steps:
       - name: Get artifact download URL
@@ -44,6 +45,12 @@ jobs:
         id: release-meta
         run: |
           echo "release-name=${{ vars.PROJECT_ID }}-$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
+          SHORT_SHA=$(jq -r '.["short-sha"]' ./metadata/release-metadata.json)
+          echo "$COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
+          echo "short-sha=$SHORT_SHA" >> $GITHUB_OUTPUT
+          COMPARE=$(jq -r '.["compare"]' ./metadata/release-metadata.json)
+          echo "compare=$COMPARE" >> $GITHUB_OUTPUT
+          echo "$COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
           COMMIT_MESSAGE=$(jq -r '.["commit-message"]' ./metadata/release-metadata.json)
           echo "commit-message<<EOF" >> "$GITHUB_OUTPUT"
           echo "$COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
@@ -55,7 +62,9 @@ jobs:
     steps:
       - name: Output release-meta
         run: |
-          echo "compare : ${{ needs.setup.outputs.commit-message }}"
+          echo "commit-message : ${{ needs.setup.outputs.commit-message }}"
           echo "release name : ${{ needs.setup.outputs.release-name }}"
+          echo "compare : ${{ needs.setup.outputs.compare }}"
+          echo "short-sha : ${{ needs.setup.outputs.short-sha }}"
 
       
