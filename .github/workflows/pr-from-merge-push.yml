@@ -30,11 +30,11 @@ jobs:
         run: |
           MESSAGE="${{ github.event.head_commit.message }}"
           COMPARE="${{ github.event.compare }}"
+          SHORT_SHA=${GITHUB_SHA::8}
           jq -n \
             --arg compare "$COMPARE" \
             --arg commitMessage "$MESSAGE" \
-            --arg shortSha "$SHORT_SHA" \
-           '{compare: $compare, "commit-message": $commitMessage, "short-sha": $shortSha}' > release-metadata.json
+           '{compare: $compare, "commit-message": $commitMessage}' > release-metadata.json
       - name: Upload release metadata
         uses: actions/upload-artifact@v4
         with:
