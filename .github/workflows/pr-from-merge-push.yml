@@ -28,9 +28,10 @@ jobs:
     steps:
       - name: Create release metadata artifact
         run: |
-          MESSAGE=$(cat ${{ github.event.head_commit.message }})
+          MESSAGE=${{ github.event.head_commit.message }}
+          COMPARE=${{ github.event.compare }}
           jq -n \
-            --arg compare "${{ github.event.compare }}" \
+            --arg compare "$COMPARE" \
             --arg commitMessage "$MESSAGE" \
            '{compare: $compare, "commit-message": $commitMessage}' > release-metadata.json
       - name: Upload release metadata
