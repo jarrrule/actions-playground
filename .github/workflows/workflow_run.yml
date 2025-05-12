@@ -49,7 +49,7 @@ jobs:
 #          echo "decoded-message=$decoded_message" >> $GITHUB_OUTPUT
           echo "release-name=${{ vars.PROJECT_ID }}-$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
           COMMIT_MESSAGE=$(jq -r '.["commit-message"]' ./metadata/release-metadata.json)
-          echo "commit_message<<EOF" >> "$GITHUB_OUTPUT"
+          echo "commit-message<<EOF" >> "$GITHUB_OUTPUT"
           echo "$COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
           echo "EOF" >> "$GITHUB_OUTPUT"
 
