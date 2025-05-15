@@ -9,7 +9,7 @@ on:
 jobs:
   check-status:
     if: github.event.workflow_run.head_branch == 'develop'
-    runs-on: [ self-hosted, build ]
+    runs-on: ubuntu-latest
     outputs:
       conclusion: ${{ steps.get-conclusion.outputs.conclusion }}
 
