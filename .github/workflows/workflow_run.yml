@@ -1,4 +1,4 @@
-name: "merge pull listener"
+name: "merge pull request listener"
 
 on:
   workflow_run:
