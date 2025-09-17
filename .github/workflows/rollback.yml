@@ -10,9 +10,7 @@ on:
 jobs:
   setup:
     if: ${{ startsWith(github.ref, 'refs/tags/') }}
-    runs-on:
-      - self-hosted
-      - build
+    runs-on: ubuntu-latest
     outputs:
       release-shortSha: ${{ steps.release-meta.outputs.shortSha }}
       release-name: ${{ steps.release-meta.outputs.name }}
