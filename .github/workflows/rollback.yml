@@ -13,21 +13,34 @@ on:
 
 jobs:
   setup:
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
     runs-on:
       - self-hosted
       - build
     outputs:
-      release-meta: ${{ steps.release-meta.outputs.data }}
+      release-shortSha: ${{ steps.release-meta.outputs.shortSha }}
+      release-name: ${{ steps.release-meta.outputs.name }}
     steps:
       - uses: actions/checkout@v4
       - name: Get release meta
         id: release-meta
         run: |
-          git fetch origin refs/notes/commits:refs/notes/commits
-          git notes show ${{ github.sha }}
-          NOTES_DATA="$(git notes show ${{ github.sha }})"
-          echo "data=$NOTES_DATA" >> $GITHUB_OUTPUT
-          echo "what is the sha ${{ github.sha }}"
+          echo "shortSha=$(echo ${{ github.sha }} | cut -c 1-8)" >> $GITHUB_OUTPUT
+          echo "name=$(echo ${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          echo "### Rollback to release :hash:" >> $GITHUB_STEP_SUMMARY
+          echo "\`$(echo ${{ github.ref_name }}`" >> $GITHUB_STEP_SUMMARY
+      - name: Find current latest release
+        id: latest
+        run: |
+          latest_tag=$(gh release list --limit 1 --json tagName --jq '.[0].tagName')
+          echo "latest_tag=$latest_tag" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Confirm rollback
+        run: |
+          echo "🔄 Current latest release: ${{ steps.latest.outputs.latest_tag }}"
+          echo "🔙 Rolling back to: ${{ github.ref_name}}"
 
 #  service-now:
 #    uses: sainsburys-tech/navigation-actions/.github/workflows/service-now-create.yaml@v7.5
