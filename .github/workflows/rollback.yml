@@ -6,10 +6,6 @@ on:
         type: string
         required: true
         description: Reason for SNOW
-      sha:
-        type: string
-        required: false
-        description: just for testing purposes
 
 jobs:
   setup:
